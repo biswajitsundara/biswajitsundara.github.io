@@ -1,194 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Biswajit Sundara's Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-</style>
+<head>
+  <title>Biswajit Sundara</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+.bg-5 { 
+    background-color: #F5F5F5; /* Light Gray */
+    color: #808080;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+
+#profile-name
+{
+  animation:type 3s steps(16);
+overflow:hidden;
+white-space:nowrap;
+border-right:2px solid white;
+width:16ch;
+
+}
+@keyframes type{
+0%{
+  width:0ch;
+}
+100%
+{
+width:16ch;
+}
+  </style>
+
+<script>
+window.onload = function () {
+
+var options = {
+	animationEnabled: true,
+	
+	axisY: {
+		title: "Skill Rate (in %)",
+		suffix: "%",
+		includeZero: true
+	},
+	axisX: {
+		title: "Topics"
+	},
+	data: [{
+		type: "column",
+		yValueFormatString: "#,##0#"%"",
+		dataPoints: [
+			{ label: "Selenium", y: 90 },	
+			{ label: "Java", y: 80 },	
+			{ label: "Cucumber", y: 85 },
+			{ label: "TestNG", y: 80 },	
+			{ label: "Maven", y: 40 },
+			{ label: "Jenkins", y: 30},
+			{ label: "Git", y: 60 },
+                        { label: "REST API", y: 25 },
+			{ label: "HTML", y: 60 },
+                        { label: "CSS", y: 45 },
+                        { label: "JavaScript", y: 25 },
+                        { label: "BootStrap", y: 20 },
+			
+		]
+	}]
+};
+$("#chartContainer").CanvasJSChart(options);
+
+}
+</script>
+</head>
 <body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <img src="images\me.png" style="width:90%">
-    <br><br><h3><b>Biswajit Sundara</b></h3>
-    <h6>Test Lead, India</h6>
-  </div>
-  <div class="w3-bar-block"> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Java</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Selenium</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">DevOps</a> 
-    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Products</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#Aboutme">ABOUT ME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="gh-pages/comingsoon.html" target="_blank">PRODUCTS</a></li>
+        <li><a href="https://biswajitsundara.home.blog/" target="_blank">BLOG</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">?</a>
-  <span>Company Name</span>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>a blog for the coders</b></h1>
-    <h1 class="w3-xxxlarge w3-text-green"><b>Java</b></h1>
-    <hr style="width:50px;border:5px solid green" class="w3-round">
-  </div>
-  
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <a href="#">How to develop a website using Java Spring</a>
-      <br><br><a href="#">Implementing REST API in Java</a>
-      <br><br><a href="#">Java design patterns </a>
-    </div>
-
-    <div class="w3-half">
-      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
-    </div>
-  </div>
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
-  <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-green"><b>Services.</b></h1>
-    <hr style="width:50px;border:5px solid green" class="w3-round">
-    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-  </div>
-  
-  <!-- Designers -->
-  <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-green"><b>Designers.</b></h1>
-    <hr style="width:50px;border:5px solid green" class="w3-round">
-    <p>The best team in the world.</p>
-    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <p><b>Our designers are thoughtfully chosen</b>:</p>
-  </div>
-
-  <!-- The Team -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Jane Doe</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Packages / Pricing Tables -->
-  <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-green"><b>Products</b></h1>
-    <hr style="width:50px;border:5px solid green" class="w3-round">
-    <p>Look at the products designed by me</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <img src="images\chatbot.jpg" style="width:90%">
-    </div>
-        
-    <div class="w3-half">
-     <br><br>This is designed in JavaFx & core java.
-    <br><br>Simple to configure & simple to use
-    <br><br>Can be used in any organisation, any team
-    <br><br><button class="w3-button w3-red w3-round-xxlarge">Get it Free</button>
-
-    </div>
-  </div>
-  
-  <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-green"><b>Contact.</b></h1>
-    <hr style="width:50px;border:5px solid green" class="w3-round">
-    <p>Do you want to connect with me?</p>
-      <div class="w3-section">
-        <table padding="5px"><tr><td><img src="images\linkedin.png" style="width:50%"></td>
-         <td><img src="images\github.png" style="width:50%"></td>
-	<td><img src="images\wordpress.png" style="width:50%"></td></tr></table>
-      </div> 
-  </div>
-
-<!-- End page content -->
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <img src="img/unnamed.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <center><h3 id="profile-name">Biswajit Sundara</h3></center>
 </div>
 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<!-- Second Container -->
+<div id="Aboutme" class="container-fluid bg-2 text-center">
+  <h3 class="margin">About Me</h3>
+   <div class="row">
+    <div class="col-sm-4">
+   <span class="glyphicon glyphicon-user" style="font-size: 150px;color:white;"></span>
+   </div>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
+   <div class="col-sm-8" style="line-height:250%">
+   <p style="text-align:left">Myself Biswajit Sundara. I hold a B.Tech degree with distinction in Computer Science from SRM Univeristy, Chennai and currently I lead a highly efficient automation team. Its been a decade now being in IT industry and I have always enjoyed exploring new concepts and sharing it with others.
+   </p>
+   </div>
+</div>
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-</script>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">SKILL GRAPH</h3><br>
+  <div class="row">
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div> 
+  </div>
+
+</div>
+
+
+
+
+<div id="contact" class="container-fluid bg-grey bg-5" >
+  <h2 class="text-left">CONTACT</h2><br>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact me and I'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chennai, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> Not Disclosed</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> biswajitsundara@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeCfZ1EY1CY7cyUAWntxcgulPRmatfG0H7zhNpj6EyegXxgFA/formResponse" target="_self" method="POST">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="entry.309576492" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="entry.2105915532" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="entry.860341804" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+ </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Thank you. Please visit again</p> 
+</footer>
 
 </body>
 </html>
