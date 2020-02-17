@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Biswajit Sundara Blog | VB Script</title>
+
+  <script src="js/head.js"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+   
+<link href="css/comment.css" rel="stylesheet">
+
+<link href="css/blogpage.css" rel="stylesheet">
+
+</head>
+
+<body onload="LoadFunc()">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><br></div>
+      <div class="list-group list-group-flush">
+	 <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'home')">Home</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basics')">VB Script Basics</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'dataTypes')">Data Types,Variables</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'controlFlow')">Control Flow Statements</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'operators')">Operators</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'arrays')">Arrays</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'strings')">Strings and Numbers</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'messages')">Message & Alerts</a>
+   <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'dateTime')">Date & Time</a>
+<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'functions')">Functions</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'fileHandling')">File Handling</a>
+ <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'clsObj')">Class & Object</a>
+<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'loginWeb')">Login Web Page</a>
+ <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'stdMark')">Student Marksheet</a>
+
+<br><br>      
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+       
+         <a href="bloghome.html">Biswajit Sundara Blog</a>
+
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+              <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;</a>
+           
+            
+          
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        
+
+  <div id="home" class="topics">
+<br><br> 
+ <div class= row>
+<div style="max-width: 540px; text-align: center;">
+<br><br>
+<img src="img\vbscript\logo.png" style="width:50%;">  
+<br><br>
+<a href="https://en.wikipedia.org/wiki/VBScript" target="_blank">wiki/vbscript.com</a>
+</div>
+
+ <div class="card mb-6" style="max-width: 540px;">  
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <img src="img\brand\profile.png" class="card-img" alt="...">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">Author Bio</h5>
+        <p class="card-text">This book is written by Biswajit Sundara.
+	Biswajit is a software professional with 10+ years of experience. He has worked on various technologies and also an avid blogger on technology.</p>
+        <p class="card-text"><small class="text-muted">Feb 9th, 2020</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<br><br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">VB Script Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'dataTypes')">Data Types, Variables</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'controlFlow')">Control Flow Statements</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'operators')">Operators</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'arrays')">Arrays</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'strings')">Strings, Numbers</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'messages')">Message & Alerts</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'dateTime')">Date & Time</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'functions')">Functions</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'fileHandling')">File Handling</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'clsObj')">Class & Objects</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'loginWeb')">Examples</a></li>
+  </ul>
+</div>
+
+</div>
+
+<br><br>
+<div class="container">
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+    <div class="row">
+      <div class="col-25">
+        <label for="uname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="uname" name="entry.689225320" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="emailAddress" placeholder="Your email address..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="comment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comment" name="entry.1648468188" placeholder="Write your precious comment here.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="hidden" name="entry.2069828936" value="VB Script">
+    </div>
+    <div class="row">
+      <input type="submit" value="Post Comment">
+    </div>
+  </form>
+</div>
+
+
+
+
+
+</div>        
+      <div id="basics" class="topics" style="line-height: 200%;">
+      <h1 class="mt-4">VB Script Basics</h1>
+      <p>VB Script is a light weight scripting language developed by Microsoft. It is used to manage windows system as well as client side scripting.</p>
+
+      <p><ul><li>VB script was released by Microsoft in 1996</li>
+      <li>It uses Component Object Model to access elements in the executing environment.</li>
+      <li>By default VB script is installed in Windows Operating system.</li>
+         <li>Simply put some code in a notepad and save it with .vbs extension, then double click on the file to execute the code.</li>
+      <li>Some of most popular IDEs for VB Script are - <a href="https://www.vbsedit.com/">vbs edit</a>, <a href="https://visualstudio.microsoft.com/" target="_blank">visual studio</a></li>
+      <li>VB script is quite popular with UFT automation tool.</li>
+      <li>We can use VB script in web pages also however, it works only in IE browser.</li>
+      <li>Debugging VB script is bit difficult</li>
+      <li>System Admins use VB scripts to code system automation utils</li>
+      <li>VB script is used in Excel Macros and can any company exist without Excel!</li>
+      <li>To comment any line use single quote. Example: <font color="green"><i>'This is a comment</i></font></li>
+</ul>
+
+      <h4>Example 1: Desktop Script</h4>
+      Open NotePad and type the below code. Then save it with file name <i>demo.vbs</i>
+      and then double click on the file to execute
+      <br><br>
+            <pre class="codeblock">Msgbox <span style='color:#2A00FF'>"Hey there!"</span></pre>
+      
+      <br><h4>Example 2: Web Script</h4>
+      Save the below code as .html format and open it in IE browser. If you click on the button then the message box will appear. Try to open the same file in ChromeBrowser and click on the login button. Nothing will happen because Chrome Browser doesn't support VB Script.
+           <br><br><pre class="codeblock">&lt;html&gt;
+	&lt;head&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;button onclick=<span style='color:#2A00FF'>"clickMe()"</span>&gt;Click Me&lt;/button&gt;
+		&lt;script type=<span style='color:#2A00FF'>"text/vbscript"</span>&gt;
+			Function clickMe()
+				msgbox <span style='color:#2A00FF'>"Hey there!"</span>
+			End Function
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'dataTypes')">Next -></button>  
+
+<br><br> 
+     </div>
+
+    
+      
+
+ <div id="dataTypes" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Data Types & Variables</h2>
+    <p>To keep it simple, we can say variable is the container where we store our data and data type is the specifier for the variable, means using data type we will declare which type of data a particular variable is going to contain.</p>
+     <p>We can take real world example of our kitchen where we have different containers for oil,sugar, biscuit etc. And when we purchase those containers from market, they specify which container is for which item and when we bring it home, we keep changing the item that we store in the containers. That's exactly how the data type, variable concept works. Also we know there are small containers, big containers. Similarly we have data types with small storage capability and big storage capability.</p>
+
+    <ul><li>Variable name must begin with a letter. Example: name, age, sal
+    </li><li>Variable name can't start with special letters, numbers. Example: 1name,$age, sal. etc
+    </li><li>This is the syntax to declare a variable: <font color="blue"><i>Dim name</i></font>
+    </li><li>We can't declare and assign the variable at the same time. <font color="blue"><i>Dim name="Biswajit"</i></font>
+    </li><li>First we need to declare <font color="blue"><i>Dim name</i></font> and then assign the value.<font color="blue"><i>name="Biswajit"</i></font>
+    </li><li>We can also use variables directly without declaring, however it's not the best practice.<font color="blue"><i>name="Biswajit"</i></font>
+    </li><li>VB Script has an option to force you to declare variables. Use the statement <font color="blue"><i>Option Explicit</i></font> at the top of your script
+    </li><li>We don't have to specify the data types like integer, string etc. Based on the value assigned to the variable, it understands the data type.
+    </li><li>We can declare multiple variables separated by comma. <font color="blue"><i>Dim name,age,sal</i></font> 
+    </li><li>If we want to know the type of variable, then we can use this method <font color="blue"><i>typeName(variablename)</i></font>. It will return the data type as Integer, String etc. 
+    </li><li>The scope of variables can be <font color="blue"><i>Dim</i></font>  (local to procedure, script etc), <font color="blue"><i>private</i></font> (if we declare it globally in one script then it will be available for all the functions in the same script), <font color="blue"><i>public</i></font> (if we declare it globally in one script then it will be available for all the associated scripts also)   
+    </li>
+     </ul>
+
+
+    <h4>Example 1: Usage of different variables</h4>
+<br><pre class="codeblock">Dim name,age,sal,married,increment,manager,doj,dojTime
+name=<span style='color:#2A00FF'>"Biswajit"</span>
+age=30
+sal=FormatCurrency(31000)
+married=True
+increment=12.30
+manager=<span style='color:#2A00FF'>""</span>
+doj=FormatDateTime(Date(),0)
+dojTime=FormatDateTime(Now(),0)
+
+
+Msgbox <span style='color:#2A00FF'>"Name variable="</span> & name
+Msgbox typeName(name)
+
+Msgbox <span style='color:#2A00FF'>"Age variable="</span> & age
+Msgbox typeName(age)
+
+Msgbox <span style='color:#2A00FF'>"Sal variable="</span> & sal
+Msgbox typeName(sal)
+
+Msgbox <span style='color:#2A00FF'>"Married variable="</span> & married
+Msgbox typeName(married)
+
+Msgbox <span style='color:#2A00FF'>"Increment variable= "</span> & increment
+Msgbox typeName(increment)
+
+Msgbox <span style='color:#2A00FF'>"Manager variable="</span> & manager
+Msgbox typeName(manager)
+
+Msgbox <span style='color:#2A00FF'>"DOJ variable="</span> & doj
+Msgbox typeName(doj)
+
+Msgbox <span style='color:#2A00FF'>"Doj Time="</span> & dojTime
+Msgbox typeName(dojTime)</pre>
+
+<br><h4>Example 2: Scope of variables</h4>
+
+<br><pre class="codeblock">Dim company
+company =<span style='color:#2A00FF'>"ABC Corp"</span>
+<span style='font-weight:bold;color:#7B0052;'>private</span> department
+department=<span style='color:#2A00FF'>"Logistics"</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> city
+city=<span style='color:#2A00FF'>"Newyork"</span>
+
+
+Sub fun1()
+Dim name
+name=<span style='color:#2A00FF'>"Mark"</span>
+Msgbox name
+
+Msgbox company
+Msgbox department
+Msgbox City
+End Sub
+
+Sub fun2()
+'This will print blank as name is a local variable for fun1
+Msgbox name
+Msgbox company
+Msgbox department
+Msgbox City
+End Sub
+
+
+call fun1()
+call fun2()</pre>
+
+<br><h4>Example 3: Usage of Option Explicit</h4>
+The below code will throw an error because we have the option explicit statement & not declaring the variable. Just add the statement Dim name and it will run fine.
+<br><br><pre class="codeblock">Option Explicit
+name=<span style='color:#2A00FF'>"Hello"</span>
+Msgbox name</pre>
+
+
+<br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'controlFlow')">Next -></button>  
+
+<br><br> 
+
+
+</div>
+   
+
+<div id="controlFlow" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Control Flow Statements</h2>
+    <p>The VB Script statements are executed sequentially always means the line number1 will be executed first and then line number2 and so on. However when we implement conditions, decision making blocks then we need to execute statements based on the logic that it satisfies.</p>
+    <p>So this is called control flow mechanism where we can control the execution order of statements.</p>
+    <ul><li>Control flow statements available in VB Script are: If Else, Loops, Select Case
+    </li><li>To break control flow statements we have these commands: Exit For, Exit do, Exit Sub, Exit Function
+    </li><li>There's no command to break select case or if.
+    </li><li>Return command is not applicable in VB Script also
+    </ul>
+
+    <br>
+    <h4>If Else</h4>
+    
+    <pre class="codeblock">X=inputbox(<span style='color:#2A00FF'>"Input value for X"</span>)
+
+Y=inputbox(<span style='color:#2A00FF'>"Input value for Y"</span>)
+
+If (X&gt;Y) Then
+
+    msgbox <span style='color:#2A00FF'>"Value of X is greater than Y"</span>
+    
+    ElseIf (Y&gt;X) Then
+        msgbox <span style='color:#2A00FF'>"Value of Y is greater than X"</span>
+    
+    Else
+        msgbox <span style='color:#2A00FF'>"X and Y are equal"</span>
+
+End If</pre>
+
+<br>
+<h4>Select Case</h4>
+
+<pre class="codeblock">X=inputbox(<span style='color:#2A00FF'>"Enter the day number"</span>)
+
+Select Case x
+
+     Case 1
+	Msgbox <span style='color:#2A00FF'>"Monday"</span>
+
+     Case 2
+           Msgbox <span style='color:#2A00FF'>"Tuesday"</span>
+
+     Case Else
+            Msgbox <span style='color:#2A00FF'>"Invalid Input"</span>
+
+End Select</pre>
+
+<br>
+
+<pre class="codeblock">X=inputbox(<span style='color:#2A00FF'>"Enter City Name"</span>)
+
+Select Case x
+
+     Case <span style='color:#2A00FF'>"Delhi"</span>
+	Msgbox <span style='color:#2A00FF'>"Capital"</span>
+
+     Case <span style='color:#2A00FF'>"Indore"</span>
+           Msgbox <span style='color:#2A00FF'>"Non Capital"</span>
+
+     Case Else
+            Msgbox <span style='color:#2A00FF'>"Invalid Input"</span>
+
+End Select</pre>
+
+<br><h4>Do While Loop</h4>
+
+<pre class="codeblock">Dim a
+a=0
+	<span style='font-weight:bold;color:#7B0052;'>do</span>
+           msgbox <span style='color:#2A00FF'>"a="</span> & a
+           a=a+1
+        loop until a&gt;5</pre>
+
+<br><h4>While Loop</h4>
+
+<pre class="codeblock">Dim x
+x = 1   
+	While x &lt; 5   
+	  Msgbox x
+	  x=x+1
+	Wend</pre>
+
+<br><h4>For Next Loop</h4>
+
+<pre class="codeblock">For i = 0 To 5
+  
+    Msgbox <span style='color:#2A00FF'>"i="</span> & i
+
+Next</pre>
+
+<br><h4>For Each Loop</h4>
+
+<pre class="codeblock">Dim webseries(2)
+
+webseries(0)=<span style='color:#2A00FF'>"Game Of Thrones"</span>
+
+webseries(1)=<span style='color:#2A00FF'>"Sacred Games"</span>
+
+webseries(2)=<span style='color:#2A00FF'>"Little Things"</span>
+
+For Each x In webseries
+
+  Msgbox x
+
+Next</pre>
+
+<br><h4>Exit For Loop</h4>
+
+<pre class="codeblock">For i = 0 To 5
+  
+    If i=3 Then
+     Exit For
+    End <span style='font-weight:bold;color:#7B0052;'>if</span>
+
+Next
+
+Msgbox <span style='color:#2A00FF'>"i="</span> & i</pre>
+
+<br><h4>Exit Do Loop</h4>
+<pre class="codeblock">Do <span style='font-weight:bold;color:#7B0052;'>while</span> (x &lt; 5)
+
+  If (x = 3) then 
+  exit <span style='font-weight:bold;color:#7B0052;'>do</span>
+  End <span style='font-weight:bold;color:#7B0052;'>if</span>
+  x=x+1
+
+loop
+
+Msgbox <span style='color:#2A00FF'>"x="</span> &x</pre>
+
+<br><h4>Exit Sub</h4>
+<pre class="codeblock">Sub exitSubDemo
+
+   Msgbox <span style='color:#2A00FF'>"Message1"</span>
+
+   Exit Sub
+
+   Msgbox <span style='color:#2A00FF'>"Message2"</span>
+
+End Sub</pre>
+
+<br><h4>Exit Function</h4>
+
+<pre class="codeblock">Function exitFunctionDemo()
+
+   Msgbox <span style='color:#2A00FF'>"Message1"</span>
+
+   Exit Function
+
+   Msgbox <span style='color:#2A00FF'>"Message2"</span>
+
+End Function</pre>
+
+
+<br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'dataTypes')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'operators')">Next -></button>  
+
+<br><br> 
+
+
+  </div>
+
+
+
+<div id="operators" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Operators</h2>
+    <p>Operator means which operates on variables/constants and performs some action. E.g '+' is an operator that performs addition. Similarly every operator has some responsibility.Basically operators are categorized as : <font color="blue">Arithmetic, Comparison, Logical </font></p>
+    <h4>Arithmetic Operators</h4>
+    <p>We all know what are the arithmetic operators: Addition ( + ), Subtraction ( - ), Multiplication ( * ) , Division ( / ), Modulos ( Mod ), Exponent ( ^ ). So lets get into the code directly </p>
+    <pre class="codeblock">a=6
+b=3
+
+c=a+b
+Msgbox <span style='color:#2A00FF'>"Addition="</span> &c
+
+c=a-b
+Msgbox <span style='color:#2A00FF'>"Subtraction="</span> &c
+
+
+c=a*b
+Msgbox <span style='color:#2A00FF'>"Multiplication="</span> &c
+
+
+c=a/b
+Msgbox <span style='color:#2A00FF'>"Division="</span> &c
+
+a=5
+c=a mod b
+Msgbox <span style='color:#2A00FF'>"Mod="</span> &c
+
+c=a^b
+Msgbox <span style='color:#2A00FF'>"Exponent="</span> &c</pre>
+
+<h4>Comparison Operators</h4>
+Any operator that comapres two values are considered as comparison operators. <br>Example: Equals ( = ), Greater than ( > ), Less than ( < ), Not equals ( <> ), Greather than equals ( >= ), Less than equals ( <= ) 
+
+<pre class="codeblock">a=3
+b=2
+
+If a=b Then
+
+Msgbox <span style='color:#2A00FF'>"a matches with b"</span>
+
+End If
+
+If a&gt;b Then
+
+Msgbox <span style='color:#2A00FF'>"a is greater than b"</span>
+
+End <span style='font-weight:bold;color:#7B0052;'>if</span>
+
+If a&lt;b Then
+
+Msgbox <span style='color:#2A00FF'>"a is lesser than b"</span>
+
+End If
+
+If a&gt;=b Then
+
+Msgbox <span style='color:#2A00FF'>"a is greater than equals b"</span>
+
+End If
+
+If a&lt;=b Then
+
+Msgbox <span style='color:#2A00FF'>"a is lesser than equals b"</span>
+
+End If
+
+If a&lt;&gt;b Then
+
+Msgbox <span style='color:#2A00FF'>"a is not equals to b"</span>
+
+End If</pre>
+
+
+<br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'controlFlow')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'arrays')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+<div id="arrays" class="topics">
+    <h1 class="mt-4">Arrays</h2>
+    <p>to be updated..</p>
+  </div>
+
+
+<div id="strings" class="topics">
+    <h1 class="mt-4">Strings And Numbers</h2>
+      <p>to be updated..</p>
+  </div>
+
+
+<div id="messages" class="topics">
+    <h1 class="mt-4">Messages And Alerts</h2>
+      <p>to be updated..</p>
+  </div>
+
+
+<div id="dateTime" class="topics">
+    <h1 class="mt-4">Date And Time</h2>
+     <p>to be updated..</p>
+  </div>
+
+<div id="functions" class="topics">
+    <h1 class="mt-4">Functions</h2>
+    <p>to be updated..</p>
+  </div>
+
+<div id="fileHandling" class="topics">
+    <h1 class="mt-4">File Handling</h2>
+    <p>to be updated..</p>
+  </div>
+
+
+<div id="clsObj" class="topics">
+    <h1 class="mt-4">Class & Objects</h2>
+    <p>to be updated..</p>
+  </div>
+
+<div id="loginWeb" class="topics">
+    <h1 class="mt-4">Example 1: Login to Web</h2>
+     <p>to be updated..</p>
+  </div>
+
+
+<div id="stdMark" class="topics">
+    <h1 class="mt-4">Example 2: Student Marksheet</h2>
+     <p>to be updated..</p>
+  </div>
+
+</div>
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+
+  window.scrollTo(0, 0);
+  
+}
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('home').style.display = "block";
+}
+</script>
+
+  
+</body>
+
+</html>
