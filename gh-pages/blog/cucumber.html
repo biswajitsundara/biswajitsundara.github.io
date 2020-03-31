@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Biswajit Sundara Blog | Cucumber</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+  <link href="css/comment.css" rel="stylesheet">
+
+   <link href="css/blogpage.css" rel="stylesheet">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158659468-1');
+</script>
+
+
+</head>
+
+
+<body onload="LoadFunc()">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><br></div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'home')">Home</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'bdd')">BDD Basics</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukebasics')">Cucumber Basics</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukeComp')">Cucumber Components</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'keywords')">Gherkin Keywords</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'background')">Background</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukeOptions')">Cucumber Options</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukeTags')">Cucumber Tags</a>
+         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukeHooks')">Cucumber Hooks</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'dataDriven')">Data Driven Testing</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'dataTable')">Data Table</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukeTestNG')">Cucumber & TestNG</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukeReport')">Cucumber & Reporting</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Dependency Injection</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Parallel Run</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Cucumber Best Practices</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Sample Feature Files</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Frequently Asked Questions</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Closing Thoughts</a>
+<br><br>      
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+       
+         <a href="bloghome.html"> Biswajit Sundara Blog</a>
+
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+              <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;</a>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        
+
+      <div id="home" class="topics">
+
+<br><br>
+        
+ <div class= row>
+
+<div style="max-width: 540px; text-align: center;">
+<br>
+<img src="img\cucumber\logo.png" style="width:90%;">  
+<a href="https://cucumber.io/" target="_blank">cucumber.io</a>
+</div>
+
+ <div class="card mb-6" style="max-width: 540px;">  
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <img src="img\brand\profile.png" class="card-img" alt="...">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">Author Bio</h5>
+        <p class="card-text">This book is written by Biswajit Sundara.
+	Biswajit is a software professional with 10+ years of experience. He has worked on various technologies and also an avid blogger on technology.</p>
+        <p class="card-text"><small class="text-muted">Jan 2nd, 2020</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+<br><br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">GitHub Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'architecture')">Architecture</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicoperation')">Basic Operations</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicCommands')">Basic Commands</a></li>
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'branching')">Branching</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'conflictres')">Resolving Conflicts</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'ssh')">SSH Key Generation</a></li>
+    <li class="list-group-item"><a href="Blog_home.html">Blog Home</a></li>
+    <li class="list-group-item"><a href="#">Author Profile</a></li>
+  </ul>
+</div>
+
+</div>
+
+<br><br>
+<div class="container">
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+    <div class="row">
+      <div class="col-25">
+        <label for="uname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="uname" name="entry.689225320" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="emailAddress" placeholder="Your email address..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="comment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comment" name="entry.1648468188" placeholder="Write your precious comment here.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="hidden" name="entry.2069828936" value="GitHub">
+    </div>
+    <div class="row">
+      <input type="submit" value="Post Comment">
+    </div>
+  </form>
+</div>
+
+
+
+      </div> 
+        
+      <div id="bdd" class="topics" style="line-height: 200%;">
+      <h1 class="mt-4">Behaviour Driven Development Basics</h1>
+      Behaviour Driven Development is a software development approach where focus is on behaviour instead of the functionality.
+	</li><li>For example: Customer wants to have login functionality on the application but the client doesn't know programming langauage so tells us the behaviour, how it should work.
+        </li><li>So client says
+		<pre>
+			I am on the login page
+			I enter user id and password and click on login button
+			Then it should take me to home page</pre>
+      </li><li>Taking this as requirement, developer writes code for each behaviour and tester writes functional code for each behaviour to test the same.
+      </li><li>The above example consists of 3 must have steps <font color="blue">Pre condition </font>(at login page) , <font color="blue">Action </font>(give credentials and click), <font color="blue">Result </font>(Route to home page)
+      </li><li>BDD uses the language <font color="blue">Gherkin</font> to define the behaviours. It's a plain text English language.
+      </li><li>Discipline is very much required when opting for BDD approach. Collaboration is the core philosophy of this approach. 
+      </li><li>Earlier there were no common medium between DEV, QA, Stake holders but in BDD the developers use the same requirement written in Gherkin, QA refers the same to develop automation tests. Stake holders understand it too.
+      </li></ul>
+
+
+<br><h4><font color="#4682B4">TDD Vs BDD</font></h4>
+Test Driven Development (TDD) is focused on test cases. 
+<ul><li>So when the requirement comes, the tests are designed first without knowing whether it will work or not.
+</li><li>Then the tests are run. 
+</li><li>If it fails then developer writes the code.
+</li><li>Again the test runs. If it passes then its done if it fails then goes back to the developer again. 
+</li><li>The process continues until the test case passes.
+</li></ul>
+This is often misunderstood with unit testing however that's different. Unit testing is what developer tests a single component where as TDD refers to execution of an actual test flow.
+This is also used by Agile teams. Some of the popular TDD tools are Junit, TestNG.
+<br><br><font color="blue">Example:</font> Promo code is made mandatory in the payment section. So first test if you keep it blank and try to make payment. If the flow works then the test fails. Developer will make the change until you are forced to add promo code before checking out.
+
+<br><br>BDD is considered as an extension of TDD. 
+<ul><li>The requirement is the behaviour of the functionality written in plain english language. 
+</li><li>Then corresponding to the behaviours functional code is written and tested. 
+</li><li>If the test passes then its done else it goes back to the developer who makes the code change and it's tested again. 
+</li><li>The process continues until the test passes. 
+</li></ul>
+<font color="blue">Example:</font> Same example, the behaviour of the functionality will be. I am at the payments page, I keep promo code field as blank and try to make payment. Then it shouldn't check me out. Then functional code is developed and if the last behaviour fails, then developer will be asked to make code changes and then it will be tested again until all the behaviours are validated.
+
+   
+
+<br><br><h4><font color="#4682B4">Gherkin Language</font></h4>
+Gherkin (pronounced as Jerkin) is the BDD language. 
+<ul><li>BDD uses this plain text English language which can be understood by all. 
+</li><li>We can also say Gherkin is a Business readable, domain specific language that is created to describe behaviors. 
+</li><li>Using Gherkin we write behavior tests first and then implement functional codes later.
+</li><li>Gherkin has its syntax to standardize how it should be written
+</li><li>The Gherkin documents are stored as text files with .feature extension.
+</li></ul>
+<pre>
+Feature: ATM Cash Withdraw
+As an existing customer, I want to withdraw cash from ATM
+    Scenario: Withdraw cash less than account balance
+    Given I am at the ATM transaction screen
+    When I entered the pin and the amount to withdraw
+    Then the same amount cash is dispensed
+</pre>
+
+<br><h4><font color="#4682B4">BDD in Agile</font></h4>
+The Agile & BDD complement each other beautifully as the core philosophy is collaboration for both.
+In agile the requirement is in the form of user story and in BDD the feature files
+are used. There are so many similarities so BDD fits perfectly in Agile model.
+<ul><li>User story is nothing but a scenario in BDD feature file.
+</li><li>Since Agile tracks the progress as per the user story, it becomes easy to track the testing based on feature file scenarios.
+</li><li>Some teams write Agile user stories in Gherkin language so it becomes easy to use the same in BDD (cucumber automation)
+</li><li>Usually Product Owner (Business Analysts) write the user stories/gherkin feature files and the scrum team contributes to refine.
+</li></ul>
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'architecture')">Next -></button>  
+
+<br><br> 
+</div>
+
+    
+ <div id="cukebasics" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Cucumber Basics</h2>
+   <p>Cucumber is a Behaviour Driven Development Framework. As the name indicates, this framework focuses on the behaviour of the feature and based on that everything else is driven.</p>
+
+      <ul><li>Cucumber is currently owned by <font color="blue">Smart Bear</font> company</li>
+      </li><li>It is an open source tool however <font color="blue">Cucumber Studio </font>offered by Smart Bear is a licensed tool
+      </li><li>Similar to cucumber there are different BDD tools available in market like <font color="blue">JBehave, J Dave, FitNese </font>etc
+      </li><li>Cucumber is meant for automated <font color="blue">user acceptance testing (UAT) </font>as the business users can understand what is covered in testing.
+      </li><li>Though its debatable where it should be used. This can be used anywhere it fits in. Most of the teams use it for <font color="blue">Regression testing</font> also. 	
+      </li><li>Cucumber fits perfectly with <font color="blue">Agile model </font>as user stories can be converted into scenarios of feature files.
+      </li><li>Cucumber was originally written in <font color="blue">Ruby</font> language.
+      </li><li>Now cucumber supports many different languages like java, ruby, scala, java script, groovy etc. 	
+     </ul>
+
+   <h4><font color="#4682B4">How to install Cucumber</font></h4>
+       <ul><li>Open eclipse. Go to Help -> Install New Software
+	</li><li>Click on the 'Add' button
+	</li><li>The Add repository dialog box should open
+	</li><li>Enter the name as <b>Cucumber</b>
+	</li><li>Enter the location as <font color="blue">http://cucumber.github.com/cucumber-eclipse/update-site</font>
+	</li><li>Click 'OK'
+	</li><li>Then Go Next -> Accept licence agreement
+	</li><li>If you get security pop up, click on 'install any way' 
+	</li><li>Restart the Eclipse
+      </li></ul>
+
+ <h4><font color="#4682B4">Cucumber Plugins</font></h4>
+ Use the below plugins in maven pom.xml file.
+ <ul><li>cucumber-java
+ </li><li>cucumber-jvm
+ </li><li>cucumber-junit
+ </li><li>junit
+ </li></ul>
+ <p>Note: If you are using lambda expressions then use <font color="blue">cucumber-java8</font> instead of cucumber-java. Download the dependencies/jar files from io.cucumber.</p>
+  
+	
+ <h4><font color="#4682B4">Common Installation Challenges</font></h4>
+ 1. If <font color="blue">cucumber.class </font>shows as not resolved to a type in the runner file. 
+ <ul><li>Make sure cucumber-junit is installed. 
+ </li><li>Check the JRE System library is 1.8 or above
+ </li></ul>    
+ 2. If you notice the <font color="blue">feature files show warning </font>always that glue code is missing for the steps even though its present.
+  <ul><li>Go to Eclipse -> Help -> Install New Softwares -> add this <font color="blue">https://cucumber.github.io/cucumber-eclipse-update-site-snapshot/</font>
+  </li><li>Convert the maven project. Right click on the project -> Configure -> Convert to cucumber project
+  </li></ul> 
+  
+
+
+<br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicoperation')">Next -></button>  
+
+<br><br> 
+
+</div>
+   
+
+<div id="cukeComp" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Cucumber Components</h2>
+
+There are basically 3 components in cucumber
+<ol><li>Feature File
+</li><li>Step Definition
+</li><li>Runner File  
+</ol>
+<pre style="line-height: 150%;">
+<code>
+
+		                       +--------------+                 
+		                       |     Runner   |                 
+     	        +----------------------|     File     |----------------------+
+        	|                      |              |                      |
+		|	               +--------------+                      |
+        	|                              |                             |
+        	|                              |                             | 
+		|			       | 			     v	
+	+------------+                 +--------------+                 +-----------+
+	|   Feature  |                 |     Step     |                 |           |
+	|   File     +--matched with-->| Definitions  +                 |  System   |
+	|            |                 |              |                 |           |
+	+------------+                 +--------------+                 +-----------+
+
+
+
+</code></pre>
+
+
+   
+
+<h4><font color="#4682B4">Feature File</font></h4>
+
+<ul><li>A Feature File is an entry point to the Cucumber tests.
+</li><li>The file is saved with .feature extension. 
+</li><li>This is the file where we write Gherkin steps (plain english)
+</li><li>This is an essential part of cucumber framework. This is a live documentation as well as executable requirement.
+</li><li>A Single feature file may contain one or many scenarios. Usually it contains a list of scenarios. 
+</li><li>The keywords in feature file - Feature, Given , When , Then , As, But, * , Scenario, Scenario Outline
+</li><li>Feature file is written by Business Analysts (Product Owners in Agile teams)
+</li><li>Some people call it feature steps or gherkin steps.
+</ul>	
+
+
+<br><h4><font color="#4682B4">Step Definition File</font></h4>
+</ul><li>Step Definition is where the automation code is written. 
+</li><li>The steps in the gherkin file directly map to the step definitions. 
+</li><li>Each step in the gherkin maps to a single step definition that in turn contains a block of code that gets executed when the scenario is ran.
+</li><li>Step definition file contains these three things : Selenium code + Java code + Cucumber annotations like Given, Then, When etc.
+</li><li>Please note sequence of execution depends on the sequence of steps in feature file but not the sequence in step definition file.
+</li><li>Step definition file is developped by the automation testers in a project
+</li><li>Some people call it step definitions or some call it as glue code.
+</li></ul>
+
+
+<br><h4><font color="#4682B4">Test Runner</font></h4>
+</ul><li>The runner file interacts with the feature file & the step definition file and executes the code.
+</li><li>By default Cucumber uses Junit framework to run. We can use TestNG also.
+</li><li>This class will use the Junit annotation @RunWith(), which tells JUnit what is the test runner class
+</li></ul>
+
+
+<br><h4><font color="#4682B4">Example</font></h4>
+</ul><li>Create a maven project
+</li><li>Under src\test\java -> Create a new package features -> create a file Login.feature 
+</li><li>Under src\test\java -> Create a new package steps -> create a file LoginSteps
+</li><li>Under src\test\java -> create a new package runner -> create a file LogInRunner
+</li></ul>
+<br>
+<b>Login.feature</b>
+<pre class="codeblock">
+<font color="#f1ac58"><b>Feature:</b></font>Login to application
+<font color="#f1ac58"><b>Scenario:</b></font> Valid login to application
+<font color="#51aeb0"><b>Given</b></font> I am at the login page
+<font color="#51aeb0"><b>And</b></font> Enter the user name as Biswajit
+<font color="#51aeb0"><b>And</b></font> Enter the password as Sundara
+<font color="#51aeb0"><b>When</b></font> click on login button
+<font color="#51aeb0"><b>Then</b></font> Verify the login is success
+</pre>
+
+
+<br><b>LoginSteps.java</b>
+
+<pre class="codeblock">
+<span style='font-weight:bold;color:#7B0052;'>package</span> steps;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.java.en.Given;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.java.en.Then;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.java.en.When;
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginSteps <span style='font-weight:bold;color:#D3171B'>{</span>
+		
+	@Given(<span style='color:#2A00FF'>"I am at the login page"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> i_am_at_the_login_page() <span style='font-weight:bold;color:#D3171B'>{</span>
+	   System.out.println(<span style='color:#2A00FF'>"I am at the home page"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Given(<span style='color:#2A00FF'>"Enter the user name as Biswajit"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enter_the_user_name_as_Biswajit() <span style='font-weight:bold;color:#D3171B'>{</span>
+	   
+		System.out.println(<span style='color:#2A00FF'>"The user name is Biswajit"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Given(<span style='color:#2A00FF'>"Enter the password as Sundara"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enter_the_password_as_Sundara() <span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"The Password is Sundara"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@When(<span style='color:#2A00FF'>"click on login button"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> click_on_login_button() <span style='font-weight:bold;color:#D3171B'>{</span>
+	    
+		System.out.println(<span style='color:#2A00FF'>"Login button is clicked"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Then(<span style='color:#2A00FF'>"Verify the login is success"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> verify_the_login_is_success() <span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Log in success"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><b>LoginRunner.java</b>
+
+<pre class="codeblock">
+<span style='font-weight:bold;color:#7B0052;'>package</span> runner;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.junit.runner.RunWith;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.junit.Cucumber;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.junit.CucumberOptions;
+
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features=<span style='color:#2A00FF'>"src/test/java/features/Login.feature"</span>
+				, glue=<span style='color:#2A00FF'>"steps"</span> , dryRun= <span style='font-weight:bold;color:#7B0052;'>false</span>)
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginRunner <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><h4><font color="#4682B4">Run & Observe</font></h4>
+<ul><li>Run the LoginRunner.java file. Right click -> Run as Junit Test
+</li><li>You will see while running its mapping the feature file steps with the corresponding step definitions.
+</li><li>If there's any step that's available in feature file but not in step definition file, then it will fail
+</li><li>We can also run the feature file, right click on Login.feature file -> Run as "Cucumber Feature" That's why it's called executable requirement.
+</li><li>The starting point is the feature file, so it's the most important file.
+</li><li>Using the runner file we can run any number of feature files.
+<pre>@CucumberOptions(features=="src/test/java/features/<strike>login.feature</strike>")</pre>
+</li><li>If we remove the file name and point to the features package, it will run all the features file under it.   
+</li><li>The features file and steps file have one to one mapping. It is case sensitive, all the steps in the feature file should be mapped to methods in the steps file.
+</li></ul>
+
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+<div id="keywords" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Gherkin Keywords</h2>
+We know now that feature file should be written in Gherkin language and BDD/Agile operates on the philosohy of collaboration.
+So there should be a specific format or structure else everyone will have their own way of writing and which will lead to a messy document.
+That's where the keywords come in. The keywords are used to give structure and meaning to the specifications.
+    
+  
+<br><br><h4><font color="#4682B4">1. Feature</font></h4>
+<ul><li>Every Gherkin file starts with the keyword 'Feature'
+</li><li>Feature defines the functionality that we are going to test
+</li><li>E.g if we test payment gateway then Feature: Payment Gate Way
+</li><li>E.g if we test login functionality then Feature: Login 
+</li><li>The idea of having a feature file is to put down a summary of what we will be testing.
+</li><li>Whatever comes after the Feature: keyword, till the next Keyword is encountered is considered as feature description. It can be a single line or multiple lines.
+  
+<pre>
+	Feature: LogIn Action Test
+	OR
+	Feature: LogIn Action Test
+	Description: This feature will test a LogIn and LogOut functionality
+	OR
+	Feature: LogIn Action Test
+	This feature will test a LogIn and LogOut functionality
+	Please make sure to test everything.
+</pre>
+
+</li></ul>    
+
+<h4><font color="#4682B4">2. Scenario</font></h4>
+<ul><li>Each test is called a scenario. It starts with the keyword 'Scenario'
+</li><li>In Agile terms we can say each user story is one Scenario.
+</li><li>A feature file can contain one or more scenarios.
+</li><li>Each scenario is broken into three logical parts - Pre condition (Given), Test (When), Verification (Then) 
+<pre>
+	Scenario: Search a product and add the first result/product to the User basket
+	Or
+	Scenario: Successful LogIn with Valid Credentials
+</pre>
+</li></ul>
+  
+
+<h4><font color="#4682B4">3. Given</font></h4>
+<ul><li>Given defines a precondition to the test.
+</li><li>For Example: In shopping website, assume that the LogIn page link is only present on the Home Page. Then the precondition for clicking the LogIn link is that the user is at the Home Page.
+<pre>
+     Scenario: Successful LogIn with Valid Credentials
+     Given User is on Home Page
+</pre>
+</li></ul>
+  
+<h4><font color="#4682B4">4. When</font></h4>
+<ul><li>When keyword defines the user action.
+</li><li>In the below example the user 'clicks on the link' and that's an action.
+<pre>
+     Scenario: Successful LogIn with Valid Credentials
+     Given User is on Home Page
+     When User clicks on the log in link
+</pre>
+</li></ul> 
+
+
+<h4><font color="#4682B4">5. Then</font></h4>
+<ul><li>Then keyword defines the Outcome of previous steps. 
+</li><li>We can understand it better by looking at the test below and adding a Then step there.
+<pre>
+     Scenario: Successful Login with Valid Credentials
+     Given User is on Home Page
+     When User Clicks on the log in link
+     And User enters UserName and Password
+     Then Message displayed LogIn Successfully
+</pre>
+</li></ul> 
+
+
+<h4><font color="#4682B4">6. And</font></h4>
+And keyword is used to add conditions to your steps. Let's look at it by modifying our example a little
+<pre>
+     Scenario: Successful Login with Valid Credentials
+     Given User is on Home Page
+     When User Navigate to LogIn Page
+     And User enters UserName and Password
+     Then Message displayed Login Successfully
+    
+     OR
+     
+     Scenario: Successful Login with Valid Credentials
+     Given User is on Home Page
+     And LogIn Link displayed
+     When User Navigate to LogIn Page
+     And User enters UserName and Password
+     Then Message displayed Login Successfully
+     And LogOut Link displayed
+</pre>
+</li></ul> 
+
+
+<h4><font color="#4682B4">7. But</font></h4>
+But keyword is used to add negative type comments. It is not a hard & fast rule to use 'but' only for negative conditions. 
+<br>However it makes sense to use 'But' when you will try to add a condition which is opposite to the premise your test is trying to set. 
+<pre>
+     Scenario: Unsuccessful Login with InValid Credentials
+     Given User is on Home Page
+     When User Navigate to LogIn Page
+     And User enters UserName and Password
+     But The user credentials are wrong
+     Then Message displayed Wrong UserName & Password
+</pre>
+</li></ul> 
+
+
+<h4><font color="#4682B4">7. * Keyword</font></h4>
+This keyword is very special. This keyword defies the whole purpose of having Given, When, Then and all the other keywords. Basically Cucumber doesn't care about what Keyword you use to define test steps, all it cares about what code it needs to execute for each step. 
+<pre>
+     Scenario: Successful Login with Valid Credentials
+     Given User is on Home Page
+     When User Navigate to LogIn Page
+     And User enters UserName and Password
+     Then Message displayed Login Successfully
+
+<font color="blue"><i>Can be written as</i></font>
+
+     Scenario: Successful Login with Valid Credentials
+     * User is on Home Page
+     * User Navigate to LogIn Page
+     * User enters UserName and Password
+     * Message displayed Login Successfully
+</pre>
+</li></ul> 
+
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basicoperation')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'branching')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+<div id="background" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Background</h2>
+Background in Cucumber is used to define a step or series of steps which are common to all the scenarios/tests in the feature file. 
+
+<ul><li>A Background is like a scenario containing one or multiple steps however it runs before each and every scenario in a feature file where it's defined.
+</li><li>Example: Let's say we are testing an e-commerce site for purchasing product or compare product price. Now for both of these scenarios we need to login to the application first:
+	<pre>
+        Navigate to Login Page
+	Enter UserName and Password
+	Land on home page</pre>
+After these steps only we will be able to add a product to your cart/compare price/ able to perform the payment.
+So we won't repeat these steps in each scenario instead we can move it under Background so it gets executed before each scenario.
+</li><li>Background runs before each scenario, but after any Before hooks
+</li><li>Some people ask me if we have before hooks then what is the need of Background. It's quite simple, Before hook is not visible to customers or business users however Background is visible to them.
+</li><li>Business users read the background first and then they read the scenario to understand the complete flow. 
+</li><li>In the feature file, Background should be positioned before the first Scenario.
+</li><li>The background is limited to one particular feature file. If we have multiple feature files then we will have to write background in all the feature files to make it work.
+</li><li>Background section should be short. Ideally not more than 4 lines as users need to remember this before reading the scenarios.
+</li><li>Don't write lengthy texts. It should be readable without scrolling right.
+</li></ul>
+<b>Sample Feature file</b>
+
+<pre style="line-height:150%">
+
+Feature: Online Shopping Feature
+Description: The purpose of this feature is to make sure user is able to shop online
+
+Background: User is Logged In
+	Given I navigate to the login page
+	When I enter username and password
+	Then I should be on home page
+
+Scenario: Search a product and add the first product to the user basket
+	Given User search for iPhone 11 
+	When Add the first iPhone that appears in the search result to the basket
+	Then User basket should display with added item
+
+Scenario: Search for products and compare the price
+	Given User search for iPhone products 
+	When compare all the product prices
+        And Add the product with lesser price to the basket  
+	Then User basket should display with lowest priced product
+
+</pre>
+
+In the above example, we have two different scenarios where user is adding a product from search and a lowest priced product. But the common step is to log In to website for both the scenarios. This is why we create another Scenario for Log In but named it as Background rather than a Scenario. So that it executes for both the Scenarios.
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basicCommands')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'conflictres')">Next -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="cukeOptions" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Cucumber Options</h2>
+The runner file has annotation <font color="blue">@CucumberOptions</font> We can say this is the settings or runtime configurations for our test. We can specify the feature file path, step definition path, reporting path etc here. We can control the test execution by different parameters from here. 
+This can be used only in the runner file. CucumberOptions is an interface under the cucumber.junit package.  
+    
+<br><br><h4><font color="#4682B4">Dry Run</font></h4>
+<ul><li>This option can either set as true or false (default value is false). 
+</li><li>If it is set as true, it means that Cucumber will only check that every Step mentioned in the Feature File have corresponding code written in Step Definition file or not. 
+</li><li>So in case any of the function is missed in the Step Definition for any Step in Feature File, it will give us the message. 
+</li><li>So If you writing scenarios first and then implementing step definitions then add dryRun = true.
+</li><li>boolean dryRun() default false; is the method signature.
+<pre>@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , dryRun= true)</pre>
+</li><li>Always use dryRun=true to generate the step definitions and later customize it.
+</li></ul>
+
+
+<h4><font color="#4682B4">Strict</font></h4>
+<ul><li>If strict option is set to false then at execution time if cucumber encounters any undefined/pending steps then cucumber does not fail the execution 
+</li><li>Undefined steps are skipped and BUILD is SUCCESSFUL.
+</li><li>boolean strict() default false; is the method signature.
+<pre>@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , strict= false)</pre>
+</li></ul>
+
+<h4><font color="#4682B4">Feature</font></h4>
+<ul><li>Features Options helps Cucumber to locate the Feature file in the project folder structure.
+</li><li>All we need to do is to specify the folder path and Cucumber will automatically find all the '.features' extension files in the folder.
+</li><li>It can be defined like:
+<pre>@CucumberOptions(features="features", glue="steps" , strict= false)</pre>
+Here 'features'  is the package name under which there are n number of feature files.
+</li><li>One very famous uestion is if I have 100 feature files, how can I run in cucumber?
+The answer is in the runner file, @CucumberOptions(features= specify the package name)
+</li><li>If we want to run only one feature file then we need to extend the path further so package name/file name
+features="src/test/java/features/login.feature"
+</li><li>String[] features() default {}; is the method signature
+</li></ul>
+
+
+<h4><font color="#4682B4">Glue</font></h4>
+<ul><li>This helps Cucumber to locate the Step Definition file. 
+</li><li>Whenever Cucumber encounters a Step, it looks for a Step Definition inside all the files present in the folder mentioned in Glue Option.
+</li><li>In the base coding this is the signature of this = String[] glue() 
+</li>Here 'steps' is the package under which we have the step definition files.<li>
+<pre>@CucumberOptions(features="src/test/java/features/login.feature",glue="steps" , strict= false)</pre>
+Here 'features'  is the package name under which there are n number of feature files.
+</li></ul>
+
+<h4><font color="#4682B4">Tags</font></h4>
+<ul><li>Cucumber provides a simple method to organize features and scenarios by user determined classifications using tags.
+</li><li>Tag starts with “@”. After “@” you can have any relevant text to define your tag
+</li><li>In the feature file, you need to define the tags e.g = @smoketest, @unittest etc.
+</li><li>And then in the runner file you can mention the tag names to run only corresponding features.
+<pre>@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , tags= {"@smoke"})</pre>
+</li><li>The base signature of the method = String[] tags()  
+</li></ul>
+
+
+<h4><font color="#4682B4">Plugin</font></h4>
+<ul><li>Plugin Option is used to specify different formatting options for the output reports. 
+</li><li>Various options that can be used as for-matters are:
+	<ul><li>A- Pretty: Prints the Gherkin source with additional colors and stack traces for errors.
+	</li><li>B- HTML: This will generate a HTML report at the location mentioned in the for-matter itself.</li></ul>
+<pre>@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , plugin = {"pretty", "html:target/cucumber"})</pre>
+</li><li>The base signature = String[] plugin() 
+</li><li>Format option is deprecated. Use Plugin in place of that.  
+</li></ul>
+
+
+<h4><font color="#4682B4">Monochrome</font></h4>
+<ul><li>This option can either set as true or false (default value is false). 
+</li><li>If it is set as true, it means that the console output for the Cucumber test is much more readable. 
+</li><li>And if it is set as false, then the console output is not as readable as it should be. 
+</li><li>For practice just add the code ‘monochrome = true‘ in TestRunner class.
+<pre>@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , monochrome=true)</pre>
+</li><li>The base signature = boolean monochrome()
+</li></ul>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'branching')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'ssh')">Next -></button>  
+
+<br><br> 
+
+
+</div>
+
+
+<div id="cukeTags" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Cucumber Tags</h2>
+    We always need to categorize test cases for better maintainability. In TestNG this is called groups and in cucumber the same is called "tags"
+   <ul><li>Let's say you have got many different feature files which cover all the different functionality of the application. Now there can be certain situation in the project where you like to execute just a SmokeTests or End2EndTests or may be RegressionTests. One approach is that you create separate feature file which would make the project filthy. 
+    </li><li>Working with GitHub repo, we often need to enter the user name & password. If we use the SSH approach then we don't have to give username/password everytime.
+    </li><li>For this, Cucumber has already provided a way to organize your scenario execution by using tags in feature file. We can define each scenario with a useful tag. Later, in the runner file, we can decide which specific tag (and so as the scenario(s)) we want Cucumber to execute. Tag starts with "@". After "@" you can have any relevant text to define your tag like @SmokeTests just above the scenarios you like to mark. Then to target these tagged scenarios just specify the tags names in the CucumberOptions as tags = {"@SmokeTests"}.
+    </li><li>Tagging not just specifically works with Scenarios, it also works with Features. Means you can also tag your features files. Any tag that exists on a Feature will be inherited by Scenario, Scenario Outline or Examples.
+    </li></ul>
+
+<h4><font color="#4682B4">Different ways to use Tags</font></h4>
+<ul><li>Cucumber can exclude scenarios with a particular tag by inserting the tilde character before the tag.
+<pre><font color="blue">@CucumberOptions(features="src/test/java/features/login.feature",glue="steps" , tags= {"~@smoke"})</font></pre>
+</li><li>Tags can be separated by comma or logical OR
+<pre><font color="blue">@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , tags= {"@smoke, @sanity"})
+@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , tags= {"@smoke OR @sanity"})</font></pre>
+
+</li><li>Multiple tag arguments can be created with AND
+<pre><font color="blue">@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , tags= {"@smoke AND @sanity"})</font></pre>
+
+</li><li>AND or NOT
+<pre><font color="blue">@CucumberOptions(features="src/test/java/features/login.feature", glue="steps" , tags= {"@smoke,@sanity", "~@regression"})</font></pre>
+</li></ul>
+
+
+<h4><font color="#4682B4">Example</font></h4>
+<br><b>Multiplelogin.feature</b>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Multiple Login</span>
+<span style="color: #008800; font-weight: bold">Background:</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">Invoke Leaftap application</span>
+
+<span style="color: #007700">@smoke</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Login into Leaftaps(Positive)</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter the user name as DemoSalesManager</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter the password crmsfa</span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on login button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the login is success</span>
+
+<span style="color: #007700">@sanity</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Login into Leaftaps(Negative)</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter the user name as DemoSalesManager</span><span style="background-color: #fff0f0">1</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter the password crmsfa</span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on login button</span>
+<span style="color: #008800; font-weight: bold">But </span><span style="color: #0066BB; font-weight: bold">Verify the login is fail</span>
+</pre></div>
+
+
+
+<br><b>MultipleLoginRunner.java</b>
+<pre class="codeblock">
+<span style='font-weight:bold;color:#7B0052;'>package</span> runner;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.junit.runner.RunWith;
+<span style='font-weight:bold;color:#7B0052;'>import</span> cucumber.api.CucumberOptions;
+<span style='font-weight:bold;color:#7B0052;'>import</span> cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features=<span style='color:#2A00FF'>"src/test/java/features/multiplelogin.feature"</span>, glue=<span style='color:#2A00FF'>"steps"</span> 
+                 , monochrome=true, tags=<span style='color:#2A00FF'>"@smoke"</span>)
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> MultipleLoginRunner
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span>
+</pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="cukeHooks" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Cucumber Hooks</h2>
+    Hooks are blocks of code that can run before or after every scenario. This is typically used for setup and teardown of the environment before and after each scenario.
+   <ul><li>We can declare hooks in any class in any package. 
+    </li><li>Cucumber hooks help us to better manage the test execution and also to avoid code duplication.
+    </li><li>Often people get confused between Cucumber hooks & Background. So Hooks are unseen steps primarily focused on managing the resources however background is meant for taking us to a particular state from where a scenario can execute.
+    </li><li>For example, logging into the application or logging out from the application should never be kept in hooks as these are steps business users to see. This should be kept under background.
+    </li><li>However starting the web browser, initiating report logging or closing the DB connection should be under hooks as these should be kept under the covers and business users need not to see it.
+    </li><li>Cucumber hooks supports only two annotation @Before, @After (don't get confused with TestNG which supports a whole bunch of annotations) 
+    </li><li>Hooks affect every scenario. it's good practice to keep hooks in a separate class.
+    </li><li>Even though we can have Hooks in the glue code, it's not the best practice. 
+    </li><li>After hook executes always even in case the test fails. That's the reason why it's used in resource cleanup. Let's say we have opened the DB connection and started testing but the test failed. We will have memory leak and performance issue. Using the After hook, it ensures irrespective of the test pass/fail it will cleanup the resource by closing the DB connection in this example. 
+    </li><li>We can run the @before, @after methods in sequence in hooks file using order. @before(order=0), @before(order=1)   
+</li></ul>
+
+<h4><font color="#4682B4">Why do we need Cucumber Hooks</font></h4>
+
+Hooks can be used to perform background tasks that are not part of business functionality. 
+
+<br>Such prerequisite tasks could be
+<ul><li>Starting up a browser
+</li><li>Setting or clearing cookies
+</li><li>Connecting to a database
+</li><li>Starting reports
+</li><li>Starting the error logger
+</ul>
+
+Same way some after test tasks could be
+
+<ul><li>Closing browser
+</li><li>Closing the DB connection
+</li><li>Closing reports
+</li><li>Stopping the error logger
+</ul>
+
+<h4><font color="#4682B4">Scenario Hooks</font></h4>
+Scenario hooks run for every scenario.
+<br><b>@Before</b>
+<br>Methods annotated with @Before will execute before every scenario or we can say Before hooks run before the first step of each scenario.
+The below example starts browser before every scenario. 
+
+<pre class="codeblock">@Before
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testInitialization() <span style='font-weight:bold;color:#D3171B'>{</span>
+    startBrowser();
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+If we have multiple @Before annoted methods then we can specify the sequence how it should run.
+
+@Before(order=2)
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> beforeScenario() <span style='font-weight:bold;color:#D3171B'>{</span>
+    takeScreenshot();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre></pre>
+
+<b>@After</b>
+<br>Methods annotated with @Before will execute before every scenario or we can say After hooks run after the last step of each scenario, even when the step result is failed, undefined, pending, or skipped.
+
+<pre class="codeblock">@After
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> afterScenario() <span style='font-weight:bold;color:#D3171B'>{</span>
+    closeBrowser();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+
+<br><h4><font color="#4682B4">Step Hooks</font></h4>
+Step hooks are invoked before and after a step. If a BeforeStep hook is executed the AfterStep hooks will also be executed regardless of the result of the step. If a step did not pass, the following step and its hooks will be skipped.
+
+<br><br><b>@BeforeStep</b>
+<br>Methods annotated with @BeforeStep execute before every step. Let's make an entry to the log file before each step.
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> beforeStep() <span style='font-weight:bold;color:#D3171B'>{</span>
+    logStep();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<b>@AfterStep</b>
+<br>Methods annotated with @AfterStep execute after every step.
+<pre class="codeblock">@AfterStep
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> afterStep() <span style='font-weight:bold;color:#D3171B'>{</span>
+    takeScreenshot();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+
+<h4><font color="#4682B4">Scenario parameter in Hooks</font></h4>
+The scenario parameter hold the information about the current scenario. 
+<ul><li>The getName method returns the scenario name.
+</li><li>The getId method returns the line number from the feature file when it is used in scenario. If we use the same in scenario outline, it will return the line number of the data.
+</li><li>The getStatus method returns the status of the scenario - PASSED/FAILED
+</li><li>If we invoke getStatus method in before method then it will return, status=UNDEFINED
+</li><li>If we invoke isfailed() in before method then it will return 'false'
+</li><li>Remember, the getStatus(), isfailed() are after method functions. 
+</li></ul>
+<pre class="codeblock">@After
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> afterScenario(Scenario scenario) <span style='font-weight:bold;color:#D3171B'>{</span> 
+    <span style='color:#3F7F5F'>// some code
+</span><span style='font-weight:bold;color:#D3171B'>}</span></pre> 
+
+
+
+
+<h4><font color="#4682B4">Example: Hooks.java</font></h4>
+I have placed the Hooks.java under the steps package. 
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>package</span> steps;
+<span style='font-weight:bold;color:#7B0052;'>import</span> cucumber.api.Scenario;
+<span style='font-weight:bold;color:#7B0052;'>import</span> cucumber.api.java.After;
+<span style='font-weight:bold;color:#7B0052;'>import</span> cucumber.api.java.Before;
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Hooks <span style='font-weight:bold;color:#D3171B'>{</span>
+	
+	@Before
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> beforeScenario(Scenario sc)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(sc.getName());
+		System.out.println(sc.getId());
+		System.out.println(<span style='color:#2A00FF'>"Before method is called in hooks"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@After
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> AfterScenario(Scenario sc)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(sc.getName());
+		System.out.println(sc.getId());
+		System.out.println(sc.getStatus());
+		System.out.println(sc.isFailed());		
+             System.out.println(<span style='color:#2A00FF'>"After method is called in hooks"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<h4><font color="#4682B4">Conditional hooks</font></h4>
+Hooks can be conditionally selected for execution based on the tags of the scenario. To run a particular hook only for certain scenarios, you can associate a Before or After hook with a tag expression.
+
+<pre class="codeblock">
+@After(<span style='color:#2A00FF'>"@sanity and not @regression"</span>)
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> doSomethingAfter(Scenario scenario)<span style='font-weight:bold;color:#D3171B'>{</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="dataDriven" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Data Driven Testing</h2>
+
+Cucumber allows us to pass test data from feature file to the step definitions. It offers good amount of options through which we can achieve data driven testing in cucumber.
+Data Driven Testing in cucumber can be categorized into three -
+
+<ul><li>Step Arguments
+</li><li>Data Tables
+</li><li>Scenario Outline (Example table)
+</li></ul> 
+
+<br><h4><font color="#4682B4">Step Arguments</font></h4>
+Step Arguments is the easiest way of passing parameters from the feature file to the step definition file. Here the data parameter is applicable to that particular step only.
+
+As we can see in the below example, the user name & password are passed from the feature file and received in the step definition file. We can also see the data parameter can be at the end of the sentence or in between.
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 175%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Login to application</span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Valid login to application</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the login page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">The user name as "</span><span style="background-color: #fff0f0">anmolratanxp@gmail.com</span><span style="color: #0066BB; font-weight: bold">" is entered</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter the password as "</span><span style="background-color: #fff0f0">automation</span><span style="color: #0066BB; font-weight: bold">"</span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on login button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify my account page opens</span>
+</pre></div>
+ 
+</td><td>
+
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<pre style="margin: 0; line-height: 136%"><span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"The user name as {string} is entered"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">enter_the_user_name_as</span><span style="color: #333333">(</span>String uname<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+      driver<span style="color: #333333">.</span><span style="color: #0000CC">findElement</span><span style="color: #333333">(</span>By<span style="color: #333333">.</span><span style="color: #0000CC">id</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"email"</span><span style="color: #333333">)).</span><span style="color: #0000CC">sendKeys</span><span style="color: #333333">(</span>uname<span style="color: #333333">);</span>
+<span style="color: #333333">}</span>
+
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Enter the password as {string}"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">enter_the_password_as</span><span style="color: #333333">(</span>String pswd<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+      driver<span style="color: #333333">.</span><span style="color: #0000CC">findElement</span><span style="color: #333333">(</span>By<span style="color: #333333">.</span><span style="color: #0000CC">id</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"passwd"</span><span style="color: #333333">)).</span><span style="color: #0000CC">sendKeys</span><span style="color: #333333">(</span>pswd<span style="color: #333333">);</span>
+<span style="color: #333333">}</span></pre></div>
+ 
+</td></tr></tbody></table>
+
+
+<br><h4><font color="#4682B4">Step Argument for different Types</font></h4>
+
+<br><h5><font color="grey">1) Integer Type</font></h5>
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 200%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Calculator Test</span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Addition Test</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">Calculator is opened</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">enter </span><span style="background-color: #fff0f0">2</span><span style="color: #0066BB; font-weight: bold"> plus </span><span style="background-color: #fff0f0">3</span><span style="color: #0066BB; font-weight: bold"> </span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on equals</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the result is </span><span style="background-color: #fff0f0">5</span><span style="color: #0066BB; font-weight: bold"></span>
+</pre></div>
+
+ 
+ 
+</td><td style="width:50%">
+
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"enter {int} plus {int}"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">enter_plus</span><span style="color: #333333">(</span>Integer int1<span style="color: #333333">,</span> Integer int2<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+	a<span style="color: #333333">=</span>int1<span style="color: #333333">;</span>
+	b<span style="color: #333333">=</span>int2<span style="color: #333333">;</span>
+	c<span style="color: #333333">=</span>a<span style="color: #333333">+</span>b<span style="color: #333333">;</span>
+<span style="color: #333333">}</span>
+<span style="color: #555555; font-weight: bold">@Then</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Verify the result is {int}"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">verify_the_result_is</span><span style="color: #333333">(</span>Integer int1<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"verified result is ="</span><span style="color: #333333">+</span>int1 <span style="color: #333333">+</span><span style="background-color: #fff0f0">" "</span> <span style="color: #333333">+</span>c<span style="color: #333333">);</span>
+<span style="color: #333333">}</span>
+</pre></div>
+
+</td></tr></tbody></table>
+ 
+<br><h5><font color="grey">2) Double Type</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 270%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Addition Test</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">Calculator is opened</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">enter values </span><span style="background-color: #fff0f0">2.3</span><span style="color: #0066BB; font-weight: bold"> plus </span><span style="background-color: #fff0f0">3.1</span><span style="color: #0066BB; font-weight: bold"> </span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on equals</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the result should be </span><span style="background-color: #fff0f0">5.0</span><span style="color: #0066BB; font-weight: bold"></span>
+</pre></div>
+
+</td><td style="width:50%">
+
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"enter values {double} plus {double}"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">enter_plus</span><span style="color: #333333">(</span>Double double1<span style="color: #333333">,</span> Double double2<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+        a1<span style="color: #333333">=</span>double1<span style="color: #333333">;</span>
+	b1<span style="color: #333333">=</span>double2<span style="color: #333333">;</span>
+	c1<span style="color: #333333">=</span>a1<span style="color: #333333">+</span>b1<span style="color: #333333">;</span>
+<span style="color: #333333">}</span>
+
+<span style="color: #555555; font-weight: bold">@Then</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Verify the result should be {double}"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">verify_the_result_is</span><span style="color: #333333">(</span>Double double1<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"verified result is ="</span><span style="color: #333333">+</span>double1 <span style="color: #333333">+</span><span style="background-color: #fff0f0">" "</span> <span style="color: #333333">+</span>c1<span style="color: #333333">);</span>
+<span style="color: #333333">}</span>
+</pre></div>
+
+</td></tr></tbody></table>
+
+
+<br><h5><font color="grey">3) No Data Type</font></h5>
+If we don't specify the strings within quotes. Cucumber assumes it is a plain text and will not tokenize it. In the below example the user name & password places are not parameterized.
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Login test</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">calculator login page is opened</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">enter username Biswajit and password Sundara</span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on login</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the calculator home page opens</span>
+</pre></div>
+
+ 
+
+</td><td style="width:50%">
+
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code...</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"enter username Biswajit and password Sundara"</span><span style="color: #333333">)</span>
+	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">enter_username_Biswajit_and_password_Sundara</span><span style="color: #333333">()</span> <span style="color: #333333">{</span>
+		<span style="color: #888888">//code..	    </span>
+	<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+ 
+
+</td></tr></tbody></table>
+
+<br><h5><font color="grey">4) Valid Values as Step Arguments</font></h5>
+We can have valid values mentioned in the step argument, so that it accepts any value that's within the choice list. Here in this example, the calculator can be scientific, basic, advanced. So in the feature file we can mention only any of these values
+else it will throw error. Because the step definition contains these valid values.
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Calculator Types</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">calculator login page is opened</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I select basic calaculator</span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on ok</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the calculator is opened</span>
+</pre></div>
+
+
+</td><td style="width:50%">
+
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"^I select (scientific|basic|advanced) calaculator$"</span><span style="color: #333333">)</span>
+	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">i_select_calaculator_type</span><span style="color: #333333">(</span>String type<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+		System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Calculator type="</span> <span style="color: #333333">+</span>type<span style="color: #333333">);</span>   
+	<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+
+ 
+</td></tr></tbody></table>
+
+
+<br><h5><font color="grey">5) Multiple Step Arguments</font></h5>
+We can have multiple data parameters in the same sentence and it can be of any data type other than string</b>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Login to application</span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Valid login to application</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the login page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter user name as "</span><span style="background-color: #fff0f0">abc@gmail.com</span><span style="color: #0066BB; font-weight: bold">" and password as </span><span style="background-color: #fff0f0">123</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on login button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify my account page opens</span>
+</pre></div>
+
+ 
+
+
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Enter user name as {string} and password as {int}"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">enter_user_name_pwd</span><span style="color: #333333">(</span>String username<span style="color: #333333">,</span> Integer pswd<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+    System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"UserName="</span> <span style="color: #333333">+</span>username<span style="color: #333333">);</span>
+    System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Password="</span> <span style="color: #333333">+</span>pswd<span style="color: #333333">);</span>
+<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+ 
+</td></tr></tbody></table>
+
+
+
+<br><h5><font color="grey">6) Wild Card Step Arguments</font></h5>
+We can use wild card at the place of the string so it can accept any string from the feature file.
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> login to app</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the login page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter the user name as "</span><span style="background-color: #fff0f0">abcd@gmail.com</span><span style="color: #0066BB; font-weight: bold">" </span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on login button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify my account page opens</span>
+</pre></div>
+ 
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"^Enter user name as \"(.*)\""</span><span style="color: #333333">)</span>
+	<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">enter_the_user_name_as</span><span style="color: #333333">(</span>String uname<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+		driver<span style="color: #333333">.</span><span style="color: #0000CC">findElement</span><span style="color: #333333">(</span>By<span style="color: #333333">.</span><span style="color: #0000CC">id</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"email"</span><span style="color: #333333">)).</span><span style="color: #0000CC">sendKeys</span><span style="color: #333333">(</span>uname<span style="color: #333333">);</span>
+	<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+
+</td></tr></tbody></table>
+
+<br><h5><font color="grey">7) Regular Expression in Step Arguments</font></h5>
+We can use regular expression in the step argument. It helps to ensure pass data in the required format from feature file to step definition.
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Login to application</span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Valid login to application</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the login page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter user name as "</span><span style="background-color: #fff0f0">abc@gmail.com</span><span style="color: #0066BB; font-weight: bold">" and password as </span><span style="background-color: #fff0f0">123</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on login button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify my account page opens</span>
+</pre></div>
+ 
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Enter user name as \"([^\"]*)\" and \"([^\"]*)\" as password"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">enter_user_name_password</span><span style="color: #333333">(</span>String username<span style="color: #333333">,</span> String pswd<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+            System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"UserName="</span> <span style="color: #333333">+</span>username<span style="color: #333333">);</span>
+	    System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Password="</span> <span style="color: #333333">+</span>pswd<span style="color: #333333">);</span>
+<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+
+</td></tr></tbody></table>
+
+
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="dataTable" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Data Table</h2>
+Using step arguments we can pass data from feature file to step definition however if we have a huge set of data to supply then it won't be effective. For example let's say to fill a form we need data for 20-30 fields. If we write 20-30 lines in feature file and corresponding step definition then it will increase the code redundancy & maintenance will be difficult too.
+Cucumber data table allows us to pass data in the tabular format from feature file to the step definition. This works nicely and most users prefers this approach.
+<ul><li>The data table is applied to one step only below which it is written.
+</li><li>The data table may or maynot contain the headers. Think like it's an html table only.
+</li><li>The table columns are separated by pipe symbol ( | )
+</li><li>The table may contain one or multiple rows/columns.
+</li><li>I don't think there's any maximum count of rows/columns that we can have in data table. However cucumber feature file should be mantained in a single page view.
+So scrolling much horizontally or vertically should be avoided. Instead long steps should be broken into multiple steps.
+</li><li>The data table can be one or multiple rows/columns. With or Without headers
+</li><li>The reason why we need headers in data table columns is it gives meaning to the column. Without headers we don't know which data the column holds.
+</li></ul>
+
+<br><h5><font color="#4682B4">1)Single Coulumn - Single Row Without Header</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Product Search</span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Search Mens Wear</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the search page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">search for mens wear item</span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">tshirt</span><span style="color: #008800; font-weight: bold">|</span><span style="background-color: #fff0f0"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on product image</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the product details page opens</span>
+</pre></div>
+ 
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%">
+//code..
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"search for mens wear item"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">search_for_mens_wear_item</span><span style="color: #333333">(</span>DataTable dataTable<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+      List<span style="color: #333333"><</span>String<span style="color: #333333">></span> item <span style="color: #333333">=</span> dataTable<span style="color: #333333">.</span><span style="color: #0000CC">asList</span><span style="color: #333333">(</span>String<span style="color: #333333">.</span><span style="color: #0000CC">class</span><span style="color: #333333">);</span>
+      System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Mens Searchable item="</span> <span style="color: #333333">+</span>item<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">));</span>
+<span style="color: #333333">}</span>
+//code..
+</pre></div>
+
+</td></tr></tbody></table>
+
+<h5><font color="#4682B4">2)Single Coulumn - Single Row With Header</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Search girls Wear</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the search page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">search for girls wear</span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Item</span><span style="color: #008800; font-weight: bold">    |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">anarkali</span><span style="color: #008800; font-weight: bold">|</span><span style="background-color: #fff0f0"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on product image</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the product details page opens</span>
+</pre></div>
+
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"search for girls wear"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">search_girls_wear</span><span style="color: #333333">(</span>DataTable dataTable<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+List<span style="color: #333333"><</span>String<span style="color: #333333">></span> item <span style="color: #333333">=</span> dataTable<span style="color: #333333">.</span><span style="color: #0000CC">asList</span><span style="color: #333333">(</span>String<span style="color: #333333">.</span><span style="color: #0000CC">class</span><span style="color: #333333">);</span>
+System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Girls Searchable item="</span> <span style="color: #333333">+</span>item<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">));</span>
+<span style="color: #888888">//We need to get the index from 1 as the 0th index holds the heading.</span>
+<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+ 
+</td></tr></tbody></table>
+
+
+
+<h5><font color="#4682B4">3)Two Coulumn - Single Row Without Header</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 150%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Search baby wear</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the search page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">search for baby wear</span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">seven</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">baby dress</span><span style="color: #008800; font-weight: bold"> |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on product image</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the product details page opens</span>
+</pre></div>
+
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"search for baby wear"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">search_for_baby_wear</span><span style="color: #333333">(</span>DataTable dataTable<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+	List<span style="color: #333333"><</span>List<span style="color: #333333"><</span>String<span style="color: #333333">>></span> item <span style="color: #333333">=</span> dataTable<span style="color: #333333">.</span><span style="color: #0000CC">cells</span><span style="color: #333333">();</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Baby age="</span><span style="color: #333333">+</span>	item<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Baby dress="</span><span style="color: #333333">+</span>item<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">));</span>
+<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+ 
+</td></tr></tbody></table>
+
+
+<h5><font color="#4682B4">4)Two Coulumn - Single Row With Header</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Search casual wear</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the search page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">search for casual wear</span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Summer</span><span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0">Winter</span><span style="color: #008800; font-weight: bold">     | </span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">loose wear</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">tight wear</span><span style="color: #008800; font-weight: bold"> |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on product image</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the product details page opens</span>
+</pre></div>
+
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"search for casual wear"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">search_for_casual_wear</span><span style="color: #333333">(</span>DataTable dataTable<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+	List<span style="color: #333333"><</span>List<span style="color: #333333"><</span>String<span style="color: #333333">>></span> item <span style="color: #333333">=</span> dataTable<span style="color: #333333">.</span><span style="color: #0000CC">cells</span><span style="color: #333333">();</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Summer wear="</span><span style="color: #333333">+</span>	item<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Winter wear="</span><span style="color: #333333">+</span>item<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">));</span>
+<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+ 
+</td></tr></tbody></table>
+
+
+<h5><font color="#4682B4">5)Multiple Column - Single Row Without Header</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 180%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Register new user</span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Register domestic user</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the registration page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">fill the registration form</span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Biswajit</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> Sundara</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0"> Dec 22</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> bis@gmail.com</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> Domestic</span><span style="color: #008800; font-weight: bold">|</span><span style="background-color: #fff0f0"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on submit button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the user registered successfully message</span>
+</pre></div>
+
+
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"fill the registration form"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">fill_the_registration_form</span><span style="color: #333333">(</span>DataTable dataTable<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+	List<span style="color: #333333"><</span>List<span style="color: #333333"><</span>String<span style="color: #333333">>></span> form <span style="color: #333333">=</span> dataTable<span style="color: #333333">.</span><span style="color: #0000CC">cells</span><span style="color: #333333">();</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">));</span>
+<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+ 
+</td></tr></tbody></table>
+
+
+
+<h5><font color="#4682B4">6)Multiple Column - Multiple Row Without Header</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 290%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Register user family</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the registration page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">fill the registration form for the family</span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Biswajit</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> Sundara</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Father</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">  Dec 22</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> bis@gmail.com</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0"> Domestic</span><span style="color: #008800; font-weight: bold"> |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Priyanka</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> Sundara</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Mother</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">  Jan 20</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> pri@gmail.com</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0"> Domestic</span><span style="color: #008800; font-weight: bold"> |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Kunu</span><span style="color: #008800; font-weight: bold">     |</span><span style="background-color: #fff0f0"> Sundara</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Son</span><span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0">  May 26</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> kunu@gmail.com</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0"> Domestic</span><span style="color: #008800; font-weight: bold"> |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on submit button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the user registered successfully message</span>
+</pre></div>
+
+
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">//code..</span>
+<span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"fill the registration form for the family"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">fill_the_registration_form</span><span style="color: #333333">(</span>DataTable dataTable<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+       List<span style="color: #333333"><</span>List<span style="color: #333333"><</span>String<span style="color: #333333">>></span> form <span style="color: #333333">=</span> dataTable<span style="color: #333333">.</span><span style="color: #0000CC">cells</span><span style="color: #333333">();</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">print</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">));</span>
+<span style="color: #333333">}</span>
+<span style="color: #888888">//code..</span>
+</pre></div>
+
+ 
+</td></tr></tbody></table>
+
+
+<h5><font color="#4682B4">7)Multiple Column - Single Row With Header</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 230%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Register international user</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the registration page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">fill the international user registration form</span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">FirstName</span><span style="color: #008800; font-weight: bold">|</span><span style="background-color: #fff0f0">Country</span><span style="color: #008800; font-weight: bold">|</span><span style="background-color: #fff0f0"> DOB</span><span style="color: #008800; font-weight: bold">   |</span><span style="background-color: #fff0f0">Email</span><span style="color: #008800; font-weight: bold">         |</span><span style="background-color: #fff0f0">AccountType</span><span style="color: #008800; font-weight: bold">  |      </span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Biswajit</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">UK</span><span style="color: #008800; font-weight: bold">     |</span><span style="background-color: #fff0f0"> Dec 22</span><span style="color: #008800; font-weight: bold">|</span><span style="background-color: #fff0f0"> bis@gmail.com</span><span style="color: #008800; font-weight: bold">|</span><span style="background-color: #fff0f0">International</span><span style="color: #008800; font-weight: bold">|</span><span style="background-color: #fff0f0"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on submit button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the user registered successfully message</span>
+</pre></div>
+
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"fill the international user registration form"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">fill_the_international_reg_form</span><span style="color: #333333">(</span>DataTable dataTable<span style="color: #333333">)</span> 
+<span style="color: #333333">{</span>   
+	List<span style="color: #333333"><</span>Map<span style="color: #333333"><</span>String<span style="color: #333333">,</span> String<span style="color: #333333">>></span> form<span style="color: #333333">;</span>
+	form<span style="color: #333333">=</span>dataTable<span style="color: #333333">.</span><span style="color: #0000CC">asMaps</span><span style="color: #333333">(</span>String<span style="color: #333333">.</span><span style="color: #0000CC">class</span><span style="color: #333333">,</span> String<span style="color: #333333">.</span><span style="color: #0000CC">class</span><span style="color: #333333">);</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"fill the form"</span><span style="color: #333333">);</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"FirstName"</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Country"</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"DOB"</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Email"</span><span style="color: #333333">));</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"AccountType"</span><span style="color: #333333">));</span>
+<span style="color: #333333">}</span>
+</pre></div>
+
+</td></tr></tbody></table>
+
+<h5><font color="#4682B4">8)Multiple Column - Multiple Row With Header</font></h5>
+
+<table class="table table-borderless">
+<thead><tr><th><center><font color="silver">Feature File</font></center></th><th><center><font color="silver">Step Definition</font></center></th></tr></thead><tbody>
+<tr><td>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 250%"><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Register international user family</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I am at the registration page</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">fill the international registration form for family</span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">FirstName</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">Country</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">DOB</span><span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0">AccountType</span><span style="color: #008800; font-weight: bold">   |</span><span style="background-color: #fff0f0">Relation</span><span style="color: #008800; font-weight: bold">|      </span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Biswajit</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">UK</span><span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0">Dec 22</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">International</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">Father</span><span style="color: #008800; font-weight: bold">  |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Priyanka</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">UK</span><span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0">Jan 20</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">International</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">Mother</span><span style="color: #008800; font-weight: bold">  |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0">Kunu</span><span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0">UK</span><span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0">May 26</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">International</span><span style="color: #008800; font-weight: bold"> |</span><span style="background-color: #fff0f0">Son</span><span style="color: #008800; font-weight: bold">     |</span>
+<span style="color: #008800; font-weight: bold">  </span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on submit button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the user registered successfully message</span>
+</pre></div>
+
+</td><td style="width:50%">
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 130%"><span style="color: #555555; font-weight: bold">@Given</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"fill the international registration form for family"</span><span style="color: #333333">)</span>
+<span style="color: #008800; font-weight: bold">public</span> <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">fill_the_international_reg_familyForm</span><span style="color: #333333">(</span>DataTable dataTable<span style="color: #333333">)</span> <span style="color: #333333">{</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"fill intnl family registration form"</span><span style="color: #333333">);</span>
+	List<span style="color: #333333"><</span>Map<span style="color: #333333"><</span>String<span style="color: #333333">,</span> String<span style="color: #333333">>></span> form<span style="color: #333333">;</span>
+	form<span style="color: #333333">=</span>dataTable<span style="color: #333333">.</span><span style="color: #0000CC">asMaps</span><span style="color: #333333">(</span>String<span style="color: #333333">.</span><span style="color: #0000CC">class</span><span style="color: #333333">,</span> String<span style="color: #333333">.</span><span style="color: #0000CC">class</span><span style="color: #333333">);</span>
+	<span style="color: #008800; font-weight: bold">for</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">;</span> i<span style="color: #333333"><</span>form<span style="color: #333333">.</span><span style="color: #0000CC">size</span><span style="color: #333333">();</span> i<span style="color: #333333">++)</span> 
+         <span style="color: #333333">{</span>	
+		System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span>i<span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"FirstName"</span><span style="color: #333333">));</span>
+		System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span>i<span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Country"</span><span style="color: #333333">));</span>
+		System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span>i<span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"DOB"</span><span style="color: #333333">));</span>
+		System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span>i<span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"AccountType"</span><span style="color: #333333">));</span>
+		System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span>i<span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="background-color: #fff0f0">"Relation"</span><span style="color: #333333">));</span>
+	<span style="color: #333333">}</span>
+	List<span style="color: #333333"><</span>List<span style="color: #333333"><</span>String<span style="color: #333333">>></span> form2 <span style="color: #333333">=</span> dataTable<span style="color: #333333">.</span><span style="color: #0000CC">asLists</span><span style="color: #333333">(</span>String<span style="color: #333333">.</span><span style="color: #0000CC">class</span><span style="color: #333333">);</span>
+	<span style="color: #008800; font-weight: bold">for</span><span style="color: #333333">(</span><span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">;</span> i<span style="color: #333333"><</span>form2<span style="color: #333333">.</span><span style="color: #0000CC">size</span><span style="color: #333333">();</span> i<span style="color: #333333">++)</span> 
+        <span style="color: #333333">{</span> 
+	<span style="color: #888888">//i starts from 1 because i=0 represents the header</span>
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form2<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span>i<span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">));</span> 
+	System<span style="color: #333333">.</span><span style="color: #0000CC">out</span><span style="color: #333333">.</span><span style="color: #0000CC">println</span><span style="color: #333333">(</span>form2<span style="color: #333333">.</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span>i<span style="color: #333333">).</span><span style="color: #0000CC">get</span><span style="color: #333333">(</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">));</span>
+       <span style="color: #333333">}</span>
+<span style="color: #333333">}</span>
+</pre></div>
+
+ 
+ 
+</td></tr></tbody></table>
+
+<br>
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+ 
+</div>
+
+
+<div id="cukeTestNG" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Cucumber & TestNG</h1>
+
+Cucumber can be integrated with TestNG and most of the hybrid automation frameworks use this approach. By default Cucumber supports Junit however integrating with TestNG we can use more features provided by TestNG.  
+So We need to make three major updates-
+<br><ul><li>In Maven (<font color="blue">POM.xml</font>) add cucumber-testNG, TestNG dependency
+</li><li>In CucumberRunner / TestRunner file <font color="blue">extends </font> AbstractTestNGCucumberTests 
+</li><li>In <font color="blue">TestNG.xml</font> add path and name of CucumberRunner / TestRunner file in class tag.
+</li></ul> 
+
+<h4><font color="#4682B4">Step1: Update pom.xml file</font></h4>
+In pom.xml add the dependencies for cucumber-testng & the testng. This will download the supporting jar files.
+
+<pre style="margin: 0; line-height: 125%">
+
+<span style="color: #888888">&lt;!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng --&gt;</span>
+  <span style="color: #3cb371">&lt;dependency&gt;</span>
+	<span style="color: #3cb371">&lt;groupId&gt;</span>io.cucumber<span style="color: #3cb371">&lt;/groupId&gt;</span>
+	<span style="color: #3cb371">&lt;artifactId&gt;</span>cucumber-testng<span style="color: #3cb371">&lt;/artifactId&gt;</span>
+	<span style="color: #3cb371">&lt;version&gt;</span>5.3.0<span style="color: #3cb371">&lt;/version&gt;</span>
+  <span style="color: #3cb371">&lt;/dependency&gt;</span>
+
+<span style="color: #888888">&lt;!-- https://mvnrepository.com/artifact/org.testng/testng --&gt;</span>
+  <span style="color: #3cb371">&lt;dependency&gt;</span>
+	<span style="color: #3cb371">&lt;groupId&gt;</span>org.testng<span style="color: #3cb371">&lt;/groupId&gt;</span>
+	<span style="color: #3cb371">&lt;artifactId&gt;</span>testng<span style="color: #3cb371">&lt;/artifactId&gt;</span>
+	<span style="color: #3cb371">&lt;version&gt;</span>6.14.3<span style="color: #3cb371">&lt;/version&gt;</span>
+  <span style="color: #3cb371">&lt;/dependency&gt;</span>
+</pre>
+
+
+
+<br><h4><font color="#4682B4">Step2: Update TestRunner file</font></h4>
+The TestRunner class file should extend the class AbstractTestNGCucumberTests. This will allow cucumber tests to be run on TestNG instead of JUnit.
+
+<pre style="line-height:150%;">
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.AfterClass;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.AfterMethod;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.AfterSuite;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.AfterTest;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.BeforeClass;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.BeforeMethod;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.BeforeSuite;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.BeforeTest;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.testng.AbstractTestNGCucumberTests;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.testng.CucumberOptions;
+
+
+@CucumberOptions(features=<span style='color:#2A00FF'>"src/test/resources/Shop.feature"</span>, glue=<span style='color:#2A00FF'>"stepdefs"</span> , dryRun=<span style='font-weight:bold;color:#7B0052;'>false</span>)
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ShopTest <span style='font-weight:bold;color:#7B0052;'>extends</span> AbstractTestNGCucumberTests<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	@BeforeSuite
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> beforeSuite()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"before suite step executed"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	@BeforeClass
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> beforeClass()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"before class step executed"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	@BeforeTest
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> beforeTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"before test step executed"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	@BeforeMethod
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> beforeMethod()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"before method step executed"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	@AfterSuite
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> afterSuite()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"after suite step executed"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	@AfterClass
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> afterClass()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"after class step executed"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	@AfterTest
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> afterTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"after test step executed"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	@AfterMethod
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> afterMethod()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"after method step executed"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+ 
+
+<br><h4><font color="#4682B4">Step3: Configure TestNG.xml file</font></h4>
+
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span style="color: #557799">&lt;!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"&gt;</span>
+<span style="color: #007700">&lt;suite</span> <span style="color: #0000CC">name=</span><span style="background-color: #fff0f0">"Suite"</span><span style="color: #007700">&gt;</span>
+  <span style="color: #007700">&lt;test</span> <span style="color: #0000CC">thread-count=</span><span style="background-color: #fff0f0">"5"</span> <span style="color: #0000CC">name=</span><span style="background-color: #fff0f0">"Test"</span><span style="color: #007700">></span>
+  <span style="color: #007700">&lt;classes&gt;</span>
+      <span style="color: #007700">&lt;class</span> <span style="color: #0000CC">name=</span><span style="background-color: #fff0f0">"testrunners.ShopTest"</span><span style="color: #007700">/&gt;</span>
+    <span style="color: #007700">&lt;/classes&gt;</span>
+  <span style="color: #007700">&lt;/test&gt;</span> <span style="color: #888888"><!-- Test --></span>
+<span style="color: #007700">&lt;/suite&gt;</span> <span style="color: #888888"><!-- Suite --></span>
+</pre>
+
+<br><h4><font color="#4682B4">Observations</font></h4>
+Run the testng.xml file and see how it works.
+<ul><li>Before Suite is executed first, before any runner file.
+</li><li>Before test is executed then, before the runner file.
+</li><li>Before class is executed before executing the runner file.
+</li><li>Before method is executed before the scenario in feature file.
+</li><li>After method is executed after the scenario in feature file.
+</li><li>For scenario outline, it's basically number of scenarios so for each scenario it executes before method & after method.
+</li><li>Once the runner file is completed. executes after test
+</li><li>Then finally after suite.
+</li><li>Test reports are available at test-output folder.
+</li></ul>
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+
+</div>
+
+
+<div id="cukeReport" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Cucumber & Extent Reports</h1>
+Reporting in cucumber is bit tricky as we need to organize results based on the features, scenarios and then steps. There are so many reporting tools available. We have default reporting in the <font color="blue">CucumberOptions</font> where 
+we can generate text, html, json reports. However we must go for a customized report always. So comes my favourite Extent Report. There's an extent report from <font color="blue">vimalselvam</font>, cucumber-extentsreport which was quite popular initially
+however there's no new release post mid 2018, also it doesn't support parallel execution. So we will go with <font color="blue">extentreports</font>
+
+
+<br><br><h4><font color="#4682B4">Project Structure</font></h4>
+<img src="img\cucumber\cucumber_reports.png">
+
+
+<br><br><h4><font color="#4682B4">Maven Dependency</font></h4>
+<pre class="codeblock">
+		<span style="color: #7c8e46">&lt;dependency&gt;</span>
+			<span style="color: #7c8e46">&lt;groupId&gt;</span>com.aventstack<span style="color: #7c8e46">&lt;/groupId&gt;</span>
+			<span style="color: #7c8e46">&lt;artifactId&gt;</span>extentreports<span style="color: #7c8e46">&lt;/artifactId&gt;</span>
+			<span style="color: #7c8e46">&lt;version&gt;</span>4.0.9<span style="color: #7c8e46">&lt;/version&gt;</span>
+		<span style="color: #7c8e46">&lt;/dependency&gt;</span>
+
+		<span style="color: #7c8e46">&lt;dependency&gt;</span>
+			<span style="color: #7c8e46">&lt;groupId&gt;</span>io.cucumber<span style="color: #7c8e46">&lt;/groupId&gt;</span>
+			<span style="color: #7c8e46">&lt;artifactId&gt;</span>cucumber-java<span style="color: #7c8e46">&lt;/artifactId&gt;</span>
+			<span style="color: #7c8e46">&lt;version&gt;</span>5.1.3<span style="color: #7c8e46">&lt;/version&gt;</span>
+		<span style="color: #7c8e46">&lt;/dependency&gt;</span>
+		
+		<span style="color: #7c8e46">&lt;dependency&gt;</span>
+			<span style="color: #7c8e46">&lt;groupId&gt;</span>io.cucumber<span style="color: #7c8e46">&lt;/groupId&gt;</span>
+			<span style="color: #7c8e46">&lt;artifactId&gt;</span>cucumber-jvm<span style="color: #7c8e46">&lt;/artifactId&gt;</span>
+			<span style="color: #7c8e46">&lt;version&gt;</span>5.1.3<span style="color: #7c8e46">&lt;/version&gt;</span>
+			<span style="color: #7c8e46">&lt;type&gt;</span>pom<span style="color: #7c8e46">&lt;/type&gt;</span>
+		<span style="color: #7c8e46">&lt;/dependency&gt;</span>
+		
+		<span style="color: #7c8e46">&lt;dependency&gt;</span>
+			<span style="color: #7c8e46">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color: #7c8e46">&lt;/groupId&gt;</span>
+			<span style="color: #7c8e46">&lt;artifactId&gt;</span>selenium-java<span style="color: #7c8e46">&lt;/artifactId&gt;</span>
+			<span style="color: #7c8e46">&lt;version&gt;</span>3.141.59<span style="color: #7c8e46">&lt;/version&gt;</span>
+		<span style="color: #7c8e46">&lt;/dependency&gt;</span>
+
+		<span style="color: #7c8e46">&lt;dependency&gt;</span>
+			<span style="color: #7c8e46">&lt;groupId&gt;</span>io.cucumber<span style="color: #7c8e46">&lt;/groupId&gt;</span>
+			<span style="color: #7c8e46">&lt;artifactId&gt;</span>cucumber-testng<span style="color: #7c8e46">&lt;/artifactId&gt;</span>
+			<span style="color: #7c8e46">&lt;version&gt;</span>5.3.0<span style="color: #7c8e46">&lt;/version&gt;</span>
+		<span style="color: #7c8e46">&lt;/dependency&gt;</span>
+
+		<span style="color: #7c8e46">&lt;dependency&gt;</span>
+			<span style="color: #7c8e46">&lt;groupId&gt;</span>org.testng<span style="color: #7c8e46">&lt;/groupId&gt;</span>
+			<span style="color: #7c8e46">&lt;artifactId&gt;</span>testng<span style="color: #7c8e46">&lt;/artifactId&gt;</span>
+			<span style="color: #7c8e46">&lt;version&gt;</span>6.14.3<span style="color: #7c8e46">&lt;/version&gt;</span>
+		<span style="color: #7c8e46">&lt;/dependency&gt;</span>
+
+		<span style="color: #7c8e46">&lt;dependency&gt;</span>
+			<span style="color: #7c8e46">&lt;groupId&gt;</span>commons-io<span style="color: #7c8e46">&lt;/groupId&gt;</span>
+			<span style="color: #7c8e46">&lt;artifactId&gt;</span>commons-io<span style="color: #7c8e46">&lt;/artifactId&gt;</span>
+			<span style="color: #7c8e46">&lt;version&gt;</span>2.6<span style="color: #7c8e46">&lt;/version&gt;</span>
+		<span style="color: #7c8e46">&lt;/dependency&gt;</span>
+</pre>
+ 
+ 
+
+<br><br><h4><font color="#4682B4">CustomExtentReporter.java</font></h4>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>package</span> base;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> java.io.File;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> com.aventstack.extentreports.ExtentReports;
+<span style='font-weight:bold;color:#7B0052;'>import</span> com.aventstack.extentreports.ExtentTest;
+<span style='font-weight:bold;color:#7B0052;'>import</span> com.aventstack.extentreports.GherkinKeyword;
+<span style='font-weight:bold;color:#7B0052;'>import</span> com.aventstack.extentreports.MediaEntityBuilder;
+<span style='font-weight:bold;color:#7B0052;'>import</span> com.aventstack.extentreports.MediaEntityModelProvider;
+<span style='font-weight:bold;color:#7B0052;'>import</span> com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> CustomExtentReporter <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> ExtentHtmlReporter htmlReport;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> ExtentReports extentReport;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> ExtentTest extentTestStep,extentTestCase, extentTest;
+
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> startReport(String reportLocation)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		htmlReport= <span style='font-weight:bold;color:#7B0052;'>new</span> ExtentHtmlReporter(<span style='font-weight:bold;color:#7B0052;'>new</span> File(reportLocation));
+		extentReport = <span style='font-weight:bold;color:#7B0052;'>new</span> ExtentReports();
+		extentReport.attachReporter(htmlReport);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> startTestCase(String testcaseName)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		extentTestCase = extentReport.createTest(testcaseName);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> startTestNode(String testNode)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		extentTestStep=extentTestCase.createNode(testNode);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> reportTestStep(GherkinKeyword ghKeyword, String name)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		extentTest = extentTestStep.createNode(ghKeyword, name);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> reportTest(String desc, String status, String imgPath)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>try</span>
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			MediaEntityModelProvider img = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+			img=MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build();
+			
+			<span style='font-weight:bold;color:#7B0052;'>if</span>(status.equalsIgnoreCase(<span style='color:#2A00FF'>"PASS"</span>)) 
+			<span style='font-weight:bold;color:#D3171B'>{</span>
+				extentTest.pass(desc);
+			<span style='font-weight:bold;color:#D3171B'>}</span>
+			<span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#7B0052;'>if</span> (status.equalsIgnoreCase(<span style='color:#2A00FF'>"FAIL"</span>)) 
+			<span style='font-weight:bold;color:#D3171B'>{</span>
+				extentTest.fail(desc, img);
+			<span style='font-weight:bold;color:#D3171B'>}</span>	
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		<span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			System.err.println(e.getMessage());
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> saveReport()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(extentReport!=<span style='font-weight:bold;color:#7B0052;'>null</span>)
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			extentReport.flush();
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br><h4><font color="#4682B4">TestBase.java</font></h4>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>package</span> base;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> java.io.File;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.apache.commons.io.FileUtils;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.OutputType;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.TakesScreenshot;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.WebDriver;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.chrome.ChromeDriver;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestBase <span style='font-weight:bold;color:#D3171B'>{</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> CustomExtentReporter extentReporter;
+
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setWebDriver()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\chromedriver.exe"</span>);
+		driver = <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> WebDriver getWebDriver()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> driver;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> startReport()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+			extentReporter= <span style='font-weight:bold;color:#7B0052;'>new</span> CustomExtentReporter();
+			extentReporter.startReport(<span style='color:#2A00FF'>"C:\\TestReport.html"</span>);	
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> endReport()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+			extentReporter.saveReport();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> CustomExtentReporter getReport()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> extentReporter;
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> takeScreenShot(String filename)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+		<span style='font-weight:bold;color:#7B0052;'>try</span> 
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			FileUtils.copyFile(src, <span style='font-weight:bold;color:#7B0052;'>new</span> File(filename));
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		<span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br><h4><font color="#4682B4">Login.feature</font></h4>
+
+<pre class="codeblock"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> LoginFeature</span>
+<span style="color: #0066BB; font-weight: bold">  </span>
+<span style="color: #0066BB; font-weight: bold">This feature is for the log in to application</span>
+
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Valid Login</span>
+<span style="color: #008800; font-weight: bold">    Given </span><span style="color: #0066BB; font-weight: bold">I am at the login page</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I enter the login credentials</span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0"> username</span><span style="color: #008800; font-weight: bold">                  |</span><span style="background-color: #fff0f0"> password</span><span style="color: #008800; font-weight: bold">      |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0"> biswajit@gmail.com</span><span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0"> automation</span><span style="color: #008800; font-weight: bold">    |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I click login button</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">I should land on home page</span>
+
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Invalid Login</span>
+<span style="color: #008800; font-weight: bold">    Given </span><span style="color: #0066BB; font-weight: bold">I am at the login page</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I enter the login credentials</span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0"> username</span><span style="color: #008800; font-weight: bold">         |</span><span style="background-color: #fff0f0"> password</span><span style="color: #008800; font-weight: bold">      |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0"> abc@gmail.com</span><span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0"> automation</span><span style="color: #008800; font-weight: bold">    |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I click login button</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">I should land on home page</span>
+</pre>
+
+
+<br><br><h4><font color="#4682B4">Login.java</font></h4>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>package</span> pages;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.By;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.WebDriver;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.WebElement;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.support.FindBy;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.support.How;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.support.PageFactory;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.support.ui.ExpectedConditions;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.support.ui.WebDriverWait;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	WebDriver driver;
+	
+    <span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage(WebDriver driver) <span style='font-weight:bold;color:#D3171B'>{</span>
+        PageFactory.initElements(driver, <span style='font-weight:bold;color:#7B0052;'>this</span>);
+        this.driver=driver;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    @FindBy(how = How.ID, using = <span style='color:#2A00FF'>"email"</span>)
+    <span style='font-weight:bold;color:#7B0052;'>public</span> WebElement txtUserName;
+
+    @FindBy(how = How.ID, using = <span style='color:#2A00FF'>"passwd"</span>)
+    <span style='font-weight:bold;color:#7B0052;'>public</span> WebElement txtPassword;
+
+    @FindBy(how = How.ID, using = <span style='color:#2A00FF'>"SubmitLogin"</span>)
+    <span style='font-weight:bold;color:#7B0052;'>public</span> WebElement btnLogin;
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterCred(String userName, String password)
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+        txtUserName.sendKeys(userName);
+        txtPassword.sendKeys(password);
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickLogin()
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+        btnLogin.click();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> waitForHomePage()
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+    	WebDriverWait wait= <span style='font-weight:bold;color:#7B0052;'>new</span> WebDriverWait(driver,5);
+    	<span style='font-weight:bold;color:#7B0052;'>try</span>
+    	<span style='font-weight:bold;color:#D3171B'>{</span>
+    		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(<span style='color:#2A00FF'>"//h1[text()='My account']"</span>)));
+    	<span style='font-weight:bold;color:#D3171B'>}</span>
+    	<span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)
+    	<span style='font-weight:bold;color:#D3171B'>{</span>
+    		
+    	<span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+ 
+
+<br><br><h4><font color="#4682B4">Hook.java</font></h4>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>package</span> steps;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> java.io.IOException;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.WebDriver;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> base.TestBase;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.java.After;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.java.Before;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.java.Scenario;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Hook <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+
+	@Before
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> InitializeTest(Scenario scenario) <span style='font-weight:bold;color:#D3171B'>{</span>
+		TestBase.setWebDriver();
+		driver= TestBase.getWebDriver();
+				
+		TestBase.getReport().startTestCase(scenario.getName());
+		TestBase.getReport().startTestNode(scenario.getName());
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	
+	@After
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> TearDownTest(Scenario scenario) <span style='font-weight:bold;color:#7B0052;'>throws</span> IOException <span style='font-weight:bold;color:#D3171B'>{</span>
+		String screenShotFileName= <span style='color:#2A00FF'>"C:\\snaps"</span> + scenario.getName().replaceAll(<span style='color:#2A00FF'>" "</span>, <span style='color:#2A00FF'>""</span>)+<span style='color:#2A00FF'>".png"</span>;
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(scenario.isFailed())
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			TestBase.takeScreenShot(screenShotFileName);
+			TestBase.getReport().reportTest(scenario.getName(), <span style='color:#2A00FF'>"FAIL"</span>, screenShotFileName);
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		<span style='font-weight:bold;color:#7B0052;'>else</span>
+			
+			TestBase.getReport().reportTest(scenario.getName(), <span style='color:#2A00FF'>"PASS"</span>, screenShotFileName);
+		
+		
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(driver!=<span style='font-weight:bold;color:#7B0052;'>null</span>)
+		driver.quit();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><br><h4><font color="#4682B4">Loginstep.java</font></h4>
+
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>package</span> steps;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> <span style='font-weight:bold;color:#7B0052;'>static</span> org.testng.Assert.assertEquals;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.openqa.selenium.WebDriver;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> com.aventstack.extentreports.GherkinKeyword;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> base.TestBase;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.datatable.DataTable;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.java.en.Given;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.java.en.Then;
+<span style='font-weight:bold;color:#7B0052;'>import</span> pages.LoginPage;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginStep <span style='font-weight:bold;color:#7B0052;'>extends</span> TestBase<span style='font-weight:bold;color:#D3171B'>{</span>
+	
+	WebDriver driver= TestBase.getWebDriver();
+	LoginPage loginPage= <span style='font-weight:bold;color:#7B0052;'>new</span> LoginPage(driver);
+	
+	
+	@Given(<span style='color:#2A00FF'>"I am at the login page"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> i_am_at_the_login_page() <span style='font-weight:bold;color:#7B0052;'>throws</span> ClassNotFoundException <span style='font-weight:bold;color:#D3171B'>{</span>
+	    driver.get(<span style='color:#2A00FF'>"http://automationpractice.com/index.php?controller=authentication&back=my-account"</span>);
+	    TestBase.getReport().reportTestStep(<span style='font-weight:bold;color:#7B0052;'>new</span> GherkinKeyword(<span style='color:#2A00FF'>"Given"</span>), <span style='color:#2A00FF'>"I am at the login page"</span>);
+	    
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Given(<span style='color:#2A00FF'>"I enter the login credentials"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> i_enter_the_login_credentials(DataTable dataTable) <span style='font-weight:bold;color:#7B0052;'>throws</span> ClassNotFoundException <span style='font-weight:bold;color:#D3171B'>{</span>
+	    loginPage.enterCred(dataTable.cell(1, 0), dataTable.cell(1, 1));
+	    TestBase.getReport().reportTestStep(<span style='font-weight:bold;color:#7B0052;'>new</span> GherkinKeyword(<span style='color:#2A00FF'>"Given"</span>), <span style='color:#2A00FF'>"I enter the login credentials"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Given(<span style='color:#2A00FF'>"I click login button"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> i_click_login_button() <span style='font-weight:bold;color:#7B0052;'>throws</span> ClassNotFoundException <span style='font-weight:bold;color:#D3171B'>{</span>
+	    loginPage.clickLogin();
+	    TestBase.getReport().reportTestStep(<span style='font-weight:bold;color:#7B0052;'>new</span> GherkinKeyword(<span style='color:#2A00FF'>"Given"</span>), <span style='color:#2A00FF'>"I click login button"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Then(<span style='color:#2A00FF'>"I should land on home page"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> i_should_land_on_home_page() <span style='font-weight:bold;color:#7B0052;'>throws</span> ClassNotFoundException <span style='font-weight:bold;color:#D3171B'>{</span>
+		loginPage.waitForHomePage();
+	    String actualTitle = driver.getTitle();
+	    assertEquals(<span style='color:#2A00FF'>"My account - My Store"</span>, actualTitle);
+	    TestBase.getReport().reportTestStep(<span style='font-weight:bold;color:#7B0052;'>new</span> GherkinKeyword(<span style='color:#2A00FF'>"Then"</span>), <span style='color:#2A00FF'>"I should land on home page"</span>);
+	    
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br><h4><font color="#4682B4">TestRunner.java</font></h4>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>package</span> runner;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.AfterSuite;
+<span style='font-weight:bold;color:#7B0052;'>import</span> org.testng.annotations.BeforeSuite;
+
+<span style='font-weight:bold;color:#7B0052;'>import</span> base.TestBase;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.testng.AbstractTestNGCucumberTests;
+<span style='font-weight:bold;color:#7B0052;'>import</span> io.cucumber.testng.CucumberOptions;
+
+
+@CucumberOptions(features=<span style='color:#2A00FF'>"src/test/java/features/Login.feature"</span>
+				, glue=<span style='color:#2A00FF'>"steps"</span> , dryRun=<span style='font-weight:bold;color:#7B0052;'>false</span>)
+
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestRunner <span style='font-weight:bold;color:#7B0052;'>extends</span> AbstractTestNGCucumberTests<span style='font-weight:bold;color:#D3171B'>{</span>
+	
+	@BeforeSuite
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> beforeTestSuite()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		TestBase.startReport();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	@AfterSuite
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> afterTestSuite()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		TestBase.endReport();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br><h4><font color="#4682B4">TestNG.xml</font></h4>
+
+<pre class="codeblock1"><span style="color: #557799">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span style="color: #557799">&lt;!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"&gt;</span>
+<span style="color: #007700">&lt;suite</span> <span style="color: #0000CC">name=</span><span style="background-color: #fff0f0">"Suite"</span><span style="color: #007700">&gt;</span>
+  <span style="color: #007700">&lt;test</span> <span style="color: #0000CC">thread-count=</span><span style="background-color: #fff0f0">"5"</span> <span style="color: #0000CC">name=</span><span style="background-color: #fff0f0">"Test"</span><span style="color: #007700">></span>
+  <span style="color: #007700">&lt;classes&gt;</span>
+      <span style="color: #007700">&lt;class</span> <span style="color: #0000CC">name=</span><span style="background-color: #fff0f0">"runner.TestRunner"</span><span style="color: #007700">/&gt;</span>
+    <span style="color: #007700">&lt;/classes&gt;</span>
+  <span style="color: #007700">&lt;/test&gt;</span> <span style="color: #888888">&lt;!-- Test --&gt;</span>
+<span style="color: #007700">&lt;/suite&gt;</span> <span style="color: #888888">&lt;!-- Suite --&gt;</span>
+</pre>
+ 
+<br><br><h4><font color="#4682B4">TestReport.html</font></h4>
+<iframe src="img\cucumber\TestReport.html" style="width:100%; height:700px;"></iframe>
+
+
+<br><br><h4><font color="#4682B4">Observation</font></h4>
+<ul><li>Run the testng.xml file and verify the results in the report
+</li></li>Scenario is considered as one testcase and status for each step is logged in the report
+</li><li>For the failed step snapshot is taken and attached to the report
+</li><li>If we want to report based on the feature file, then change in the Hook file at the @Before step. 
+<font face="courier new">TestBase.getReport.startTestCase(scenario.getId())</font>
+</li></ul>
+Make sure you are extracting the feature file name only and then pass into the startTestCase method. Becuase the scenario.getId() returns the feature file name along with the path in the system directory.
+
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+
+
+</div>
+
+
+
+</div>
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+
+    window.scrollTo(0, 0);
+  
+}
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('home').style.display = "block";
+}
+</script>
+
+  
+</body>
+
+</html>

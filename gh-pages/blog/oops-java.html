@@ -1,0 +1,1714 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Biswajit Sundara Blog | OOPS Java</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+<link href="css/comment.css" rel="stylesheet">
+<link href="css/blogpage.css" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158659468-1');
+</script>
+
+
+</head>
+
+
+
+
+
+
+
+<body onload="LoadFunc()">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><br></div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'home')">Home</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basics')">OOPS Basics</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'classObj')">Class & Objects</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'classType')">Type Of Classes</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'inheritance')">Inheritance</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basicCommands')">Polymorphism</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'branching')">Abstraction</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'encap')">Encapsulation</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Coupling</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Cohesion</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'association')">Association</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'aggregation')">Aggregation</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'composition')">Composition</a>
+
+<br><br>      
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+       
+         <a href="bloghome.html"> Biswajit Sundara Blog</a>
+
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+              <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;</a>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        
+
+      <div id="home" class="topics">
+
+<br><br>
+        
+<div class="row">
+ 
+    <div class="col-md-6">
+    <br><br>
+    <center><h1><font face="Jokerman" style="font-size:100px">OOPS</font></h1>
+     Please comment below if you like the book</center>
+    </div>
+
+<div class="col-md-6">
+ 
+<div class="card">
+<div class="row no-gutters">    
+   <div class="col-md-6">
+      <br><img src="img\brand\profile.png" class="card-img" alt="...">
+    </div>
+   <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">Author Bio</h5>
+        <p class="card-text">This web book is written by Biswajit Sundara.
+	Biswajit is a software professional with 10+ years of experience. He has worked on various technologies and also an avid blogger on technology.</p>
+        <p class="card-text"><small class="text-muted">Jan 2nd, 2020</small></p>
+      </div>
+    </div>
+</div>
+</div>
+
+    </div>
+   
+</div>
+
+<br><br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">OOPs Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'architecture')">Class & Objects</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicoperation')">Inheritance</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicCommands')">Polymorphism</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'branching')">Abstraction</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'conflictres')">Encapsulation</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'ssh')">Coupling</a></li>
+    <li class="list-group-item"><a href="Blog_home.html">Cohesion</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="Blog_home.html">Association</a></li>
+    <li class="list-group-item"><a href="#">Aggregation</a></li>
+    <li class="list-group-item"><a href="#">Composition</a></li>
+  </ul>
+</div>
+
+</div>
+
+<br><br>
+<div class="container">
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+    <div class="row">
+      <div class="col-25">
+        <label for="uname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="uname" name="entry.689225320" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="emailAddress" placeholder="Your email address..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="comment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comment" name="entry.1648468188" placeholder="Write your precious comment here.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="hidden" name="entry.2069828936" value="GitHub">
+    </div>
+    <div class="row">
+      <input type="submit" value="Post Comment">
+    </div>
+  </form>
+</div>
+
+
+
+      </div> 
+        
+      <div id="basics" class="topics" style="line-height: 200%;">
+      <h1 class="mt-4">OOPS Basics</h1>
+      <p>Object Oriented Programming (Paradigms) is a way of writing programs. The programming aims to resemble to the real world. Here everything is based on classes and objects.</p>
+
+<br><h4><font color="#4682B4">Why do we need OOPS</font></h4>
+<ul><li>OOPS provides a clear modular structure to the programming.
+</li><li>It's easy to build and modify complex codes.
+</li><li>Code reusability 
+</li><li>As it resembles the real world, easy to solve the real world problems through this.
+</li><li>It is secured. Unlike the procedural language OOPS ensures security.
+</li></ul>
+
+<br><h4><font color="#4682B4">Languages support OOPS</font></h4>
+<ul><li>Simula (The first OOPS language)
+</li><li>Java
+</li><li>Ruby
+</li><li>Python
+</li><li>C++ etc
+</li></ul>
+      
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'architecture')">Next -></button>  
+
+<br><br> 
+</div>
+
+    
+ <div id="classObj" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Class & Objects</h2>
+    This can be defined in two ways. We can say class is a blue print or proto type from which objects are created. For example: Employee class may contain data memebrs like name, age, salary, dept etc & the methods like swipeIn(), swipeOut(), getSalary() etc. Now this is a blue print, whenever we create any employee object, the object will have a copy of all this. The employee will have a set of attributes like name, age etc and then can access the methods.        
+    <br><br>Or we can say class is a collection of similar objects. For example - Employee Mark, Employee Jack & Employee Jill are objects of one class Employee. Class also represents the set of properties or methods that are common to all objects. For example - all employees will have properties/attributes such as name, employee id, salary etc. methods such as markattendance(), getSalary(), applyLeave() etc.
+    
+
+<br><br><h4><font color="#4682B4">Components of Class</font></h4>
+<ul><li>Modifiers : A class can be public or has default access  
+</li><li>Class name: The name should begin with a initial letter (capitalized by convention).
+</li><li>Superclass(if any): The name of the parent class (if any) preceded by the extends keyword. In Java a subclass can have only one parent class. 
+</li><li>Interfaces(if any): The name of interface(interfaces separated by ,) preceded by the implements keyword. It can implement multiple interfaces
+</li><li>Body: The class body surrounded by braces, { }.
+</li></ul>
+
+Constructors are used for initializing new objects. Fields are variables that provides the state of the class and its objects, and methods are used to implement the behavior of the class and its objects.
+
+<br><br><h4><font color="#4682B4">Object</font></h4>
+
+Objects are nothing but instance of the class. A single class can create any number of unique objects. An object consists of
+<ul><li><font color="#a3b77e"><b>State :</b></font> It is represented by attributes of an object. It also reflects the properties of an object.
+</li><li><font color="#a3b77e"><b>Behavior :</b></font> It is represented by methods of an object. It also reflects the response of an object with other objects.
+</li><li><font color="#a3b77e"><b>Identity :</b></font> It gives a unique name to an object and enables one object to interact with other objects.
+</li></ul>
+<img src="img\oops\class.png">
+<br><br>In the above example - Identity is the roll number of the student. State/Attributes are - Name, age, color, caste etc. Behaviors - Entering into class, leaving the class, writing assignments, asking questions etc.
+
+<br><br><h4><font color="#4682B4">Object Declaration</font></h4>
+When an object of a class is created, the class is said to be instantiated. All the instances share the attributes and the behavior of the class. But the values of those attributes, i.e. the state are unique for each object. A single class may have any number of instances. In general,we can't create objects of an abstract class or an interface.
+
+<br><br><pre><span style='font-weight:bold;color:#7B0052;'>Student</span> Priyanka;</pre>
+
+If we declare reference variable(Priyanka) like this, its value will be undetermined(null) until an object is actually created and assigned to it. Simply declaring a reference variable does not create an object.
+
+
+<br><br><h4><font color="#4682B4">Object Initialization</font></h4>
+
+The new operator instantiates a class by allocating memory for a new object and returning a reference to that memory. The new operator also invokes the class constructor. There are three ways we can initialize object -  by reference variable, by method, by constructor
+
+The below program Student.java defines a class, creates objects and gives the following output.
+
+<pre>
+
+Hi my name is Priyanka
+My rollnumber, age and color are 10257,29,white
+</pre>
+
+This class contains a single constructor. We can recognize a constructor because its declaration uses the same name as the class and it has no return type. The Java compiler differentiates the constructors based on the number and the type of the arguments. The constructor in the Student  class takes four arguments. The following statement provides "Priyanka",10257,29,"white" as values for those arguments:
+
+<br><br><pre>Student Priyanka = <span style='font-weight:bold;color:#7B0052;'>new</span> Student(<span style='color:#2A00FF'>"Priyanka"</span>,10257,29,<span style='color:#2A00FF'>"white"</span>);</pre>
+
+
+<br><b>Student.java</b>
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Student 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='color:#3F7F5F'>// Instance Variables
+</span>		String name;
+		<span style='font-weight:bold;color:#7B0052;'>int</span> rollnumber;
+		<span style='font-weight:bold;color:#7B0052;'>int</span> age;
+		String color;
+
+		<span style='color:#3F7F5F'>// Constructor Declaration of Class
+</span>		<span style='font-weight:bold;color:#7B0052;'>public</span> Student(String name, <span style='font-weight:bold;color:#7B0052;'>int</span> rollnumber, <span style='font-weight:bold;color:#7B0052;'>int</span> age, String color)
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			this.name = name;
+			this.rollnumber = rollnumber;
+			this.age = age;
+			this.color = color;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		<span style='color:#3F7F5F'>// method 1
+</span>		<span style='font-weight:bold;color:#7B0052;'>public</span> String getName()
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span> name;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		<span style='color:#3F7F5F'>// method 2
+</span>		<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> getRollnumber()
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span> rollnumber;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		<span style='color:#3F7F5F'>// method 3
+</span>		<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> getAge()
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span> age;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		<span style='color:#3F7F5F'>// method 4
+</span>		<span style='font-weight:bold;color:#7B0052;'>public</span> String getColor()
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span> color;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		@Override
+		<span style='font-weight:bold;color:#7B0052;'>public</span> String toString()
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span>(<span style='color:#2A00FF'>"Hi my name is "</span>+ this.getName()+
+				<span style='color:#2A00FF'>".\nMy rollnumber,age and color are "</span> +
+				this.getRollnumber()+<span style='color:#2A00FF'>","</span> + this.getAge()+
+				<span style='color:#2A00FF'>","</span>+ this.getColor());
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args)
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			Student Priyanka = <span style='font-weight:bold;color:#7B0052;'>new</span> Student(<span style='color:#2A00FF'>"Priyanka"</span>,10257, 29, <span style='color:#2A00FF'>"white"</span>);
+			System.out.println(Priyanka.toString());
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><br><h4><font color="#4682B4">Different ways to Create Object</font></h4>
+
+There are many ways to create an object in java.
+<ul><li>By new keyword
+</li><li>By newInstance() method
+</li><li>By clone() method
+</li><li>By deserialization
+</li><li>Factory Method 
+</li></ul>
+
+<h5><font color="#a3b77e">1. New keyword </font></h5>
+It is the most common and general way to create object in java.
+<br><br><pre><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> NewKeywordExample  
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+    String name = <span style='color:#2A00FF'>"Biswajit Automation"</span>; 
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args)  
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        <span style='color:#3F7F5F'>// Here we are creating Object of  
+</span>        <span style='color:#3F7F5F'>// NewKeywordExample using new keyword 
+</span>        NewKeywordExample obj = <span style='font-weight:bold;color:#7B0052;'>new</span> NewKeywordExample(); 
+        System.out.println(obj.name); 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<h5><font color="#a3b77e">2. Using New Instance </font></h5>
+If we know the name of the class & if it has a public default constructor we can create an object –Class.forName. We can use it to create the Object of a Class. Class.forName actually loads the Class in Java but doesn’t create any Object. To Create an Object of the Class you have to use the new Instance Method of the Class.
+
+<br><br><pre><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> NewInstanceExample 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+    String name = <span style='color:#2A00FF'>"HelloWorld"</span>; 
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        <span style='font-weight:bold;color:#7B0052;'>try</span>
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            Class cls = Class.forName(<span style='color:#2A00FF'>"NewInstanceExample"</span>); 
+            NewInstanceExample obj = (NewInstanceExample) cls.newInstance(); 
+            System.out.println(obj.name); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+        <span style='font-weight:bold;color:#7B0052;'>catch</span> (ClassNotFoundException e) 
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            e.printStackTrace(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+        <span style='font-weight:bold;color:#7B0052;'>catch</span> (InstantiationException e) 
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            e.printStackTrace(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+        <span style='font-weight:bold;color:#7B0052;'>catch</span> (IllegalAccessException e) 
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            e.printStackTrace(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<h5><font color="#a3b77e">3. Using Clone Method </font></h5>
+Whenever clone() is called on any object, the JVM actually creates a new object and copies all content of the previous object into it. Creating an object using the clone method does not invoke any constructor. To use clone() method on an object we need to implement Cloneable and define the clone() method in it.
+
+<pre><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> CloneExample <span style='font-weight:bold;color:#7B0052;'>implements</span> Cloneable 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+    @Override
+    <span style='font-weight:bold;color:#7B0052;'>protected</span> Object clone() <span style='font-weight:bold;color:#7B0052;'>throws</span> CloneNotSupportedException 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        <span style='font-weight:bold;color:#7B0052;'>return</span> super.clone(); 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+    String name = <span style='color:#2A00FF'>"GeeksForGeeks"</span>; 
+  
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        CloneExample obj1 = <span style='font-weight:bold;color:#7B0052;'>new</span> CloneExample(); 
+        <span style='font-weight:bold;color:#7B0052;'>try</span>
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            CloneExample obj2 = (CloneExample) obj1.clone(); 
+            System.out.println(obj2.name); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+        <span style='font-weight:bold;color:#7B0052;'>catch</span> (CloneNotSupportedException e) 
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            e.printStackTrace(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+//Note : Here we are creating the clone of an existing Object and not any new Object.
+//Class need to implement Cloneable Interface otherwise it will throw CloneNotSupportedException.
+</pre>
+
+<h5><font color="#a3b77e">4. Using Deserialization</font></h5>
+Whenever we serialize and then deserialize an object, JVM creates a separate object. In deserialization, JVM doesn’t use any constructor to create the object. To deserialize an object we need to implement the Serializable interface in the class.
+
+
+<br><br><pre><span style='color:#3F7F5F'>//Serializing an Object :</span>
+<span style='font-weight:bold;color:#7B0052;'>class</span> DeserializationExample <span style='font-weight:bold;color:#7B0052;'>implements</span> Serializable 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+    <span style='font-weight:bold;color:#7B0052;'>private</span> String name; 
+    DeserializationExample(String name) 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        this.name = name; 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+  
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        <span style='font-weight:bold;color:#7B0052;'>try</span>
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            DeserializationExample d = 
+                    <span style='font-weight:bold;color:#7B0052;'>new</span> DeserializationExample(<span style='color:#2A00FF'>"GeeksForGeeks"</span>); 
+            FileOutputStream f = <span style='font-weight:bold;color:#7B0052;'>new</span> FileOutputStream(<span style='color:#2A00FF'>"file.txt"</span>); 
+            ObjectOutputStream oos = <span style='font-weight:bold;color:#7B0052;'>new</span> ObjectOutputStream(f); 
+            oos.writeObject(d); 
+            oos.close(); 
+            f.close(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+        <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) 
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            e.printStackTrace(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+Object of DeserializationExample class is serialized using writeObject() method and written to file.txt file.
+
+<br><br><pre><span style='color:#3F7F5F'>//Deserialization of Object :</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> DeserializationExample 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        <span style='font-weight:bold;color:#7B0052;'>try</span>
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            DeserializationExample d; 
+            FileInputStream f = <span style='font-weight:bold;color:#7B0052;'>new</span> FileInputStream(<span style='color:#2A00FF'>"file.txt"</span>); 
+            ObjectInputStream oos = <span style='font-weight:bold;color:#7B0052;'>new</span> ObjectInputStream(f); 
+            d = (DeserializationExample)oos.readObject(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+        <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) 
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            e.printStackTrace(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+        System.out.println(d.name); 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<h5><font color="#a3b77e">5. Using newInstance() method of Constructor class</font></h5>
+This is similar to the newInstance() method of a class. There is one newInstance() method in the java.lang.reflect.Constructor class which we can use to create objects. It can also call parameterized constructor, and private constructor by using this newInstance() method. Both newInstance() methods are known as reflective ways to create objects. In fact newInstance() method of Class internally uses newInstance() method of Constructor class.
+
+<br><br><pre><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ReflectionExample 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+    <span style='font-weight:bold;color:#7B0052;'>private</span> String name; 
+    ReflectionExample() 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setName(String name) 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        this.name = name; 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+    <span style='font-weight:bold;color:#D3171B'>{</span> 
+        <span style='font-weight:bold;color:#7B0052;'>try</span>
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            Constructor constructor 
+                = ReflectionExample.class.getDeclaredConstructor(); 
+            ReflectionExample r = constructor.newInstance(); 
+            r.setName(<span style='color:#2A00FF'>"GeeksForGeeks"</span>); 
+            System.out.println(r.name); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+        <span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) 
+        <span style='font-weight:bold;color:#D3171B'>{</span> 
+            e.printStackTrace(); 
+        <span style='font-weight:bold;color:#D3171B'>}</span> 
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicoperation')">Next -></button>  
+
+<br><br> 
+
+</div>
+   
+
+<div id="classType" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Different Type Of Classes</h2>
+
+<br><h4><font color="#4682B4">Nested Class</font></h4>
+
+Java allows us to define a class within another class. Such a class is called a nested class.
+<ul><pre style="line-height: 150%;">
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> OuterClass 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    ...
+    <span style='font-weight:bold;color:#7B0052;'>class</span> NestedClass 
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+        ...
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+</ul>
+
+<h4><font color="#4682B4">Why Use Nested Classes?</font></h4>
+<ul><li>It is a way of logically grouping classes that are only used in one place: If a class is useful to only one other class, then it is logical to embed it in that class and keep the two together. Nesting such "helper classes" makes their package more streamlined.
+</li><li>It increases encapsulation: Consider two top-level classes, A and B, where B needs access to members of A that would otherwise be declared private. By hiding class B within class A, A's members can be declared private and B can access them. In addition, B itself can be hidden from the outside world.
+</li><li>It can lead to more readable and maintainable code: Nesting small classes within top-level classes places the code closer to where it is used.
+</li><li>Java doesn't allow a class to be declared as private. However in nested class architecture we can declare the inner class as private and it will not be accessed out side of the outer class.
+</li><li>The inner class can access the private or public variables/methods of the outer class.
+</li><li>Nested classes are of three types - Inner class, Method Local Inner Class, Static nested classes, Anonymous Inner Class
+</li></ul>
+
+
+<h4><font color="#4682B4">1. Inner Class</font></h4>
+In nested class architecture the class that is inside the outer class is called inner class. The class can be private and it can't be accessed from an object outside of the class. As a side note, we can't have static method in a nested inner class because an inner class is implicitly associated with an object of its outer class so it cannot define any static method for itself.
+
+<pre style="line-height: 150%;">
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> OuterClass
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>class</span> InnerClass
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> print()
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			System.out.println(<span style='color:#2A00FF'>"This is inner class.."</span>);
+		<span style='font-weight:bold;color:#D3171B'>}</span>	
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> display_inner()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		InnerClass incls= <span style='font-weight:bold;color:#7B0052;'>new</span> InnerClass();
+		incls.print();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> NestedClassDemo 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+	<span style='font-weight:bold;color:#D3171B'>{</span>		
+		OuterClass ocls= <span style='font-weight:bold;color:#7B0052;'>new</span> OuterClass();
+		ocls.display_inner();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+There's another way to create objects
+<pre style="line-height: 150%;">
+
+</span><span style='font-weight:bold;color:#7B0052;'>class</span> Outer
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>class</span> InnerClass
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> print()
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			System.out.println(<span style='color:#2A00FF'>"This is inner class.."</span>);
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		<span style='color:#3F7F5F'>/*public static void printme() -- Static method is not allowed
+		{
+			System.out.println("This is inner class..");
+		}*/</span>
+
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> NestedInnerClass 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+      <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+      <span style='font-weight:bold;color:#D3171B'>{</span>
+      Outer.InnerClass incls= <span style='font-weight:bold;color:#7B0052;'>new</span> Outer().new InnerClass();
+      incls.print();
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<h4><font color="#4682B4">2. Method Local Inner Class</font></h4>
+
+Inner class can be declared within a method of an outer class. Method Local inner classes can’t use local variable of outer method until that local variable is not declared as final. The main reason we need to declare a local variable as a final is that local variable lives on stack till method is on the stack but there might be a case the object of inner class still lives on the heap. Method local inner class can’t be marked as private, protected, static and transient but can be marked as abstract and final, but not both at the same time.
+
+<pre style="line-height: 150%;">
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> OutClass
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> OutMethod()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>class</span> InnerClass
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>void</span> innerMethod()
+			<span style='font-weight:bold;color:#D3171B'>{</span>
+				System.out.println(<span style='color:#2A00FF'>"Method inner class.."</span>);
+			<span style='font-weight:bold;color:#D3171B'>}</span>
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		InnerClass incls= <span style='font-weight:bold;color:#7B0052;'>new</span> InnerClass();
+		incls.innerMethod();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Method_Local_Inner_Class <span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span>
+		OutClass ocls= <span style='font-weight:bold;color:#7B0052;'>new</span> OutClass();
+		ocls.OutMethod();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<h4><font color="#4682B4">3. Static nested classes</font></h4>
+
+Static nested classes are not technically an inner class. They are like a static member of outer class.
+
+<pre style="line-height: 150%;">
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> OutSideClass
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>class</span> InnerClass
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> show()
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			System.out.println(<span style='color:#2A00FF'>"Message shown.."</span>);
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> OuterMethod()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		InnerClass incls= <span style='font-weight:bold;color:#7B0052;'>new</span> InnerClass();
+		incls.show();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> StaticInnerClassDemo 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		OutSideClass ocls= <span style='font-weight:bold;color:#7B0052;'>new</span> OutSideClass();
+		ocls.OuterMethod();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<h4><font color="#4682B4">4. Anonymous Inner Class</font></h4>
+Anonymous inner classes are declared without any name at all. They are created in two ways.
+
+<br><br><h5>As subclass of specified type</h5>
+
+<pre style="line-height: 150%;">
+<span style='font-weight:bold;color:#7B0052;'>class</span> Demo 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+	<span style='font-weight:bold;color:#7B0052;'>void</span> show() 
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		System.out.println(<span style='color:#2A00FF'>"i am in show method of super class"</span>); 
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span> 
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AnonymousClassDemoOne 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+
+	<span style='color:#3F7F5F'>//  An anonymous class with Demo as base class 
+</span>	<span style='font-weight:bold;color:#7B0052;'>static</span> Demo d = <span style='font-weight:bold;color:#7B0052;'>new</span> Demo() 
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		<span style='font-weight:bold;color:#7B0052;'>void</span> show() 
+		<span style='font-weight:bold;color:#D3171B'>{</span> 
+			super.show(); 
+			System.out.println(<span style='color:#2A00FF'>"i am in Flavor1Demo class"</span>); 
+		<span style='font-weight:bold;color:#D3171B'>}</span> 
+	<span style='font-weight:bold;color:#D3171B'>}</span>; 
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args)
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		d.show(); 
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+In the above code, we have two class Demo and Flavor1Demo. Here demo act as super class and anonymous class acts as a subclass, both classes have a method show(). In anonymous class show() method is overridden.
+
+<br><br><h5>As implementer of the specified interface</h5>
+
+<pre style="line-height: 150%;">
+
+<span style='font-weight:bold;color:#7B0052;'>interface</span> Hello 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+	<span style='font-weight:bold;color:#7B0052;'>void</span> show(); 
+<span style='font-weight:bold;color:#D3171B'>}</span> 
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> AnonymousClassDemoTwo 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+
+	<span style='color:#3F7F5F'>// An anonymous class that implements Hello interface 
+</span>	<span style='font-weight:bold;color:#7B0052;'>static</span> Hello h = <span style='font-weight:bold;color:#7B0052;'>new</span> Hello() 
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> show() 
+		<span style='font-weight:bold;color:#D3171B'>{</span> 
+			System.out.println(<span style='color:#2A00FF'>"i am in anonymous class"</span>); 
+		<span style='font-weight:bold;color:#D3171B'>}</span> 
+	<span style='font-weight:bold;color:#D3171B'>}</span>; 
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span> 
+		h.show(); 
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+In above code we create an object of anonymous inner class but this anonymous inner class is an implementer of the interface Hello. Any anonymous inner class can implement only one interface at one time. It can either extend a class or implement interface at a time.
+
+<br><br><h4><font color="#4682B4">5. Pojo Class</font></h4>
+Pojo stands for Plain Old Java Object. This class is similar to any other class in Java however it has some set of rules. The reason of having this class is to simplify the web development process.
+Let's say we have a pojo class for employee. The class has set of attributes and methods. When employee details are fetched from DB. It will be done through the pojo class object and then using the same object the web page can access the values.
+A question may arise then what is Java Bean. Java Bean has also the similar features, so we can say all Java Bean classes are POJO but not all POJOs are Java Bean.
+<ul><li>A Pojo class shouldn't extend any class
+</li><li>A Pojo class shouldn't implement any interface
+</li><li>The class must be public i.e accessible to all.
+</li><li>Properties or variables defined in the class must be private i.e. can't be accessed directly.
+</li><li>The class must have default constructor i.e no argument constructor.
+</li><li>Public Getter and Setter must be present in the classes in order to access the variables/properties.
+</li></ul>
+
+<pre style="line-height: 150%;"><span style='font-weight:bold;color:#7B0052;'>class</span> Employee
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+	<span style='color:#3F7F5F'>//Field names 
+</span>	<span style='font-weight:bold;color:#7B0052;'>private</span> String name; 
+	<span style='font-weight:bold;color:#7B0052;'>private</span> String id; 
+	<span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>double</span> salary; 
+
+	<span style='color:#3F7F5F'>//No argument constructor
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> Employee() <span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"object initialized.."</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Getters/Setters
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> String getName() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> name;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setName(String name) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.name = name;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getId() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> id;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setId(String id) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.id = id;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>double</span> getSalary() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> salary;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setSalary(<span style='font-weight:bold;color:#7B0052;'>double</span> salary) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.salary = salary;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> PojoExample
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		Employee emp= <span style='font-weight:bold;color:#7B0052;'>new</span> Employee();
+		emp.setId(<span style='color:#2A00FF'>"121"</span>);
+		emp.setName(<span style='color:#2A00FF'>"Biswajit"</span>);
+		emp.setSalary(120.00);
+
+		System.out.println(emp.getId());
+		System.out.println(emp.getName());
+		System.out.println(emp.getSalary());
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+
+<br><br> 
+
+</div>
+
+
+<div id="inheritance" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Inheritance</h2>
+
+Inheritance simply means <font color="blue">Relationship</font> between classes.
+
+<ul><li>Inheritance is the mechanism where one class acquires the properties of another class.
+</li><li>In other way, we can say this is an approach where new class is derived from an existing class. 
+</li><li>Whenever Inheritance comes, just visualize the child-parent relationship. The child inherits the properties of the parent.
+</li><li>Similarly child classes may inherit or acquire the properties and methods of the parent classes. 
+</li><li>The child class often referred as sub class, derived class etc, the parent class is often referred as superclass etc.
+</li><li>The keyword <font color="blue">extends </font> is used to indicate the child class extends the parent class.
+</li><li>In Java if we don't declare any super class/parent class then it extends the <font color="blue">Object Class</font>
+</li><li>That's why it's said, Object Class is the root of all inheritance hierarchies.
+</li><li>And it's the only class in Java that doesn't extend another class.
+</li></ul>
+
+<pre><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Subclass <span style='font-weight:bold;color:#7B0052;'>extends</span> Superclass
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='color:#3F7F5F'>//methods and fields
+</span><span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<h4><font color="#4682B4">Why do we need Inheritance?</font></h4>
+
+<p>We need inheritance for <font color="blue">code reusability</font>. Some people say inheritance is required for polymorphism(overloading or overriding) however that's not right. Code reusability is the correct answer.
+
+</p><p>Let's discuss a scenario here. We have car classes such as - BMW, Maruti, i20 etc. All cars will have some basic features like start engine, fuel, key, accelerator etc. So if we design it as it is then we will have to repeat the same properties/methods in all the car classes. Instead of that we can create a car class and have all the common properties defined there. Then each car class BMW, Maruti, i20 etc can extend the car class and use the properties. This way we achieve code reusability.
+</p>
+
+
+<br><h4><font color="#4682B4">Types Of Inheritance?</font></h4>
+<ul><li>There can be three types of inheritance in java- Single, Multilevel and Hierarchical. Using classes.
+</li><li>There are two more types - Multiple and Hybrid inheritance which are supported through interface only.
+</li></ul>
+
+<br><h4><font color="#4682B4">Single Inheritance</font></h4>
+
+<p>Single inheritance enables a derived class to inherit properties and behavior from a single parent class. It allows a derived class to inherit the properties and behavior of a base class, thus enabling code reusability as well as adding new features to the existing code. This makes the code much more elegant and less repetitive. Single inheritance is safer than multiple inheritance if it is approached in the right way. It also enables a derived class to call the parent class implementation for a specific method if this method is overridden in the derived class or the parent class constructor.
+
+</p><p>Example: Here the architecture is DerivedClass --> BaseClass. Let's say iPhone inherits the properties of ApplePhones.
+</p>
+
+
+<pre style="line-height: 150%;"><span style='color:#3F7F5F'>//base class 
+</span><span style='font-weight:bold;color:#7B0052;'>class</span> ApplePhones
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+	<span style='color:#3F7F5F'>// the apple class has two fields 
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> String OS; 
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> version; 
+
+	<span style='color:#3F7F5F'>// the apple class has one constructor 
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> ApplePhones(<span style='font-weight:bold;color:#7B0052;'>int</span> version) 
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		OS = <span style='color:#2A00FF'>"IOS"</span>; 
+		this.version = version; 
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getOSDetails() 
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		<span style='font-weight:bold;color:#7B0052;'>return</span> OS; 
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> updateVersion(<span style='font-weight:bold;color:#7B0052;'>int</span> increment) 
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		version = version+increment; 
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+
+<span style='font-weight:bold;color:#D3171B'>}</span> 
+
+<span style='color:#3F7F5F'>//derived class 
+</span><span style='font-weight:bold;color:#7B0052;'>class</span> IPhone <span style='font-weight:bold;color:#7B0052;'>extends</span> ApplePhones 
+<span style='font-weight:bold;color:#D3171B'>{</span> 
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String product_name;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> Price;
+
+	<span style='color:#3F7F5F'>// the IPhone subclass has one constructor 
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> IPhone(<span style='font-weight:bold;color:#7B0052;'>int</span> version, String productname, <span style='font-weight:bold;color:#7B0052;'>int</span> price) 
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		<span style='color:#3F7F5F'>// invoking base-class(AplePhones) constructor 
+</span>		<span style='font-weight:bold;color:#7B0052;'>super</span>(version); 
+		product_name= productname; 
+		Price= price;
+	<span style='font-weight:bold;color:#D3171B'>}</span>  
+
+	<span style='color:#3F7F5F'>// overriding getOS
+</span>	@Override
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getOSDetails() 
+	<span style='font-weight:bold;color:#D3171B'>{</span> 
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='color:#2A00FF'>"iOS001"</span>; 
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+
+<span style='font-weight:bold;color:#D3171B'>}</span> 
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> SingleInheritanceDemo <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		IPhone iphone = <span style='font-weight:bold;color:#7B0052;'>new</span> IPhone(1,<span style='color:#2A00FF'>"iPhone MX"</span>, 50000); 
+		System.out.println(<span style='color:#2A00FF'>"ProductName="</span> +iphone.product_name);
+		System.out.println(<span style='color:#2A00FF'>"OS="</span> +iphone.OS);
+		System.out.println(<span style='color:#2A00FF'>"version="</span> +iphone.version);
+		System.out.println(<span style='color:#2A00FF'>"Price="</span> +iphone.Price);
+
+		IPhone iphone2 = <span style='font-weight:bold;color:#7B0052;'>new</span> IPhone(2,<span style='color:#2A00FF'>"iPhone XX"</span>, 90000); 
+		System.out.println(<span style='color:#2A00FF'>"ProductName="</span> +iphone2.product_name);
+		System.out.println(<span style='color:#2A00FF'>"OS="</span> +iphone2.getOSDetails());
+		iphone2.updateVersion(2);
+		System.out.println(<span style='color:#2A00FF'>"version="</span> +iphone2.version);
+		System.out.println(<span style='color:#2A00FF'>"Price="</span> +iphone2.Price);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4><font color="#4682B4">MultiLevel Inheritance</font></h4>
+When a class extends a class, which extends anther class then this is called multilevel inheritance. 
+<ul><li>Real life example can be you ---> Your father ----> Your grand father.
+</li><li>Here you are the child class, your father is your parent class and your grand father is your father's parent class.
+</li><li>Derived class(c) ----> Intermediatory Class (B) -----> Base class(A)
+</li></ul>
+
+
+<pre style="line-height: 150%;"><span style='font-weight:bold;color:#7B0052;'>class</span> Car
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Car()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Class Car"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> vehicleType()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Vehicle Type: Car"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>class</span> Maruti <span style='font-weight:bold;color:#7B0052;'>extends</span> Car
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Maruti()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Class Maruti"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> brand()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Brand: Maruti"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> speed()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Max: 90Kmph"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>class</span> Maruti800 <span style='font-weight:bold;color:#7B0052;'>extends</span> Maruti
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Maruti800()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Maruti Model: 800"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> speed()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Max: 80Kmph"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> MultipleLevelInheritanceDemo 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+        <span style='font-weight:bold;color:#D3171B'>{</span>
+		Maruti800 obj=<span style='font-weight:bold;color:#7B0052;'>new</span> Maruti800();
+		obj.vehicleType();
+		obj.brand();
+		obj.speed();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+Output
+---------
+Class Car
+Class Maruti
+Maruti Model: 800
+Vehicle Type: Car
+Brand: Maruti
+Max: 80Kmph</pre>
+
+
+<br><h4><font color="#4682B4">Hierarchical Inheritance</font></h4>
+When more than one classes inherit a same class then this is called hierarchical inheritance. So there will be one base class and multiple subclasses.
+
+<pre style="line-height: 150%;"><span style='font-weight:bold;color:#7B0052;'>class</span> manager
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> manager_code=9;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> managercode()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Manager Code="</span> +manager_code);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> EmployeeTom <span style='font-weight:bold;color:#7B0052;'>extends</span> manager
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> TomDetails()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Name= Tom"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> EmployeeJerry <span style='font-weight:bold;color:#7B0052;'>extends</span> manager
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> JerryDetails()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Name= Jerry"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HierarchicalInheritanceDemo 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		EmployeeTom tom= <span style='font-weight:bold;color:#7B0052;'>new</span> EmployeeTom();
+		tom.TomDetails();
+		tom.managercode();
+		
+		EmployeeJerry jerry= <span style='font-weight:bold;color:#7B0052;'>new</span> EmployeeJerry();
+		jerry.JerryDetails();
+		jerry.managercode();
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+Output
+----------
+Name= Tom
+Manager Code=9
+Name= Jerry
+Manager Code=9</pre>
+
+<br><h4><font color="#4682B4">Multiple Inheritance</font></h4>
+When a class inherits properties of more than one parent class, that is called Multiple Inheritance. A common question often asked is, does Java support multiple inheritance? The answer is No. Why not? The problem occurs when there exist methods with same signature in both the super classes and subclass. On calling the method, the compiler cannot determine which class method to be called and even on calling which class method gets the priority. We can implement multiple inheritance using interfaces.
+
+<br><br><pre class="codeblock1"><span style='color:#3F7F5F'>//First Parent class
+</span><span style='font-weight:bold;color:#7B0052;'>class</span> Parent1
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>void</span> fun()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Parent1"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='color:#3F7F5F'>//Second Parent Class
+</span><span style='font-weight:bold;color:#7B0052;'>class</span> Parent2
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>void</span> fun()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Parent2"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> Child <span style='font-weight:bold;color:#7B0052;'>extends</span> Parent1, Parent2 <span style='color:#3F7F5F'>//--This will throw error
+</span><span style='font-weight:bold;color:#D3171B'>{</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> MultipleInheritanceDemo 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		Child t = <span style='font-weight:bold;color:#7B0052;'>new</span> Child();
+		t.fun();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span>	
+</pre>
+
+<pre class="codeblock1">
+//Multiple Inheritance UsingInterface
+<span style='font-weight:bold;color:#7B0052;'>interface</span> Father
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> cashProperty(); 
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>interface</span> Mother
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> goldProperty(); 
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>interface</span> AncestorProperties <span style='font-weight:bold;color:#7B0052;'>extends</span> Father, Mother
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> getAncestorProperties();
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> Child <span style='font-weight:bold;color:#7B0052;'>implements</span> AncestorProperties
+<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>int</span> cash;
+	<span style='font-weight:bold;color:#7B0052;'>int</span> gold;
+	
+	@Override
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> cashProperty() <span style='font-weight:bold;color:#D3171B'>{</span>
+		cash=5000;
+		<span style='font-weight:bold;color:#7B0052;'>return</span> cash;
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Override
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> goldProperty() <span style='font-weight:bold;color:#D3171B'>{</span>
+		gold=5;
+		<span style='font-weight:bold;color:#7B0052;'>return</span> gold;
+		
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Override
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> getAncestorProperties() 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Father's properties="</span> +cashProperty());
+		System.out.println(<span style='color:#2A00FF'>"Mother's properties="</span> +goldProperty());
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> MultipleInheritanceUsingInterface 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		Child chld= <span style='font-weight:bold;color:#7B0052;'>new</span> Child();
+		chld.getAncestorProperties();
+
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+
+<br><h4><font color="#4682B4">Member Access</font></h4>
+We have been discussing the child class will inherit the parent class properties. But what are the properties will be inherited by the child class?
+
+<pre>
+
+Public ---> Child class can inherit.
+Protected ----> Child class can inherit
+Private -----> Child class <font color="red">can not</font> inherit
+</pre>
+
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>package</span> inheritance;
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> Father
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String surname=<span style='color:#2A00FF'>"Sundara"</span>;
+	<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>int</span> bankBalance=450;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> String diary=<span style='color:#2A00FF'>"My diary 1959"</span>;
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>class</span> Child <span style='font-weight:bold;color:#7B0052;'>extends</span> Father
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String name=<span style='color:#2A00FF'>"Biswajit"</span>;
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AccessCheck <span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		Child chld= <span style='font-weight:bold;color:#7B0052;'>new</span> Child();
+		System.out.println(chld.name);
+		System.out.println(chld.surname);
+		System.out.println(chld.bankBalance);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+
+<br><h4><font color="#4682B4">Points To Ponder</font></h4>
+
+<ul><li><font color="#4ba574"><b>Remote Webdriver </b></font>is the superclass of all selenium classes. 
+<br><font face="courier">public class ChromeDriver extends RemoteWebDriver</font>
+</li><li>Press F3 on a method, it will take you to the code. Press F4 on a method and it will display the hierarchy.
+</li><li><b><font color="#4ba574">Object </b></font>is the superclass of all classes in java.
+</li><li><b><font color="#4ba574">Default superclass:</b></font> Except Object class, which has no superclass, every class has one and only one direct superclass (single inheritance). In the absence of any other explicit superclass, every class is implicitly a subclass of Object class.
+</li><li><b><font color="#4ba574">Superclass can only be one:</b></font> A superclass can have any number of subclasses. But a subclass can have only one superclass. This is because Java does not support multiple inheritance with classes. Although with interfaces, multiple inheritance is supported by java.
+</li><li><b><font color="#4ba574">Inheriting Constructors:</b></font> A subclass inherits all the members (fields, methods, and nested classes) from its superclass. Constructors are not members, so they are not inherited by subclasses, but the constructor of the superclass can be invoked from the subclass.
+</li><li><b><font color="#4ba574">Private member inheritance:</b></font> A subclass does not inherit the private members of its parent class. However, if the superclass has public or protected methods(like getters and setters) for accessing its private fields, these can also be used by the subclass.
+</li></ul>
+
+<br><h4><font color="#4682B4">What all can be done in a Subclass?</font></h4>
+
+In sub-classes we can inherit members as is, replace them, hide them, or supplement them with new members:
+
+<ul><li>The inherited fields can be used directly, just like any other fields.
+</li><li>We can declare new fields in the subclass that are not in the superclass.
+</li><li>The inherited methods can be used directly as they are.
+</li><li>We can write a new instance method in the subclass that has the same signature as the one in the superclass, thus overriding it (as in example above, toString() method is overridden).
+</li><li>We can write a new static method in the subclass that has the same signature as the one in the superclass, thus hiding it.
+</li><li>We can declare new methods in the subclass that are not in the superclass.
+</li><li>We can write a subclass constructor that invokes the constructor of the superclass, either implicitly or by using the keyword super.
+</div>
+
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+
+<br><br> 
+
+</div>
+
+<div id="encap" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Encapsulation</h2>
+      Encapsulation is a mechanism of binding code and data together in a single unit.
+       <ul><li>Single Unit (class) = Data (Variable) + Code (Methods)
+      </li><li>So in other words, variables and methods are wrapped in a class in such a way that it can't be accessed by outside of the class
+      </li><li>This is used to hide the internal implementation from the outer world.
+      </li><li>Means The variables of the class will be hidden from other classes and can be accessed by only the current class methods
+      </li></ul><img src="img\oops\Encapsulation.png" style="height:250px; width:250px;">
+      
+   
+<h4><font color="#4682B4">Push Projects</font></h4>
+
+	Here we will see how can we push projects to GitHub.
+	Let's create a folder <font color="rgb(240, 128, 128)">testproj</font>and have a text file named <font color="rgb(240, 128, 128)">file.txt</font>
+        Launch command prompt 
+    
+<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git init</span>
+Initialized empty Git repository in C:/Users/Biswajit/Desktop/wiki/testproj/.git
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git clone </span>https://github.com/biswajitsundara/githubtest.git
+</span>Cloning into 'githubtest'...
+Username for 'https://github.com': xxxx
+Password for 'https://biswajitsundara@github.com':xxxx
+warning: You appear to have cloned an empty repository.
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
+On branch master
+No commits yet
+Untracked files:
+  (use git add ..." to include in what will be committed)
+        file.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git add *.*</span>
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
+On branch master
+No commits yet
+Changes to be committed:
+  (use "git rm --cached ..." to unstage)
+        new file:   file.txt
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git commit -m "first commit"</span>
+[master (root-commit) a98e199] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git remote add origin </span>https://github.com/biswajitsundara /githubtest.git
+</span>
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git push -u origin master</span>
+Username for 'https://github.com': xxxx
+Password for 'https://biswajitsundara@github.com': xxxx
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 222 bytes | 222.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/biswajitsundara/githubtest.git
+* [new branch]      master -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+***** Check the file should be available in the GitHub *******</pre>
+
+
+<br><h4><font color="#4682B4">Pull Operations</font></h4>
+Here we will see how can we pull projects from GitHub. Launch command prompt and execute the below commands
+<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git pull </span>https://github.com/biswajitsundara/githubtest.git
+</span>Username for 'https://github.com': biswajitsundara
+Password for 'https://biswajitsundara@github.com':
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/biswajitsundara/githubtest
+ * branch            HEAD       -&gt; FETCH_HEAD</pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+<div id="association" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Association</h2>
+    
+Association defines relationship between two separate classes through their objects.
+
+<ul><li>Association defines a relationship between two class objects based on common attributes.
+</li><li>The association can be one-to-one. one-to-many, many-to-many
+</li><li>Composition and Aggregation are the two types of association. 
+</li><li>Let's take an example, bank and employee.
+</li><li>There are multiple banks an employee can have. one bank can have multiple employees also
+</li><li>Both have their own life cycles (they can be created or deleted independently)
+</li><li>Let's say if one employee is deleted, it doesn't impact the bank. 
+</li><li>Similarly if a bank is deleted it doesn't impact the employee.
+</li></ul>
+ 
+<br><h4><font color="#4682B4">Source Code</font></h4>
+
+<ul><li>Let's say we have a class for bank
+</li><li>And another class for employee.
+</li><li>We can establish the association using bank id.
+</li><li>Both classes are independent. 
+</li><li>Any change in bank class doesn't impact the employee class
+</ul>
+
+<b>Bank.java</b>
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Bank
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> bankId;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String bankName;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> getBankId() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> bankId;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setBankId(<span style='font-weight:bold;color:#7B0052;'>int</span> bankId) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.bankId = bankId;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getBankName() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> bankName;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setBankName(String bankName) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.bankName = bankName;
+	<span style='font-weight:bold;color:#D3171B'>}</span>	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<b>Employee.java</b>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>class</span> Employee
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> empId;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> bankId;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String empName;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> getEmpId() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> empId;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setEmpId(<span style='font-weight:bold;color:#7B0052;'>int</span> empId) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.empId = empId;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>int</span> getBankId() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> bankId;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setBankId(<span style='font-weight:bold;color:#7B0052;'>int</span> bankId) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.bankId = bankId;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getEmpName() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> empName;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setEmpName(String empName) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.empName = empName;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+		
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<b>AssociationExample.java</b>
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AssociationExample <span style='font-weight:bold;color:#D3171B'>{</span>
+    
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span>		
+    
+    Bank bank= <span style='font-weight:bold;color:#7B0052;'>new</span> Bank();
+    bank.setBankId(230);
+    bank.setBankName(<span style='color:#2A00FF'>"Citi Bank"</span>);
+    
+    Employee emp= <span style='font-weight:bold;color:#7B0052;'>new</span> Employee();
+    emp.setEmpId(23140);
+    emp.setBankId(230);
+    emp.setEmpName(<span style='color:#2A00FF'>"Biswajit"</span>);
+    
+        System.out.println(<span style='color:#2A00FF'>"Name="</span> +emp.getEmpName());
+	System.out.println(<span style='color:#2A00FF'>"ID="</span> +emp.getEmpId());
+	System.out.println(<span style='color:#2A00FF'>"Bank ID="</span> +emp.getBankId());
+	
+	<span style='font-weight:bold;color:#7B0052;'>if</span>(emp.getBankId()==bank.getBankId())
+	System.out.println(<span style='color:#2A00FF'>"Bank name="</span> +bank.getBankName());
+	<span style='font-weight:bold;color:#7B0052;'>else</span>
+		System.out.println(<span style='color:#2A00FF'>"Bank doesn't exist"</span>);
+    
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><h4><font color="#4682B4">Observation</font></h4>
+Here we can see the relation is established based one common attribute bankId. If the bank Id exists in the bank object then it returns the bank name else say doesn't exist.
+Both classes are independent to each other. 
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basicoperation')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'branching')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+<div id="aggregation" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Aggregation</h2>
+    Aggregation is a type of association between two classes.
+    
+   <ul><li>Aggregation defines <font color="blue">HAS A</font> relationship between classes.
+    </li><li>For example, Employee class HAS A address class. 
+    </li><li>This relationship is unidirectional means employee class has address but vice versa is not possible.
+    </li><li>One class can exist without another class means if we nullify the object of employee class, the address object still exists
+    </li><li>Aggregation can be used instead of inheritance however we will have to see the need for so.
+    </li></ul>
+
+<br><h4><font color="#4682B4">Source Code</font></h4>
+
+<b>Address.java</b>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Address
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	String streetname;
+	String houseno;
+	String pobox;
+	String pincode;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Address(String stname, String hno, String pbox, String pin)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		streetname=stname;
+		houseno=hno;
+		pobox=pbox;
+		pincode=pin;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><b>Employee.java</b>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Employee
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	String name;
+	String id;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Employee(String naMe, String Id)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		name= naMe;
+		id=Id;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> printInfo(Address ad)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"************** Employee Info **************"</span>);
+		System.out.println(<span style='color:#2A00FF'>"Name= "</span>+name);
+		System.out.println(<span style='color:#2A00FF'>"Id= "</span>+id);
+		System.out.println(<span style='color:#2A00FF'>"StreetName = "</span>+ad.streetname);
+		System.out.println(<span style='color:#2A00FF'>"House No = "</span>+ad.houseno);
+		System.out.println(<span style='color:#2A00FF'>"PO Box = "</span>+ad.pobox);
+		System.out.println(<span style='color:#2A00FF'>"PinCode = "</span>+ad.pincode);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><b>AggregationExample.java</b>
+
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> AggregationExample <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		Employee emp1= <span style='font-weight:bold;color:#7B0052;'>new</span> Employee(<span style='color:#2A00FF'>"Kareena"</span>,<span style='color:#2A00FF'>"221"</span>);
+		Address add= <span style='font-weight:bold;color:#7B0052;'>new</span> Address(<span style='color:#2A00FF'>"Andheri West"</span>,<span style='color:#2A00FF'>"1051A"</span>,<span style='color:#2A00FF'>"PO12/13"</span>,<span style='color:#2A00FF'>"72001"</span>);
+		emp1.printInfo(add);
+		
+		Employee emp2= <span style='font-weight:bold;color:#7B0052;'>new</span> Employee(<span style='color:#2A00FF'>"Saif"</span>,<span style='color:#2A00FF'>"222"</span>);
+		Address add2= <span style='font-weight:bold;color:#7B0052;'>new</span> Address(<span style='color:#2A00FF'>"Andheri East"</span>,<span style='color:#2A00FF'>"1051A"</span>,<span style='color:#2A00FF'>"PO12/13"</span>,<span style='color:#2A00FF'>"72004"</span>);
+		emp2.printInfo(add2);
+	<span style='font-weight:bold;color:#D3171B'>}</span>	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4><font color="#4682B4">Observation</font></h4>
+<ul><li>Here we can see the objects for employee & address are created separately.
+</li><li>If we set emp2=null then also we will see address details are getting printed.
+</li><li>so we can say the address object is passed during run time and it can be any address object.
+</li></ul>
+
+
+<br><h4><font color="#4682B4">Advantages</font></h4>
+<ul><li>Using Aggregation we can achieve code reusability in an efficient manner.
+</li><li>Let's say we are tagging address object 1 for one employee and then the employee changed his address then all we need to do is map to another address object.
+</li><li>Unlike inheritance here there won't be any conflicts between methods. 
+</li></ul>
+
+
+<br><h4><font color="#4682B4">Usage in Selenium</font></h4>
+Let's say there's a registration page to be used for employee, manager, vendors registration etc.
+All the common fields like firstname, last name, gender, email address etc can be kept in one class file.
+While filling the form we can pass the object of this class to our testcase. So we don't have to create multiple pages for the same registration and can reuse.
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basicCommands')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'conflictres')">Next -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="composition" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Composition</h2>
+    Composition is a restricted form of Aggregation in which two entities are highly dependent on each other. When an object contains the other object, if the contained object cannot exist without the existence of container object, then it is called composition.
+
+<ul><li>It is Part-Of</font> relationship.
+</li><li>An employee contains address. Means Address is part of Employee class.
+</li><li>In composition, both the entities are dependent on each other
+</li><li>When there is a composition between two entities, the composed object cannot exist without the other entity.
+</li><li>A good design pattern is to use composition over inheritance.
+</li><li>A class contains students. A student cannot exist without a class. There exists composition between class and students.
+</li><li>This restriction is not in aggregation. Though one object can contain the other object, there is no condition that the composed object must exist.
+</li><li>A Library contains students and books. Relationship between library and student is aggregation because a student can exist without a library but A book can not exist without a library so the relation between books and library is called composition. 
+</ul>
+
+
+<h4><font color="#4682B4">Source Code</font></h4>
+
+<br><b>Address.java</b>
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Address
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>private</span> String streetname;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> String houseno;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> String pobox;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> String pincode;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getStreetname() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> streetname;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setStreetname(String streetname) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.streetname = streetname;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getHouseno() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> houseno;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setHouseno(String houseno) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.houseno = houseno;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getPobox() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> pobox;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setPobox(String pobox) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.pobox = pobox;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getPincode() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> pincode;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setPincode(String pincode) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.pincode = pincode;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+			
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><b>Employee.java</b>
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Employee
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>private</span> String name;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> String id;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> Address address;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Employee()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		address= <span style='font-weight:bold;color:#7B0052;'>new</span> Address();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getName() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> name;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setName(String name) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.name = name;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> String getId() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> id;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setId(String id) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.id = id;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Address getAddress() <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> address;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><b>CompositionExample.java</b>
+<pre class="codeblock"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> CompositionExample <span style='font-weight:bold;color:#D3171B'>{</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> printInfo(Employee emp)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(emp.getId());
+		System.out.println(emp.getName());
+		System.out.println(emp.getAddress().getHouseno());
+		System.out.println(emp.getAddress().getPincode());
+		System.out.println(emp.getAddress().getStreetname());
+		System.out.println(emp.getAddress().getPobox());
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		Employee emp1= <span style='font-weight:bold;color:#7B0052;'>new</span> Employee();
+		emp1.setId(<span style='color:#2A00FF'>"2077"</span>);
+		emp1.setName(<span style='color:#2A00FF'>"Kareena"</span>);
+		emp1.getAddress().setHouseno(<span style='color:#2A00FF'>"201/202"</span>);
+		emp1.getAddress().setPobox(<span style='color:#2A00FF'>"PO201"</span>);
+		emp1.getAddress().setStreetname(<span style='color:#2A00FF'>"New Park Street"</span>);
+		emp1.getAddress().setPincode(<span style='color:#2A00FF'>"60021"</span>);
+		
+		printInfo(emp1);
+		
+		
+		Employee emp2= <span style='font-weight:bold;color:#7B0052;'>new</span> Employee();
+		emp2.setId(<span style='color:#2A00FF'>"1059"</span>);
+		emp2.setName(<span style='color:#2A00FF'>"Saif"</span>);
+		emp2.getAddress().setHouseno(<span style='color:#2A00FF'>"131"</span>);
+		emp2.getAddress().setPobox(<span style='color:#2A00FF'>"PO201"</span>);
+		emp2.getAddress().setStreetname(<span style='color:#2A00FF'>"Pataudi Street"</span>);
+		emp2.getAddress().setPincode(<span style='color:#2A00FF'>"60031"</span>);
+	
+		printInfo(emp2);
+			
+	<span style='font-weight:bold;color:#D3171B'>}</span>	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><h4><font color="#4682B4">Observation</font></h4> 
+<ul><li>If we look at the above program. Employee class contains the address object. 
+</li><li>We are setting the address details through the employee object.
+</li><li>If we make the employee object as null. Then all its memebrs will be destroyed along with the address object. 
+</li><li>So address object is strongly dependent on the employee object.
+</li><li>This type of design is called composition. 
+</li></ul>
+
+<br><h4><font color="#4682B4">Advantages</font></h4>
+<ul><li>Let's say we have a class called 'Company' and it has various components like - Employee, Department, etc. 
+</li><li>If we use inheritance then we can acquire property of only one class.
+</li><li>Incase of inheritance all the properties will be inherited by default however here we can fetch what is required from the class.
+</li></ul>
+
+<br><h4><font color="#4682B4">Usage in Selenium Framework</font></h4>
+Let's say we create a class TestConfiguration. This class will have data members like browser name, browser version, maximize window, delete cookies etc
+Now in the Test Case class we can create object of the test configuration class and then pass it to the web driver factory class. So based on the browser requirement
+the values will be set and for each testcase a testconfig will be created. At the end of the test execution we will set the testcase object to null so test config will also be destroyed.
+
+<br><br>Another example, in most of the websites now a days, we can see common sections between pages. The sections may contain buttons like - add to card, check out, contact us etc.
+If we add these section items/menu in every page then we will have code redundancy. We can't keep all these into one page and call in other pages
+because in page object model, each page class should be independent. Here we can create another package for sections and store all the UI elements & methods under it.
+Now in each page class we can create object of that section and set/get values, call methods as required. 
+ 
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+
+<br><br> 
+</div>
+
+
+</div>
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+
+    window.scrollTo(0, 0);
+  
+}
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('home').style.display = "block";
+}
+</script>
+
+  
+</body>
+
+</html>

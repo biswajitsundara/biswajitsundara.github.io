@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Pontano Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<link href="css/blogpage.css" rel="stylesheet">
+
+<link href="css/comment2.css" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Roboto',sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 21vw;
+
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.topics {
+  margin-left:20vw;
+  height: 1000px;
+  line-height: 200%;
+  font-family: 'Roboto',sans-serif;font-size: 16px; font-weight:400; 
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar { 
+    display: none; 
+  }
+  div.container {margin-left: 0;}
+}
+
+h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height: 150%;}
+
+
+</style>
+</head>
+
+
+<body onload="LoadFunc()">
+
+<div class="sidebar">
+<br><h1><center>Page Object Model</center></h1>
+  <a class="active" href="#" name="menu" id="homeMenu" onclick="openTopic(event, 'home')">Home</a>
+  <a href="#" name="menu" id="basicsMenu" onclick="openTopic(event, 'basics')" >Page Object Model Basics</a>
+  <a href="#" name="menu" id="factoryMenu" onclick="openTopic(event, 'factory')" >Java Factory Design Pattern</a>
+  <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'pomFactory')">POM with Page Factory</a>
+  <a href="#" name="menu" id="selFactoryMenu" onclick="openTopic(event, 'selFactory')">Selenium Page Factory</a>
+  <a href="#" name="menu" id="pomGenericsMenu" onclick="openTopic(event, 'pomGenerics')">POM with Generics</a>
+  <a href="#" name="menu" id="loadpatMenu" onclick="openTopic(event, 'loadpat')">POM with Loadable Component</a>
+  <a href="#" name="menu" id="fluidPatMenu" onclick="openTopic(event, 'fluidPat')">POM with Fluent Design Pattern</a>
+   <a href="#" name="menu" id="woutFactoryMenu" onclick="openTopic(event, 'woutFactory')">POM without Page Factory</a>
+  <a href="#" name="menu" id="POMframeworkMenu" onclick="openTopic(event, 'POMframework')">Page Object Model Framework</a>
+
+</div>
+
+
+<div class="container">
+
+    <div id="home" class="topics">
+         
+         <div class="row">
+ 
+               <div class="col-md-5">
+                   <br><br><br><br>
+                   <h2 style="font-size:36px;">Page Object Model</font></h2>
+                   Please comment below if you like the book
+                   
+                   <br><br><button type="button" class="btn btn-info" onclick="window.open('bloghome.html')">Blog Home</button>
+                   <button type="button" class="btn btn-success" onclick="window.open('../../index.html')">Author Profile</button>
+               </div> <!---------------End of First column---------->
+
+
+         <div class="col-md-7">
+          <br><br>
+              <div class="card">
+                   <div class="row no-gutters">    
+                      <div class="col-md-5">
+                        <br><br><img src="img\brand\profile.png" class="card-img" alt="...">
+                      </div>
+   
+                   <div class="col-md-7">
+                      <div class="card-body">
+                      <h5 class="card-title">Author Bio</h5>
+                      <p class="card-text">This web book is written by Biswajit Sundara.
+	              He has 10+ years of IT experience and an avid blogger on technology.</p>
+                     <p class="card-text"><small class="text-muted">March 31st, 2020</small></p>
+                 </div>
+         </div>
+     </div>
+</div> <!---------------End of Second column---------->
+
+</div> <!---------------End of Row---------->
+
+
+<div class="row">
+<br><br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">Page Object Model Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'factory')"> Java Factory Design Pattern</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'pomFactory')">POM With Page Factory</a></li>
+    
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'selFactory')">Selenium Page Factory</a></li>
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'pomGenerics')">POM with Generics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'loadpat')">POM with Loadable Component</a></li>
+    
+    
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'fluidPat')">POM with Fluent Design Pattern</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'woutFactory')">POM without Page Factory</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'POMframework')">Page Object Model Framework</a></li>
+  </ul>
+</div>
+
+</div>
+
+</div> <!---------------End of Row---------->
+
+</div><!---------------End of Row---------->
+
+<br><br><br>
+<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+    <div class="row">
+      <div class="col-25">
+        <label for="uname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="uname" name="entry.689225320" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="emailAddress" placeholder="Your email address..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="comment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comment" name="entry.1648468188" placeholder="Write your precious comment here.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="hidden" name="entry.2069828936" value="page-object-model">
+    </div>
+    <div class="row">
+      <input type="submit" value="Post Comment">
+    </div>
+  </form>
+
+<br><br><br>
+
+</div> <!---------------End of Topic---------->
+
+
+<!------------------------------------------------------------------ End of Home ---------------------------------------------------------------->
+
+<div id="basics" class="topics">
+    <br><br><h2>Page Object Model Basics</h2><hr> 
+  
+  Page Object Model is a selenium design pattern using which we can build reusable and extensible framework.
+  <br><br><h4><font color="#5e98c8">What is Page Object Model</font></h4>
+  Popularly called as POM is a design pattern which simply means to organize classes by web pages and in test cases call the methods from the page classes.
+  I have seen many people referring to this as framework. Please note Page Object Model is <font color="blue">not a framework</font> and also this is not a language specific design pattern. This is a design pattern from selenium. 
+
+  <br><br>Application Under Test is simply a collection of web pages and the webpage contains set of objects. The POM design models the same in the test code. For every web page there will be a corresponding page class
+  and for every UI object there will be corresponding web elements defined in the page class. All the UI actions/services offered on the page will have corresponding page action method in the page class. This helps in reducing 
+  duplicate code and easy to fix applicable areas in case of UI changes.     
+
+<br><img src="img/pom/pom.png" style="width:100%;">
+Note - The pencil icon indicates the UI elements, the play button indicates it routes us to the next page.
+
+<br><br><br><h4><font color="#5e98c8">Benefits of using POM</font></h4>
+Frameworks designed with POM are highly popular and widely used across teams. Benefits of using this approach 
+
+<br><br><ul style="list-style-position: inside;padding-left: 0;"><li><b>Test Maintenance</b>
+<br>Let's say we don't use POM and write scripts differently and there's a change on a particular page. The locator is changed. A mandatory field is added or removed.
+Then how can we make that change. Until unless we run all our scripts and analyse the failure points we can't update all the places. Whereas if we use the POM design
+then for each page we maintain a separate class file. If the developer informs us there's a change in the page then go to the particular class file and make required updates
+that's it and we are done. So this way we can make changes to only the applicable class file, we don't touch and mess up any other class file. So test maintenance becomes really easy.
+
+<br><br></li><li><b>Reducing code duplication/Reusability</b>
+<br>Let's say we have 1000 test cases for an e-commerce application. For each test case we would login to application. So if we keep all our codes at the test case level
+then we will have to write codes for login in all these 1000 test cases. The code base will be really huge and if there's any change then we will have to update all our test cases one by one.
+Instead if we use POM approach, we can keep all the login related objects/methods in one page and all the 1000 test cases can reuse them. This way we can reduce the code redundancy significantly.
+Also for multi lingual sites (English plus French, German etc) using POM design helps a lot as we can simply create another page class file for another language. We can also maintain packages based on language.
+like <font color="blue">pages_en</font> for english. <font color="blue">pages_fr</font> for French etc.  
+
+<br><br></li><li><b>Readability</b>
+<br>If we write all the locators, methods in the test case class file then there will be too much code in the test case file and if we read we can't get the real picture easily.
+However in POM design we keep all the internal architecture inside page class files and in the test case file we only write the methods to be called from the page class files 
+so it gives us the feeling of a story. If we read the method names, at a glance we can say what the flow is.
+</li></ul>
+
+<br><font color="#5e98c8"><h4>Rules Of POM</font></h4>
+  <ul style="list-style-position: inside;padding-left: 0;"><li>There should be a separate class file for each webpage E.g <font color="blue">LoginPage.java, HomePage.java</font> etc.</font> 
+  </li><li>The page classes should be under one package. E.g under package<font color="blue"> "pages"</font>
+  </li><li>The pages should extend one wrapper class. 
+   <pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage</pre>
+  </li><li>The Base Page can hold actions those are common  across the pages e.g handling a popup, handling menu items
+  </li><li>All page class needs to have a constructor (page factory model)
+  <pre class="codeblock1">
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage
+<span style='font-weight:bold;color:#D3171B'>{</span>
+   <span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage(WebDriver driver)
+   <span style='font-weight:bold;color:#D3171B'>{</span>
+       PageFactory.initElements(driver,this);
+   <span style='font-weight:bold;color:#D3171B'>}</span> 
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+ </li>
+ </li><li>The page class should have locators and the action methods for the web page
+  <pre class="codeblock1">
+<span style='color:#3F7F5F'>//locators
+</span>@FindBy(how=How.ID,using=<span style='color:#2A00FF'>"username"</span>)
+<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement eleUserName;	
+
+<span style='color:#3F7F5F'>//Action Methods 
+</span><span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage enterUserName(String data) 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+   type(eleUserName, data);
+   <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+<span style='font-weight:bold;color:#D3171B'>}</span></pre> 
+</li><li>For Login page, we need to have the locators userid, password, login button and then the action methods like enterUserName, 
+enterPassword, clickLogin etc. 
+</li><li>This is advisable not to use assertions in the pages. However I feel that helps. We can keep all the assertions/verifications in the page.
+
+</li><li>If we use Fluent design pattern then there should be a page method that links to another page.
+<pre class="codeblock1">
+@FindBy(how=How.CLASS_NAME,using=<span style='color:#2A00FF'>"decorativeSubmit"</span>)
+<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement eleLogin;	
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage clickLogIn() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    click(eleLogin);
+    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> HomePage();		
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+</li></ul>
+
+<br><h4><font color="#5e98c8">Disadvantages</font></h4>
+There are some criticisms of this design pattern also.
+<ul style="list-style-position: inside;padding-left: 0;"><li>Spending more time on designing the pages. In one of my projects I have seen people were developing page classes for each and every page/every field and that was taking time.
+However I suggested them to include fields that are required to cover test cases and then we can extend that further. The idea worked well.   
+</li><li>It violates the SOLID principle. The Single Responsibility says every class file needs to have only one work to do. However in our page classes we include both locator & page action methods
+so multiple responsibilities are assigned to one class.
+</li></ul>
+ 
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'factory')">Next -></button>  
+<br><br>
+ 
+</div> <!-- End of basics topic -->
+
+<!----------------------------------------------------------- End of basics topic ------------------------------------------------------------------------------>
+
+<div id="factory" class="topics">
+<br><br><h2>Java Factory Design Pattern</h2><hr>
+Factory design pattern is a java design pattern categorized in creational design pattern. It is one of the widely used and popular design pattern. The design pattern
+says client class should pass inputs to the factory class & the factory class should create objects for the sub classes and return to the client.
+
+
+<br><br><h4><font color="#5e98c8">The Problem</font></h4>
+Every design pattern solves one or many problems. So we must know which problem is solved by Factory design pattern. 
+
+Let's say we have an ecommerce site like Flipkart where the user can order any item. So here the client is the Flipkart app.
+
+<br><br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FlipKart <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Scanner sc= <span style='font-weight:bold;color:#7B0052;'>new</span> Scanner(System.in);
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> String product_order;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> DellLaptop dellLaptop;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> HPLaptop hpLaptop;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Enter the product name to order="</span>);
+		String product_order= sc.next();
+		
+
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(product_order.equalsIgnoreCase(<span style='color:#2A00FF'>"Dell_Laptop"</span>))<span style='font-weight:bold;color:#D3171B'>{</span>
+			dellLaptop = <span style='font-weight:bold;color:#7B0052;'>new</span> DellLaptop();  
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		
+		<span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#7B0052;'>if</span>(product_order.equalsIgnoreCase(<span style='color:#2A00FF'>"HP_Laptop"</span>)) <span style='font-weight:bold;color:#D3171B'>{</span>
+			hpLaptop = <span style='font-weight:bold;color:#7B0052;'>new</span> HPLaptop();  
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+So here the objects are getting created in the client code. Every time a new product is added, the client code needs to be modified. So here we have two problems
+<ul style="list-style-position: inside;padding-left: 0;"><li>The implementation details are exposed. The client knows how product objects are created. There's no encapsulation.
+</li><li>Every time we need to change the code and compile the code while adding/removing product so the dependency is high and it's tightly coupled  
+</li></ul>
+
+<br><h4><font color="#5e98c8">The Solution</font></h4>
+Using factory design pattern we can solve the above problems. 
+
+
+<br><br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>interface</span> Product <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> printPrice();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Dell <span style='font-weight:bold;color:#7B0052;'>implements</span> Product<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>int</span> price=4000;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Dell()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Dell Laptop is added to your cart"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Override
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> printPrice() <span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Dell Laptop Price="</span>+price);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HP <span style='font-weight:bold;color:#7B0052;'>implements</span> Product<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>int</span> price=6000;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> HP()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"HP Laptop is added to your cart"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Override
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> printPrice() <span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"HP Laptop Price="</span>+price);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ProductFactory <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Product getInstance(String prodname)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(prodname.equalsIgnoreCase(<span style='color:#2A00FF'>"Dell"</span>))
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Dell();
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		<span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#7B0052;'>if</span>(prodname.equalsIgnoreCase(<span style='color:#2A00FF'>"HP"</span>))
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> HP();
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FlipKart <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
+	<span style='font-weight:bold;color:#D3171B'>{</span>		
+        	ProductFactory prodfact= <span style='font-weight:bold;color:#7B0052;'>new</span> ProductFactory();
+        	Product prod= prodfact.getInstance(<span style='color:#2A00FF'>"Dell"</span>);
+        	prod.printPrice();	
+     
+        	prod= prodfact.getInstance(<span style='color:#2A00FF'>"HP"</span>);
+        	prod.printPrice();	
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><ul style="list-style-position: inside;padding-left: 0;"><li>Code for interface not for implementation. In the above example, we are creating a variable for interface product and then assigning different product objects to the variable.
+</li><li>The object instantiation is not in the client code, the object creation is happening in the product factory class.
+</li><li>Using interface we achieve abstraction and since the object creation is hidden from the client code so encapsulation is also achieved.
+</li><li>If there's a new product comes tomorrow like Asus Laptop then we can create a separate class for Asus and update the product factory. There is no need to update the client code. If we pass the name as string to product factory then it will return the object for Asus class. 
+So its easy to extend the functionality without impacting the client code and it's one big achievement.  
+</li></ul>
+
+<br><h4><font color="#5e98c8">When to use Factory Pattern</font></h4>
+<ul style="list-style-position: inside;padding-left: 0;"><li>The factory pattern needs to be used when the client class wants to create object of sub classes but doesn't want to bother how the objects of sub classes are created.
+In the above example, Flipkart app just wants objects for different laptops. The app expects an object to interact with product just by passing the name of the product.
+It doesn't mind how the product objects are created, what are the dependencies those products have etc.
+
+</li><li>In other words we can say, when the requirement is to create objects based on different input conditions, parameters then Factory Pattern suits well. 
+</li></ul>
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'pomFactory')">Next -></button>  
+<br><br>
+
+</div> <!-- End of factory topic -->
+
+
+<!------------------------------------------------------------------------ End of java factory topic  ------------------------------------------------------------>
+
+<div id="pomFactory" class="topics">
+<br><br><h2>POM with Page Factory</h2><hr>
+To support the page object model, Selenium has a class called <b>PageFactory</b> class. The responsibility of the page factory class is to initialize the web elements 
+of the page class. 
+
+
+<br><br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"email"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement username;
+	
+	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"passwd"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement password;
+	
+	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"SubmitLogin"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement loginbutton;
+
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterUserName(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		username.sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterPassword(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		password.sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickLogin()<span style='font-weight:bold;color:#D3171B'>{</span>
+		loginbutton.click();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HomePage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage(WebDriver driver)<span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+		PageFactory.initElements(driver, <span style='font-weight:bold;color:#7B0052;'>this</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Page Elements
+</span>	@FindBy(xpath= <span style='color:#2A00FF'>"//h1[@class='page-heading' and text()='My account']"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement pageHeading;
+
+	@FindBy(id= <span style='color:#2A00FF'>"search_query_top"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement searchBox;
+
+	@FindBy(name= <span style='color:#2A00FF'>"submit_search"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement searchIcon;
+
+
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterSearchItem(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		searchBox.sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickSearchIcon()<span style='font-weight:bold;color:#D3171B'>{</span>
+		searchIcon.click();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2">public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FirstTest <span style='font-weight:bold;color:#7B0052;'>extends</span> TestSetup<span style='font-weight:bold;color:#D3171B'>{</span>
+
+ @Test
+ <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> executeTest()
+ <span style='font-weight:bold;color:#D3171B'>{</span>
+	LoginPage loginpage= PageFactory.initElements(driver, LoginPage.class);
+	loginpage.enterUserName(<span style='color:#2A00FF'>"abc@gmail.com"</span>);
+	loginpage.enterPassword(<span style='color:#2A00FF'>"automation"</span>);
+	loginpage.clickLogin();
+		
+	HomePage homepage= <span style='font-weight:bold;color:#7B0052;'>new</span> HomePage(driver);
+	homepage.enterSearchItem(<span style='color:#2A00FF'>"dress"</span>);
+	homepage.clickSearchIcon();
+		
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestSetup <span style='font-weight:bold;color:#D3171B'>{</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriver driver;
+	
+	@BeforeClass
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> startTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\Users\\Biswajit\\chromedriver.exe"</span>);
+		driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+		driver.get(<span style='color:#2A00FF'>"http://automationpractice.com/index.php?"</span>);
+		driver.manage().window().maximize();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@AfterClass()
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> endTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.quit();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4><font color="#5e98c8">Observation</font></h4>
+<ul style="list-style-position: inside;padding-left: 0;"><li>We can have the initElements in the test case class or in the page class. For the LoginPage we have the initElements method in the test class. However for the HomePage class
+we are having the initElements method in the page class constructor. Whenever we create the object of the home page, it creates the object and then calls the initElements method.
+If you notice, we don't have any constructor in the LoginPage and it works fine. Both ways are correct however my preference is to keep the PageFactory.initElements() method
+in the page class.
+</li><li>The @FindBy annotation removes the boiler plate code and locates the element and saves in the web element variable mentioned below. I will explain more how it works internally.
+</li></ul>
+
+<br><h4><font color="#5e98c8">Points to Ponder</font></h4>
+<ul style="list-style-position: inside;padding-left: 0;"><li>If we use Page Factory then we can use objects/ui fields without worrying about their initialization.
+</li><li>WebElements are evaluated lazily. Upon intialization, it creates a proxy for the web element and whenever we use the field in page object then only there will be a call to the "find element" for the field.
+</li><li>All the field variables should be declared as private, but the page methods should be public as those are the page services should be accessed from outside. 
+</li></ul>
+  
+<br><h4><font color="#5e98c8">References</font></h4>
+<a href="https://github.com/SeleniumHQ/selenium/wiki/PageFactory" target="_blank">https://github.com/SeleniumHQ/selenium/wiki/PageFactory</a>
+<br><a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects" target="_blank">https://github.com/SeleniumHQ/selenium/wiki/PageObjects</a>
+
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'factory')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'selFactory')">Next -></button>  
+<br><br>
+
+</div>
+
+<!------------------------------------------------------------------------ End of pom with page factory topic  ----------------------------------------------------->
+
+<div id="selFactory" class="topics">
+<br><br><h2>Selenium Page Factory</h2><hr>
+We will look into all the aspects of Selenium Page Factory here.
+
+<br><br><h4><font color="#5e98c8">How it works</font></h4>
+To initialize the web elements we write <b>PageFactory.initElements(driver, LoginPage.class);</b> Let's see how it works in the back end.
+
+The init elements method accepts webdriver as the first argument and then the class name as second argument. Then it calls the instantiate page method which has the same two arguments
+then the object is saved as page object. Then the init elements method is called with parameters as driver & the created page object.
+
+<br><br><pre class="codeblock2">
+public class PageFactory {
+     public static <T> T initElements(WebDriver driver, Class<T> pageClassToProxy) 
+        {
+	    T page = instantiatePage(driver, pageClassToProxy);
+	    initElements(driver, page);
+	    return page;
+	}
+
+</pre>
+The instantiate page method first tries to get the constructor of the class with by passing web driver as parameter type. Then it returns the specified constructor of the class 
+which is saved as constructor object. When a class has no argument constructor then we can create object using class.newInstance() however since we have argument here so
+first constructor object needs to be created and then we can create new instance from the constructor. 
+
+<br><br><pre class="codeblock2">
+private static &lt;T&gt; T instantiatePage(WebDriver driver, Class&lt;T&gt; pageClassToProxy) 
+   {
+	 try 
+         {
+	    Constructor&lt;T&gt; constructor = pageClassToProxy.getConstructor(WebDriver.class);
+	    return constructor.newInstance(driver);
+	 } 
+         
+         catch (NoSuchMethodException e) 
+          {
+	        return pageClassToProxy.newInstance();
+	  }
+          //exceptions
+   } 
+</pre>
+
+Once the page object is instantiated then there are couple of methods for initElements those call the searchcontext through ElementLocatorFactory and also pulls all the field names from the class
+Then initializes them one by one using the same web driver. So basically the driver.findElement("locator") is taken care completely using this class.
+ 
+<br><br><h4><font color="#5e98c8">@FindBy</font></h4>
+@FindBy annotation is used in conjunction with the selenium Page Factory to locate the web elements. Usually these web elements are initialized as the page object is created.
+The @FindBy annotation can be used to locate one or more elements based on the specified criteria.
+
+<br><br><pre class="codeblock2">
+@FindBy(how = How.TAG_NAME, using = "a")
+private List&lt;WebElement&gt; allLinks;
+
+@FindBy(how = How.ID, using = "xxxx")
+private WebElement element;
+</pre>
+
+We can use the how or directly use the locator type and value. Both of these point to the same element.
+
+<pre class="codeblock2">
+@FindBy(id = "foobar") 
+WebElement foobar;
+
+@FindBy(how = How.ID, using = "foobar") 
+WebElement foobar;
+</pre>
+
+
+<br><h4><font color="#5e98c8">@FindBys</font></h4>
+Some situations we can't locate the element using a single locator strategy so we can go for FindBys. Please note, when we use FindBys then
+all the locator criteria should be satisfied in order to locate the web element/elements. It uses the look up as a chained series of FindBys.
+
+<pre class="codeblock2">
+@FindBys({
+    	  @FindBy(tagName = "button"),
+          @FindBy(className = "submit")
+    	  })
+private WebElement Signin;
+</pre>
+We can save multiple web elements using List&lt;WebElement&gt; if it returns.
+
+
+<br><br><h4><font color="#5e98c8">@FindAll</font></h4>
+Here also we will use a group of @FindBy criteria and the element can be located using any of the @FindBy. Please note, there's no guarantee in which order it will process
+from the look up if any one @FindBy is satisfied then it will return the web element.
+
+<pre class="codeblock2">
+@FindAll({
+	  @FindBy(how = How.ID, using = "uname"),
+	  @FindBy(className = "user-name")
+ })
+private WebElement userName;
+</pre>
+
+
+<br><h4><font color="#5e98c8">Difference between @FindBy, @FindBys, @FindAll</font></h4>
+<ul><li>@FindBy - There's only one condition using which we will locate one or more web elements.
+</li><li>@FindBys - There are multiple @FindBy and it will return the web element only when ALL @FindBy are satisfied.
+</li><li>@FindByAll - There are multiple @FindBy and it will return the web element when any of the @FindBy is satisfied.
+</li></ul>
+  
+<br><h4><font color="#5e98c8">Difference between @FindBy and FindElement</font></h4>
+<ul><li>@FindBy is an annotation and findElement is an web driver method.
+</li><li>Both are used for locating web elements.
+</li><li>@FindBy is used in conjuction with PageFactory to finding web elements. findElement is the normal way of locating web elements.
+</li><li>If the page is not initialized then @FindBy will throw null pointer exception. 
+</li></ul>
+
+
+<br><h4><font color="#5e98c8">CacheLookup</font></h4>
+<ul><li>@CacheLookup is an annotation that is used to mark elements so that once located, the same DOM instance can be used always.
+</li><li>CacheLookup is a marker interface.
+</li><li>This helps when the DOM never changes and multiple calls to the web element is made because it searches once.
+</li><li>Be careful while using this as possibility of StaleElementReferenceException is more in this approach.
+</li><li>This is not helpful in AJAX applications because the DOM changes frequently there.
+</li></ul>
+<pre class="codeblock2">
+@CacheLookup
+@FindBy(how = How.ID, using = "email")
+private WebElement username;
+</pre>
+
+
+<br><h4><font color="#5e98c8">AjaxElementLocatorFactory</font></h4>
+The AjaxElementLocatorFactory class helps to inject wait or time out in the page factory model. 
+
+<pre class="codeblock2">
+private int timeOut = 30;
+private WebDriver driver;
+public HomePage(WebDriver driver)
+{
+   this.driver=driver;
+   PageFactory.initElements(new AjaxElementLocatorFactory(driver,timeOut), this);
+}
+</pre>
+Here we have specified the time out as 30 seconds. So for every web element the wait condition of 30 seconds is applied. It will throw NoSuchElementException only after 30 seconds if the element is not found.
+Please note, by default there's no waiting in the page object pattern. Once the @FindBy annotation is executed it will straight away try to locate the element and if not found will throw the exception.
+Also the selenium page factory uses the lazy loading concept, it tries to look for web element only when called through the page object. So using AjaxElementLocatorFactory we can solve the synchronisation issue.   
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'pomFactory')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'pomGenerics')">Next -></button>  
+<br><br>
+
+</div>
+
+<!------------------------------------------------------------------------ End of selenium page factory topic  ----------------------------------------------------->
+
+<div id="pomGenerics" class="topics">
+<br><br><h2>POM With Generics</h2><hr>
+Generics is the way of specifying the type of class, methods etc. This helps in achieving compile time type-safety. 
+A quick example of generics can be List&lt;String&gt; listItems; is using generics to indicate the type of list is string. We can apply this principle in selenium page object model.
+Basically we will create a class <font color="blue">"Page"</font> which will create objects for the pages and return the same.
+
+<br><br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Page <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriverWait wait;
+
+	<span style='color:#3F7F5F'>//Constructor
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> Page(WebDriver driver, WebDriverWait wait)<span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver = driver;
+		this.wait = wait;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Using java generics create and return a new page. 
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span>  &lt;TPage&gt; TPage GetInstance (Class&lt;TPage&gt; pageClass) <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>try</span> 
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span> pageClass.getDeclaredConstructor(WebDriver.class, WebDriverWait.class)
+			                .newInstance(this.driver, this.wait);
+		<span style='font-weight:bold;color:#D3171B'>}</span> 
+		<span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) 
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			System.out.println(e.getMessage());
+			<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+In the TestSetup class, we create the object of the page class and provide the webdriver & webdriver wait objects as parameters.
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestSetup <span style='font-weight:bold;color:#D3171B'>{</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriverWait wait;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Page page;
+	
+	@BeforeClass
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> startTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\Users\\Biswajit\\chromedriver.exe"</span>);
+		driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+		driver.get(<span style='color:#2A00FF'>"http://automationpractice.com/index.php?"</span>);
+		driver.manage().window().maximize();
+		wait= <span style='font-weight:bold;color:#7B0052;'>new</span> WebDriverWait(driver,30);
+		page= <span style='font-weight:bold;color:#7B0052;'>new</span> Page(driver,wait);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@AfterClass()
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> endTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.quit();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+Then in the TestClass we are calling the GetInstance method by supplying the class name as parameter and fetching the actual pageclass object and then invoking the page methods.
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FirstTest <span style='font-weight:bold;color:#7B0052;'>extends</span> TestSetup<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	@Test
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> executeTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		page.GetInstance(LoginPage.class).enterUserName(<span style='color:#2A00FF'>"abc@gmail.com"</span>);
+		page.GetInstance(LoginPage.class).enterPassword(<span style='color:#2A00FF'>"automation"</span>);
+		page.GetInstance(LoginPage.class).clickLogin();
+		
+		page.GetInstance(HomePage.class).enterSearchItem(<span style='color:#2A00FF'>"dress"</span>);
+		page.GetInstance(HomePage.class).clickSearchIcon();
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+There are no changes to the page classes though. However here you go
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriverWait wait;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage(WebDriver driver, WebDriverWait wait) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+		this.wait=wait;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By username= By.id(<span style='color:#2A00FF'>"email"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By password= By.id(<span style='color:#2A00FF'>"passwd"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By loginbutton= By.id(<span style='color:#2A00FF'>"SubmitLogin"</span>);
+	
+	
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterUserName(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.findElement(username).sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterPassword(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.findElement(password).sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickLogin()<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.findElement(loginbutton).click();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HomePage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriverWait wait;
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage(WebDriver driver, WebDriverWait wait) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+		this.wait=wait;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	
+	<span style='color:#3F7F5F'>//Page Elements
+</span>	<span style='font-weight:bold;color:#7B0052;'>private</span> By searchBox= By.id(<span style='color:#2A00FF'>"search_query_top"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By searchIcon= By.name(<span style='color:#2A00FF'>"submit_search"</span>);
+
+
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterSearchItem(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.findElement(searchBox).sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickSearchIcon()<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.findElement(searchIcon).click();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+Here the benefit is we are not creating page objects in the test script. While reading the code written for the test script it's easy to follow which method is called from which class.
+
+<br><br><h4><font color="#5e98c8">Using BasePage Class</font></h4>
+If we want to use the base page class concept in the above design then below are the changes we need to make.
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> BasePage <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriverWait wait;
+	
+    <span style='font-weight:bold;color:#7B0052;'>public</span> BasePage(WebDriver driver, WebDriverWait wait) <span style='font-weight:bold;color:#D3171B'>{</span>
+    	this.driver=driver;
+	this.wait=wait;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F7F5F'>//Click Method
+</span>    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> click (By eleLoc) <span style='font-weight:bold;color:#D3171B'>{</span>
+        driver.findElement(eleLoc).click();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F7F5F'>//Write Text
+</span>    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterText (By eleLoc, String text) <span style='font-weight:bold;color:#D3171B'>{</span>
+        driver.findElement(eleLoc).sendKeys(text);
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    <span style='color:#3F7F5F'>//Read Text
+</span>    <span style='font-weight:bold;color:#7B0052;'>public</span> String getText (By eleLoc) <span style='font-weight:bold;color:#D3171B'>{</span>
+        <span style='font-weight:bold;color:#7B0052;'>return</span> driver.findElement(eleLoc).getText();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Page <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriverWait wait;
+
+	<span style='color:#3F7F5F'>//Constructor
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> Page(WebDriver driver, WebDriverWait wait)<span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver = driver;
+		this.wait = wait;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Using java generics create and return a new page. 
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span>  &lt;TPage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage&gt; TPage GetInstance (Class&lt;TPage&gt; pageClass) <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>try</span> 
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			<span style='font-weight:bold;color:#7B0052;'>return</span> pageClass.getDeclaredConstructor(WebDriver.class, WebDriverWait.class)
+					        .newInstance(this.driver, this.wait);
+		<span style='font-weight:bold;color:#D3171B'>}</span> 
+		<span style='font-weight:bold;color:#7B0052;'>catch</span> (Exception e) 
+		<span style='font-weight:bold;color:#D3171B'>{</span>
+			System.out.println(e.getMessage());
+			<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage(WebDriver driver, WebDriverWait wait)<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>super</span>(driver,wait);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By username= By.id(<span style='color:#2A00FF'>"email"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By password= By.id(<span style='color:#2A00FF'>"passwd"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By loginbutton= By.id(<span style='color:#2A00FF'>"SubmitLogin"</span>);
+	
+	
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterUserName(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		enterText(username,text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterPassword(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		enterText(password,text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickLogin()<span style='font-weight:bold;color:#D3171B'>{</span>
+		click(loginbutton);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+There's no change to the TestSetup class and also we need to modify the HomePage class similar to the LoginPage class.
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'selFactory')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'loadpat')">Next -></button>  
+<br><br>
+
+</div>
+
+<!------------------------------------------------------------------------ End of pom with generics topic  ----------------------------------------------------->
+
+<div id="loadpat" class="topics">
+<br><br><h2>POM with Loadable Component</h2><hr>
+The loadable component in Page Object Model pattern ensures that the page/component is loaded successfully.
+
+<br><br><h4><font color="#5e98c8">How Loadable Component Works</font></h4>
+<ul style="list-style-position: inside;padding-left: 0;"><li>The PageClass needs to extend LoadableComponent class.
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#7B0052;'>extends</span> LoadableComponent&lt;LoginPage&gt;</pre>
+
+</li><li>LoadableComponent is an abstract class and has three methods - get(), load(), isLoaded(). 
+
+</li><li>The get method has the implementation as below. Basically it calls the isLoaded() method first. If there's no error then it returns the class/subclass else it calls the load() method and then one more time isLoaded() method.
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> T get() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    <span style='font-weight:bold;color:#7B0052;'>try</span> 
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+      isLoaded();
+      <span style='font-weight:bold;color:#7B0052;'>return</span> (T) <span style='font-weight:bold;color:#7B0052;'>this</span>;
+    <span style='font-weight:bold;color:#D3171B'>}</span> 
+    <span style='font-weight:bold;color:#7B0052;'>catch</span> (Error e) 
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+      load();
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+    
+    isLoaded();
+    <span style='font-weight:bold;color:#7B0052;'>return</span> (T) <span style='font-weight:bold;color:#7B0052;'>this</span>;
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+</li><li>The other two load() and isLoaded() are abstract methods and don't have the implementations, so those need to be implemented in the class that extends Loadable component class.
+So here we have complete liberty what code to include in these two methods.
+
+</li><li> Based on the application page design, speed of the rendering we need to write codes for load() and isLoaded method. A simple example can be like below. 
+<pre class="codeblock2">@Override
+<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>void</span> load() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+ driver.get(<span style='color:#2A00FF'>"http://automationpractice.com/index.phpcontroller=authentication&back=my-account"</span>);
+ System.out.println(<span style='color:#2A00FF'>"url opened"</span>);		
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+@Override
+<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>void</span> isLoaded() <span style='font-weight:bold;color:#7B0052;'>throws</span> Error 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+ String url = driver.getCurrentUrl();
+ Assert.assertEquals(true, url.endsWith(<span style='color:#2A00FF'>"my-account"</span>));		
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+</li><li>So in the testclass when the get() method will be called. First it will invoke the isLoaded() method and check if the url contains the page name. If not then it will throw an error
+and in the get() method, in case of error it will go to load() method, so it will load the url again and then again check if the url contains the page name. 
+
+</li><li>We can add wait conditions in isLoaded() method and customize it as per our need. We may use ExpectedConditions.urlContains(), ExpectedConditions.urlToBe(), ExpectedConditions.titleContains(), ExpectedConditions.titleIs() etc.
+We can also wait for a particular element on the page something like page heading, menu item etc.
+</li></ul>
+
+
+<br><h4><font color="#5e98c8">Real time Scenario</font></h4>
+
+<ul style="list-style-position: inside;padding-left: 0;"><li>The load() method loads the url. Here the catch is, not all websites are structured by pages. So if the url remains same across pages and we load it again in some page then we might go back to previous page. Also the websites designed with webservices/API calls/Data fetch calls might break if we reload the same url. So I have seen in many frameworks this method is left blank.
+</li><li>Let's say we are working on an e-commerce application. On home page, when we search for an item like dress/t-shirt etc and click on search button then the search item gets added to the url. If we use the url in the load method then we will have to pass the search string from testcase and pass on to the page constructor and then use it in the load method.
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+<span style='font-weight:bold;color:#7B0052;'>private</span> String searchItem;
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> SearchPage(WebDriver driver, String searchItem)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+   this.driver=driver;
+   this.searchItem=searchItem;
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+@Override
+<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>void</span> load() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+   driver.get(<span style='color:#2A00FF'>"http://automationpractice.com/index.php?
+   controller=search&orderby=position&orderway=desc&search_query="</span>+searchItem+<span style='color:#2A00FF'>"&submit_search="</span>);
+<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+@Override
+<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>void</span> isLoaded() <span style='font-weight:bold;color:#7B0052;'>throws</span> Error <span style='font-weight:bold;color:#D3171B'>{</span>
+String title = driver.getTitle();
+Assert.assertEquals(title, <span style='color:#2A00FF'>"Search - My Store"</span>);
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+</li></ul>
+
+
+<br><h4><font color="#5e98c8">Customizing LoadableComponent</font></h4>
+<ul style="list-style-position: inside;padding-left: 0;"><li>We can customize the LoadableComponent class and can modify the methods to fit in our framework. Let's see an example below.
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> <span style='font-weight:bold;color:#7B0052;'>class</span> CustomLoadableComponent&lt;T <span style='font-weight:bold;color:#7B0052;'>extends</span> CustomLoadableComponent&lt;T&gt;&gt; <span style='font-weight:bold;color:#D3171B'>{</span>
+
+<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriverWait wait = <span style='font-weight:bold;color:#7B0052;'>null</span>;
+<span style='font-weight:bold;color:#7B0052;'>private</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>final</span> <span style='font-weight:bold;color:#7B0052;'>int</span> LOAD_TIMEOUT=30;
+	
+@SuppressWarnings(<span style='color:#2A00FF'>"unchecked"</span>)
+<span style='font-weight:bold;color:#7B0052;'>public</span> T get() <span style='font-weight:bold;color:#D3171B'>{</span>
+   <span style='font-weight:bold;color:#7B0052;'>try</span> 
+   <span style='font-weight:bold;color:#D3171B'>{</span>
+      isLoaded();
+      <span style='font-weight:bold;color:#7B0052;'>return</span> (T) <span style='font-weight:bold;color:#7B0052;'>this</span>;
+   <span style='font-weight:bold;color:#D3171B'>}</span> 
+   <span style='font-weight:bold;color:#7B0052;'>catch</span> (Error e) 
+   <span style='font-weight:bold;color:#D3171B'>{</span>
+      System.out.println(e.getMessage());	
+      load();
+   <span style='font-weight:bold;color:#D3171B'>}</span>
+
+    isLoaded();
+    <span style='font-weight:bold;color:#7B0052;'>return</span> (T) <span style='font-weight:bold;color:#7B0052;'>this</span>;	  
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isElementLoaded(WebDriver driver,By locPath)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+ wait= <span style='font-weight:bold;color:#7B0052;'>new</span> WebDriverWait(driver,LOAD_TIMEOUT);		 
+ wait.until(ExpectedConditions.visibilityOfElementLocated(locPath));
+		
+ WebElement ele = driver.findElement(locPath);
+ <span style='font-weight:bold;color:#7B0052;'>if</span>(ele.isDisplayed())
+   <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+ <span style='font-weight:bold;color:#7B0052;'>else</span>
+    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;	  
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> <span style='font-weight:bold;color:#7B0052;'>void</span> load();
+<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>abstract</span> <span style='font-weight:bold;color:#7B0052;'>void</span> isLoaded() <span style='font-weight:bold;color:#7B0052;'>throws</span> Error;
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+Then in our page class we can use this way
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#7B0052;'>extends</span> CustomLoadableComponent&lt;LoginPage&gt;
+<span style='font-weight:bold;color:#D3171B'>{</span>	
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage(WebDriver driver)<span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='color:#3F7F5F'>//Page Elements
+</span>	<span style='font-weight:bold;color:#7B0052;'>private</span> By pageHeading= By.xpath(<span style='color:#2A00FF'>"//h1[@class='page-heading' and text()='Authentication']"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By username= By.id(<span style='color:#2A00FF'>"email"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By password= By.id(<span style='color:#2A00FF'>"passwd"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By loginbutton= By.id(<span style='color:#2A00FF'>"SubmitLogin"</span>);
+	
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterUserName(String text)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.findElement(username).sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterPassword(String text)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.findElement(password).sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickLogin()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.findElement(loginbutton).click();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Override
+	<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>void</span> load() <span style='font-weight:bold;color:#D3171B'>{</span>
+	driver.get(<span style='color:#2A00FF'>"http://automationpractice.com/index.php?controller=authentication&back=my-account"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@Override
+	<span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>void</span> isLoaded() <span style='font-weight:bold;color:#7B0052;'>throws</span> Error <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(!isElementLoaded(driver,pageHeading))
+		<span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Error(<span style='color:#2A00FF'>"Page is not loaded"</span>);	
+	<span style='font-weight:bold;color:#D3171B'>}</span>	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+</li></ul>
+
+
+<br><h4><font color="#5e98c8">Advantages</font></h4>
+The benefit of using the loadable component design pattern is, it ensures the page is loaded as expected when the page is called. If the page is not loaded, then it reloads the page url so incase of any connection errors or loading issues are resolved.
+
+<br><br><h4><font color="#5e98c8">Disadvantages</font></h4>
+The page loading is dependent a specific check and it creates few limitations. 
+<ul style="list-style-position: inside;padding-left: 0;"><li>We can't say if that is satisfied then all our elements are loaded.
+</li><li>If we would like to use the page under some other condition then it won't be possible.
+</li><li>If the html page has different loadable sections as branches, then creating separate page class won't be effective and also using this pattern won't help because everytime we would need pageloading check differently.
+</li><li>Mostly the navigation between pages happen via page controls like when login button is clicked then the home page is loaded. So the load() method used for loading a direct url might not be ideal.
+</li></ul>  
+
+
+<br><h4><font color="#5e98c8">References</font></h4>
+<a href="https://confengine.com/selenium-conf-2016/proposal/2340/better-page-object-handling-with-loadable-component-pattern" target="_blank">https://confengine.com/selenium-conf-2016/proposal/2340</a>
+<br><a href="https://github.com/SeleniumHQ/selenium/wiki/LoadableComponent" target="blank">https://github.com/SeleniumHQ/selenium/wiki/LoadableComponent</a>
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'pomGenerics')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'fluidPat')">Next -></button>  
+<br><br>
+
+</div> <!-- End of loadpat topic -->
+
+<!----------------------------------------------------- End of loadable pattern topic  ------------------------------------------------------------------------->
+
+<div id="fluidPat" class="topics">
+<br><br><h2>POM with Fluent Design Pattern</h2><hr>
+The fluent design pattern is implemented by method chaining. In this design each method returns <font color="blue">this</font> (self). The benefit of this design is 
+domain specific language. It increases the readability of the business logic. 
+
+
+<br><br><h4><font color="#5e98c8">Java Example</font></h4>
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>class</span> Customer
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	String fname,lname,sex,country;
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Customer FirstName(String firstName)<span style='font-weight:bold;color:#D3171B'>{</span>
+		fname=firstName;
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Customer LastName(String lastName)<span style='font-weight:bold;color:#D3171B'>{</span>
+		lname=lastName;
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Customer Sex(String gender)<span style='font-weight:bold;color:#D3171B'>{</span>
+		sex=gender;
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> Customer Country(String ctry)<span style='font-weight:bold;color:#D3171B'>{</span>
+		country=ctry;
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> display()<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Name: "</span>+fname + <span style='color:#2A00FF'>" "</span> +lname );
+		System.out.println(<span style='color:#2A00FF'>"Sex: "</span>+sex);
+		System.out.println(<span style='color:#2A00FF'>"Country: "</span>+country);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FluentDesignPattern <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span>
+
+		Customer c1= <span style='font-weight:bold;color:#7B0052;'>new</span> Customer();
+		c1.FirstName(<span style='color:#2A00FF'>"Jack"</span>).LastName(<span style='color:#2A00FF'>"Dowson"</span>).Sex(<span style='color:#2A00FF'>"Male"</span>).Country(<span style='color:#2A00FF'>"USA"</span>).display();
+
+		Customer c2= <span style='font-weight:bold;color:#7B0052;'>new</span> Customer();
+		c1.FirstName(<span style='color:#2A00FF'>"Rose"</span>).LastName(<span style='color:#2A00FF'>"Buketer"</span>).Sex(<span style='color:#2A00FF'>"Female"</span>).Country(<span style='color:#2A00FF'>"FRANCE"</span>).display();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br><h4><font color="#5e98c8">Selenium Example</font></h4>
+The selenium page object model along with fluent design pattern works like a charm. Here are some basic rules we need to follow.
+<ul><li>Page class methods should have <font color="blue">pagename</font> as the return type, and method inside should have <font color="blue">return this;</font>
+</li><li>The method from which it navigates to the next page, should have the return type of the page that it's routing to. For example, the click_login() method in the Login page should have return type as HomePage
+because once the method is executed then we will have to call the home page methods.
+</li><li>This approach makes the test script so clear that one can understand how the test flow goes.
+</li><li>If there's any method fails and returns null then the chain is broken so we can figure out easily from where the test flow is breaking.
+</li><li>If there are multiple routing available from a particular page, then we need to implement it that way. 
+For example, from the login page if the successful login takes it to home page and unsuccessful login takes to error page then we will have to design the two pages, two click_login methods to route to these pages.
+</li><li>The only disadvantage of this approach is that, the test designer should know which method returns which page else the flow will be messed up.
+</li></ul>
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage(WebDriver driver)<span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+		PageFactory.initElements(driver, <span style='font-weight:bold;color:#7B0052;'>this</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='color:#3F7F5F'>//Page Elements
+</span>	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"email"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement username;
+
+	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"passwd"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement password;
+
+	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"SubmitLogin"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement loginbutton;
+
+	
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage enterUserName(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		username.sendKeys(text);
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage enterPassword(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		password.sendKeys(text);
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage clickLogin()<span style='font-weight:bold;color:#D3171B'>{</span>
+		loginbutton.click();
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> HomePage(driver);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HomePage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage(WebDriver driver)<span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+		PageFactory.initElements(driver, <span style='font-weight:bold;color:#7B0052;'>this</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	
+	<span style='color:#3F7F5F'>//Page Elements
+</span>	@FindBy(id= <span style='color:#2A00FF'>"search_query_top"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement searchBox;
+
+	@FindBy(name= <span style='color:#2A00FF'>"submit_search"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement searchIcon;
+
+
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage enterSearchItem(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		searchBox.sendKeys(text);
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> SearchPage clickSearchIcon()<span style='font-weight:bold;color:#D3171B'>{</span>
+		searchIcon.click();
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> SearchPage(driver);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> SearchPage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> SearchPage(WebDriver driver)<span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+		PageFactory.initElements(driver, <span style='font-weight:bold;color:#7B0052;'>this</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@FindBy(how=How.XPATH, using=<span style='color:#2A00FF'>"//span[@class='navigation_page' and text()='Search']"</span>)
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement sectionHeading;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> searchPageDisplayed()<span style='font-weight:bold;color:#D3171B'>{</span>
+		
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(sectionHeading.isDisplayed())<span style='font-weight:bold;color:#D3171B'>{</span>
+			System.out.println(<span style='color:#2A00FF'>"Search Page is successfully displayed"</span>);
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FirstTest <span style='font-weight:bold;color:#7B0052;'>extends</span> TestSetup<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	@Test
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> executeTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>new</span> LoginPage(driver)
+		    .enterUserName(<span style='color:#2A00FF'>"abc@gmail.com"</span>)
+		    .enterPassword(<span style='color:#2A00FF'>"automation"</span>)
+		    .clickLogin()
+		    .enterSearchItem(<span style='color:#2A00FF'>"dress"</span>)
+		    .clickSearchIcon()
+		    .searchPageDisplayed();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'loadpat')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'woutFactory')">Next -></button>  
+<br><br>
+
+</div>
+
+<!-------------------------------------------------------- End of Fluent Design Pattern ------------------------------------------------------------------------>
+
+<div id="woutFactory" class="topics">
+<br><br><h2>POM without Page Factory</h2><hr>
+The Page Object Model can be implemented without page factory also. Here we have also created another class PageObjectManager to manage the page objects.
+
+<br><br><pre class="codeblock2">public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> PageObjectManager <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriverWait wait;
+
+	LoginPage loginpage;
+	HomePage homepage;
+	SearchPage searchpage;
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> PageObjectManager(WebDriver driver, WebDriverWait wait) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+		this.wait=wait;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage getLoginPage()<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> (loginpage == <span style='font-weight:bold;color:#7B0052;'>null</span>) ? loginpage = <span style='font-weight:bold;color:#7B0052;'>new</span> LoginPage(driver,wait) : loginpage;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage getHomePage()<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> (homepage == <span style='font-weight:bold;color:#7B0052;'>null</span>) ? homepage = <span style='font-weight:bold;color:#7B0052;'>new</span> HomePage(driver,wait) : homepage;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> SearchPage getSearchPage()<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>return</span> (searchpage == <span style='font-weight:bold;color:#7B0052;'>null</span>) ? searchpage = <span style='font-weight:bold;color:#7B0052;'>new</span> SearchPage(driver,wait) : searchpage;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestSetup <span style='font-weight:bold;color:#D3171B'>{</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriverWait wait;
+	<span style='font-weight:bold;color:#7B0052;'>public</span> PageObjectManager pagemanager;
+	
+	@BeforeClass
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> startTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\Users\\chromedriver.exe"</span>);
+		driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+		driver.get(<span style='color:#2A00FF'>"http://automationpractice.com/index.php?"</span>);
+		driver.manage().window().maximize();
+		
+		wait= <span style='font-weight:bold;color:#7B0052;'>new</span> WebDriverWait(driver,30);
+		pagemanager= <span style='font-weight:bold;color:#7B0052;'>new</span> PageObjectManager(driver,wait);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	@AfterClass()
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> endTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		driver.quit();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> BasePage <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriverWait wait;
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> BasePage(WebDriver driver, WebDriverWait wait) <span style='font-weight:bold;color:#D3171B'>{</span>
+		this.driver=driver;
+		this.wait=wait;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Click Method
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> click (By eleLoc) <span style='font-weight:bold;color:#D3171B'>{</span>
+		wait.until(ExpectedConditions.elementToBeClickable(eleLoc));
+		driver.findElement(eleLoc).click();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Write Text
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterText (By eleLoc, String text) <span style='font-weight:bold;color:#D3171B'>{</span>
+		wait.until(ExpectedConditions.elementToBeClickable(eleLoc));
+		driver.findElement(eleLoc).sendKeys(text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Read Text
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> String getText (By eleLoc) <span style='font-weight:bold;color:#D3171B'>{</span>
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eleLoc));
+		<span style='font-weight:bold;color:#7B0052;'>return</span> driver.findElement(eleLoc).getText();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Element Displayed
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>boolean</span> isDisplayed(By eleLoc) <span style='font-weight:bold;color:#D3171B'>{</span>
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eleLoc));
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(driver.findElement(eleLoc).isDisplayed())
+		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+		<span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2">public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage(WebDriver driver, WebDriverWait wait) <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>super</span>(driver,wait);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Page Elements
+</span>	<span style='font-weight:bold;color:#7B0052;'>private</span> By username= By.id(<span style='color:#2A00FF'>"email"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By password= By.id(<span style='color:#2A00FF'>"passwd"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By loginbutton= By.id(<span style='color:#2A00FF'>"SubmitLogin"</span>);
+
+
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterUserName(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		enterText(username,text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterPassword(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		enterText(password,text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickLogin()<span style='font-weight:bold;color:#D3171B'>{</span>
+		click(loginbutton);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HomePage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage(WebDriver driver, WebDriverWait wait) <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>super</span>(driver,wait);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	
+	<span style='color:#3F7F5F'>//Page Elements
+</span>	<span style='font-weight:bold;color:#7B0052;'>private</span> By searchBox= By.id(<span style='color:#2A00FF'>"search_query_top"</span>);
+	<span style='font-weight:bold;color:#7B0052;'>private</span> By searchIcon= By.name(<span style='color:#2A00FF'>"submit_search"</span>);
+
+
+	<span style='color:#3F7F5F'>//Page Actions
+</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterSearchItem(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
+		enterText(searchBox,text);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickSearchIcon()<span style='font-weight:bold;color:#D3171B'>{</span>
+		click(searchIcon);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2">public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> SearchPage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage<span style='font-weight:bold;color:#D3171B'>{</span>
+
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> SearchPage(WebDriver driver, WebDriverWait wait) <span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='font-weight:bold;color:#7B0052;'>super</span>(driver,wait);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+	<span style='color:#3F7F5F'>//Page Elements
+</span>	<span style='font-weight:bold;color:#7B0052;'>private</span> By pageHeading=By.xpath(<span style='color:#2A00FF'>"//span[@class='navigation_page' and text()='Search']"</span>);
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> searchPageDisplayed()<span style='font-weight:bold;color:#D3171B'>{</span>
+
+		<span style='font-weight:bold;color:#7B0052;'>if</span>(isDisplayed(pageHeading)) <span style='font-weight:bold;color:#D3171B'>{</span>
+			System.out.println(<span style='color:#2A00FF'>"Search Page is successfully displayed"</span>);
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FirstTest <span style='font-weight:bold;color:#7B0052;'>extends</span> TestSetup<span style='font-weight:bold;color:#D3171B'>{</span>
+
+	@Test
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> executeTest()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		pagemanager.getLoginPage().enterUserName(<span style='color:#2A00FF'>"abc@gmail.com"</span>);
+		pagemanager.getLoginPage().enterPassword(<span style='color:#2A00FF'>"automation"</span>);
+		pagemanager.getLoginPage().clickLogin();
+		
+		pagemanager.getHomePage().enterSearchItem(<span style='color:#2A00FF'>"dress"</span>);
+		pagemanager.getHomePage().clickSearchIcon();
+		
+		pagemanager.getSearchPage().searchPageDisplayed();
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'fluidPat')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'POMframework')">Next -></button>  
+<br><br>
+
+</div>
+
+<!------------------------------------------------------------------ End of POM without page factory ---------------------------------------------------------------->
+
+<div id="POMframework" class="topics">
+<br><br><h2>Page Object Model Framework</h2><hr>
+Using all the concepts we have discussed here, let's build a simple framework using the page object model design pattern. This framework is designed for website <a href="http://automationpractice.com/index.php" target="_blank">automationpractice.com</a>
+and has a test script for one flow from end to end. The source code is hosted in GitHub. 
+
+<br><br><a href="https://github.com/biswajitsundara/page-object-model" target="_blank">https://github.com/biswajitsundara/page-object-model</a>
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'woutFactory')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+
+</div>
+
+
+<!------------------------------------------------------------------ End of POM Framework ---------------------------------------------------------------->
+
+</div><!-- End of container -->
+
+
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+  window.scrollTo(0, 0);
+
+  x=document.getElementsByName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].setAttribute("class", "none");
+  }
+
+  var menuId = topicName.concat("Menu");
+  document.getElementById(menuId).setAttribute("class", "active");
+}
+
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('home').style.display = "block";
+
+}
+</script>
+
+</body>
+</html>

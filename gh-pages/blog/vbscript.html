@@ -603,10 +603,120 @@ End If</pre>
   </div>
 
 
-<div id="arrays" class="topics">
+<div id="arrays" class="topics" style="line-height:200%">
     <h1 class="mt-4">Arrays</h2>
-    <p>to be updated..</p>
-  </div>
+Array is a collection of similar items or we can say when we need to store a series of data, we can go for array.
+</ul><li>A variable contains a single value, Array can contain multiple values.
+</li><li>Items in array are stored in a sequence, refered by index 0,1,2..etc
+</li><li>Array size/dimension specifies what is the maximum elements it can store.
+</li><li>Array index starts from Zero (0). If the size is 5 then it can hold upto 6 elements. 
+</li><li>Array index can't be negative.
+</li><li>Generally array is meant to contain only homogeneous data. Example an array can have only integer or string type data, we can't store both type of data in one array.
+</li><li>VB Script array can contain any type of data.
+</li></ul>
+
+<br><h4>Array Declaration Without size</h4>
+<pre class="codeblock">Dim arr1() 
+Redim arr1(3)
+arr1(0)="Hello"
+arr1(1)="Hi"
+arr1(2)="Howdy"
+arr1(3)="Hey"
+
+Msgbox arr1(3)</pre>
+
+<br><h4>Array Declaration With size</h4>
+<pre class="codeblock">Dim arr2(2)
+arr2(0)="Bus"
+arr2(1)="Truck" 
+arr2(2)="Car" 
+
+Msgbox arr2(0)</pre>
+
+
+<br><h4>Create array with elements</h4>
+<pre class="codeblock">Dim arr3
+arr3 = Array("Whisky","Beer","Vodka")
+
+Msgbox arr3(1)</pre>
+
+
+<br><h4>Assign any value to array</h4>
+<pre class="codeblock">
+Dim arr(5)
+arr(0) = "5"            'Number as String
+arr(1) = "Biswajit"     'String
+arr(2) = 500            'Number
+arr(3) = 5.95           'Decimal Number
+arr(4) = #23/02/2020#   'Date
+arr(5) = #12.36 PM#     'Time
+
+Msgbox arr(4)
+Msgbox TypeName(arr(4))</pre>
+
+
+<br><h4>Two Dimensional array</h4>
+This is like a 2D matrix, row and column format.
+
+<pre class="codeblock">
+Dim arr4(2,3)	'3 rows and 4 columns
+         
+arr4(0,0) = "TC ID"          
+arr4(0,1) = "FName"
+arr4(0,2) = "LName"           
+arr4(0,3) = "Dept" 
+         
+arr4(1,0) = "TC001"           
+arr4(1,1) = "Ned"           
+arr4(1,2) = "Stark"           
+arr4(1,3) = "Winterfell"    
+         
+arr4(2,0) = "TC002"             
+arr4(2,1) = "Robert"            
+arr4(2,2) = "Baratheon"             
+arr4(2,3) = "KingsLanding"  
+
+Msgbox arr4(0,1)
+Msgbox arr4(1,1)
+Msgbox arr4(2,1)</pre>  
+
+<br><h4>Three Dimensional array</h4>
+This is like a 3D matrix, For array index 0 ---> There's another 2D array and so on
+
+<pre class="codeblock">
+Dim arr5(2, 2, 2)  
+arr5(0,0,0)="A"
+arr5(0,0,1)="B"
+arr5(0,0,2)="C"
+arr5(0,1,0)="A1"
+arr5(0,1,1)="B1"
+arr5(0,1,2)="C1"
+arr5(0,2,0)="A2"
+arr5(0,2,1)="B2"
+arr5(0,2,2)="C2"
+
+Msgbox arr5(0,2,2)</pre> 
+
+<br><h4>Array Start/Length</h4>
+<ul><li>LBound is used to find the starting index of the array. Usually it's zero(0)
+</li><li>UBound is the length or dimension of the array.
+</li><li>Let's say we have declared arry as arr(2) but stored only one value. The UBound will return 2 as it returns the dimension of the array not howmany elements are actually stored.
+</li><li>LBound, UBound return the integer value.
+</li></ul>
+<pre class="codeblock">
+Dim arr7
+arr7 = Array("Whisky","Beer","Vodka")
+
+Msgbox LBound(arr7)
+Msgbox UBound(arr7)
+
+Dim arr8(2)
+arr8(0)="a"
+'arr8(1)="b"
+
+Msgbox LBound(arr8)
+Msgbox UBound(arr8)</pre>  
+</div>
 
 
 <div id="strings" class="topics">
