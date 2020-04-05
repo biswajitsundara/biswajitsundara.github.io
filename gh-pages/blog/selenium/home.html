@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ 
+<style>
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height:50px;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 24px;
+  color: white;
+  padding: 5px;
+}
+
+
+body
+{
+  background-image: url("img/home/back.jpg");
+}
+
+
+
+
+h1{
+
+font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 48px;
+color: rgb(95, 158, 160);
+text-align:center;
+margin-top:5%;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px;  
+
+
+}
+
+th, td {
+  padding: 15px;
+}
+
+td.content {
+
+text-align: left; 
+border: 1px solid #7adb9d;
+border-bottom: 5px solid #7adb9d; 
+line-height: 150%; 
+padding: 15px; 
+overflow: auto;
+width:70%;
+
+
+}
+
+tr.td:hover {background-color: #ddd;}
+
+td.index {
+  text-align: left; 
+border: 1px solid #7adb9d;
+border-left: 5px solid #7adb9d; 
+line-height: 150%; 
+padding: 15px;  
+overflow: auto;
+
+  width:10%;
+}
+
+td.filler
+{
+   width:1%;
+}
+
+@media screen and (max-width: 700px) {
+  h1{
+     margin-top:15%;
+   }
+}
+
+</style>
+
+<script>
+
+
+function contenthover(obj) {
+  obj.bgColor = "#7adb9d";
+  obj.style.fontWeight = "bold";
+  obj.style.color = "white";
+}
+
+function contentout(obj)
+{
+   obj.bgColor = "White";
+    obj.style.fontWeight = "normal";
+   obj.style.color = "black";
+}
+</script>
+
+
+</head>
+<body>
+
+<div class="navbar">
+  &nbsp;&nbsp;&nbsp;Biswajit Sundara Blog
+</div>
+
+
+
+
+<h1>Selenium</h1>
+
+<center>
+<table>
+  <tr>
+    <td class="index">1</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Basics Of Selenium WebDriver</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+  <tr>
+    <td class="index">2</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Selenium Locators</td>
+  </tr>
+  
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+
+<tr>
+    <td class="index">3</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">WebElements</td>
+  </tr>
+
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">4</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Selenium Links</td>
+  </tr>
+
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">5</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Wait</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">6</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Alert</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">7</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Frame</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">8</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Window</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">9</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Exceptions</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">10</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">File Handling</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">11</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Advanced User Interactions</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">12</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Java Script Executor</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">13</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Junit</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">14</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">TestNG</td>
+  </tr>
+<tr><td class="filler"></td><td class="filler"></td><td class="filler"></td></tr>
+<tr>
+    <td class="index">14</td>
+    <td class="filler"></td>
+    <td class="content" onmouseover="contenthover(this)" onmouseout="contentout(this)">Page Object Model</td>
+  </tr>
+</table>
+</center>
+
+<br><br><center><img src="img/home/me.png" style="width:10%"></center>
+
+
+<br><br><br><br>
+</body>
+</html>

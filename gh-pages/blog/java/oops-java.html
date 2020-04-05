@@ -13,13 +13,13 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="../css/simple-sidebar.css" rel="stylesheet">
 
-<link href="css/comment.css" rel="stylesheet">
-<link href="css/blogpage.css" rel="stylesheet">
+<link href="../css/comment.css" rel="stylesheet">
+<link href="../css/blogpage.css" rel="stylesheet">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
@@ -56,8 +56,8 @@
         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basicCommands')">Polymorphism</a>
         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'branching')">Abstraction</a>
         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'encap')">Encapsulation</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Coupling</a>
-	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Cohesion</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cohesion')">Cohesion</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'coupling')">Coupling</a>
 	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'association')">Association</a>
 	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'aggregation')">Aggregation</a>
 	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'composition')">Composition</a>
@@ -103,7 +103,7 @@
 <div class="card">
 <div class="row no-gutters">    
    <div class="col-md-6">
-      <br><img src="img\brand\profile.png" class="card-img" alt="...">
+      <br><img src="../img\brand\profile.png" class="card-img" alt="...">
     </div>
    <div class="col-md-6">
       <div class="card-body">
@@ -197,10 +197,9 @@
 </div>
 
 
-
-      </div> 
+</div> 
         
-      <div id="basics" class="topics" style="line-height: 200%;">
+<div id="basics" class="topics" style="line-height: 200%;">
       <h1 class="mt-4">OOPS Basics</h1>
       <p>Object Oriented Programming (Paradigms) is a way of writing programs. The programming aims to resemble to the real world. Here everything is based on classes and objects.</p>
 
@@ -227,7 +226,9 @@
 <button  class="btn btn-success" onclick="openTopic(event, 'architecture')">Next -></button>  
 
 <br><br> 
+
 </div>
+
 
     
  <div id="classObj" class="topics" style="line-height: 200%;">
@@ -1194,7 +1195,7 @@ In sub-classes we can inherit members as is, replace them, hide them, or supplem
 </li><li>We can write a new static method in the subclass that has the same signature as the one in the superclass, thus hiding it.
 </li><li>We can declare new methods in the subclass that are not in the superclass.
 </li><li>We can write a subclass constructor that invokes the constructor of the superclass, either implicitly or by using the keyword super.
-</div>
+</ul>
 
 
 <br><br>
@@ -1206,94 +1207,104 @@ In sub-classes we can inherit members as is, replace them, hide them, or supplem
 <br><br> 
 
 </div>
+
+
 
 <div id="encap" class="topics" style="line-height: 200%;">
     <h1 class="mt-4">Encapsulation</h2>
-      Encapsulation is a mechanism of binding code and data together in a single unit.
-       <ul><li>Single Unit (class) = Data (Variable) + Code (Methods)
-      </li><li>So in other words, variables and methods are wrapped in a class in such a way that it can't be accessed by outside of the class
-      </li><li>This is used to hide the internal implementation from the outer world.
-      </li><li>Means The variables of the class will be hidden from other classes and can be accessed by only the current class methods
-      </li></ul><img src="img\oops\Encapsulation.png" style="height:250px; width:250px;">
-      
-   
-<h4><font color="#4682B4">Push Projects</font></h4>
-
-	Here we will see how can we push projects to GitHub.
-	Let's create a folder <font color="rgb(240, 128, 128)">testproj</font>and have a text file named <font color="rgb(240, 128, 128)">file.txt</font>
-        Launch command prompt 
     
-<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git init</span>
-Initialized empty Git repository in C:/Users/Biswajit/Desktop/wiki/testproj/.git
-
-C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git clone </span>https://github.com/biswajitsundara/githubtest.git
-</span>Cloning into 'githubtest'...
-Username for 'https://github.com': xxxx
-Password for 'https://biswajitsundara@github.com':xxxx
-warning: You appear to have cloned an empty repository.
-
-C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
-On branch master
-No commits yet
-Untracked files:
-  (use git add ..." to include in what will be committed)
-        file.txt
-nothing added to commit but untracked files present (use "git add" to track)
-
-C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git add *.*</span>
-
-C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
-On branch master
-No commits yet
-Changes to be committed:
-  (use "git rm --cached ..." to unstage)
-        new file:   file.txt
-
-C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git commit -m "first commit"</span>
-[master (root-commit) a98e199] first commit
- 1 file changed, 1 insertion(+)
- create mode 100644 file.txt
-
-C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
-On branch master
-nothing to commit, working tree clean
-
-C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git remote add origin </span>https://github.com/biswajitsundara /githubtest.git
-</span>
-C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git push -u origin master</span>
-Username for 'https://github.com': xxxx
-Password for 'https://biswajitsundara@github.com': xxxx
-Counting objects: 3, done.
-Writing objects: 100% (3/3), 222 bytes | 222.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/biswajitsundara/githubtest.git
-* [new branch]      master -&gt; master
-Branch 'master' set up to track remote branch 'master' from 'origin'.
-
-***** Check the file should be available in the GitHub *******</pre>
-
-
-<br><h4><font color="#4682B4">Pull Operations</font></h4>
-Here we will see how can we pull projects from GitHub. Launch command prompt and execute the below commands
-<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git pull </span>https://github.com/biswajitsundara/githubtest.git
-</span>Username for 'https://github.com': biswajitsundara
-Password for 'https://biswajitsundara@github.com':
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-From https://github.com/biswajitsundara/githubtest
- * branch            HEAD       -&gt; FETCH_HEAD</pre>
 
 <br><br>
-
 <button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
-
 <button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
-
 <br><br> 
 
-  </div>
+</div>
+
+
+<div id="cohesion" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Cohesion</h2>
+
+The dictionary meaning of cohesion is keeping it united as a whole. Applying the same principle in object oriented software design cohesion is defined 
+as the purpose of a class. A well focused class designed for a particular purpose is considered high cohesion and a less focused class is considered low cohesion.
+The best practice is to have high cohesion always.
+
+<br><br>Below is an example of <font color="blue">low cohesion</font>. The Employee is assigned with email tasks however there's another task to print letters also and that's for another purpose. 
+<pre class="codeblock2">
+public class Employee
+{
+  checkEmail()    
+  sendEmail()     
+  emailValidate() 
+  PrintLetter()   
+}
+</pre>
+
+<br>Below is an example of <font color="blue">high cohesion</font>. The HR Employee is assigned with tasks related to calculating salary, then set salary to employees and transfer salary to employee.
+Here all tasks are focused to a single purpose.   
+     
+<pre class="codeblock2">
+public class HR Employee
+{
+  calculateSalary()
+  setSalary()    
+  transferSalary()       
+}
+</pre>
+
+<br><h4><font color="#4682B4">Key Points</font></h4>
+<ul><li>Cohesion is the relationship within a module.
+</li><li>Cohesion is the degree to which a class/ module focuses on the single thing
+</li><li>While designing we should strive for high cohesion i.e class with focused to a single task
+</li></ul>
+
+Cohesion may sound similar to Single Responsibility Pattern (SRP) that's because when a class is designed to have a single responsibility then it has high cohesion.
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+<br><br> 
+
+</div>
+
+
+
+<div id="coupling" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Coupling</h2>
+
+The dictionary meaning of coupling is pairing of two items. In Object Oriented design coupling indicates how different classes are paired or how the classes are dependent.
+on each other. A good design is to have loose coupling which means classes should be less dependent on each other.
+
+<br><br><h4>Tight Coupling</h4>
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>class</span> DBService
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> DBService(String username)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Connection initialized for user "</span> +username);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> addRow(String table, String value)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.out.println(<span style='color:#2A00FF'>"Row added to table "</span> + table + <span style='color:#2A00FF'>" value= "</span>+value);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> UserRegistration <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		DBService dbservice= <span style='font-weight:bold;color:#7B0052;'>new</span> DBService(<span style='color:#2A00FF'>"scott"</span>);
+		dbservice.addRow(<span style='color:#2A00FF'>"Customer"</span>, <span style='color:#2A00FF'>"Simba Reddy"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+ 
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+<br><br> 
+
+</div>
+
 
 
 <div id="association" class="topics" style="line-height: 200%;">
