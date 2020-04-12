@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Biswajit Sundara Blog | Advanced User Actions</title>
+
+ <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/blog-post.css" rel="stylesheet">
+
+  <link href="../css/blogpage.css" rel="stylesheet">
+
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158659468-1');
+</script>
+
+</head>
+
+<body onload="LoadFunc()">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Biswajit Sundara Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../bloghome.html" target="_blank">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../../../index.html" target="_blank">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#comment">Comment</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+
+   <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+      <div class="card my-4">
+                 <h5 class="card-header">Author Profile</h5>
+              <div class="card-body">
+                  <center><img class="d-flex mr-3 rounded-circle" src="../img/brand/me.png" alt="" style="width:40%"></center>
+                  This blog book is written by Biswajit Sundara. Biswajit is a software professional with 10+ years of experience. He has worked on various technologies and also an avid blogger on technology.
+             </div>
+         </div><!-- End of Author Profile -->
+
+
+        <!-- Table of contents -->
+      <div class="card my-4">
+          <h5 class="card-header">Topics</h5>
+         <div class="card-body">
+           	<ul class="list-group list-group-flush">
+    	  	<li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">AUI Basics</a></li>
+    	  	<li class="list-group-item"><a href="#" onclick="openTopic(event, 'mouse')">Mouse Events</a></li>
+                <li class="list-group-item"><a href="#" onclick="openTopic(event, 'keybd')">KeyBoard Events</a></li>
+    	  	<li class="list-group-item"><a href="#" onclick="openTopic(event, 'sample')">Sample Scripts</a></li>
+                <li class="list-group-item"><a href="#" onclick="openTopic(event, 'summary')">Summary</a></li>
+         	</ul>
+        </div>
+     </div><!-- End of Table of contents -->
+              
+         
+
+   
+  </div><!-- End of Sidebar Widgets Column -->
+
+
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">Advanced User Actions</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by
+          <a href="#">Biswajit Sundara</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>Posted on April 12th, 2020 at 2:00 PM</p>
+
+        <hr>
+
+       
+        						<!-- Post Content -->
+
+<!-------------------------------------------------------- Start of basics --------------------------------------------->
+        
+<div id="basics" class="topics" style="line-height: 180%;">
+       <h4>What is Advanced User Actions</h4>
+       We know that selenium is a browser automation tool that automates user actions like click, enter text etc however the modern applications
+       require advanced user actions such as drag and drop, right click, mouse hover etc. So in order to automate these sophisticated user actions selenium 
+       provides the Advanced User Actions API.
+
+       <ul><li>For example, if you go to flipkart site, Electronics -> Mouse over -> You will see a flying menu is appearing. This is JQuery UI and it can't be handled using the primitive click methods. We need advanced approach to interact.
+
+       </li><li>The <font color="blue">Actions</font> class from <font face="courier new" color="blue">package org.openqa.selenium.interactions</font> is used for the advanced user actions automation.
+       </li><li>Actions = Class  & Action = interface
+       </li></ul>
+
+       <br><h4>How it works</h4>
+       <pre class="codeblock1"><span style='color:#3F7F5F'>//First configure the series of user actions
+</span>Actions builder = <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+builder.keyDown(Keys.CONTROL).click(item1)
+       .click(item2)
+       .click(item3)
+       .click(item5)
+       .keyUp(Keys.CONTROL);
+
+<span style='color:#3F7F5F'>//Get the action/built the object to execute
+</span>Action selectMultiple = builder.build();
+		
+<span style='color:#3F7F5F'>//Execute the action object
+</span>selectMultiple.perform();</pre>
+The builder design pattern is used here so instead of creating the action object & then calling the perform method 
+we can straight forward way use .build() & .perform().      
+
+       <br><br>
+       <button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Home</button>  
+       <button  class="btn btn-success" onclick="openTopic(event, 'mouse')">Next -></button>  
+       <br><br>    
+
+</div>
+<!-------------------------------------------------------- End of basics --------------------------------------------->
+        
+<!-------------------------------------------------------- Start of mouse --------------------------------------------->
+        
+<div id="mouse" class="topics" style="line-height: 180%;">
+       <h4>Mouse Events</h4>
+  The mouse interface deals with advanced user actions those can be performed using mouse. Let's look into all the methods one by one.
+
+<br><br><h4>1. Click</h4>
+The Click method is overloaded. click() without argument clicks on the last known mouse coordinates & the click(WebElement element) clicks on the middle of the given element. We need to use the web driver click method
+for the normal usage and the correct usage of this method is while clicking any menu item from the hover menu. First we will hover on the flyout menu & then click on the sub menu item.
+<font face="courier">click(WebElement element)</font> = <font face="courier">Actions.moveToElement(onElement).click()</font>. 
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> mouseClick(WebElement element)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder = <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.click(element).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4>2. Double Click</h4>
+The doubleClick() without argument double clicks on the last known mouse coordinates & the doubleClick(WebElement element) double clicks on the middle of the given element. 
+
+<font face="courier">doubleClick(WebElement element)</font> = <font face="courier">Actions.moveToElement(element).doubleClick()</font>. 
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> mouseDoubleClick(WebElement element)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder = <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);		
+    builder.doubleClick(element).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4>3. Right Click</h4>
+To perform right click, the method name is contextClick. contextClick() without argument performs the right click operation on the last known mouse coordinates & the contextClick(WebElement element) right clicks on the middle of the given element. 
+Ever wondered why selenium calls it context click instead of right click? that's because when we perform right click on UI the menu that appears is called context menu.
+<pre class="codeblock1">public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> mouseContextClick(WebElement element)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder = <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.contextClick(element).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4>4. Click and Hold</h4>
+There are two versions of this method. clickAndHold(WebElement element) clicks on the middle of the given element without releasing the button and clickAndHold() clicks and holds on the last known coordinate. 
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> mouseClickAndHold(WebElement element)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder= <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.clickAndHold(element).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4>5. Mouse Release</h4>
+There are two versions of this method. release(WebElement element) releases the pressed left mouse button on the middle of the given element. release() releases the pressed left mouse button at the current mouse location. 
+First we need to call the clickAndHold() method then the release() method else it will end up in undefined behaviour. 
+<pre class="codeblock1">public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> mouseButtonRelease(WebElement element)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder= <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.release(element).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4>6. Mouse Hover</h4>
+Moves the mouse to the middle of the element. The element is scrolled into view and its location is calculated using getBoundingClientRect.
+<pre class="codeblock1">public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> mouseHover(WebElement element)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder= <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.moveToElement(element).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4>7. Drag & Drop</h4>
+It clicks-and-holds at the location of the source element then moves to the target location and releases the mouse there.
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> mouseDragAndDrop(WebElement source, WebElement target)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder= <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.dragAndDrop(source, target).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4>8. Drag & Drop By Coordinates</h4>
+It clicks-and-holds at the location of the source element then moves to specified mouse location and releases the mouse there.
+
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> dragAndDropByCoord(WebElement element, int xaxis, int yaxis)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+     Actions builder= <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+     builder.dragAndDropBy(element, xaxis, yaxis).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+       <br><br>
+       <button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
+       <button  class="btn btn-success" onclick="openTopic(event, 'keybd')">Next -></button>  
+       <br><br>    
+
+</div>
+
+<!-------------------------------------------------------- End of mouse --------------------------------------------->
+
+
+<!-------------------------------------------------------- Start of keyboard --------------------------------------------->
+        
+<div id="keybd" class="topics" style="line-height: 180%;">
+       <h4>Keyboard Events</h4>
+The keyboard events in Actions class helps to simulate the user actions of pressing a single or multiple keys on the keyboard. We do have the send keys method
+in webdriver using which we can pass the keyboard keys however the advanced actions like pressing a key and then performing some action is not possible there. So we use
+the Keyboard events from Actions class.
+
+<br><br><h4>1. Send Keys</h4>   
+The sendKeys(WebElement element, CharSequence... keys) first clicks on the element and then enters the keys. There is another version
+sendKeys() which sends the key to the active element. 
+
+There can be a question, what is the difference between actions class sendKeys() & the selenium web driver sendKeys. There are two differences
+<ul><li>The modifier keys included in this call are not released. For example if we press Ctrl, Shift keys then thoese don't get released after the sendKeys
+we will have to release them by calling keyUp()
+</li><li>There is no attempt to re-focus the element - so sendKeys(Keys.TAB) for switching elements should work.
+</li></ul>
+
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> sendKeyAction(WebElement element, String text)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder= <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.sendKeys(element, text).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre> 
+
+
+<br><h4>2. KeyDown</h4>   
+The keyDown(WebElement element,CharSequence key) first clicks on the element and then press the modifier key. The modifier key means control/shift/alt.
+Please note two things
+<ul><li>It doesn't release the key. For example, if we have used the control key then visualize it as the key remains pressed on the keyboard.
+To release the key we need to use keyUP(CharSequence key) method. 
+</li><li>Also the valid keys are control/shift/alt. Any other key used here would end up with IllegalArgumentException.  
+</li></ul>
+The other version of the method keyDown(CharSequence key) can be used if we don't have to focus on any element.
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> sendKeyAction(WebElement element, String text)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder= <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.sendKeys(element, text).build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre> 
+
+
+<br><h4>3. KeyUp</h4>   
+The keyUp(CharSequence key) releases the modifier key. The modifier key means control/shift/alt.
+Please note two things
+<ul><li>The keyDown(CharSequence key) keeps the key pressed and the keyUp(CharSequence key) releases the modifier key.
+To release the key we need to use keyUP(CharSequence key) method. 
+</li><li>The valid keys those can be used here are control/shift/alt. Any other key used here would end up with IllegalArgumentException.  
+</li></ul>
+The other version of the method keyUp(WebElement, CharSequence key) can be used if we have to focus on any element before releasing the key.
+<pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> keyUpAction(WebElement element1)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    Actions builder= <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+    builder.keyDown(element1, Keys.CONTROL)
+           .keyUp(Keys.CONTROL)
+           .build().perform();
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+
+
+      <br><br>
+       <button  class="btn btn-primary" onclick="openTopic(event, 'mouse')"><- Prev</button>  
+       <button  class="btn btn-success" onclick="openTopic(event, 'sample')">Next -></button>  
+       <br><br>   
+
+</div>
+
+<!-------------------------------------------------------- End of keyboard ------------------------------------------>
+
+
+<!-------------------------------------------------------- Start of sample scripts --------------------------------------------->
+        
+<div id="sample" class="topics" style="line-height: 180%;">
+       <h4>FlipKart</h4>
+If you open flipkart, you will see the apple sub menu is not visible and we can't click on it without moving mouse over the electronics menu.
+So let's open the flip kart site, hover on the electronics fly out menu & then select the Apple sub menu using selenium action class.
+
+<br><br><pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FlipKart 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	
+     <span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+
+	
+     @BeforeClass
+     <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setup()
+     <span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='color:#3F7F5F'>//Instantiate WebDriver
+</span>	System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\drivers\\chromedriver.exe"</span>);
+	driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+	<span style='color:#3F7F5F'>//Launch the flipkart site & close the login popup
+</span>	driver.get(<span style='color:#2A00FF'>"https://www.flipkart.com/"</span>);
+	driver.findElement(By.xpath(<span style='color:#2A00FF'>"//button[@class='_2AkmmA _29YdH8']"</span>)).click();
+	System.out.println(<span style='color:#2A00FF'>"The flipkart site opened successfully"</span>);
+     <span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+     @Test
+     <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testFlipkart()
+     <span style='font-weight:bold;color:#D3171B'>{</span>
+
+        <span style='color:#3F7F5F'>//Instantiate the action class
+</span>	Actions builder = <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+
+        <span style='color:#3F7F5F'>//Locate the menu & sub menu item
+</span>	WebElement electronics = driver.findElement
+                                 (By.xpath(<span style='color:#2A00FF'>"//span[text()='Electronics']"</span>));
+	WebElement appleMenu = driver.findElement(By.xpath(<span style='color:#2A00FF'>"//a[text()='Apple']"</span>));
+
+
+        <span style='color:#3F7F5F'>//First hover on the fly out menu & then hover on sub menu & click
+</span>	builder.moveToElement(electronics)
+	       .click()
+	       .moveToElement(appleMenu)
+	       .click()
+	       .perform();	
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+      @AfterClass
+      <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> tearDown()
+      <span style='font-weight:bold;color:#D3171B'>{</span>
+	 <span style='color:#3F7F5F'>//driver.quit();
+</span>      <span style='font-weight:bold;color:#D3171B'>}</span>
+	
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4>Select Multiple</h4>
+To select multiple items, we need to first click on an item then press the control key & select other items. Below we have used the JQuery site for the demo.
+
+
+<br><br><pre class="codeblock1">public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> MultipleSelect 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+
+    <span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
+
+    @BeforeClass
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> setup()
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='color:#3F7F5F'>//Instantiate WebDriver
+</span>	System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\drivers\\chromedriver.exe"</span>);
+	driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+	driver.manage().window().maximize();
+	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        <span style='color:#3F7F5F'>//Launch the flipkart site & close the login popup
+</span>	driver.get(<span style='color:#2A00FF'>"https://jqueryui.com/selectable/"</span>);
+	WebElement frame = driver.findElement(By.className(<span style='color:#2A00FF'>"demo-frame"</span>));
+	driver.switchTo().frame(frame);
+	System.out.println(<span style='color:#2A00FF'>"The J Query site opened successfully"</span>);
+
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+    @Test
+    <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> testMultipleSelect()
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='color:#3F7F5F'>//Locate the web elements
+</span>	WebElement item1 = driver.findElement(By.xpath(<span style='color:#2A00FF'>"//li[text()='Item 1']"</span>));
+	WebElement item2 = driver.findElement(By.xpath(<span style='color:#2A00FF'>"//li[text()='Item 2']"</span>));
+	WebElement item3 = driver.findElement(By.xpath(<span style='color:#2A00FF'>"//li[text()='Item 3']"</span>));
+	WebElement item5 = driver.findElement(By.xpath(<span style='color:#2A00FF'>"//li[text()='Item 5']"</span>));
+
+
+	<span style='color:#3F7F5F'>//press the control key & click on items.
+</span>	Actions builder = <span style='font-weight:bold;color:#7B0052;'>new</span> Actions(driver);
+		builder.keyDown(Keys.CONTROL).click(item1)
+		.click(item2)
+		.click(item3)
+		.click(item5)
+		.keyUp(Keys.CONTROL)
+		.build()
+		.perform();
+
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+
+
+     @AfterClass
+     <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> tearDown()
+     <span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='color:#3F7F5F'>//driver.quit();
+</span>     <span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+       <br><br>
+       <button  class="btn btn-primary" onclick="openTopic(event, 'keybd')"><- Prev</button>  
+       <button  class="btn btn-success" onclick="openTopic(event, 'summary')">Next -></button>  
+       <br><br>   
+
+
+</div>
+
+<!-------------------------------------------------------- End of sample scripts ------------------------------------------>
+
+
+<!-------------------------------------------------------- Start of summary --------------------------------------------->
+        
+<div id="summary" class="topics" style="line-height: 180%;">
+
+
+<h4>Native Events vs Synthetic Events</h4>
+In WebDriver advanced user interactions are provided by either simulating the Javascript events directly (i.e. synthetic events) or by letting the browser generate the Javascript events (i.e. native events). Native events simulate the user interactions better whereas synthetic events are platform independent.
+Native events should be used whenever it is possible.
+
+<br><br>ChromeDriver provides two modes of supporting native events called WebKit events and raw events. In the WebKit events the ChromeDriver calls the WebKit functions which trigger Javascript events, in the raw events mode operating systems events are used.
+
+<br><br>In the FirefoxDriver, native events can be turned on and off in the FirefoxProfile.
+<pre>FirefoxProfile profile = new FirefoxProfile();
+profile.setEnableNativeEvents(true);
+FirefoxDriver driver = new FirefoxDriver(profile);</pre>
+
+These are some examples where native events behave different to synthetic events:
+<ul><li>With synthetic events it is possible to click on elements which are hidden behind other elements. With native events the browser sends the click event to the top most element at the given location, as it would happen when the user clicks on the specific location.
+</li><li>When a user presses the 'tab' key the focus jumps from the current element to the next element. This is done by the browser. With synthetic events the browser does not know that the 'tab' key is pressed and therefore won't change the focus. With native events the browser will behave as expected.
+</li></ul>
+
+<h4>Summary</h4>
+
+<ul><li>The Action class is less stable. So always prefer to use selenium web driver methods at the first place, if we are not able to perform
+the required action using selenium wd, then only go for the advanced user interactions API.
+</li><li>Firefox supports both Native events & Synthetic events so the assumption is that for these advanced user actions, firefox can be the preferred browser.
+</li><li>Chrome & Internet explorer support native events but don't support synthetic events.
+</li><li>Be cautious while using action class in headless mode.
+</li></ul>
+
+The codes are available here - <a href="https://github.com/biswajitsundara/selenium-aui" target="_blank">GitHub Repo</a>
+
+       <br><br>
+       <button  class="btn btn-primary" onclick="openTopic(event, 'sample')"><- Prev</button>  
+       <button  class="btn btn-success" onclick="openTopic(event, 'basics')">Home -></button>  
+       <br><br>   
+
+</div>
+
+<!-------------------------------------------------------- End of summary------------------------------------------>
+
+<!-- Comments Form -->
+<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+        <div class="card my-4" id="comment">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <input type="text" name="entry.689225320" placeholder="Your name.." class="form-control" >
+                <br><input type="text" name="emailAddress" placeholder="Your email.." class="form-control">
+                <br><textarea name="entry.1648468188" class="form-control" rows="3"></textarea>
+                <input type="hidden" name="entry.2069828936" value="advanced user interaction">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        
+        <!-- Comment with nested comments -->
+        <div class="media mb-4" style="visibility: hidden;">
+          <img class="d-flex mr-3 rounded-circle" src="../img/comment/girl3.jpg" alt="" style="width:10%">
+          <div class="media-body">
+            <h5 class="mt-0">@Priyanka Chopra</h5>
+            <p class="text-muted">12 Dec 2020 01:06:12</p> 
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="../img/brand/me.png" alt="" style="width:10%">
+              <div class="media-body">
+                <h5 class="mt-0">@Biswajit Sundara</h5>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+</form>
+    
+     
+
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; biswajitsundara.github.io 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+
+    window.scrollTo(0, 0);
+  
+}
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('basics').style.display = "block";
+}
+</script>
+
+</body>
+
+</html>
