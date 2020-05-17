@@ -458,7 +458,10 @@ From https://github.com/biswajitsundara/githubtest
    This command removes files.
    <pre>
   #If the file is added but not comitted yet and you want to delete it from staging.
-  git rm -f --cache &lt;filename with extension&gt;
+  git rm -f --cached &lt;filename with extension&gt;
+
+  #If the folder is added but not comitted yet and you want to delete it from staging.
+  git rm -r --cached &lt;foldername&gt;
 
   #If the file exists in the repository and we want to delete it
   git rm &lt;filename with extension&gt;

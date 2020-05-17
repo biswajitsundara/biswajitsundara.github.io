@@ -80,7 +80,7 @@ div.topics {
   div#tocCard {margin-left:5%;} 
 }
 
-h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height: 150%;}
+h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height: 150%; padding: 16px;}
 
 
 </style>
@@ -103,18 +103,16 @@ h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height
 <body onload="LoadFunc()">
 
 <div class="sidebar">
-<h1><center><br>Selenium Wait</center></h1>
+<h1><center>Selenium Wait</center></h1>
   <a class="active" href="#" name="menu" id="homeMenu" onclick="openTopic(event, 'home')">Home</a>
-  <a href="#" name="menu" id="basicsMenu" onclick="openTopic(event, 'basics')" >Page Object Model Basics</a>
-  <a href="#" name="menu" id="factoryMenu" onclick="openTopic(event, 'factory')" >Java Factory Design Pattern</a>
-  <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'pomFactory')">POM with Page Factory</a>
-  <a href="#" name="menu" id="selFactoryMenu" onclick="openTopic(event, 'selFactory')">Selenium Page Factory</a>
-  <a href="#" name="menu" id="pomGenericsMenu" onclick="openTopic(event, 'pomGenerics')">POM with Generics</a>
-  <a href="#" name="menu" id="loadpatMenu" onclick="openTopic(event, 'loadpat')">POM with Loadable Component</a>
-  <a href="#" name="menu" id="fluidPatMenu" onclick="openTopic(event, 'fluidPat')">POM with Fluent Design Pattern</a>
-   <a href="#" name="menu" id="woutFactoryMenu" onclick="openTopic(event, 'woutFactory')">POM without Page Factory</a>
-  <a href="#" name="menu" id="POMframeworkMenu" onclick="openTopic(event, 'POMframework')">Page Object Model Framework</a>
-
+  <a href="#" name="menu" id="basicsMenu" onclick="openTopic(event, 'basics')" >Wait Basics</a>
+  <a href="#" name="menu" id="factoryMenu" onclick="openTopic(event, 'implicit')" >Implicit Wait</a>
+  <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'explicit')">Explicit Wait</a>
+  <a href="#" name="menu" id="selFactoryMenu" onclick="openTopic(event, 'fluent')">Fluent Wait</a>
+  <a href="#" name="menu" id="pomGenericsMenu" onclick="openTopic(event, 'thread')">Thread.sleep</a>
+  <a href="#" name="menu" id="loadpatMenu" onclick="openTopic(event, 'expected')">Expected Conditions</a>
+  <a href="#" name="menu" id="fluidPatMenu" onclick="openTopic(event, 'mixing')">Mixing Waits</a>
+   <a href="#" name="menu" id="woutFactoryMenu" onclick="openTopic(event, 'summary')">Summary</a>
 </div>
 
 
@@ -164,9 +162,9 @@ h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">Page Object Model Basics</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'factory')"> Java Factory Design Pattern</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'pomFactory')">POM With Page Factory</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">Wait Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'implicit')">Implicit Wait</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'explicit')">Explicit Wait</a></li>
     
   </ul>
 </div>
@@ -176,9 +174,9 @@ h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'selFactory')">Selenium Page Factory</a></li>
-    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'pomGenerics')">POM with Generics</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'loadpat')">POM with Loadable Component</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'selFactory')">Fluent Wait</a></li>
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'pomGenerics')">Thread.sleep</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'loadpat')">Expected Conditions</a></li>
     
     
   </ul>
@@ -189,9 +187,9 @@ h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'fluidPat')">POM with Fluent Design Pattern</a></li>
-    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'woutFactory')">POM without Page Factory</a></li>
-    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'POMframework')">Page Object Model Framework</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'fluidPat')">Mixing Waits</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'woutFactory')">Summary</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'POMframework')">Comment</a></li>
   </ul>
 </div>
 
@@ -244,96 +242,53 @@ h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height
 <!------------------------------------------------------------------ End of Home ---------------------------------------------------------------->
 
 <div id="basics" class="topics">
-    <br><br><h2>Page Object Model Basics</h2><hr> 
+    <br><br><h2>Selenium Wait Basics</h2><hr> 
   
-  Page Object Model is a selenium design pattern using which we can build reusable and extensible framework.
-  <br><br><h4><font color="#5e98c8">What is Page Object Model</font></h4>
-  Popularly called as POM is a design pattern which simply means to organize classes by web pages and in test cases call the methods from the page classes.
-  I have seen many people referring to this as framework. Please note Page Object Model is <font color="blue">not a framework</font> and also this is not a language specific design pattern. This is a design pattern from selenium. 
-
-  <br><br>Application Under Test is simply a collection of web pages and the webpage contains set of objects. The POM design models the same in the test code. For every web page there will be a corresponding page class
-  and for every UI object there will be corresponding web elements defined in the page class. All the UI actions/services offered on the page will have corresponding page action method in the page class. This helps in reducing 
-  duplicate code and easy to fix applicable areas in case of UI changes.     
-
-<br><img src="img/pom/pom.png" style="width:100%;">
-Note - The pencil icon indicates the UI elements, the play button indicates it routes us to the next page.
-
-<br><br><br><h4><font color="#5e98c8">Benefits of using POM</font></h4>
-Frameworks designed with POM are highly popular and widely used across teams. Benefits of using this approach 
-
-<br><br><ul style="list-style-position: inside;padding-left: 0;"><li><b>Test Maintenance</b>
-<br>Let's say we don't use POM and write scripts differently and there's a change on a particular page. The locator is changed. A mandatory field is added or removed.
-Then how can we make that change. Until unless we run all our scripts and analyse the failure points we can't update all the places. Whereas if we use the POM design
-then for each page we maintain a separate class file. If the developer informs us there's a change in the page then go to the particular class file and make required updates
-that's it and we are done. So this way we can make changes to only the applicable class file, we don't touch and mess up any other class file. So test maintenance becomes really easy.
-
-<br><br></li><li><b>Reducing code duplication/Reusability</b>
-<br>Let's say we have 1000 test cases for an e-commerce application. For each test case we would login to application. So if we keep all our codes at the test case level
-then we will have to write codes for login in all these 1000 test cases. The code base will be really huge and if there's any change then we will have to update all our test cases one by one.
-Instead if we use POM approach, we can keep all the login related objects/methods in one page and all the 1000 test cases can reuse them. This way we can reduce the code redundancy significantly.
-Also for multi lingual sites (English plus French, German etc) using POM design helps a lot as we can simply create another page class file for another language. We can also maintain packages based on language.
-like <font color="blue">pages_en</font> for english. <font color="blue">pages_fr</font> for French etc.  
-
-<br><br></li><li><b>Readability</b>
-<br>If we write all the locators, methods in the test case class file then there will be too much code in the test case file and if we read we can't get the real picture easily.
-However in POM design we keep all the internal architecture inside page class files and in the test case file we only write the methods to be called from the page class files 
-so it gives us the feeling of a story. If we read the method names, at a glance we can say what the flow is.
-</li></ul>
-
-<br><font color="#5e98c8"><h4>Rules Of POM</font></h4>
-  <ul style="list-style-position: inside;padding-left: 0;"><li>There should be a separate class file for each webpage E.g <font color="blue">LoginPage.java, HomePage.java</font> etc.</font> 
-  </li><li>The page classes should be under one package. E.g under package<font color="blue"> "pages"</font>
-  </li><li>The pages should extend one wrapper class. 
-   <pre class="codeblock1"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage</pre>
-  </li><li>The Base Page can hold actions those are common  across the pages e.g handling a popup, handling menu items
-  </li><li>All page class needs to have a constructor (page factory model)
-  <pre class="codeblock1">
-<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage <span style='font-weight:bold;color:#7B0052;'>extends</span> BasePage
-<span style='font-weight:bold;color:#D3171B'>{</span>
-   <span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage(WebDriver driver)
-   <span style='font-weight:bold;color:#D3171B'>{</span>
-       PageFactory.initElements(driver,this);
-   <span style='font-weight:bold;color:#D3171B'>}</span> 
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
- </li>
- </li><li>The page class should have locators and the action methods for the web page
-  <pre class="codeblock1">
-<span style='color:#3F7F5F'>//locators
-</span>@FindBy(how=How.ID,using=<span style='color:#2A00FF'>"username"</span>)
-<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement eleUserName;	
-
-<span style='color:#3F7F5F'>//Action Methods 
-</span><span style='font-weight:bold;color:#7B0052;'>public</span> LoginPage enterUserName(String data) 
-<span style='font-weight:bold;color:#D3171B'>{</span>
-   type(eleUserName, data);
-   <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
-<span style='font-weight:bold;color:#D3171B'>}</span></pre> 
-</li><li>For Login page, we need to have the locators userid, password, login button and then the action methods like enterUserName, 
-enterPassword, clickLogin etc. 
-</li><li>This is advisable not to use assertions in the pages. However I feel that helps. We can keep all the assertions/verifications in the page.
-
-</li><li>If we use Fluent design pattern then there should be a page method that links to another page.
-<pre class="codeblock1">
-@FindBy(how=How.CLASS_NAME,using=<span style='color:#2A00FF'>"decorativeSubmit"</span>)
-<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement eleLogin;	
-
-<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage clickLogIn() 
-<span style='font-weight:bold;color:#D3171B'>{</span>
-    click(eleLogin);
-    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> HomePage();		
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-</li></ul>
-
-<br><h4><font color="#5e98c8">Disadvantages</font></h4>
-There are some criticisms of this design pattern also.
-<ul style="list-style-position: inside;padding-left: 0;"><li>Spending more time on designing the pages. In one of my projects I have seen people were developing page classes for each and every page/every field and that was taking time.
-However I suggested them to include fields that are required to cover test cases and then we can extend that further. The idea worked well.   
-</li><li>It violates the SOLID principle. The Single Responsibility says every class file needs to have only one work to do. However in our page classes we include both locator & page action methods
-so multiple responsibilities are assigned to one class.
-</li></ul>
+  <h4><font color="#5e98c8">What is synchronization?</font></h4>    
+      <p>Synchronization means two or more things move at the same rate or time. When we execute our test automation script, the selenium scripts has its own speed with which it fires commands. 
+      On the other side, the web application runs with its own speed so to run the automation scripts successfully we need to bring synchronization between both</p>        
  
-<br><button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+
+ <br><h4><font color="#5e98c8">What is selenium wait?</font></h4>     
+  <p>The solution to the synchronization problem is "Wait". We can't control the web application for sure, it depends on how the requests are processed at the server end, how the pages are rendered 
+      based on system capabilities (like memory, processor etc), how it interacts with other APIs, database read/write operations etc. So we need to control our automation script.
+      We need to wait until the element is available on the web page with the desired state upon which we want to perform the action.
+      <br><center><img src="img/wait/wait.png"></center> 
+   </p>
+
+<br><h4><font color="#5e98c8">Scenarios where we need wait</font></h4>
+         
+<b>Scenario One: </b> If you are signing up on IRCTC website, you have entered the pin code but the city dropdown doesn’t come immediately, it takes some time to load the city based on the zip code, if our code doesn’t have a wait, it will try to find out the city immediately and that will throw an exception.
+
+<br><br><b>Scenario Two: </b> When we move from one page to another, the page doesn't get loaded immediately. But our script runs the next statement immediately. If we don't wait for the webelement to apppear on the next page, it will throw NoSuchElementFoundException.
+
+<br><br><b>Scenario Three: </b>On a webpage you are saving the entered data, so it is processing and the next button is disabled. If we don't wait for the button to be enabled then it will throw ElementNotInteractableError.
+
+<br><br><b>Scenario Four: </b>Sometimes the element is in the DOM and it's taking time to load, if we don't add wait, then it will throw ElementNotVisibleException.
+<br><br>Below are some situations where elements take more time to load and due to which we need to make use of wait mechanism
+<ul><li>Poor Server Response time
+</li><li>Ajax Loading
+</li><li>Size of the page
+</li><li>Internet Speed
+</li><li>System hardware
+</li><li>Browser slowness / less responsiveness
+</li><li>Element created using java script
+</ul>
+
+<br><h4><font color="#5e98c8">Types Of Wait</font></h4>
+
+<p>Selenium Offers two types of wait mechanism.</p>
+<ul>
+</li><li>Implicit Wait
+</li><li>ExplicitWait
+</ul>
+<img src="img/wait/waitType.png">
+
+<br><br>There's another wait type <font color="blue">Thread.sleep</font>. It is not from Selenium and comes from Java language. However with selenium-java bindings this wait can be used
+to add some generic wait to the test execution.
+
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
 <button  class="btn btn-success" onclick="openTopic(event, 'factory')">Next -></button>  
 <br><br>
  
@@ -341,142 +296,142 @@ so multiple responsibilities are assigned to one class.
 
 <!----------------------------------------------------------- End of basics topic ------------------------------------------------------------------------------>
 
-<div id="factory" class="topics">
-<br><br><h2>Java Factory Design Pattern</h2><hr>
-Factory design pattern is a java design pattern categorized in creational design pattern. It is one of the widely used and popular design pattern. The design pattern
-says client class should pass inputs to the factory class & the factory class should create objects for the sub classes and return to the client.
+<div id="implicit" class="topics">
+<br><br><h2>Implicit Wait</h2><hr>
+Implicit wait is another type of wait that helps resolving the synchronization issues
+
+<ul>
+<li>This is selenium wait.
+</li><li>If element is found before implicitly wait time, selenium moves to next commands in the program without waiting to complete the implicitly wait time, this wait is also called dynamic wait.
+</li><li>Implicit wait is set for the entire duration of your webdriver and is set at the start of your program. Most of the automation tester writes the implicit wait after creation of browser object. 
+         That's why it's called <b>Global Wait</b>
+</li><li>Implicit wait tries to find the element in first go, if element is not present implicit wait tries to find the element after 500ms of first polling, if element is not available on second time also then implicit wait tries third time after 500 ms of second try and it goes on till the time reaches the timeout specified.
+</li><li>If the implicit wait expires without locating the element, it will throw NoSuchElementException
+</li><li>We need to write Thread.sleep() wherever we want WebDriver to wait. It is not the case with Implicit wait. Once we set implicit wait, it will be applicable for all findElemnt() and findElements() method. There is no need to write implicit wait code again and again.
+</li><li>Let's say if we set implicit wait as 30 seconds, It will be attached to the entire life cycle of webDriver and applicable to all web elements to be located by WebDriver. We can't say wait for 30 seconds for one element and 40 seconds for another element. We can't vary the wait time.
+</li><li>When searching for a single element, the driver should poll the page until the element has been found, or this timeout expires before throwing a NoSuchElementException. When searching for multiple elements, the driver should poll the page until at least one element has been found or this timeout has expired.
+</li><li>If you write implicit wait statement multiple times, time specified in latest implicit wait statement will be applicable. For example: You specify implicit wait as 30 seconds at line no 5 and another implicit wait as 60 seconds at line no 10, then implicit wait as 30 seconds will be applicable from line no 6-9 and implicit wait for 60 seconds will be applicable from line no 11 onward. So if someone asks how can you change implicit wait time, this can be answer.
+</li><li>The default setting is Zero. Once set, the implicit wait is set for the life of the WebDriver object instance.
+</li><li>This is applicable to only findElement, findElements methods.
+</li></ul>
+
+<br><h4><font color="#5e98c8">Syntax Explanation</font></h4>
+<pre class="codeblock1">driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;</pre>
+
+<pre class="codeblock1">//This is a chained method pattern. manage() is a method in the RemoteWebDriver class. 
+//It returns Options.
+</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> Options manage() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> RemoteWebDriverOptions();
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='color:#3F7F5F'>//Options is a nested interface in WebDriver and has a method timeouts()
+</span>
+<span style='color:#3F5FBF'>/**
+* @return the interface for managing driver timeouts.
+*/</span>
+    Timeouts timeouts();
 
 
-<br><br><h4><font color="#5e98c8">The Problem</font></h4>
-Every design pattern solves one or many problems. So we must know which problem is solved by Factory design pattern. 
+<span style='color:#3F7F5F'>//The timeouts method returns another nested interface in WebDriver = TimeOuts
+</span><span style='color:#3F7F5F'>//In the TimeOutInterface, the method implicitlywait exists
+</span>
+ * @param time The amount of time to wait.
+     * @param unit The unit of measure <span style='font-weight:bold;color:#7B0052;'>for</span> <span style='font-weight:bold;color:#D3171B'>{</span>@code time<span style='font-weight:bold;color:#D3171B'>}</span>.
+     * @return A self reference.
+     */
+    Timeouts implicitlyWait(<span style='font-weight:bold;color:#7B0052;'>long</span> time, TimeUnit unit);
 
-Let's say we have an ecommerce site like Flipkart where the user can order any item. So here the client is the Flipkart app.
+<span style='color:#3F7F5F'>//The implementation is in RemoteWebDriver class
+</span>
+ <span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>class</span> RemoteTimeouts <span style='font-weight:bold;color:#7B0052;'>implements</span> Timeouts 
+    <span style='font-weight:bold;color:#D3171B'>{</span>
 
-<br><br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FlipKart <span style='font-weight:bold;color:#D3171B'>{</span>
+       <span style='font-weight:bold;color:#7B0052;'>public</span> Timeouts implicitlyWait(<span style='font-weight:bold;color:#7B0052;'>long</span> time, TimeUnit unit) 
+       <span style='font-weight:bold;color:#D3171B'>{</span>
+        execute(DriverCommand.SET_TIMEOUT, ImmutableMap.of(
+            <span style='color:#2A00FF'>"implicit"</span>, TimeUnit.MILLISECONDS.convert(time, unit)));
+        <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+       <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
 
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> Scanner sc= <span style='font-weight:bold;color:#7B0052;'>new</span> Scanner(System.in);
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> String product_order;
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> DellLaptop dellLaptop;
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> HPLaptop hpLaptop;
-	
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
-	<span style='font-weight:bold;color:#D3171B'>{</span>
-		System.out.println(<span style='color:#2A00FF'>"Enter the product name to order="</span>);
-		String product_order= sc.next();
+
+
+<br><h4><font color="#5e98c8">Implement ImplicitWait using sleep method in selenium</font></h4>
+
+<pre class="codeblock1">public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ImplicitWaitWithSleep 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+
+   <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> WebDriver driver;
+
+   <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+   <span style='font-weight:bold;color:#D3171B'>{</span>
+	System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"./drivers/chromedriver.exe"</span>);
+
+	driver = <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+
+	driver.get(<span style='color:#2A00FF'>"https://google.com/"</span>);
 		
+	implicitlyWithSleep(30);
 
-		<span style='font-weight:bold;color:#7B0052;'>if</span>(product_order.equalsIgnoreCase(<span style='color:#2A00FF'>"Dell_Laptop"</span>))<span style='font-weight:bold;color:#D3171B'>{</span>
-			dellLaptop = <span style='font-weight:bold;color:#7B0052;'>new</span> DellLaptop();  
-		<span style='font-weight:bold;color:#D3171B'>}</span>
+   <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> implicitlyWithSleep(<span style='font-weight:bold;color:#7B0052;'>long</span> timeLimit)
+  <span style='font-weight:bold;color:#D3171B'>{</span>
+     System.out.println(<span style='color:#2A00FF'>"Custom implicitly wait with selenium"</span>);
 		
-		<span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#7B0052;'>if</span>(product_order.equalsIgnoreCase(<span style='color:#2A00FF'>"HP_Laptop"</span>)) <span style='font-weight:bold;color:#D3171B'>{</span>
-			hpLaptop = <span style='font-weight:bold;color:#7B0052;'>new</span> HPLaptop();  
-		<span style='font-weight:bold;color:#D3171B'>}</span>
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-So here the objects are getting created in the client code. Every time a new product is added, the client code needs to be modified. So here we have two problems
-<ul style="list-style-position: inside;padding-left: 0;"><li>The implementation details are exposed. The client knows how product objects are created. There's no encapsulation.
-</li><li>Every time we need to change the code and compile the code while adding/removing product so the dependency is high and it's tightly coupled  
-</li></ul>
-
-<br><h4><font color="#5e98c8">The Solution</font></h4>
-Using factory design pattern we can solve the above problems. 
-
-
-<br><br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
-
-<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>interface</span> Product <span style='font-weight:bold;color:#D3171B'>{</span>
-
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> printPrice();
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-
-<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
-
-<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Dell <span style='font-weight:bold;color:#7B0052;'>implements</span> Product<span style='font-weight:bold;color:#D3171B'>{</span>
-
-	<span style='font-weight:bold;color:#7B0052;'>int</span> price=4000;
-	
-	<span style='font-weight:bold;color:#7B0052;'>public</span> Dell()
+     <span style='color:#3F7F5F'>//set the counter for terminate purpose
+</span>     <span style='font-weight:bold;color:#7B0052;'>long</span> count = 0;
+		
+    <span style='color:#3F7F5F'>// calculate the number of tries
+</span>    <span style='font-weight:bold;color:#7B0052;'>long</span> tries = (timeLimit * 1000) /300;
+		
+    <span style='font-weight:bold;color:#7B0052;'>while</span>(<span style='font-weight:bold;color:#7B0052;'>true</span>)
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>try</span> 
 	<span style='font-weight:bold;color:#D3171B'>{</span>
-		System.out.println(<span style='color:#2A00FF'>"Dell Laptop is added to your cart"</span>);
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-
-	@Override
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> printPrice() <span style='font-weight:bold;color:#D3171B'>{</span>
-		System.out.println(<span style='color:#2A00FF'>"Dell Laptop Price="</span>+price);
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
-
-<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HP <span style='font-weight:bold;color:#7B0052;'>implements</span> Product<span style='font-weight:bold;color:#D3171B'>{</span>
-
-	<span style='font-weight:bold;color:#7B0052;'>int</span> price=6000;
-	
-	<span style='font-weight:bold;color:#7B0052;'>public</span> HP()
+	  System.out.println(<span style='color:#2A00FF'>"Trying for : "</span>+count+<span style='color:#2A00FF'>" time(s)"</span>);
+	  <span style='color:#3F7F5F'>// try to find the element and send keys
+</span>	  driver.findElement(By.xpath(<span style='color:#2A00FF'>"//input[@name='q']"</span>)).sendKeys(<span style='color:#2A00FF'>"Implicit wait with sleep"</span>);
+	  System.out.println(<span style='color:#2A00FF'>"element found"</span>);
+	  <span style='color:#3F7F5F'>// end the loop as we found the element
+</span>	  <span style='font-weight:bold;color:#7B0052;'>break</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+			
+	<span style='font-weight:bold;color:#7B0052;'>catch</span> (NoSuchElementException e) 
 	<span style='font-weight:bold;color:#D3171B'>{</span>
-		System.out.println(<span style='color:#2A00FF'>"HP Laptop is added to your cart"</span>);
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-
-	@Override
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> printPrice() <span style='font-weight:bold;color:#D3171B'>{</span>
-		System.out.println(<span style='color:#2A00FF'>"HP Laptop Price="</span>+price);
+	  <span style='font-weight:bold;color:#7B0052;'>if</span> (count &gt; tries) 
+	  <span style='font-weight:bold;color:#D3171B'>{</span>
+	    <span style='color:#3F7F5F'>// throw exception if element not found after exception.
+</span>	    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> NoSuchElementException(<span style='color:#2A00FF'>"Element not fount after : "</span>+timeLimit+<span style='color:#2A00FF'>"seconds"</span>);
+	  <span style='font-weight:bold;color:#D3171B'>}</span>
+	  <span style='color:#3F7F5F'>// sleep for 300 milli seconds,
+</span>	 <span style='color:#3F7F5F'>// try to find the element after 30 seconds of sleep
+</span>				
+	<span style='font-weight:bold;color:#7B0052;'>try</span> 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+	  Thread.sleep(300);
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+	<span style='font-weight:bold;color:#7B0052;'>catch</span> (InterruptedException e1) 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+	  System.out.println(<span style='color:#2A00FF'>"Sleep interupted"</span>);
 	<span style='font-weight:bold;color:#D3171B'>}</span>
 	
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-
-<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
-
-<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ProductFactory <span style='font-weight:bold;color:#D3171B'>{</span>
-
-	<span style='font-weight:bold;color:#7B0052;'>public</span> Product getInstance(String prodname)
-	<span style='font-weight:bold;color:#D3171B'>{</span>
-		<span style='font-weight:bold;color:#7B0052;'>if</span>(prodname.equalsIgnoreCase(<span style='color:#2A00FF'>"Dell"</span>))
-		<span style='font-weight:bold;color:#D3171B'>{</span>
-			<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> Dell();
-		<span style='font-weight:bold;color:#D3171B'>}</span>
-		<span style='font-weight:bold;color:#7B0052;'>else</span> <span style='font-weight:bold;color:#7B0052;'>if</span>(prodname.equalsIgnoreCase(<span style='color:#2A00FF'>"HP"</span>))
-		<span style='font-weight:bold;color:#D3171B'>{</span>
-			<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> HP();
-		<span style='font-weight:bold;color:#D3171B'>}</span>
-		<span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>null</span>;
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+			
+        count++;
+		
+           <span style='font-weight:bold;color:#D3171B'>}</span>
 	<span style='font-weight:bold;color:#D3171B'>}</span>
 <span style='font-weight:bold;color:#D3171B'>}</span></pre>
 
 
-<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>package</span> pattern_one;
-
-<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FlipKart <span style='font-weight:bold;color:#D3171B'>{</span>
-
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String args[])
-	<span style='font-weight:bold;color:#D3171B'>{</span>		
-        	ProductFactory prodfact= <span style='font-weight:bold;color:#7B0052;'>new</span> ProductFactory();
-        	Product prod= prodfact.getInstance(<span style='color:#2A00FF'>"Dell"</span>);
-        	prod.printPrice();	
-     
-        	prod= prodfact.getInstance(<span style='color:#2A00FF'>"HP"</span>);
-        	prod.printPrice();	
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-
-<br><ul style="list-style-position: inside;padding-left: 0;"><li>Code for interface not for implementation. In the above example, we are creating a variable for interface product and then assigning different product objects to the variable.
-</li><li>The object instantiation is not in the client code, the object creation is happening in the product factory class.
-</li><li>Using interface we achieve abstraction and since the object creation is hidden from the client code so encapsulation is also achieved.
-</li><li>If there's a new product comes tomorrow like Asus Laptop then we can create a separate class for Asus and update the product factory. There is no need to update the client code. If we pass the name as string to product factory then it will return the object for Asus class. 
-So its easy to extend the functionality without impacting the client code and it's one big achievement.  
-</li></ul>
-
-<br><h4><font color="#5e98c8">When to use Factory Pattern</font></h4>
-<ul style="list-style-position: inside;padding-left: 0;"><li>The factory pattern needs to be used when the client class wants to create object of sub classes but doesn't want to bother how the objects of sub classes are created.
-In the above example, Flipkart app just wants objects for different laptops. The app expects an object to interact with product just by passing the name of the product.
-It doesn't mind how the product objects are created, what are the dependencies those products have etc.
-
-</li><li>In other words we can say, when the requirement is to create objects based on different input conditions, parameters then Factory Pattern suits well. 
-</li></ul>
+<br><h4><font color="#5e98c8">Disadvantages of using Implicitly wait</font></h4>
+<ul>
+<li>If you use the implicit wait in selenium it applies to the web driver globally and increases the execution time for the entire script. so it is not always advisable.
+</li><li>You can not wait till some specific condition is satisfied like invisibility of element, when alert is present etc.
+</ul>
 
 <br><button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
 <button  class="btn btn-success" onclick="openTopic(event, 'pomFactory')">Next -></button>  
@@ -487,126 +442,57 @@ It doesn't mind how the product objects are created, what are the dependencies t
 
 <!------------------------------------------------------------------------ End of java factory topic  ------------------------------------------------------------>
 
-<div id="pomFactory" class="topics">
-<br><br><h2>POM with Page Factory</h2><hr>
-To support the page object model, Selenium has a class called <b>PageFactory</b> class. The responsibility of the page factory class is to initialize the web elements 
-of the page class. 
+<div id="explicit" class="topics">
+<br><br><h2>Explicit Wait</h2><hr>
+An explicit wait makes WebDriver wait for a certain condition to occur before proceeding further with execution. This is the best wait mechanism and should always be used in selenium frameworks.
 
 
-<br><br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> LoginPage<span style='font-weight:bold;color:#D3171B'>{</span>
+<br><br><h4><font color="#5e98c8">Why do we need Explicit Wait?</font></h4>
+<ul><li>Sometimes when we open login page, it shows the enter user id, password fields but those are not editable, it takes time for them to become editable.
+If we use implicit wait, once the fields are visible, it will pass and try to enter text and end up with element not interactable exception. Here we need to have a wait
+which will specifically wait until the element becomes clickable. 
 
-	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"email"</span>)
-	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement username;
-	
-	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"passwd"</span>)
-	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement password;
-	
-	@FindBy(how = How.ID, using = <span style='color:#2A00FF'>"SubmitLogin"</span>)
-	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement loginbutton;
+</li><li>Sometimes, when we click on alert/popup, it takes time to disappear, so we need to wait until the alert/pop up is invisible. This can't be handled using Thread.sleep as we don't know how much time it will take to disappear.
+Also implicit wait can't handle this scenario. So we need a special kind of wait which will check invisibility of the element.
 
-	<span style='color:#3F7F5F'>//Page Actions
-</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterUserName(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
-		username.sendKeys(text);
-	<span style='font-weight:bold;color:#D3171B'>}</span>
+</li><li>Processing dumbbells, spinners come and go. We need to wait for them to appear and then disappear before proceeding further.
 
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterPassword(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
-		password.sendKeys(text);
-	<span style='font-weight:bold;color:#D3171B'>}</span>
+</li><li>When tables get populated, it takes time to load as the data is fetched from database. So we need to wait until the table data is visible.
 
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickLogin()<span style='font-weight:bold;color:#D3171B'>{</span>
-		loginbutton.click();
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-
-<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> HomePage<span style='font-weight:bold;color:#D3171B'>{</span>
-
-	<span style='font-weight:bold;color:#7B0052;'>private</span> WebDriver driver;
-
-	<span style='font-weight:bold;color:#7B0052;'>public</span> HomePage(WebDriver driver)<span style='font-weight:bold;color:#D3171B'>{</span>
-		this.driver=driver;
-		PageFactory.initElements(driver, <span style='font-weight:bold;color:#7B0052;'>this</span>);
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-
-	<span style='color:#3F7F5F'>//Page Elements
-</span>	@FindBy(xpath= <span style='color:#2A00FF'>"//h1[@class='page-heading' and text()='My account']"</span>)
-	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement pageHeading;
-
-	@FindBy(id= <span style='color:#2A00FF'>"search_query_top"</span>)
-	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement searchBox;
-
-	@FindBy(name= <span style='color:#2A00FF'>"submit_search"</span>)
-	<span style='font-weight:bold;color:#7B0052;'>private</span> WebElement searchIcon;
-
-
-	<span style='color:#3F7F5F'>//Page Actions
-</span>	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> enterSearchItem(String text)<span style='font-weight:bold;color:#D3171B'>{</span>
-		searchBox.sendKeys(text);
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> clickSearchIcon()<span style='font-weight:bold;color:#D3171B'>{</span>
-		searchIcon.click();
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-
-<pre class="codeblock2">public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> FirstTest <span style='font-weight:bold;color:#7B0052;'>extends</span> TestSetup<span style='font-weight:bold;color:#D3171B'>{</span>
-
- @Test
- <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> executeTest()
- <span style='font-weight:bold;color:#D3171B'>{</span>
-	LoginPage loginpage= PageFactory.initElements(driver, LoginPage.class);
-	loginpage.enterUserName(<span style='color:#2A00FF'>"abc@gmail.com"</span>);
-	loginpage.enterPassword(<span style='color:#2A00FF'>"automation"</span>);
-	loginpage.clickLogin();
-		
-	HomePage homepage= <span style='font-weight:bold;color:#7B0052;'>new</span> HomePage(driver);
-	homepage.enterSearchItem(<span style='color:#2A00FF'>"dress"</span>);
-	homepage.clickSearchIcon();
-		
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-
-<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> TestSetup <span style='font-weight:bold;color:#D3171B'>{</span>
-	
-	<span style='font-weight:bold;color:#7B0052;'>public</span> WebDriver driver;
-	
-	@BeforeClass
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> startTest()
-	<span style='font-weight:bold;color:#D3171B'>{</span>
-		System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\Users\\Biswajit\\chromedriver.exe"</span>);
-		driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
-		driver.get(<span style='color:#2A00FF'>"http://automationpractice.com/index.php?"</span>);
-		driver.manage().window().maximize();
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-
-	@AfterClass()
-	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> endTest()
-	<span style='font-weight:bold;color:#D3171B'>{</span>
-		driver.quit();
-	<span style='font-weight:bold;color:#D3171B'>}</span>
-<span style='font-weight:bold;color:#D3171B'>}</span></pre>
-
-
-<br><h4><font color="#5e98c8">Observation</font></h4>
-<ul style="list-style-position: inside;padding-left: 0;"><li>We can have the initElements in the test case class or in the page class. For the LoginPage we have the initElements method in the test class. However for the HomePage class
-we are having the initElements method in the page class constructor. Whenever we create the object of the home page, it creates the object and then calls the initElements method.
-If you notice, we don't have any constructor in the LoginPage and it works fine. Both ways are correct however my preference is to keep the PageFactory.initElements() method
-in the page class.
-</li><li>The @FindBy annotation removes the boiler plate code and locates the element and saves in the web element variable mentioned below. I will explain more how it works internally.
+</li><li>Now a days all applications are using toaster messages on the completion page. It stays for few seconds and then disaapears. If we directly click on logout button
+it might not work as the toaster message would have hidden the button. So we need to wait for the toaster message to go before clicking on the logout button.
 </li></ul>
+From the above examples, we are sure, we need a wait to handle elements with conditions. 
 
-<br><h4><font color="#5e98c8">Points to Ponder</font></h4>
-<ul style="list-style-position: inside;padding-left: 0;"><li>If we use Page Factory then we can use objects/ui fields without worrying about their initialization.
-</li><li>WebElements are evaluated lazily. Upon intialization, it creates a proxy for the web element and whenever we use the field in page object then only there will be a call to the "find element" for the field.
-</li><li>All the field variables should be declared as private, but the page methods should be public as those are the page services should be accessed from outside. 
+
+
+<br><br><h4><font color="#5e98c8">Syntax</font></h4>  
+<pre class="codeblock1">WebDriver driver = <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+WebDriverWait wait=<span style='font-weight:bold;color:#7B0052;'>new</span> WebDriverWait(driver, 30);
+WebElement ele = driver.findElementByXPath(<span style='color:#2A00FF'>"//a[text()='Insurance Project']"</span>);
+wait.until(ExpectedConditions.elementToBeClickable(ele));
+ele.click();</pre>
+
+
+<ul>
+<li>WebDriverWait is a class. We can create an object of it by passing WebDriver instance and timeout in seconds. WebDriverWait will ignore instances of NotFoundException that are encountered (thrown) by default in the ‘until’ condition, and immediately propagate all others. You can add more to the ignore list by calling ignoring(exceptions to add).
+</li><li>An exception will be called based on expected condition in case of time out and condition is not satisfied.
+</li><li>Expected Conditions is a class and it has methods to check specific conditions.
+</li><li>Above code waits up to 30 seconds before throwing a TimeoutException or if it finds the element will return it in 0 – 30 seconds. 
+</li><li>WebDriverWait by default calls the ExpectedCondition every 500 milliseconds until it returns successfully. A successful return value for the ExpectedCondition function type is a Boolean value of true, or a non-null object.
+</li><li>Like implicit wait, explicit wait will also not wait further if condition is satisfied before timeout reaches.
+</li><li>Unlike implicit wait, explicit wait is not for entire webdriver session.
+</li><li>Unlike implicit wait, you need to write explicit wait every time whenever you need it as it is specific to a web element.
+</li><li>No need to create object of WebDriverWait again and again if you want similar timeout . If you need another timeout duration or driver instance, go for new instance of WebDriverWait.
+</li><li>We can specify timeout only in seconds. Other units of time are not possible.
+</li><li>You can reduce test execution time by using explicit wait.
+</li><li>We can customized polling time or ignore other exceptions as well using WebDriverWait instance. <br>For example:
+<pre>
+WebDriverWait wait= new WebDriverWait(driver, 30);
+wait.pollingEvery(1, TimeUnit.MICROSECONDS);
+wait.ignoring(ElementNotVisibleException.class);
+</pre>
 </li></ul>
-  
-<br><h4><font color="#5e98c8">References</font></h4>
-<a href="https://github.com/SeleniumHQ/selenium/wiki/PageFactory" target="_blank">https://github.com/SeleniumHQ/selenium/wiki/PageFactory</a>
-<br><a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects" target="_blank">https://github.com/SeleniumHQ/selenium/wiki/PageObjects</a>
 
 
 <br><br><button  class="btn btn-primary" onclick="openTopic(event, 'factory')"><- Prev</button>  
@@ -617,143 +503,67 @@ in the page class.
 
 <!------------------------------------------------------------------------ End of pom with page factory topic  ----------------------------------------------------->
 
-<div id="selFactory" class="topics">
-<br><br><h2>Selenium Page Factory</h2><hr>
-We will look into all the aspects of Selenium Page Factory here.
+<div id="fluent" class="topics">
+<br><br><h2>Fluent Wait</h2><hr>
+Fluent wait is another type of explicit wait where we can define the polling and ignore exception to continue with script execution incase element is not fond.
 
-<br><br><h4><font color="#5e98c8">How it works</font></h4>
-To initialize the web elements we write <b>PageFactory.initElements(driver, LoginPage.class);</b> Let's see how it works in the back end.
+<br><br><pre class="codeblock1"><span style='color:#3F7F5F'>// Waiting 30 seconds for an element to be present on the page
+// checking for its presence once every 5 seconds. </span> 
+Wait wait = <span style='font-weight:bold;color:#7B0052;'>new</span> FluentWait(driver)
+    .withTimeout(30, SECONDS)
+    .pollingEvery(5, SECONDS)
+    .ignoring(NoSuchElementException.class);
 
-The init elements method accepts webdriver as the first argument and then the class name as second argument. Then it calls the instantiate page method which has the same two arguments
-then the object is saved as page object. Then the init elements method is called with parameters as driver & the created page object.
+WebElement foo = wait.until(<span style='font-weight:bold;color:#7B0052;'>new</span> Function() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    	<span style='font-weight:bold;color:#7B0052;'>public</span> WebElement apply(WebDriver driver) 
+    	<span style='font-weight:bold;color:#D3171B'>{</span>
+    	    <span style='font-weight:bold;color:#7B0052;'>return</span> driver.findElement(By.id(<span style='color:#2A00FF'>"foo"</span>));
+    	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>);</pre>
 
-<br><br><pre class="codeblock2">
-public class PageFactory {
-     public static <T> T initElements(WebDriver driver, Class<T> pageClassToProxy) 
-        {
-	    T page = instantiatePage(driver, pageClassToProxy);
-	    initElements(driver, page);
-	    return page;
-	}
 
-</pre>
-The instantiate page method first tries to get the constructor of the class with by passing web driver as parameter type. Then it returns the specified constructor of the class 
-which is saved as constructor object. When a class has no argument constructor then we can create object using class.newInstance() however since we have argument here so
-first constructor object needs to be created and then we can create new instance from the constructor. 
+<br><h4><font color="#5e98c8">Consider below scenario </font></h4>
 
-<br><br><pre class="codeblock2">
-private static &lt;T&gt; T instantiatePage(WebDriver driver, Class&lt;T&gt; pageClassToProxy) 
-   {
-	 try 
-         {
-	    Constructor&lt;T&gt; constructor = pageClassToProxy.getConstructor(WebDriver.class);
-	    return constructor.newInstance(driver);
-	 } 
-         
-         catch (NoSuchMethodException e) 
-          {
-	        return pageClassToProxy.newInstance();
-	  }
-          //exceptions
-   } 
-</pre>
+You are testing Flipkart home page. Flipkart lists top items at home page which includes electronics, furniture etc. Now scenario is you need to find first 10 mobile displayed at home page. 
 
-Once the page object is instantiated then there are couple of methods for initElements those call the searchcontext through ElementLocatorFactory and also pulls all the field names from the class
-Then initializes them one by one using the same web driver. So basically the driver.findElement("locator") is taken care completely using this class.
+<ul><li>First of all you need to list all displayed item. It will include all displayed items. Then you need to filter out mobile out of all result. Once you find 10th mobile, you need to stop looking for next and return model names of top 10 mobiles.
+
+</li><li>You can use sleep, Implicit or explicit wait for above scenario but you can just wait till elements are found. But you need to wait till 10th mobile item is listed at home page. 
+
+</li><li>Apart from that Filtering, verification of count and returning model number can not be done along wait. But it can be achieved using fluent wait.
+</li></ul>
+
+<pre class="codeblock1">FluentWait wait5 = <span style='font-weight:bold;color:#7B0052;'>new</span> FluentWait(driver);		
+wait5.withTimeout(30, TimeUnit.SECONDS);
+wait5.pollingEvery(5, TimeUnit.SECONDS);
+wait5.ignoring(NoSuchElementException.class);
  
-<br><br><h4><font color="#5e98c8">@FindBy</font></h4>
-@FindBy annotation is used in conjunction with the selenium Page Factory to locate the web elements. Usually these web elements are initialized as the page object is created.
-The @FindBy annotation can be used to locate one or more elements based on the specified criteria.
+Function&lt;webdriver, boolean&gt; flag=  <span style='font-weight:bold;color:#7B0052;'>new</span> Function&lt;webdriver, boolean&gt;() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean apply(WebDriver driver) 
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+	List allEle= driver.findElements(By.name(<span style='color:#2A00FF'>"foo"</span>));
+	List allText= <span style='font-weight:bold;color:#7B0052;'>new</span> ArrayList&lt;&gt;();
+	<span style='font-weight:bold;color:#7B0052;'>for</span>(WebElement e: allEle)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+	   String textEle= e.getText();
+	   <span style='font-weight:bold;color:#7B0052;'>if</span>(textEle.equals(<span style='color:#2A00FF'>"SomeData"</span>))
+	   allText.add(textEle);
+	   <span style='font-weight:bold;color:#7B0052;'>if</span>(allText.size()==10)
+	   <span style='font-weight:bold;color:#D3171B'>{</span>
+	      <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+	   <span style='font-weight:bold;color:#D3171B'>}</span>
+	 <span style='font-weight:bold;color:#D3171B'>}</span>
+	
+      <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+ 
+<span style='font-weight:bold;color:#D3171B'>}</span>;
+wait5.until(flag);</pre>
 
-<br><br><pre class="codeblock2">
-@FindBy(how = How.TAG_NAME, using = "a")
-private List&lt;WebElement&gt; allLinks;
+Above code will make webdriver wait till 10th mobile item is displayed or waiting time expires. Fluent wait is just an upgraded version of Explicit wait. In explicit wait, expected conditions are canned(predefined) but by using fluent wait, you can write your own conditions, you can assert and can do whatever you want.
 
-@FindBy(how = How.ID, using = "xxxx")
-private WebElement element;
-</pre>
-
-We can use the how or directly use the locator type and value. Both of these point to the same element.
-
-<pre class="codeblock2">
-@FindBy(id = "foobar") 
-WebElement foobar;
-
-@FindBy(how = How.ID, using = "foobar") 
-WebElement foobar;
-</pre>
-
-
-<br><h4><font color="#5e98c8">@FindBys</font></h4>
-Some situations we can't locate the element using a single locator strategy so we can go for FindBys. Please note, when we use FindBys then
-all the locator criteria should be satisfied in order to locate the web element/elements. It uses the look up as a chained series of FindBys.
-
-<pre class="codeblock2">
-@FindBys({
-    	  @FindBy(tagName = "button"),
-          @FindBy(className = "submit")
-    	  })
-private WebElement Signin;
-</pre>
-We can save multiple web elements using List&lt;WebElement&gt; if it returns.
-
-
-<br><br><h4><font color="#5e98c8">@FindAll</font></h4>
-Here also we will use a group of @FindBy criteria and the element can be located using any of the @FindBy. Please note, there's no guarantee in which order it will process
-from the look up if any one @FindBy is satisfied then it will return the web element.
-
-<pre class="codeblock2">
-@FindAll({
-	  @FindBy(how = How.ID, using = "uname"),
-	  @FindBy(className = "user-name")
- })
-private WebElement userName;
-</pre>
-
-
-<br><h4><font color="#5e98c8">Difference between @FindBy, @FindBys, @FindAll</font></h4>
-<ul><li>@FindBy - There's only one condition using which we will locate one or more web elements.
-</li><li>@FindBys - There are multiple @FindBy and it will return the web element only when ALL @FindBy are satisfied.
-</li><li>@FindByAll - There are multiple @FindBy and it will return the web element when any of the @FindBy is satisfied.
-</li></ul>
-  
-<br><h4><font color="#5e98c8">Difference between @FindBy and FindElement</font></h4>
-<ul><li>@FindBy is an annotation and findElement is an web driver method.
-</li><li>Both are used for locating web elements.
-</li><li>@FindBy is used in conjuction with PageFactory to finding web elements. findElement is the normal way of locating web elements.
-</li><li>If the page is not initialized then @FindBy will throw null pointer exception. 
-</li></ul>
-
-
-<br><h4><font color="#5e98c8">CacheLookup</font></h4>
-<ul><li>@CacheLookup is an annotation that is used to mark elements so that once located, the same DOM instance can be used always.
-</li><li>CacheLookup is a marker interface.
-</li><li>This helps when the DOM never changes and multiple calls to the web element is made because it searches once.
-</li><li>Be careful while using this as possibility of StaleElementReferenceException is more in this approach.
-</li><li>This is not helpful in AJAX applications because the DOM changes frequently there.
-</li></ul>
-<pre class="codeblock2">
-@CacheLookup
-@FindBy(how = How.ID, using = "email")
-private WebElement username;
-</pre>
-
-
-<br><h4><font color="#5e98c8">AjaxElementLocatorFactory</font></h4>
-The AjaxElementLocatorFactory class helps to inject wait or time out in the page factory model. 
-
-<pre class="codeblock2">
-private int timeOut = 30;
-private WebDriver driver;
-public HomePage(WebDriver driver)
-{
-   this.driver=driver;
-   PageFactory.initElements(new AjaxElementLocatorFactory(driver,timeOut), this);
-}
-</pre>
-Here we have specified the time out as 30 seconds. So for every web element the wait condition of 30 seconds is applied. It will throw NoSuchElementException only after 30 seconds if the element is not found.
-Please note, by default there's no waiting in the page object pattern. Once the @FindBy annotation is executed it will straight away try to locate the element and if not found will throw the exception.
-Also the selenium page factory uses the lazy loading concept, it tries to look for web element only when called through the page object. So using AjaxElementLocatorFactory we can solve the synchronisation issue.   
 
 <br><br><button  class="btn btn-primary" onclick="openTopic(event, 'pomFactory')"><- Prev</button>  
 <button  class="btn btn-success" onclick="openTopic(event, 'pomGenerics')">Next -></button>  

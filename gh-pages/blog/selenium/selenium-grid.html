@@ -45,25 +45,19 @@ th, td {
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Biswajit Sundara Blog</a>
+      <a class="navbar-brand" href="../bloghome.html">Biswajit Sundara Blog</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="../bloghome.html">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="../../../index.html">About</a>
           </li>
         </ul>
       </div>
@@ -125,7 +119,7 @@ th, td {
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on May 1, 2020 at 12:00 PM</p>
+        <p>Posted on May 17, 2020 at 04:00 PM</p>
 
         <hr>
 
@@ -524,19 +518,8 @@ The below script to run on internet explorer browser.
     
     <br><h4>Folder Structure</h4>
     <img src="img/grid/folder-structure.png">
-    <br><br><b>HUB folder :</b> Move this folder to the HUB machine
-    <br><img src="img/grid/HUB-folder.png">
-
-    <br><br><b>Node 1 folder :</b> Move this folder to a node machine.
-    <br><img src="img/grid/Node 1.png">
-
-    <br><br><b>Node 2 folder :</b> Move this folder to a node machine.
-    <br><img src="img/grid/Node 2.png">
-
-    <br><br><b>Node 3 folder :</b> Move this folder to a node machine.
-    <br><img src="img/grid/Node 3.png">
-
-<br><br>Now the configuration is complete. Then we will go for parallel test execution through selenium grid.
+    <br><br>Move the HUB folder to the HUB machine and the Node folders to node machines.
+    Now the configuration is complete. Then we will go for parallel test execution through selenium grid.
 
 
        <br><br>
@@ -681,12 +664,12 @@ it waits until the request time out is met.
         <div class="card my-4">
           <h5 class="card-header">Leave a Comment:</h5>
           <div class="card-body">
-            <form>
-              <div class="form-group">
-                <input type="text" placeholder="Your name.." class="form-control" >
-                <br><input type="text" placeholder="Your email.." class="form-control">
-                <br><textarea class="form-control" rows="3"></textarea>
-
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+               <div class="form-group">
+                <input type="text" id="uname" name="entry.689225320" placeholder="Your name.." class="form-control" >
+                <br><input type="text" id="email" name="emailAddress" placeholder="Your email.." class="form-control">
+                <br><textarea id="comment" name="entry.1648468188" class="form-control" rows="3"></textarea>
+                <br><input type="hidden" name="entry.2069828936" value="selenium-grid" class="form-control">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
