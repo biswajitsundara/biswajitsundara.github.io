@@ -71,6 +71,8 @@ table {
         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'branching')">Branching</a>
         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'conflictres')">Resolving Conflicts</a>
          <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">SSH Key Generation</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ignore')">Git Ignore</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'gitAction')">GitHub Actions</a>
 
 <br><br>      
       </div>
@@ -936,10 +938,119 @@ Receiving objects: 100% (9/9), done.</pre>
 
 <button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
 
-<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'ignore')">Next -></button>  
 
 <br><br> 
 </div>
+
+
+<div id="ignore" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Git Ignore</h2>
+
+<p>Git Ignore is a text file in the git repository that tells the git process to exclude or ignore files/directories in the push operation</p>
+
+<h4><font color="#4682B4">Why do we need .gitignore file</font></h4>
+<p>Let's take this scenario, When we import a maven project in eclipse, it creates a folder named .settings, when we run automated tests, it generates log files, html reports.
+So over the time these files, directories become really huge and when we commit everything to github, these big file, directories are also moved to github remote
+repository which are of no use. 
+</p>
+  
+<h4><font color="#4682B4">How to use .gitignore file</font></h4>
+<ul><li>In the github root node, create a text file .gitignore
+</li><li>Add the file name/patterns to exclude. E.g .settings
+</li><li>Then execute git status -- you won't see .settings folder under untracked files that means git is ignoring that.
+</li><li>push the codes to remote repository, you will notice .settings folder is not moved.
+</li></ul>
+
+  
+<h4><font color="#4682B4">Example of .gitignore file</font></h4>
+<pre>
+.settings
+.classpath
+.project
+/target
+/test-output
+</pre>
+
+<h4><font color="#4682B4">Summary</font></h4>
+.gitignore is really simple to use and yet so useful which helps us to control which file types we would like not to commit to remote repository.
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'ssh')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'gitAction')">Next -></button>  
+<br><br>
+
+</div>
+
+
+<div id="gitAction" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">GitHub Action</h2>
+
+<p>GitHub Action is MicroSoft's answer to CI/CD. We all know how the Jenkins job triggers based on GitHub commit and runs the automated suite. Since most of the code bases are hosted in GitHub, 
+it becomes really easy to integrate with GitHub Actions for a smooth delivery pipeline.</p>
+
+<h4><font color="#4682B4">What is GitHub Action</font></h4>
+<ul><li>GitHub Action is to create CI-CD workflows.
+</li><li>If your source code is hosted in GitHub, then you can make use of it.
+</li><li>There are approx 2000 minutes free per month and then it will be chargeable.
+</li><li>The server used for GitHub Actions is GitHub's own VM/cloud server.
+</li><li>It has all the capabilities like any other CI/CD tool however it's in the early stage.
+</li></ul>
+
+
+<h4><font color="#4682B4">GitHub Action Scenarios</font></h4>
+Below are some scenarios where we can use github actions.
+<ul><li>Let's say as soon as you push the code to GitHub, it trigger's the job, validates and shows whether the build is a success or failure.
+</li><li>As soon as you create a pull request, it trigger's the job and saves the test execution status, so the reviewer can check the committed code works fine and it helps to accept the merge request.
+</li><li>Let's say the requirement is don't do anything if code is pushed/pulled to other branches and trigger the job only if the code is pushed to master branch. That's also possible.
+</li></ul>
+
+<h4><font color="#4682B4">How to configure GitHub Action?</font></h4>
+<ul><li>Open your github remote repository
+</li><li>Click on <font color="blue">Create new file</font> button
+</li><li>Create file <font color="blue">.github/workflows/&lt;filename.yml&gt;</font>
+</li><li>This will create a folder .github -> sub folder workflows -> and a file with extension .yml
+</li><li>Put the code inside this yml file and commit changes.
+</li></ul>
+  
+
+<h4><font color="#4682B4">Configuring the workflow</font></h4>
+There are several commands that we can use to customize the workflow file. Below is an example of a simple workflow file that runs the command 'maven test' on windows machine
+as soon as code is pushed to 'master' branch.
+<pre style="line-height:150%">
+
+name: Demo CI
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: windows-latest
+
+  steps:
+   - uses: actions/checkout@v2
+   - name: Test the application
+     run: |
+        mvn test
+</pre>
+
+<h4><font color="#4682B4">Test the workflow</font></h4>
+<ul><li>Now pull the repository to local, make some changes and commit the changes
+</li><li>We have configured the workflow as if we 'push' to 'master' branch then the workflow should execute
+</li><li>Now go to GitHub -> Actions tab -> You will see every step is getting executed. 
+</li><li>It will execute the command 'mvn test' and display the build status
+</li><li>The build history will be saved under this actions tab also.
+</li></ul>
+
+You can check my project here: <a href="https://github.com/biswajitsundara/GoogleSearchTest">https://github.com/biswajitsundara/GoogleSearchTest</a>
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'ignore')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+
+ 
+</div>
+
 
 
 </div>

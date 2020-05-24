@@ -109,6 +109,8 @@ h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height
   <a href="#" name="menu" id="factoryMenu" onclick="openTopic(event, 'implicit')" >Implicit Wait</a>
   <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'explicit')">Explicit Wait</a>
   <a href="#" name="menu" id="selFactoryMenu" onclick="openTopic(event, 'fluent')">Fluent Wait</a>
+  <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'pageload')">Page Load Timeout</a>
+  <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'scriptout')">Script Timeout</a>
   <a href="#" name="menu" id="pomGenericsMenu" onclick="openTopic(event, 'thread')">Thread.sleep</a>
   <a href="#" name="menu" id="loadpatMenu" onclick="openTopic(event, 'expected')">Expected Conditions</a>
   <a href="#" name="menu" id="fluidPatMenu" onclick="openTopic(event, 'mixing')">Mixing Waits</a>
@@ -573,11 +575,61 @@ Above code will make webdriver wait till 10th mobile item is displayed or waitin
 
 <!------------------------------------------------------------------------ End of selenium page factory topic  ----------------------------------------------------->
 
-<div id="pomGenerics" class="topics">
-<br><br><h2>POM With Generics</h2><hr>
-Generics is the way of specifying the type of class, methods etc. This helps in achieving compile time type-safety. 
-A quick example of generics can be List&lt;String&gt; listItems; is using generics to indicate the type of list is string. We can apply this principle in selenium page object model.
-Basically we will create a class <font color="blue">"Page"</font> which will create objects for the pages and return the same.
+<div id="pageload" class="topics">
+<br><br><h2>Page Load Timeouts</h2><hr>
+Everyone talks about page load time out. First let's understand what does it mean by page load and the time factor involved in it. 
+
+<br><br><h4><font color="#5e98c8">How page load time works</font></h4>
+<ul><li>User enters a URL, submits a form, or clicks on a hyperlink
+</li>Browser makes a request to the server through the network
+</li><li>The request is processed by the web server
+</li><li>Web server sends the response back to the browser
+</li><li>Browser starts receiving the requested page (known as time to first byte)
+</li><li>Browser parses, loads, and renders the page content
+</li><li>The entire requested page becomes available on the browser
+</ul>
+
+<pre>
+    A= The time when the request was sent to server
+    B= The time when the requested page is available on the browser
+    pageLoadTime= B-A
+</pre>
+
+
+<br><h4><font color="#5e98c8">Page Load Timeout in Selenium</font></h4>
+<ul><li>This sets the time limit for a page to load, If the page is not loaded within the given time frame then selenium throws TimeOutException.
+</li><li>If the value is set to zero or negative then it will wait indefinitely
+</li><li>By default the page load time out is zero (means it waits indefinitely)
+</li><li>Page Load timeout is applicable only to driver.get() and driver.navigate().to() methods in selenium
+</li><li>Make sure to declare this before the driver.get() or driver.navigate() method else it won't have any impact.
+</li><li>Page load timeout in selenium is not applicable when the user clicks a link to open a page.
+</li><li>pageLoadTimeout is a method in TimeOuts interface which is a nested interface in WebDriver
+</li><li>The pageLoadTimeout method accepts two arguments - (long time & TimeUnit unit)
+</li><li>pageLoadTimeout method returns the TimeOuts
+</ul>
+
+<br><h4><font color="#5e98c8">Syntax</font></h4>
+<pre class="codeblock1">
+driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);</pre>
+
+
+<br><h4><font color="#5e98c8">Example</font></h4>
+For example, I have taken a slowly loading website and set the time out as 1 second. The below code will throw timeOut exception. And if we increase the time to let's say 5-10 seconds then it will work fine.
+<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> PageLoadTimeOutDemo <span style='font-weight:bold;color:#D3171B'>
+{</span>
+
+	@Test
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> TestPageLoadTimeOut()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\drivers\\chromedriver.exe"</span>);
+		WebDriver driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+		driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);
+		driver.get(<span style='color:#2A00FF'>"https://dharma-production.com/"</span>);
+		System.out.println(driver.getTitle());
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
 
 <br><br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Page <span style='font-weight:bold;color:#D3171B'>{</span>
 
