@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Pontano Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<link href="../css/blogpage.css" rel="stylesheet">
+
+<link href="../css/comment2.css" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Roboto',sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 21vw;
+
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.heading
+{
+  font-size:36px;
+  margin-top:30%;
+}
+
+#tocCard
+{
+  margin-top:5%;
+}
+
+div.topics {
+  margin-left:20vw;
+  height: 1000px;
+  line-height: 200%;
+  font-family: 'Roboto',sans-serif;font-size: 16px; font-weight:400; 
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar { 
+    display: none; 
+  }
+  div.container {margin-left: -10%;}
+  h2.heading {margin-top:15%;}
+  div#tocCard {margin-left:5%;} 
+}
+
+h1 { font-family: Cambria, serif; font-size: 36px; font-weight: 700; line-height: 150%; padding: 16px;}
+
+table,td, th {
+  border: 1px solid #dddddd;
+}
+
+</style>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158659468-1');
+</script>
+
+
+</head>
+
+
+<body onload="LoadFunc()">
+
+<div class="sidebar">
+<h1><center>Selenium Web Table</center></h1>
+  <a class="active" href="#" name="menu" id="homeMenu" onclick="openTopic(event, 'home')">Home</a>
+  <a href="#" name="menu" id="basicsMenu" onclick="openTopic(event, 'basics')" >Web Table Basics</a>
+  <a href="#" name="menu" id="factoryMenu" onclick="openTopic(event, 'implicit')" >Implicit Wait</a>
+  <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'explicit')">Explicit Wait</a>
+  <a href="#" name="menu" id="selFactoryMenu" onclick="openTopic(event, 'fluent')">Fluent Wait</a>
+  <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'pageload')">Page Load Timeout</a>
+  <a href="#" name="menu" id="pomFactoryMenu" onclick="openTopic(event, 'scriptout')">Script Timeout</a>
+  <a href="#" name="menu" id="pomGenericsMenu" onclick="openTopic(event, 'thread')">Thread.sleep</a>
+  <a href="#" name="menu" id="loadpatMenu" onclick="openTopic(event, 'expected')">Expected Conditions</a>
+  <a href="#" name="menu" id="fluidPatMenu" onclick="openTopic(event, 'mixing')">Mixing Waits</a>
+   <a href="#" name="menu" id="woutFactoryMenu" onclick="openTopic(event, 'qAnda')">Questions</a>
+</div>
+
+
+<div class="container">
+
+    <div id="home" class="topics">
+         
+         <div class="row">
+ 
+               <div class="col-md-5">
+
+                   <h2 class ="heading">Selenium Web Table</font></h2>
+                   Please comment below if you like the book
+                   
+                   <br><br><button type="button" class="btn btn-info" onclick="window.open('../bloghome.html')">Blog Home</button>
+                   <button type="button" class="btn btn-success" onclick="window.open('../../../index.html')">Author Profile</button>
+               </div> <!---------------End of First column---------->
+
+
+         <div class="col-md-7">
+          <br><br>
+              <div class="card">
+                   <div class="row no-gutters">    
+                      <div class="col-md-5">
+                        <br><br><img src="../img\brand\profile.png" class="card-img" alt="...">
+                      </div>
+   
+                   <div class="col-md-7">
+                      <div class="card-body">
+                      <h5 class="card-title">Author Bio</h5>
+                      <p class="card-text">This web book is written by Biswajit Sundara.
+	              He has 10+ years of IT experience and an avid blogger on technology.</p>
+                     <p class="card-text"><small class="text-muted">March 31st, 2020</small></p>
+                 </div>
+         </div>
+     </div>
+</div> <!---------------End of Second column---------->
+
+</div> <!---------------End of Row---------->
+
+
+<div class="row" id="tocCard">
+
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">Wait Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'implicit')">Implicit Wait</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'explicit')">Explicit Wait</a></li>
+    
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'selFactory')">Fluent Wait</a></li>
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'pomGenerics')">Thread.sleep</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'loadpat')">Expected Conditions</a></li>
+    
+    
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'fluidPat')">Mixing Waits</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'woutFactory')">Summary</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'POMframework')">Comment</a></li>
+  </ul>
+</div>
+
+</div>
+
+</div> <!---------------End of Row---------->
+
+</div><!---------------End of Row---------->
+
+<br><br>
+<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+    <div class="row">
+      <div class="col-25">
+        <label for="uname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="uname" name="entry.689225320" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="emailAddress" placeholder="Your email address..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="comment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comment" name="entry.1648468188" placeholder="Write your precious comment here.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="hidden" name="entry.2069828936" value="page-object-model">
+    </div>
+    <div class="row">
+      <input type="submit" value="Post Comment">
+    </div>
+  </form>
+
+<br><br><br>
+
+</div> <!---------------End of Topic---------->
+
+
+<!------------------------------------------------------------------ End of Home ---------------------------------------------------------------->
+
+<div id="basics" class="topics">
+    <br><br><h2>Web Table Basics</h2><hr> 
+  
+  <h4><font color="#5e98c8">What is web table?</font></h4>    
+      <p>Web table means, an html table that appears on webpage. 
+An HTML table is defined with the <font color="blue">&lt;table&gt;</font> tag.
+Each table row is defined with the <font color="blue"> &lt;tr&gt;</font> tag. A table header is defined with the <font color="blue">&lt;th&gt;</font> tag. By default, table headings are bold and centered. A table data/cell is defined with the <font color="blue">&lt;td&gt;</font> tag.
+</p>        
+ 
+
+ <br><h4><font color="#5e98c8">HTML Table Example</font></h4>     
+ <pre class="codeblock1">
+ &lt;table style="width:100%"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Firstname&lt;/th&gt;
+    &lt;th&gt;Lastname&lt;/th&gt; 
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jill&lt;/td&gt;
+    &lt;td&gt;Smith&lt;/td&gt; 
+    &lt;td&gt;50&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Eve&lt;/td&gt;
+    &lt;td&gt;Jackson&lt;/td&gt; 
+    &lt;td&gt;94&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt; 
+</pre> 
+
+<br><h4><font color="#5e98c8">HTML Table</font></h4>
+If we run the above code, it will display the below table on a web page. 
+<table style="width:100%;">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table> 
+
+<br><h4><font color="#5e98c8">Types of web tables</font></h4>       
+<b>1. Static tables</b>: Data is static i.e. number of rows and columns are fixed.
+<br><b>2. Dynamic tables</b>: Data is dynamic i.e. number of rows and columns are not fixed and changes during run time.
+
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'factory')">Next -></button>  
+<br><br>
+ 
+</div> <!-- End of basics topic -->
+
+<!----------------------------------------------------------- End of basics topic ------------------------------------------------------------------------------>
+
+<div id="implicit" class="topics">
+<br><br><h2>Implicit Wait</h2><hr>
+Implicit wait specifies the amount of time the driver should wait when searching for an element if it is not immediately present. This is another type of selenium wait that helps resolving the synchronization issues. 
+
+
+<br><br><h4>How does it work?</h4>
+<ul><li>Implicit wait tries to find the element in first go, if element is not present implicit wait tries to find the element after 500ms of first polling, if element is not available on second time also then implicit wait tries third time after 500 ms of second try and it goes on till the time reaches the timeout specified.
+</li><li>If the implicit wait expires without locating the element, it will throw NoSuchElementException
+</li><li>If element is found before implicitly wait time, selenium moves to next commands in the program without waiting to complete the implicitly wait time, this wait is also called dynamic wait.
+</ul>
+
+<br><h4>Lifespan of Implicit Wait</h4>
+</li><li>Implicit wait is set for the entire duration of your webdriver and is set at the start of your program. 
+</li><li>Most of the automation tester writes the implicit wait after creation of browser object. 
+</li><li>That's why it's called <b>Global Wait</b>
+</li><li>We need to write Thread.sleep() wherever we want WebDriver to wait. It is not the case with Implicit wait. Once we set implicit wait, it will be applicable for all findElemnt() and findElements() method. There is no need to write implicit wait code again and again.
+</li></ul>
+
+<br><h4>Dealing with Single/Multiple Elements</h4>
+<ul><li>When searching for a single element, the driver should poll the page until the element has been found, or this timeout expires before throwing a NoSuchElementException. 
+</li><li>When searching for multiple elements, the driver should poll the page until at least one element has been found or this timeout has expired.
+</li><li>Please note here, when we use driver.findElements(..), if it finds at least one element then it will not wait until all elements are found and will proceed further.
+</li></ul>
+
+<br><h4>Varying Implicit Wait</h4>
+<ul><li>Let's say if we set implicit wait as 30 seconds, It will be attached to the entire life cycle of webDriver and applicable to all web elements to be located by WebDriver. We can't say wait for 30 seconds for one element and 40 seconds for another element. We can't vary the wait time.
+</li><li>If you write implicit wait statement multiple times, time specified in latest implicit wait statement will be applicable. For example: You specify implicit wait as 30 seconds at line no 5 and another implicit wait as 60 seconds at line no 10, then implicit wait as 30 seconds will be applicable from line no 6-9 and implicit wait for 60 seconds will be applicable from line no 11 onward. So if someone asks how can you change implicit wait time, this can be answer.
+</li></ul>
+
+<br><h4>Other Features</h4>
+<ul>
+</li><li>The default setting is Zero. Once set, the implicit wait is set for the life of the WebDriver object instance.
+</li><li>This is applicable to only findElement, findElements methods.
+</li></ul>
+
+<br><h4><font color="#5e98c8">Syntax Explanation</font></h4>
+<pre class="codeblock1">driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;</pre>
+
+<pre class="codeblock1">//This is a chained method pattern. manage() is a method in the RemoteWebDriver class. 
+//It returns Options.
+</span>
+<span style='font-weight:bold;color:#7B0052;'>public</span> Options manage() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>new</span> RemoteWebDriverOptions();
+<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='color:#3F7F5F'>//Options is a nested interface in WebDriver and has a method timeouts()
+</span>
+<span style='color:#3F5FBF'>/**
+* @return the interface for managing driver timeouts.
+*/</span>
+    Timeouts timeouts();
+
+
+<span style='color:#3F7F5F'>//The timeouts method returns another nested interface in WebDriver = TimeOuts
+</span><span style='color:#3F7F5F'>//In the TimeOutInterface, the method implicitlywait exists
+</span>
+ * @param time The amount of time to wait.
+     * @param unit The unit of measure <span style='font-weight:bold;color:#7B0052;'>for</span> <span style='font-weight:bold;color:#D3171B'>{</span>@code time<span style='font-weight:bold;color:#D3171B'>}</span>.
+     * @return A self reference.
+     */
+    Timeouts implicitlyWait(<span style='font-weight:bold;color:#7B0052;'>long</span> time, TimeUnit unit);
+
+<span style='color:#3F7F5F'>//The implementation is in RemoteWebDriver class
+</span>
+ <span style='font-weight:bold;color:#7B0052;'>protected</span> <span style='font-weight:bold;color:#7B0052;'>class</span> RemoteTimeouts <span style='font-weight:bold;color:#7B0052;'>implements</span> Timeouts 
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+
+       <span style='font-weight:bold;color:#7B0052;'>public</span> Timeouts implicitlyWait(<span style='font-weight:bold;color:#7B0052;'>long</span> time, TimeUnit unit) 
+       <span style='font-weight:bold;color:#D3171B'>{</span>
+        execute(DriverCommand.SET_TIMEOUT, ImmutableMap.of(
+            <span style='color:#2A00FF'>"implicit"</span>, TimeUnit.MILLISECONDS.convert(time, unit)));
+        <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>this</span>;
+       <span style='font-weight:bold;color:#D3171B'>}</span>
+    <span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+
+<br><h4><font color="#5e98c8">Implement ImplicitWait using sleep method in selenium</font></h4>
+
+<pre class="codeblock1">public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> ImplicitWaitWithSleep 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+
+   <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> WebDriver driver;
+
+   <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) 
+   <span style='font-weight:bold;color:#D3171B'>{</span>
+	System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"./drivers/chromedriver.exe"</span>);
+
+	driver = <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+
+	driver.get(<span style='color:#2A00FF'>"https://google.com/"</span>);
+		
+	implicitlyWithSleep(30);
+
+   <span style='font-weight:bold;color:#D3171B'>}</span>
+
+  <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> implicitlyWithSleep(<span style='font-weight:bold;color:#7B0052;'>long</span> timeLimit)
+  <span style='font-weight:bold;color:#D3171B'>{</span>
+     System.out.println(<span style='color:#2A00FF'>"Custom implicitly wait with selenium"</span>);
+		
+     <span style='color:#3F7F5F'>//set the counter for terminate purpose
+</span>     <span style='font-weight:bold;color:#7B0052;'>long</span> count = 0;
+		
+    <span style='color:#3F7F5F'>// calculate the number of tries
+</span>    <span style='font-weight:bold;color:#7B0052;'>long</span> tries = (timeLimit * 1000) /300;
+		
+    <span style='font-weight:bold;color:#7B0052;'>while</span>(<span style='font-weight:bold;color:#7B0052;'>true</span>)
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>try</span> 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+	  System.out.println(<span style='color:#2A00FF'>"Trying for : "</span>+count+<span style='color:#2A00FF'>" time(s)"</span>);
+	  <span style='color:#3F7F5F'>// try to find the element and send keys
+</span>	  driver.findElement(By.xpath(<span style='color:#2A00FF'>"//input[@name='q']"</span>)).sendKeys(<span style='color:#2A00FF'>"Implicit wait with sleep"</span>);
+	  System.out.println(<span style='color:#2A00FF'>"element found"</span>);
+	  <span style='color:#3F7F5F'>// end the loop as we found the element
+</span>	  <span style='font-weight:bold;color:#7B0052;'>break</span>;
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+			
+	<span style='font-weight:bold;color:#7B0052;'>catch</span> (NoSuchElementException e) 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+	  <span style='font-weight:bold;color:#7B0052;'>if</span> (count &gt; tries) 
+	  <span style='font-weight:bold;color:#D3171B'>{</span>
+	    <span style='color:#3F7F5F'>// throw exception if element not found after exception.
+</span>	    <span style='font-weight:bold;color:#7B0052;'>throw</span> <span style='font-weight:bold;color:#7B0052;'>new</span> NoSuchElementException(<span style='color:#2A00FF'>"Element not fount after : "</span>+timeLimit+<span style='color:#2A00FF'>"seconds"</span>);
+	  <span style='font-weight:bold;color:#D3171B'>}</span>
+	  <span style='color:#3F7F5F'>// sleep for 300 milli seconds,
+</span>	 <span style='color:#3F7F5F'>// try to find the element after 30 seconds of sleep
+</span>				
+	<span style='font-weight:bold;color:#7B0052;'>try</span> 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+	  Thread.sleep(300);
+	<span style='font-weight:bold;color:#D3171B'>}</span> 
+	<span style='font-weight:bold;color:#7B0052;'>catch</span> (InterruptedException e1) 
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+	  System.out.println(<span style='color:#2A00FF'>"Sleep interupted"</span>);
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+	
+          <span style='font-weight:bold;color:#D3171B'>}</span>
+			
+        count++;
+		
+           <span style='font-weight:bold;color:#D3171B'>}</span>
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><h4><font color="#5e98c8">Disadvantages of using Implicitly wait</font></h4>
+<ul>
+<li>If you use the implicit wait in selenium it applies to the web driver globally and increases the execution time for the entire script. so it is not always advisable.
+</li><li>You can not wait till some specific condition is satisfied like invisibility of element, when alert is present etc.
+</ul>
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'pomFactory')">Next -></button>  
+<br><br>
+
+</div> <!-- End of factory topic -->
+
+
+<!------------------------------------------------------------------------ End of java factory topic  ------------------------------------------------------------>
+
+<div id="explicit" class="topics">
+<br><br><h2>Explicit Wait</h2><hr>
+An explicit wait makes WebDriver wait for a certain condition to occur before proceeding further with execution. This is the best wait mechanism and should always be used in selenium frameworks.
+
+
+<br><br><h4><font color="#5e98c8">Why do we need Explicit Wait?</font></h4>
+<ul><li>Sometimes when we open login page, it shows the enter user id, password fields but those are not editable, it takes time for them to become editable.
+If we use implicit wait, once the fields are visible, it will pass and try to enter text and end up with element not interactable exception. Here we need to have a wait
+which will specifically wait until the element becomes clickable. 
+
+</li><li>Sometimes, when we click on alert/popup, it takes time to disappear, so we need to wait until the alert/pop up is invisible. This can't be handled using Thread.sleep as we don't know how much time it will take to disappear.
+Also implicit wait can't handle this scenario. So we need a special kind of wait which will check invisibility of the element.
+
+</li><li>Processing dumbbells, spinners come and go. We need to wait for them to appear and then disappear before proceeding further.
+
+</li><li>When tables get populated, it takes time to load as the data is fetched from database. So we need to wait until the table data is visible.
+
+</li><li>Now a days all applications are using toaster messages on the completion page. It stays for few seconds and then disaapears. If we directly click on logout button
+it might not work as the toaster message would have hidden the button. So we need to wait for the toaster message to go before clicking on the logout button.
+</li></ul>
+From the above examples, we are sure, we need a wait to handle elements with conditions. 
+
+
+
+<br><br><h4><font color="#5e98c8">Syntax</font></h4>  
+<pre class="codeblock1">WebDriver driver = <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+WebDriverWait wait=<span style='font-weight:bold;color:#7B0052;'>new</span> WebDriverWait(driver, 30);
+WebElement ele = driver.findElementByXPath(<span style='color:#2A00FF'>"//a[text()='Insurance Project']"</span>);
+wait.until(ExpectedConditions.elementToBeClickable(ele));
+ele.click();</pre>
+
+
+<ul>
+<li>WebDriverWait is a class. We can create an object of it by passing WebDriver instance and timeout in seconds. WebDriverWait will ignore instances of NotFoundException that are encountered (thrown) by default in the ‘until’ condition, and immediately propagate all others. You can add more to the ignore list by calling ignoring(exceptions to add).
+</li><li>An exception will be called based on expected condition in case of time out and condition is not satisfied.
+</li><li>Expected Conditions is a class and it has methods to check specific conditions.
+</li><li>Above code waits up to 30 seconds before throwing a TimeoutException or if it finds the element will return it in 0 – 30 seconds. 
+</li><li>WebDriverWait by default calls the ExpectedCondition every 500 milliseconds until it returns successfully. A successful return value for the ExpectedCondition function type is a Boolean value of true, or a non-null object.
+</li><li>Like implicit wait, explicit wait will also not wait further if condition is satisfied before timeout reaches.
+</li><li>Unlike implicit wait, explicit wait is not for entire webdriver session.
+</li><li>Unlike implicit wait, you need to write explicit wait every time whenever you need it as it is specific to a web element.
+</li><li>No need to create object of WebDriverWait again and again if you want similar timeout . If you need another timeout duration or driver instance, go for new instance of WebDriverWait.
+</li><li>We can specify timeout only in seconds. Other units of time are not possible.
+</li><li>You can reduce test execution time by using explicit wait.
+</li><li>We can customized polling time or ignore other exceptions as well using WebDriverWait instance. <br>For example:
+<pre>
+WebDriverWait wait= new WebDriverWait(driver, 30);
+wait.pollingEvery(1, TimeUnit.MICROSECONDS);
+wait.ignoring(ElementNotVisibleException.class);
+</pre>
+</li></ul>
+
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'factory')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'selFactory')">Next -></button>  
+<br><br>
+
+</div>
+
+<!------------------------------------------------------------------------ End of pom with page factory topic  ----------------------------------------------------->
+
+<div id="fluent" class="topics">
+<br><br><h2>Fluent Wait</h2><hr>
+Fluent wait is another type of explicit wait where we can define the polling and ignore exception to continue with script execution incase element is not fond.
+
+
+<br><br><h4><font color="#5e98c8">What is FluentWait?</font></h4>
+<ul>
+<li>FluentWait is class in selenium which implements Wait interface. WebDriverWait is subclass of FluentWait. Now you remember syntax of defining explicit wait. You will be able to find relationship between explicit wait and fluent wait.
+</li><li>It  is an implementation of the Wait interface that may have its timeout and polling interval configured on the fly.
+</li><li>Each FluentWait instance defines the maximum amount of time to wait for a condition, as well as the frequency with which to check the condition. Furthermore, the user may configure the wait to ignore specific types of exceptions whilst waiting, such as NoSuchElementExceptions  when searching for an element on the page.
+</li></ul>
+
+<br><h4><font color="#5e98c8">When to use Fluent Wait</font></h4>
+<ul><li>When you do not find suitable expected wait condition in explicit wait.
+</li><li>To handle dynamic web elements.
+</li><li>You need to do more than just waiting.
+</li><li>When you need to create your own customized wait conditions.
+</ul>
+
+<br><pre class="codeblock1"><span style='color:#3F7F5F'>// Waiting 30 seconds for an element to be present on the page
+// checking for its presence once every 5 seconds. </span> 
+Wait wait = <span style='font-weight:bold;color:#7B0052;'>new</span> FluentWait(driver)
+    .withTimeout(30, SECONDS)
+    .pollingEvery(5, SECONDS)
+    .ignoring(NoSuchElementException.class);
+
+WebElement foo = wait.until(<span style='font-weight:bold;color:#7B0052;'>new</span> Function() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    	<span style='font-weight:bold;color:#7B0052;'>public</span> WebElement apply(WebDriver driver) 
+    	<span style='font-weight:bold;color:#D3171B'>{</span>
+    	    <span style='font-weight:bold;color:#7B0052;'>return</span> driver.findElement(By.id(<span style='color:#2A00FF'>"foo"</span>));
+    	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span>);</pre>
+
+
+<br><h4><font color="#5e98c8">Consider below scenario </font></h4>
+
+You are testing Flipkart home page. Flipkart lists top items at home page which includes electronics, furniture etc. Now scenario is you need to find first 10 mobile displayed at home page. 
+
+<ul><li>First of all you need to list all displayed item. It will include all displayed items. Then you need to filter out mobile out of all result. Once you find 10th mobile, you need to stop looking for next and return model names of top 10 mobiles.
+
+</li><li>You can use sleep, Implicit or explicit wait for above scenario but you can just wait till elements are found. But you need to wait till 10th mobile item is listed at home page. 
+
+</li><li>Apart from that Filtering, verification of count and returning model number can not be done along wait. But it can be achieved using fluent wait.
+</li></ul>
+
+<pre class="codeblock1">FluentWait wait5 = <span style='font-weight:bold;color:#7B0052;'>new</span> FluentWait(driver);		
+wait5.withTimeout(30, TimeUnit.SECONDS);
+wait5.pollingEvery(5, TimeUnit.SECONDS);
+wait5.ignoring(NoSuchElementException.class);
+ 
+Function&lt;webdriver, boolean&gt; flag=  <span style='font-weight:bold;color:#7B0052;'>new</span> Function&lt;webdriver, boolean&gt;() 
+<span style='font-weight:bold;color:#D3171B'>{</span>
+    <span style='font-weight:bold;color:#7B0052;'>public</span> Boolean apply(WebDriver driver) 
+    <span style='font-weight:bold;color:#D3171B'>{</span>
+	List allEle= driver.findElements(By.name(<span style='color:#2A00FF'>"foo"</span>));
+	List allText= <span style='font-weight:bold;color:#7B0052;'>new</span> ArrayList&lt;&gt;();
+	<span style='font-weight:bold;color:#7B0052;'>for</span>(WebElement e: allEle)
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+	   String textEle= e.getText();
+	   <span style='font-weight:bold;color:#7B0052;'>if</span>(textEle.equals(<span style='color:#2A00FF'>"SomeData"</span>))
+	   allText.add(textEle);
+	   <span style='font-weight:bold;color:#7B0052;'>if</span>(allText.size()==10)
+	   <span style='font-weight:bold;color:#D3171B'>{</span>
+	      <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>true</span>;
+	   <span style='font-weight:bold;color:#D3171B'>}</span>
+	 <span style='font-weight:bold;color:#D3171B'>}</span>
+	
+      <span style='font-weight:bold;color:#7B0052;'>return</span> <span style='font-weight:bold;color:#7B0052;'>false</span>;
+    <span style='font-weight:bold;color:#D3171B'>}</span>
+ 
+<span style='font-weight:bold;color:#D3171B'>}</span>;
+wait5.until(flag);</pre>
+
+Above code will make webdriver wait till 10th mobile item is displayed or waiting time expires. Fluent wait is just an upgraded version of Explicit wait. In explicit wait, expected conditions are canned(predefined) but by using fluent wait, you can write your own conditions, you can assert and can do whatever you want.
+
+
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'pomFactory')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'pomGenerics')">Next -></button>  
+<br><br>
+
+</div>
+
+<!------------------------------------------------------------------------ End of selenium page factory topic  ----------------------------------------------------->
+
+<div id="pageload" class="topics">
+<br><br><h2>Page Load Timeouts</h2><hr>
+Everyone talks about page load time out. First let's understand what does it mean by page load and the time factor involved in it. 
+
+<br><br><h4><font color="#5e98c8">How page load time works</font></h4>
+<ul><li>User enters a URL, submits a form, or clicks on a hyperlink
+</li><li>Browser makes a request to the server through the network
+</li><li>The request is processed by the web server
+</li><li>Web server sends the response back to the browser
+</li><li>Browser starts receiving the requested page (known as time to first byte)
+</li><li>Browser parses, loads, and renders the page content
+</li><li>The entire requested page becomes available on the browser
+</ul>
+
+<pre>
+    A= The time when the request was sent to server
+    B= The time when the requested page is available on the browser
+    pageLoadTime= B-A
+</pre>
+
+
+<br><h4><font color="#5e98c8">Page Load Timeout in Selenium</font></h4>
+<ul><li>This sets the time limit for a page to load.
+</li><li>If the page is not loaded within the given time frame then selenium throws TimeOutException.
+</li><li>If the value is set to zero or negative then it will wait indefinitely
+</li><li>By default the page load time out is zero (means it waits indefinitely)
+</li><li>Page Load timeout is applicable only to driver.get() and driver.navigate().to() methods in selenium
+</li><li>Make sure to declare this before the driver.get() or driver.navigate() method else it won't have any impact.
+</li><li>Page load timeout in selenium is not applicable when the user clicks a link to open a page.
+</li><li>pageLoadTimeout is a method in TimeOuts interface which is a nested interface in WebDriver
+</li><li>The pageLoadTimeout method accepts two arguments - (long time & TimeUnit unit)
+</li><li>pageLoadTimeout method returns the TimeOuts
+</ul>
+
+<br><h4><font color="#5e98c8">Syntax</font></h4>
+<pre class="codeblock1">
+driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);</pre>
+
+
+<br><h4><font color="#5e98c8">Example</font></h4>
+For example, I have taken a slowly loading website and set the time out as 1 second. The below code will throw timeOut exception. And if we increase the time to let's say 5-10 seconds then it will work fine.
+<br><pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> PageLoadTimeOutDemo <span style='font-weight:bold;color:#D3171B'>
+{</span>
+
+	@Test
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> TestPageLoadTimeOut()
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\drivers\\chromedriver.exe"</span>);
+		WebDriver driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+		driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);
+		driver.get(<span style='color:#2A00FF'>"https://dharma-production.com/"</span>);
+		System.out.println(driver.getTitle());
+		
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'selFactory')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'loadpat')">Next -></button>  
+<br><br>
+
+</div>
+
+<!------------------------------------------------------------------------ End of pom with generics topic  ----------------------------------------------------->
+
+<div id="scriptout" class="topics">
+<br><br><h2>Script Timeout</h2><hr>
+Selenium allows users to set the time to wait for asynchronous script to finish execution. If the script is not completed it's execution in the specified time then it throws script time out error.
+
+
+<br><br><h4><font color="#5e98c8">How does it work</font></h4>
+<ul><li>The script timeout affects only the Java Script Executor method.
+</li><li>We know Java script has two methods - executeScript, executeAsynchronous script
+</li><li>The script time out affects only executeAsynchronous script.
+</li><li>The default value is zero, means there's no timeout time mentioned. The script will execute and it won't wait for the call back and return null.
+</li><li>If the value is set to negative, let's say -1 then it will wait indefinitely
+</li><li>So when you use executeAsynchronous script, you should set the time out considering how much maximum time it may take.
+</li><li>If there's a bug and the script doesn't get completed within the specified time then it will throw the error and you receive the feedback.
+</li></ul>
+
+
+<br><br><h4><font color="#5e98c8">What is synchronous/Asynchronous</font></h4>
+Synchronous in Java Script means each step operation waits for the previous step to complete, so no matter how long it takes to execute the previous step, the next step won't be executed
+however in Asynchronous the script execution happens independently, parallely. For example, while a script is making a AJAX call, another script can fetch data from database.
+
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'pomGenerics')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'fluidPat')">Next -></button>  
+<br><br>
+
+</div> <!-- End of loadpat topic -->
+
+<!----------------------------------------------------- End of loadable pattern topic  ------------------------------------------------------------------------->
+
+<div id="expected" class="topics">
+<br><br><h2>Expected Conditions</h2><hr>
+
+Explicit wait will be applicable for only one line (one conditon) and we have to use it with ExpectedConditions class. ExplicitWait does not have any effect on findElement and findElements. ExplicitWait also called as WebdriverWait. WebDriverWait by default calls the ExpectedCondition every 500 milliseconds until it returns successfully. Below are the different Expected Conditions:
+
+<br><br><h4>1. alertIsPresent()</h4>
+
+<pre class="codeblock2"><span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> A
+<span style='font-weight:bold;color:#D3171B'>{</span>
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#7B0052;'>throws</span> InterruptedException
+	<span style='font-weight:bold;color:#D3171B'>{</span>
+		<span style='color:#3F7F5F'>//open firefox
+</span>		WebDriver driver=<span style='font-weight:bold;color:#7B0052;'>new</span> FirefoxDriver();
+		<span style='color:#3F7F5F'>//open google.com
+</span>		driver.get(<span style='color:#2A00FF'>"https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver"</span>);
+		driver.findElement(BY.xpath(<span style='color:#2A00FF'>"//button[@class='alert']"</span>)).click();
+		WebDriverWait wait = <span style='font-weight:bold;color:#7B0052;'>new</span> WebDriverWait(driver, 30 <span style='color:#3F7F5F'>/*timeout in seconds*/</span>);
+		<span style='color:#3F7F5F'>//throws TimeoutException if no alert is present
+</span>		wait.until(ExpectedConditions.alertIsPresent());
+		driver.switchTo().alert().dismiss();
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+
+
+<br><br><h4>2. elementToBeClickable() </h4>
+Selenium waits for an element to become clickable like disabled state to normal state, selenium moves to next line of code if the element becomes clickable before the timeout otherwise selenium throws TimoutException Executing below code will fail as the button is disabled
+
+In below code wait statement makes selenium to wait for 30 or till the button gets enabled, if button is not enabled in specified time limit selenium throws 'Timeout Exception'
+<pre>
+
+public class A
+{
+  public static void main(String[] args) throws InterruptedException
+  {
+      //open firefox
+      WebDriver driver=new FirefoxDriver();
+      //open google.com
+      driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
+      WebDriverWait wait = new WebDriverWait(driver, 30 /*timeout in seconds*/);
+      //throws TimeoutException if element does not become as clickable in given time
+      wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='btn1']"))));
+      driver.findElement(By.xpath("//button[@id='btn1']")).click();
+
+  }
+}
+</pre>
+
+<br><br><h4>3. elementToBeSelected() </h4>
+Selenium waits for an element to be selected when we use 'elementToBeSelected()', when selenium finds the element is selected it moves to next line of code, in case if element is not selected before the specified time, then selenium Throws TimoutException
+
+<pre>
+
+public class A
+{
+  public static void main(String[] args) throws InterruptedException
+  {
+      //open firefox
+      WebDriver driver=new FirefoxDriver();
+      //open google.com
+      driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
+      driver.findElement(BY.xpath("//button[@class='alert']")).click();
+      WebDriverWait wait = new WebDriverWait(driver, 30 /*timeout in seconds*/);
+      //throws TimeoutException if element is not selected in given time
+      wait.until(ExpectedConditions.elementToBeSelected(By.xpath("//input[@id='hidden]"))));
+  }
+}
+
+</pre>
+
+
+<br><br><h4>4. textToBePresentInElement() </h4>
+Selenium waits for an element to have particular text when we use 'textToBePresentInElement()', when selenium finds the element have particular text it moves to next line of code, in case if element doesnot have text before the specified time, then selenium Throws TimoutException
+
+<pre>
+public class A
+{
+  public static void main(String[] args) throws InterruptedException
+  {
+      //open firefox
+      WebDriver driver=new FirefoxDriver();
+      //open google.com
+      driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
+      driver.findElement(BY.xpath("//button[@class='alert']")).click();
+      WebDriverWait wait = new WebDriverWait(driver, 30 /*timeout in seconds*/);
+      //throws TimeoutException if some text is not present in he webpage
+      wait.until(ExpectedConditions.textToBePresentInElement(By.xpath("//input[@id='h2]"))));
+  }
+}
+</pre>
+
+
+<br><br><h4>5. titleIs()</h4>
+Selenium waits for an webpage to have a particular title when we use 'titleIs()', when selenium finds webpage with given title, it moves to next line of code, in case if webpage doesnot have title before the specified time, then selenium Throws TimoutException
+
+<pre>
+public class A
+{
+  public static void main(String[] args) throws InterruptedException
+  {
+      //open firefox
+      WebDriver driver=new FirefoxDriver();
+      //open google.com
+      driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
+      driver.findElement(BY.xpath("//button[@class='alert']")).click();
+      WebDriverWait wait = new WebDriverWait(driver, 30 /*timeout in seconds*/);
+      //throws TimeoutException if title does not contain give string
+      wait.until(ExpectedConditions.titleIs("selenium webdriver sample")));
+  }
+}
+</pre>
+
+<br><br><h4>6. visibilityOfElementLocated()</h4>
+Selenium waits for visibility of element when we use 'visibilityOfElementLocated()', when element is visible, it moves to next line of code, in case if element is not visible before the specified time, then selenium Throws TimoutException
+
+<pre>
+public class A
+{
+  public static void main(String[] args) throws InterruptedException
+  {
+    //open firefox
+    WebDriver driver=new FirefoxDriver();
+    //open google.com
+    driver.get("https://chercher.tech/practice/explicit-wait-sample-selenium-webdriver");
+    driver.findElement(BY.xpath("//button[@class='alert']")).click();
+    WebDriverWait wait = new WebDriverWait(driver, 30 /*timeout in seconds*/);
+    //throws TimeoutException if the element is not displayed on the webpage
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='hidden]")));
+  }
+}
+</pre>
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'loadpat')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'woutFactory')">Next -></button>  
+<br><br>
+
+</div>
+
+<!-------------------------------------------------------- End of Expected Conditions ------------------------------------------------------------------------>
+
+<div id="thread" class="topics">
+<br><br><h2>Thread.sleep</h2><hr>
+Thread.sleep is a static wait and it pauses the execution for a certain period of time. 
+
+<ul>
+<li>This is not a selenium wait. It can be used in any Java program.
+</li><li><b>Thread</b> is a class of java and <b>Sleep</b> is a static method so we can call Thread.sleep()
+</li><li>Thread.sleep suspends execution of the current thread for a specified time.
+</li><li>sleep() methods accept duration in miliseconds. ( 1 s= 1000 ms).
+</li><li>Cannot give time in negative It throws IllegalArgumentException.
+</li><li>sleep() throws a checked exception which we must either throw or handle it using try catch.
+</li><li>We shouldn't increase the thread.sleep value. It will add up to the test execution.
+</li><li>It is not a good practice to use this wait as it sleeps without any condition.
+</li><li>Whenever we land a situation where we can't use implicitly wait or explicit wait then only use this type of wait.
+</li></ul>
+
+<br><h4>Java Implementation</h4>
+<pre class="codeblock2">Class Name: <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> Thread <span style='font-weight:bold;color:#7B0052;'>implements</span> Runnable 
+Method: <span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>native</span> <span style='font-weight:bold;color:#7B0052;'>void</span> sleep(<span style='font-weight:bold;color:#7B0052;'>long</span> millis) <span style='font-weight:bold;color:#7B0052;'>throws</span> InterruptedException;</pre>
+</pre>
+
+<br><h4>Example</h4>
+Let's say we have used Thread.sleep(3000) that means it will pause the execution for 3 seconds. If our element is visible in 1 second then also it will wait for 3 seconds and then continue. This way it increases the script execution time. It is always unpredictable when the webpage loads our desired webelement, if it takes 3.01 seconds then our script will fail. So this type of wait mechanism is highly avoidable.
+
+<pre class="codeblock2">public</span> <span style='font-weight:bold;color:#7B0052;'>void</span> pauseBrowser(<span style='font-weight:bold;color:#7B0052;'>int</span> waitTime)
+<span style='font-weight:bold;color:#D3171B'>{</span>
+   <span style='font-weight:bold;color:#7B0052;'>long</span> wait=waitTime*1000L;
+   	
+   <span style='font-weight:bold;color:#7B0052;'>try</span>
+      <span style='font-weight:bold;color:#D3171B'>{</span>
+	Thread.sleep(wait);
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+   <span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)
+      <span style='font-weight:bold;color:#D3171B'>{</span>
+	System.out.println(<span style='color:#2A00FF'>"Wait is unsuccessfull"</span>);
+      <span style='font-weight:bold;color:#D3171B'>}</span>
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+</pre>
+
+
+<br><h4>Disadvantages</h4>
+<ul><li>We make WebDriver to wait for 3 seconds in above program. What if search result appears in just a second? WebDriver will still wait for another 2 seconds. 
+It will increase test execution time.
+
+</li><li>We need to pass wait time in advance to sleep method. What if search result appears after 4 seconds. Our script will fail again. We can not pass dynamic waiting as required.
+</li><li>You need to write sleep() method whenever we need to make webdriver wait. That means to provide wait for two web element you need to write Thread.sleep() twice just before you locate web elements.
+</li><li>It is not good programming practice and we should never use Thread.sleep in test scripts, it makes our script unstable.
+</li></ul>
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'fluidPat')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'POMframework')">Next -></button>  
+<br><br>
+
+</div>
+
+<!------------------------------------------------------------------ End of thread.sleep ---------------------------------------------------------------->
+
+<div id="mixing" class="topics">
+<br><br><h2>Mixing Waits</h2><hr>
+One of the key question is what happens when we mix both implicit & explicit wait? should or shouldn't we do it? The answer is <b>Never</b> mix implicit & explicit waits together
+Doing so can cause unpredictable wait times. For example, setting an implicit wait of 10 seconds and an explicit wait of 15 seconds could cause a timeout to occur after 20 seconds.
+
+<ul><li>So we have implicit wait=10 seconds & Explicit wait to wait for an element to present = 15 seconds
+
+</li><li>First it will start with the explicit wait, and poll the DOM once after 500 milli seconds
+
+</li><li>Implicit wait is the global wait & its tied to the driver instance, since it's set it will hold the DOM for 10 seconds before returning a failure.
+
+</li><li>Again it comes back to the explicit wait and checks whether it has reached its time limit which is 15s. It is currently at 10s (+ a tiny amount of time taken to execute the script, network latency, etc.) into the wait, which is less then 15s. So it is not done waiting and polls the DOM again.
+
+</li><li>Because of the implicit wait, again it holds the DOM for 10 seconds then returns the failure.
+
+</li><li>Now if we check the implicit wait paused the DOM twice, so overall 20 seconds it will take before throwing timeout.  
+
+</li></ul>
+ 
+<pre class="codeblock2">
+
+<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>class</span> MixingWaits <span style='font-weight:bold;color:#D3171B'>{</span>
+
+	<span style='font-weight:bold;color:#7B0052;'>public</span> <span style='font-weight:bold;color:#7B0052;'>static</span> <span style='font-weight:bold;color:#7B0052;'>void</span> main(String[] args) <span style='font-weight:bold;color:#D3171B'>{</span>
+
+		System.setProperty(<span style='color:#2A00FF'>"webdriver.chrome.driver"</span>, <span style='color:#2A00FF'>"C:\\chromedriver.exe"</span>);
+		WebDriver driver= <span style='font-weight:bold;color:#7B0052;'>new</span> ChromeDriver();
+
+		<span style='color:#3F7F5F'>//set implicit wait
+</span>		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+
+		<span style='color:#3F7F5F'>//set explicit wait
+</span>		WebDriverWait wait = <span style='font-weight:bold;color:#7B0052;'>new</span> WebDriverWait(driver,15);
+
+		<span style='color:#3F7F5F'>//visit the site
+</span>		driver.get(<span style='color:#2A00FF'>"https://react-redux.realworld.io/#/?_k=9zvfi5"</span>);
+
+		<span style='color:#3F7F5F'>//locate a dummy element to cause failure
+</span>		By element= By.id(<span style='color:#2A00FF'>"hello"</span>);
+
+		<span style='color:#3F7F5F'>//start the clock
+</span>		<span style='font-weight:bold;color:#7B0052;'>long</span> start = System.currentTimeMillis();
+
+		
+		<span style='color:#3F7F5F'>//Execute the explicit wait
+</span>		<span style='font-weight:bold;color:#7B0052;'>try</span> <span style='font-weight:bold;color:#D3171B'>{</span>
+			wait.until(ExpectedConditions.presenceOfElementLocated(element));
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+		<span style='font-weight:bold;color:#7B0052;'>catch</span>(Exception e)<span style='font-weight:bold;color:#D3171B'>{</span>
+
+		<span style='font-weight:bold;color:#D3171B'>}</span>
+
+		<span style='color:#3F7F5F'>//stop the clock
+</span>		<span style='font-weight:bold;color:#7B0052;'>long</span> end = System.currentTimeMillis();
+
+		<span style='color:#3F7F5F'>//print the duration
+</span>		System.out.println(<span style='color:#2A00FF'>"Elapsed time : "</span> + (end - start)/1000 +<span style='color:#2A00FF'>" seconds"</span>);
+
+		<span style='color:#3F7F5F'>//print the title
+</span>		System.out.println(driver.getTitle());
+
+		<span style='color:#3F7F5F'>//quit the driver
+</span>		driver.quit();
+
+	<span style='font-weight:bold;color:#D3171B'>}</span>
+
+<span style='font-weight:bold;color:#D3171B'>}</span></pre>
+<br><br><button  class="btn btn-primary" onclick="openTopic(event, 'woutFactory')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+
+</div>
+
+
+<!------------------------------------------------------------------ End of mixing waits ---------------------------------------------------------------->
+
+
+<div id="qAnda" class="topics">
+<br><br><h2>Questions & Answers</h2><hr>
+
+<b>What is wait in Selenium?</b>
+<br>Selenium commands run faster and the browser rendering may take time (based on system performance, network latency etc). So selenium wait commands
+bring synchronization between these two. 
+
+<br><br><b>What are we waiting for?</b>
+<br>Waiting for .until condition is satisfied, until method gets satisfied when it receives neither null nor false.
+
+<br><br><b>How long do we wait?</b>
+<br>It is defined explicitly in timeout parameter of .withTimeout() method
+
+<br><br><b>How often we can check the result?</b>
+<br>Defined in pollingFrequency.
+
+<br><br><b>When to use?</b>
+<br>When we try to test the presence of an element that may appear after particular seconds/minutes, and many other things like wait till an element’s property satisfy certain condition or alerts or titles so on.
+
+<br><br><b>What is the return type of until method?</b>
+<br>Until method uses Generic return type <V>. If the condition doesn't satisfy within the specified time then this method will throw a non-specified Throwable.
+
+<br><br><b>What are different type of waits</b>
+<br>Implicit & Explicit wait (Webdriver wait, Fluent wait)
+
+
+<br><br><b>Which class is the super class of WebDriverWait?</b>
+<br>FluentWait (super class) ---> WebDriverWait (sub class)
+
+</div>
+
+<!------------------------------------------------------------------ End of Q&A ---------------------------------------------------------------->
+
+</div><!-- End of container -->
+
+
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+  window.scrollTo(0, 0);
+
+  x=document.getElementsByName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].setAttribute("class", "none");
+  }
+
+  var menuId = topicName.concat("Menu");
+  document.getElementById(menuId).setAttribute("class", "active");
+}
+
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('home').style.display = "block";
+
+}
+</script>
+
+</body>
+</html>

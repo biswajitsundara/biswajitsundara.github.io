@@ -57,12 +57,11 @@
         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'dataTable')">Data Table</a>
 	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukeTestNG')">Cucumber & TestNG</a>
 	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'cukeReport')">Cucumber & Reporting</a>
-	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Dependency Injection</a>
-	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Parallel Run</a>
-	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Cucumber Best Practices</a>
-	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Sample Feature Files</a>
-	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Frequently Asked Questions</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">Closing Thoughts</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'parallel')">Parallel Run</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'depInject')">Dependency Injection</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'best')">Cucumber Best Practices</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'sample')">Sample Feature Files</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'faq')">Frequently Asked Questions</a>
 <br><br>      
       </div>
     </div>
@@ -126,9 +125,9 @@
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">GitHub Basics</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'architecture')">Architecture</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicoperation')">Basic Operations</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'bdd')">BDD Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'cukebasics')">Cucumber Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'cukeComp')">Cucumber Components</a></li>
   </ul>
 </div>
 
@@ -137,9 +136,9 @@
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicCommands')">Basic Commands</a></li>
-    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'branching')">Branching</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'conflictres')">Resolving Conflicts</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'keywords')">Gherkin Keywords</a></li>
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'background')">Background</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'cukeOptions')">Cucumber Options</a></li>
   </ul>
 </div>
 
@@ -148,9 +147,9 @@
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'ssh')">SSH Key Generation</a></li>
-    <li class="list-group-item"><a href="Blog_home.html">Blog Home</a></li>
-    <li class="list-group-item"><a href="#">Author Profile</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'cukeTags')">Cucumber Tags</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'cukeHooks')">Cucumber Hooks</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'dataDriven')">Data Driven Testing</a></li>
   </ul>
 </div>
 
@@ -318,13 +317,21 @@ are used. There are so many similarities so BDD fits perfectly in Agile model.
   </li></ul> 
   
 
+<h4><font color="#4682B4">Difference between cucumber.io & info.cukes</font></h4>
+Most of the people get confused between these two and really struggle while setting up cucumber for the first time. There
+are many outdated videos/articles on the web those are using info.cukes group id for maven dependency
+<ul><li>Please note info.cukes group id refers to the older version of cucumber. Upto 1.26 version. 
+  </li><li>If you go to maven central repository and check info.cukes, you will see the message the artifact is moved to io.cucumber
+  </li><li>cucumber.io refers to the latest cucumber library and only this should be used going forward.
+  </li></ul> 
 
-<br>
+<h4><font color="#4682B4">Project Skeleton</font></h4>
+You can download the cucumber-java project skeleton from below link 
+<br><a href="https://github.com/cucumber/cucumber-java-skeleton" target="_blank">https://github.com/cucumber/cucumber-java-skeleton</a>
 
+<br><br>
 <button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
-
 <button  class="btn btn-success" onclick="openTopic(event, 'basicoperation')">Next -></button>  
-
 <br><br> 
 
 </div>
@@ -368,7 +375,8 @@ There are basically 3 components in cucumber
 </li><li>The file is saved with .feature extension. 
 </li><li>This is the file where we write Gherkin steps (plain english)
 </li><li>This is an essential part of cucumber framework. This is a live documentation as well as executable requirement.
-</li><li>A Single feature file may contain one or many scenarios. Usually it contains a list of scenarios. 
+</li><li>Feature file contains only scenarios (defined by the keyword scenario or scenario outline)
+</li><li>A single feature file can contain any number of scenarios but should be relevant to the feature such as registration, login etc. 
 </li><li>The keywords in feature file - Feature, Given , When , Then , As, But, * , Scenario, Scenario Outline
 </li><li>Feature file is written by Business Analysts (Product Owners in Agile teams)
 </li><li>Some people call it feature steps or gherkin steps.
@@ -2123,10 +2131,207 @@ Make sure you are extracting the feature file name only and then pass into the s
 <button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
 <button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
 <br><br>
+</div>
+
+
+<div id="depInject" class="topics" style="line-height: 200%;">
+<h1>Dependency Injection</h1>
+When it's required to share state between cucumber steps we need to use Dependency Injection. As the name implies it injects the current state to the step definitions.
+
+
+<br><br><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> SearchFeature</span>
+<span style="color: #0066BB; font-weight: bold">  </span>
+<span style="color: #0066BB; font-weight: bold">This feature is validate user is able to search product</span>
+
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Search Product</span>
+<span style="color: #008800; font-weight: bold">    Given </span><span style="color: #0066BB; font-weight: bold">I am at the login page</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I enter the login credentials</span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0"> username</span><span style="color: #008800; font-weight: bold">       |</span><span style="background-color: #fff0f0"> password</span><span style="color: #008800; font-weight: bold">   |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0"> abc@gmail.com</span><span style="color: #008800; font-weight: bold">  |</span><span style="background-color: #fff0f0"> 123</span><span style="color: #008800; font-weight: bold">        |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I click login button</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I am at the home page</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I search for dress</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">I click on search button</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">I should see the product names</span>
+</pre>
+ 
+<br><p>If we look at the above scenario, it deals with multiple step definition files such as loginSteps, homepageSteps, searchSteps. Now the question is when it executes the methods from all these three files
+how is it going to operate on the same web driver instance. The answer is dependency injection. We need to create WebDriver at a common place and then inject it in all these three files so during run time
+it should refer to the same webdriver instance. Another example is if we want to share data between steps. Let's say we get the confirmation number in one step and then want to verify the number on the next page
+using another step.</p>
+
+<h4><font color="#4682B4">Pico Container</font></h4>
+Using pico container we can achieve dependency injection. Add the below dependency to pom.xml
+
+<pre style="margin: 0;><span style="color: #880000; font-weight: bold">&lt;</span>dependency<span style="color: #880000; font-weight: bold">&gt;</span>
+    <span style="color: #880000; font-weight: bold">&lt;</span>groupId<span style="color: #880000; font-weight: bold">&gt;</span>org.picocontainer<span style="color: #880000; font-weight: bold">&lt;</span>/groupId<span style="color: #880000; font-weight: bold">&gt;</span>
+    <span style="color: #880000; font-weight: bold">&lt;</span>artifactId<span style="color: #880000; font-weight: bold">&gt;</span>picocontainer<span style="color: #880000; font-weight: bold">&lt;</span>/artifactId<span style="color: #880000; font-weight: bold">&gt;</span>
+    <span style="color: #880000; font-weight: bold">&lt;</span>version<span style="color: #880000; font-weight: bold">&gt;</span>2.15<span style="color: #880000; font-weight: bold">&lt;</span>/version<span style="color: #880000; font-weight: bold">&gt;</span>
+<span style="color: #880000; font-weight: bold">&lt;</span>/dependency<span style="color: #880000; font-weight: bold">&gt;</span>
+</pre>
+ 
 
 
 </div>
 
+
+
+
+<div id="best" class="topics" style="line-height: 200%;">
+<h1>1. Cucumber Best Practices</h1>
+
+<br><h4><font color="#4682B4">Prevent leaking state between scenarios</font></h4>
+<ul><li>Avoid using global or static variables.
+</li><li>Make sure you clean your database in a Before hook
+</li><li>If you share a browser between scenarios, delete cookies in a Before hook
+</li></ul>
+
+<br><h4><font color="#4682B4">Independent scenarios</font></h4>
+The scenarios should be independent to each other. For example: Some beginners write login as one scenario and then purchase as another scenario and end up with errors.
+The purchase scenario itself should have the login step before purchasing the product or we can keep login under background.
+
+<br><br><h4><font color="#4682B4">Data table size</font></h4>
+The data table size should be kept to minimum. There's no finite number as how many columns we can keep however the best practice is to keep in such a way that
+the reader doesn't have to scroll too much. Usually 8-10 columns should be enough. If the data table grows big then the good approach is to use external files
+such as JSON or Excel files and mention the file names in the data table.
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+</div>
+
+
+
+<div id="sample" class="topics" style="line-height: 150%;">
+
+<h1>Sample Feature File</h1>
+<br><br><pre style="margin: 0;><span style="color: #888888">#Author: biswajitsundara@mybank.com</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #888888">#Date: 26/06/2020</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #888888">#Application: mybank.com</span><span style="color: #0066BB; font-weight: bold"></span>
+
+<span style="color: #007700">@Complete</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Mybank Accounts</span>
+<span style="color: #0066BB; font-weight: bold">  Mybank offers different account types to customers</span>
+
+
+ <span style="color: #008800; font-weight: bold">Background:</span><span style="color: #0066BB; font-weight: bold"> User is at home page</span>
+ <span style="color: #008800; font-weight: bold"> Given </span><span style="color: #0066BB; font-weight: bold">I opened the mybank website</span>
+
+
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #007700">@Regression</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> New Account Opening</span>
+<span style="color: #008800; font-weight: bold">    Given </span><span style="color: #0066BB; font-weight: bold">I am at the home page</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">I click on "</span><span style="background-color: #fff0f0">Accounts</span><span style="color: #0066BB; font-weight: bold">" and select "</span><span style="background-color: #fff0f0">New</span><span style="color: #0066BB; font-weight: bold">"</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">I landed on "</span><span style="background-color: #fff0f0">New Account</span><span style="color: #0066BB; font-weight: bold">" page</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">I filled the new account form with details</span>
+<span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0">First Name</span><span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0">Last Name</span><span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0">Age</span><span style="color: #008800; font-weight: bold">       |</span><span style="background-color: #fff0f0">Phone</span><span style="color: #008800; font-weight: bold">     |</span><span style="background-color: #fff0f0">Account Type</span><span style="color: #008800; font-weight: bold"> |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0">Biswajit</span><span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0">Sundara</span><span style="color: #008800; font-weight: bold">        |</span><span style="background-color: #fff0f0">34</span><span style="color: #008800; font-weight: bold">        |</span><span style="background-color: #fff0f0">123123</span><span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0">Savings</span><span style="color: #008800; font-weight: bold">      |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">I submitted the form</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">I verified the application number is generated.</span>
+
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #007700">@Regression,</span><span style="color: #0066BB; font-weight: bold"> </span><span style="color: #007700">@Sanity</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #008800; font-weight: bold">Scenario Outline:</span><span style="color: #0066BB; font-weight: bold"> Search Account Holders</span>
+<span style="color: #008800; font-weight: bold">    Given </span><span style="color: #0066BB; font-weight: bold">I am at the Accounts page</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold"> I entered the </span><span style="color: #996633"><account id></span><span style="color: #0066BB; font-weight: bold"> in search box</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">I clicked submit </span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">I verify the </span><span style="color: #996633"><account holder name></span><span style="color: #0066BB; font-weight: bold"> and the </span><span style="color: #996633"><status></span><span style="color: #0066BB; font-weight: bold"></span>
+
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Examples:</span><span style="color: #0066BB; font-weight: bold"> </span><span style="color: #008800; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="color: #996633"> account id</span><span style="color: #008800; font-weight: bold">  |</span><span style="color: #996633"> account holder name</span><span style="color: #008800; font-weight: bold"> |</span><span style="color: #996633"> status</span><span style="color: #008800; font-weight: bold">     |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0"> 1234567</span><span style="color: #008800; font-weight: bold">     |</span><span style="background-color: #fff0f0"> Biswajit Sundara</span><span style="color: #008800; font-weight: bold">    |</span><span style="background-color: #fff0f0"> Active</span><span style="color: #008800; font-weight: bold">     |</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">      |</span><span style="background-color: #fff0f0"> 9898223</span><span style="color: #008800; font-weight: bold">     |</span><span style="background-color: #fff0f0"> Priyanka Chopra</span><span style="color: #008800; font-weight: bold">     |</span><span style="background-color: #fff0f0"> Inactive</span><span style="color: #008800; font-weight: bold">   |</span>
+
+<span style="color: #008800; font-weight: bold">      </span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #007700">@Regression,</span><span style="color: #0066BB; font-weight: bold"> </span><span style="color: #007700">@JIRA-123</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #0066BB; font-weight: bold">  </span><span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Demat Account Link</span>
+<span style="color: #008800; font-weight: bold">    Given </span><span style="color: #0066BB; font-weight: bold">I am at the Accounts page</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">I click on Demat Account link</span>
+<span style="color: #0066BB; font-weight: bold">    </span><span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">I SSO over to my linked Demat account</span>
+<span style="color: #0066BB; font-weight: bold">   </span>
+</pre>
+ 
+
+</div>
+ 
+
+
+<div id="faq" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Frequently Asked Questions</h1>
+
+<br><h5><font color="tomato">1. What is cucumber?</font></h5>
+<p>Cucumber is a BDD (Behavioral Driven Development) framework which works in conjunction with selenium.</p>
+
+<br><h5><font color="tomato">2. You have 300 feature files, how will you execute them?</font></h5>
+<p>In the runner file, features="&lt;package name&gt;". It will read all the feature files from the package.</p>
+
+<br><h5><font color="tomato">3. Write down all the Gherkin keywords for steps?</font></h5>
+<p>Given
+<br>When
+<br>And
+<br>Then
+<br>But
+</p>
+
+<br><h5><font color="tomato">4. What is background in cucumber?</font></h5>
+<p>The common pre condition for all the scenarios can be put under background.</p>
+
+<br><h5><font color="tomato">5. Which file is most important in cucumber</font></h5>
+<p>.feature file</p>
+
+
+<br><h5><font color="tomato">6. What are the tags used in cucumber options?</font></h5>
+<pre>
+Features		name		
+Glue			dryrun
+Tags			format	
+Monochrome              plugin
+Strict		
+</pre>
+
+
+<br><h5><font color="tomato">7. Write-down a feature file?</font></h5>
+<pre style="margin: 0; line-height: 175%"><span style="color: #008800; font-weight: bold">Feature:</span><span style="color: #0066BB; font-weight: bold"> Login to gmail</span>
+<span style="color: #008800; font-weight: bold">Scenario:</span><span style="color: #0066BB; font-weight: bold"> Login into gmail(Positive)</span>
+<span style="color: #008800; font-weight: bold">Given </span><span style="color: #0066BB; font-weight: bold">Invoke gmail application</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter the user name as abc@gmail.com</span>
+<span style="color: #008800; font-weight: bold">And </span><span style="color: #0066BB; font-weight: bold">Enter the password </span><span style="background-color: #fff0f0">123</span><span style="color: #0066BB; font-weight: bold"></span>
+<span style="color: #008800; font-weight: bold">When </span><span style="color: #0066BB; font-weight: bold">click on login button</span>
+<span style="color: #008800; font-weight: bold">Then </span><span style="color: #0066BB; font-weight: bold">Verify the login is success</span>
+</pre>
+ 
+<br><h5><font color="tomato">8. Difference between cucumber & TestNG?</font></h5>
+<pre style="line-height:150%">
+------------------------------------------------------------------------------------------------------------------------------------------
+                                Cucumber                               |                      TestNG                                      
+------------------------------------------------------------------------------------------------------------------------------------------
+1. Cucumber is to run acceptance tests, written in Behavior driven     |    1. TestNG is testing framework where you specify test classes 
+   development style.Gherkin is the language that Cucumber uses        |       that needs to be executed.
+   to define test cases                                                |	
+                                                                       | 
+2. We use the runner file to run the cucumber test cases.              |    2. We use testNG.xml file to run the test cases.
+                                                                       |
+3. Useful when you have less number of test cases	               |    3. Useful when you have large number of test cases
+                                                                       |
+4. Parallel execution is possible				       |    4. Parallel execution is possible
+                                                                       | 
+5. We can group the test cases using 'tags'	                       |    5. We can group the test cases using 'groups'
+-------------------------------------------------------------------------------------------------------------------------------------------
+</pre>
+
+<br><h5><font color="tomato">9. What are the cucumber annotations?</font></h5>
+<p>@Runwith, @CucumberOptions then explain the dry run, tags etc 
+<br>JUnit annotations we can use also - @Before, @After</p>
+
+
+<br><h5><font color="tomato">10. What is the difference between scenario & scenario outline?</font></h5>
+<p>Scenario is executed once, means all the gherkin steps under scenario are executed once however in scenario outline the steps are executed multiple times depending on the data parameters mentioned under examples</p>
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+</div>
 
 
 </div>

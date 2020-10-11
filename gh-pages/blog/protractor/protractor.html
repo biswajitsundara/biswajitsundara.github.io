@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Biswajit Sundara Blog | Cucumber</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/simple-sidebar.css" rel="stylesheet">
+
+  <link href="../css/comment.css" rel="stylesheet">
+
+   <link href="../css/blogpage.css" rel="stylesheet">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158659468-1');
+</script>
+
+
+</head>
+
+
+<body onload="LoadFunc()">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><br></div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'home')">Home</a>
+	<a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basics')">Protractor Basics</a>
+        
+<br><br>      
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+       
+         <a href="bloghome.html"> Biswajit Sundara Blog</a>
+
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+              <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;</a>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        
+
+      <div id="home" class="topics">
+
+<br><br>
+        
+ <div class= row>
+
+<div style="max-width: 540px; text-align: center;">
+<br>
+<img src="img\protractor\logo.jpg" style="width:90%;">  
+<a href="https://www.protractortest.org/#/" target="_blank">www.protractortest.org</a>
+</div>
+
+ <div class="card mb-6" style="max-width: 540px;">  
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <img src="../img\brand\profile.png" class="card-img" alt="...">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">Author Bio</h5>
+        <p class="card-text">This book is written by Biswajit Sundara.
+	Biswajit is a software professional with 10+ years of experience. He has worked on various technologies and also an avid blogger on technology.</p>
+        <p class="card-text"><small class="text-muted">Jan 2nd, 2020</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+<br><br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">Protractor Basics</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'keywords')">Type Script</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'cukeTags')">Framework</a></li>
+  </ul>
+</div>
+
+</div>
+
+<br><br>
+<div class="container">
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+    <div class="row">
+      <div class="col-25">
+        <label for="uname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="uname" name="entry.689225320" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="emailAddress" placeholder="Your email address..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="comment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comment" name="entry.1648468188" placeholder="Write your precious comment here.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="hidden" name="entry.2069828936" value="GitHub">
+    </div>
+    <div class="row">
+      <input type="submit" value="Post Comment">
+    </div>
+  </form>
+</div>
+
+
+    </div> 
+        
+      <div id="basics" class="topics" style="line-height: 200%;">
+      <h1 class="mt-4">Protractor Basics</h1>
+      Protractor is a testing framework to test angular applications.
+
+      </li><li>Protractor was developped by Google Developers to support angular applications.
+      </li><li>It supports both Angular and Non-Angular applications.
+      </li><li>Some people suggest WebdriverIO however Protractor is the best tool to automate angular applications. 
+      </li><li>Supports cross browser testing
+      </li><li>Supports parallel execution
+      </li><li>Supports headless browser
+      </li><li>Automatic waiting mechanism so no synchronisation issue
+      </li></ul>
+
+
+<br><h4><font color="#4682B4">Install Node.Js</font></h4>
+<ul><li>Search "node download" in google or go to <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>
+</li><li>For windows download the installer (.msi) as per the system 32 or 64 bit.
+</li><li>Once installed go to program files/node js folder and copy the path <font color="blue">C:\Program Files\nodejs</font>
+</li><li>Create a new environment variable under system variables<font color="blue"> NODE_HOME</font> with the above path
+</li><li>Append the path in <font color="blue">Path</font> variable also.
+</li><li>Then open command prompt and type this command <font color="blue">node -v</font>
+</li><li>If it returns the version number like v12.18.2 then node js is successfully installed.
+</li></ul>
+
+
+<br><h4><font color="#4682B4">Check npm is available</font></h4>
+<ul><li>npm stands for node package manager. It's included in the Node.Js  
+</li><li>Open command prompt and type this command <font color="blue">npm -v</font>
+</li><li>If it returns the version number like 6.14.5 then node js is successfully installed.
+</li></ul>
+
+<br><h4><font color="#4682B4">Install Protractor</font></h4>
+<ul><li>Open command prompt and type this command <font color="blue">npm install -g protractor</font>
+</li><li>This will install the protractor.
+</li><li>by using npm, we are instructing the package manager to download the protractor package. 
+</li><li>g stands for global. So this protractor will be available globally.
+</li><li>This will be installed at the AppData path <font color="blue">C:\Users\Biswajit\AppData\Roaming\npm\node_modules </font>  
+</li><li>Go to command prompt and type<font color="blue"> protractor --version</font>, it should return the version like 7.0.0 
+</li><li>This will also install <font color="blue"> webdriver-manager</font> 
+</li></ul>
+
+<br><h4><font color="#4682B4">Update WebDriver Manager</font></h4>
+<ul><li>The install protractor command also installs the <font color="blue"> webdriver-manager</font>
+</li><li>Check the path <font color="blue"> C:\Users\Biswajit\AppData\Roaming\npm\node_modules\protractor\node_modules\webdriver-manager </font>
+</li><li>Open command prompt and type <font color="blue"> webdriver-manager update </font> to refresh with latest updates
+</li><li>This package is responsible for supplying browser drivers/ all selenium webdriver functionalities.
+</li></ul>
+
+
+<br><h4><font color="#4682B4">Install Visual Studio Code IDE</font></h4>
+<ul><li>We can use IDE like Eclipse, WebStorm however Visual Studio Code is the best IDE for protractor, Java Script or TypeScript
+</li><li>This can be downloaded from here - <a href="https://code.visualstudio.com/docs?dv=win">https://code.visualstudio.com/docs?dv=win</a>
+</li><li>Visual studio has licensing cost but the community version is free.
+</li></ul>
+
+
+<br><h4><font color="#4682B4">Install Type Script</font></h4>
+<ul><li>Type Script is the super set of Java Script. Means It has all the features from Java Script and more.
+</li><li>Java Script doesn't support OOPs, and that's the primary reason why Type Script is preferred. So that we can use classes, objects etc.
+</li><li>Open command prompt and type <font color="blue"> npm install -g typescript </font> to install type script
+</li><li>But please note, protractor can understand only Java Script. So type script codes are converted to Java Script before execution
+</li><li>Use the command <font color="blue">tsc helloworld.ts</font> to compile/generate the java script file out of type script.
+</li><li>Refer for more details<a href="https://www.typescriptlang.org/"> https://www.typescriptlang.org/</a>
+</li><li>Refer for more details<a href="https://www.typescriptlang.org/"> https://www.typescriptlang.org/</a>
+</li></ul>
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'architecture')">Next -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="basics" class="topics" style="line-height: 200%;">
+
+
+</div>
+
+
+
+</div>
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+
+    window.scrollTo(0, 0);
+  
+}
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('home').style.display = "block";
+}
+</script>
+
+  
+</body>
+
+</html>

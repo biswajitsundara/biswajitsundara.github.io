@@ -1,0 +1,1028 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Biswajit Sundara Blog | Maven</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/simple-sidebar.css" rel="stylesheet">
+
+<link href="../css/comment.css" rel="stylesheet">
+
+<style>
+
+
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+
+</style>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158659468-1');
+</script>
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body onload="LoadFunc()">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><br></div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'home')">Home</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basics')">Maven Basics</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'install')">Maven Installation</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'pom')">Pom.xml File</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'addCompiler')">Add Compiler</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'buildCycle')">Build Life Cycle</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'conflictres')">Resolving Conflicts</a>
+         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">SSH Key Generation</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ignore')">Git Ignore</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'gitAction')">GitHub Actions</a>
+
+<br><br>      
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+       
+         <a href="bloghome.html"> Biswajit Sundara Blog</a>
+
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+              <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;</a>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        
+
+      <div id="home" class="topics">
+
+<br><br>
+        
+ 
+<div class= row>
+
+<div style="max-width: 540px; text-align: center;">
+<br>
+<img src="img\maven\maven-logo.png" style="width:80%;">  
+<p>Please comment below if you like the book</p>
+<button type="button" class="btn btn-info" onclick="window.open('../bloghome.html')">Blog Home</button>
+<button type="button" class="btn btn-success" onclick="window.open('../../../index.html')">Author Profile</button>
+<br><br>
+</div>
+
+ <div class="card mb-6" style="max-width: 540px;">  
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <img src="../img\brand\profile.png" class="card-img" alt="...">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">Author Bio</h5>
+        <p class="card-text">This book is written by Biswajit Sundara.
+	Biswajit is a software professional with 10+ years of experience. He has worked on various technologies and also an avid blogger on technology.</p>
+        <p class="card-text"><small class="text-muted">Last Edited: May 24th, 2020</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+ 
+     
+
+<br><br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">GitHub Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'architecture')">Architecture</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicoperation')">Basic Operations</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicCommands')">Basic Commands</a></li>
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'branching')">Branching</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'conflictres')">Resolving Conflicts</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'ssh')">SSH Key Generation</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'ignore')">Git Ignore</a></li>
+    <li class="list-group-item"><a href=#" onclick="openTopic(event, 'gitAction')">Git Actions</a></li>
+  </ul>
+</div>
+
+</div>
+
+<br><br>
+
+<!-- comment section -->
+
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+               <div class="form-group">
+                <input type="text" id="uname" name="entry.689225320" placeholder="Your name.." class="form-control" >
+                <br><input type="text" id="email" name="emailAddress" placeholder="Your email.." class="form-control">
+                <br><textarea id="comment" name="entry.1648468188" class="form-control" rows="3"></textarea>
+                <br><input type="hidden" name="entry.2069828936" value="selenium-grid" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        
+<!-- Comment with nested comments -->
+        <div class="media mb-4" style="visibility:hidden">
+          <img class="d-flex mr-3 rounded-circle" src="../img/comment/boy1.png" alt="" style="width:10%">
+          <div class="media-body">
+            <h5 class="mt-0">@Pravin Kumar</h5>
+            <p class="text-muted">17 May 18:04:02</p> Really helpful, thanks for sharing.
+
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="../img/brand/me.png" alt="" style="width:10%">
+              <div class="media-body">
+                <h5 class="mt-0">@Biswajit Sundara</h5>
+                Thank you Pravin
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+ </div> <!-- End of first Div -->
+
+<!---------------------- End of home page Div ------------------------------>
+        
+      <div id="basics" class="topics" style="line-height: 200%;">
+      
+      <h1 class="mt-4">Maven Basics</h1>
+       <p>Maven is a project management tool that uses POM (project object model) architecture. We can also say, Maven is a build tool that helps building, managing java based projects. 
+       Maven also helps to publish the projects as jar, war, metadata etc.</p> 
+        
+       <h4><font color="#4682B4">What is build/build tool?</font></h4>
+       <p>In QA world we hear it often when is the QA build, Production build etc. So what does build mean? Let's take an example of a web application. We develop the source code
+       run it in our local and it works fine. Now the application code should work in the server, and there we might not have all the dependent softwares, configurations etc what we have in our system
+       so basically the build tool will download all the required dependencies, compile the source code into binary code, test the code and then package the binary code. During build deployment
+       the package will be moved to the particular server and now the application is ready to be run independently.</p>
+
+        <h4><font color="#4682B4">Advantages of Maven</font></h4>
+        <ul><li><font color="blue">Project Structure:</font> Maven has clear project structure, it helps to organize the codes nicely. The src/main/java holds the application code and the src/test/java holds the unit test cases in case of Web Application project.
+                For Automation project, many folks leave the src/main/java and writes everything under src/test/java. However I recommend keep the Framework related codes under src/main/java and then your application related codes like page classes, test modules, test cases under src/test/java
+                So that in future if you share the project to another team, they just need to work on things those are under src/test/java 
+        </li><li><font color="blue">Dependency Management:</font> When we write codes, often we make references to external libraries, in order to use the functionalities we need to download the jar files and then provide the jar file link in the build path of the project.
+        Manually adding the jar file is a tedious process, if there's a new version of something we have been using then we will have to manually delete the old jar file, download and attach the new jar file. Also when we share the project to another person, then he/she
+        needs to download the files again and then set the build path. Maven handles this beautifully. In the pom.xml we just need to mention the dependency names, As soon as we save, all the dependecies are downloaded and attached to the project.  
+        </li></ul>
+
+        <h4><font color="#4682B4">Popular Build Tools</font></h4>
+	<ul><li>Maven -- supports Java and used for dependency management and automated software build
+        </li><li>Graddle -- supports Java, Groovy, Scala language. It introduces a Groovy-based domain-specific language instead of the XML form.
+        </li><li>MSBuild -- supports C#. Developped by Microsoft
+	</li><li>ANT -- supports Java language, uses XML file format, Old build tool, now rarely used.
+        </li></ul>
+
+       <h4><font color="#4682B4">Maven Central Repository</font></h4>
+       From this remote repository, maven downloads all the required Jar files and saves in the local .m2 folder. 
+      <br>Refer: <a href="https://repo.maven.apache.org/maven2/">https://repo.maven.apache.org/maven2/</a>
+
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'architecture')">Next -></button>  
+<br><br> 
+
+</div>
+
+    
+ <div id="install" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Maven Installation</h1>
+    First check if Maven is already installed. Type the below command in windows command prompt and see what does it return? if Maven is already installed then it will show the details else give the error message 'command is not recognized' 
+    <pre class="codeblock1">mvn -version</pre>
+    
+   <h4><font color="#4682B4">Download Maven</font></h4>
+     <ul><li>Go to url <a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a>
+     </li><li>Under <b>Files</b> check the row <font color="blue">Binary zip archive</font>
+     </li><li>Click on the hyperlink - apache-maven-3.6.3-bin.zip
+     </li></ul>
+    
+<h4><font color="#4682B4">Setup Maven</font></h4>
+<ul><li>Extract the zip file downloaded above
+     </li><li>copy the path upto bin folder e.g <font face="courier">C:\apache-maven-3.6.3\bin</font>
+     </li><li>Now go to environment variable, edit the system variable <font face="courier">Path</font>
+     </li><li>Append the copied folder path into the path variable text.
+     </li><li>Open command prompt and execute the command <font face="courier">mvn -version</font>
+     </li><li>Now it should return details about maven version     
+     </li></ul>
+
+<h4><font color="#4682B4">Setup Maven in Eclipse</font></h4>
+<ul><li>To make use of the maven software we also need to setup maven in the IDE that we use
+     </li><li>Eclipse has Maven in built now a days. So we don't have to configure anything additional
+     </li><li>To ensure maven is installed, go to Window -> Preference -> Maven should be at the left column 
+     </li><li>Go to File -> New -> Other -> Maven -> Maven Project (should be able to create the project) 
+     </li><li>Right click on the created maven project -> Run as -> should see the options m2 maven build, maven install, maven test etc   
+     </li></ul>
+
+<h4><font color="#4682B4">Create maven project using command line</font></h4>
+Just run the below command in windows command prompt, it will create the maven project.
+<pre class="codeblock2">
+mvn -B archetype:generate 
+    -DarchetypeGroupId=org.apache.maven.archetypes 
+    -DgroupId=com.mycompany.app 
+    -DartifactId=my-app
+</pre>
+
+
+<br><button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'basicoperation')">Next -></button>  
+<br><br> 
+
+</div>
+   
+
+<div id="pom" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">POM.xml File</h1>
+   
+<p>Pom.xml is the back bone of the maven project. It contains all the informations related to the project. Please note there can be only one pom.xml file
+in maven project.</p>
+
+<table style="width:100%;"><tr>
+<td style="width:25%;padding:5px;border-bottom:1px solid #ddd;">Project</td>
+<td style="padding:5px;border-bottom: 1px solid #ddd;">This is the root node in the pom.xml file. It specifies from where the maven project schema is downloaded.</td>
+</tr>
+
+<tr><td style="width:25%;padding:5px;border-bottom: 1px solid #ddd;">ModelVersion</td>
+<td style="padding:5px;border-bottom: 1px solid #ddd;">The maven POM version name</td>
+</tr>
+
+<tr><td style="width:25%;padding:5px;border-bottom: 1px solid #ddd;">GroupID</td>
+<td style="padding:5px;border-bottom: 1px solid #ddd;">This is used to uniquely identify organization projects. The combination of domain of your company, your company name, and the type of project should be used as group Id. So if you host your project in the maven central repository then
+It will navigate through the hierarchy and download the published files. Let's say mine is a commercial company and the name is bisApps and the type of project is 'framework'
+then the group id will become com.bisApps.framework</td>
+</tr>
+
+<tr><td style="width:25%;padding:5px;border-bottom: 1px solid #ddd;">ArtifactId</td>
+<td style="padding:5px;border-bottom: 1px solid #ddd;">Artifact Id is the project name. Group Id & artifact Id together forms an unique key that separates it from all other projects. Continuing our example let's say my framework project name is 'selenium-automation'</td>
+</tr>
+
+<tr><td style="width:25%;padding:5px;border-bottom: 1px solid #ddd;">Packaging</td>
+<td style="padding:5px;border-bottom: 1px solid #ddd;">Packaging indicates how would we like to publish the project. For web projects WAR and for Java projects JAR packaging is used</td>
+</tr>
+
+
+<tr><td style="width:25%;padding:5px;border-bottom: 1px solid #ddd;">Version</td>
+<td style="padding:5px;border-bottom: 1px solid #ddd;">This element indicates the version of the artifact generated by the project. It helps in version controlling of the project</td>
+</tr>
+
+<tr><td style="width:25%;padding:5px;border-bottom: 1px solid #ddd;">Name</td>
+<td style="padding:5px;border-bottom: 1px solid #ddd;">The display name of the project. When we create a maven project in eclipse, this is auto populated and same as Artifact Id</td>
+</tr>
+
+<tr><td style="width:25%;padding:5px;border-bottom: 1px solid #ddd;">Url</td>
+<td style="padding:5px;border-bottom: 1px solid #ddd;">Where the project can be found</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+
+<div id="addCompiler" class="topics" style="line-height: 200%;">
+<h1 class="mt-4">Add Compiler to Maven Projects</h1>
+This is a pre requisite that we need to complete. We will have to specify where is the Java compiler, means we need to set the JDK for maven project. If we don't complete this step
+and try to build our project -> Then it will end up with the below error 
+<br><font color="red">No compiler is provided in this environment. Perhaps you are running on a JRE rather than a JDK?</font>
+
+<br><br><h4><font color="#4682B4">Environment Variable JAVA_HOME</font></h4>
+Maven relies on the JAVA_HOME environment variable to use the right compiler. JAVA_HOME must refer to a JDK (JAVA Development Kit) and not a JRE (Java Runtime Environment).
+<ul><li>Go to Environment variables -> Create a new variable under System Variable
+</li><li>Variable name <font color="blue">JAVA_HOME</font>
+</li><li>Variable Path <font color="blue">C:\Program Files\Java\jdk1.8.0_241</font>
+</li><li>Open command prompt and type the command <font color="blue">mvn -version</font>
+</li><li>Then it should display the Java details also
+<pre style="font-family:courier new;font-size:16px;">
+C:\Users\Biswajit>mvn -version
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: C:\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin\..
+Java version: 1.8.0_241, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk1.8.0_241\jre</pre>
+</ul>
+
+<h4><font color="#4682B4">Running Maven in Eclipse</font></h4>
+If we are running maven in Eclipse, then we need to add JDK to eclipse so that it can run maven without any issues.
+
+<ul><li>Open Eclipse -> click on Windows -> Preferences -> Java -> Installed JREs
+</li><li>If JDK is selected then that's fine, else if JRE is showing.
+</li><li>Select the JRE row (don't tick) -> Click on 'Edit' button
+</li><li>Set the JRE home, JRE name as JDK path and JDK name respectively.
+<img src="img/maven/add_jdk.png">
+</li><li>Finish -> Apply & Close.
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'basicCommands')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'conflictres')">Next -></button>  
+<br><br>
+ 
+</div>
+
+
+
+<div id="buildCycle" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Build Life Cycle</h1>
+ 
+<p>We know that Maven is a build tool, so the next question is how to build? what are the steps we need to perform.
+Build life cycle is nothing but a series of phases/command execution to build the project.</p>
+
+<h4><font color="#4682B4">Clean</font></h4>
+This step needs to be done before any build life cycle. When we execute the command <font face="courier new">  mvn clean </font> it will
+delete the <font color="blue">target</font> directory that holds the result files from previous build.
+
+<pre style="line-height:150%;">
+
+C:\Users\Biswajit\Desktop\demo>mvn clean
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< GoogleSearchTest:GoogleSearchTest >------------------
+[INFO] Building GoogleSearchTest 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ GoogleSearchTest ---
+[INFO] Deleting C:\Users\Biswajit\Desktop\demo\target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.555 s
+[INFO] Finished at: 2020-06-07T20:33:23+05:30
+[INFO] ------------------------------------------------------------------------
+</pre>
+
+
+<br><h4><font color="#4682B4">1. Validate</font></h4>
+Validate the project is correct and all necessary information is available. Open the pom.xml. There shouldn't be anything wrong. If you see any red icon, we need to fix. For example, if you are using selenium 3.15.0 and that version is not available in maven repository it will show red icons and it is a validation error.
+We can right click on the project -> Run as -> Maven Build -> Set the goal as "validate" -> Run. However I always prefer executing the commands in command prompt.
+
+<pre style="line-height:150%;">
+
+C:\Users\Biswajit\Desktop\demo>mvn validate
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< GoogleSearchTest:GoogleSearchTest >------------------
+[INFO] Building GoogleSearchTest 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.143 s
+[INFO] Finished at: 2020-06-07T20:37:07+05:30
+[INFO] ------------------------------------------------------------------------
+</pre>
+
+<br><h4><font color="#4682B4">2. Compile</font></h4>
+Compile the source code and create class files out of java files. If there are any syntax errors then it will throw
+compilation errors else the build will be successfull. Eclipse offers a way to review the errors. If you see a red icon on your project then it has problems. Go to window -> show views -> Problems
+
+<pre style="line-height:150%;">
+
+C:\Users\Biswajit\Desktop\demo>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< GoogleSearchTest:GoogleSearchTest >------------------
+[INFO] Building GoogleSearchTest 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ GoogleSearchTest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Biswajit\Desktop\demo\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ GoogleSearchTest ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\Biswajit\Desktop\demo\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.886 s
+[INFO] Finished at: 2020-06-07T20:41:57+05:30
+[INFO] ------------------------------------------------------------------------
+</pre>
+
+<br><h4><font color="#4682B4">3. Test</font></h4>
+Test the compiled source code using any unit testing framework like Junit/TestNG etc. It will scan the project and pick the methods annoted with @Test and start executing them one by one.
+
+<pre style="line-height:150%;">
+
+C:\Users\Biswajit\Desktop\demo>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< GoogleSearchTest:GoogleSearchTest >------------------
+[INFO] Building GoogleSearchTest 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ GoogleSearchTest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Biswajit\Desktop\demo\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ GoogleSearchTest ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\Biswajit\Desktop\demo\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ GoogleSearchTest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Biswajit\Desktop\demo\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ GoogleSearchTest ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\Biswajit\Desktop\demo\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ GoogleSearchTest -
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+ChromeDriver was started successfully.
+Jun 07, 2020 8:59:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Title verification Passed
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 47.446 sec - in
+TestSuite
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:01 min
+[INFO] Finished at: 2020-06-07T20:59:42+05:30
+[INFO] ------------------------------------------------------------------------
+</pre>
+
+<br><h4><font color="#4682B4">4. Package</font></h4>
+The compiled code will be packaged in the distributable format like JAR/WAR.
+
+<pre style="line-height:150%;">
+
+C:\Users\Biswajit\Desktop\demo>mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------< GoogleSearchTest:GoogleSearchTest >------------------
+[INFO] Building GoogleSearchTest 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ GoogleSearchTest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Biswajit\Desktop\demo\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ GoogleSearchTest ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ GoogleSearchTest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Biswajit\Desktop\demo\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ GoogleSearchTest ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ GoogleSearchTest -
+--
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+ChromeDriver was started successfully.
+Jun 07, 2020 9:15:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Title verification Passed
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.686 sec - in
+TestSuite
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ GoogleSearchTest ---
+[INFO] Building jar: C:\Users\Biswajit\Desktop\demo\target\GoogleSearchTest-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.415 s
+[INFO] Finished at: 2020-06-07T21:15:49+05:30
+[INFO] ------------------------------------------------------------------------
+</pre>
+We can see the jar file is created under the target folder. C:\Users\Biswajit\Desktop\demo\target\GoogleSearchTest-0.0.1-SNAPSHOT.jar
+
+<br><h4><font color="#4682B4">5. Verify</font></h4>
+
+This will execute the integration tests from the project. The mvn test is meant to execute the unit tests and mvn verify is meant to execute the integration tests.
+We will have to configure in pom.xml file using fail safe plugin 
+
+Ref -https://www.petrikainulainen.net/programming/maven/integration-testing-with-maven/
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basicoperation')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'branching')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+
+
+
+<div id="conflictres" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Conflict Resolution</h2>
+    Merge conflict is one of the most challenging and tedious task that most of the teams have to deal with. The only suggestion to avoid merge conflict is frequently moving the updates to GitHub and to work on freshly pulled github project.
+
+<br><br><h4><font color="#4682B4">When Merge Conflict Happens</font></h4>
+<ul><li>Let's say there's a file in our repository named <font color="blue"><i>file.txt</i></font>
+</li><li>The content of the file is
+</li><pre>test file</pre>
+<li>Mark cloned the project to his local and started working on it.
+</li><li>At the same time another user Jack updated the same file and committed to GitHub
+</li><li>Now the file content becomes this in GitHub
+<pre>
+test file
+this line is added by Jack</pre>
+</li><li>Mark changed the file content and added one line in his local
+<pre>
+test file
+this line is added by Mark</pre>
+</li><li>Now he added, comitted the file <font color="blue"><i>file.txt</i></font>
+</li><li>While pushing the updates to GitHub, it gets rejected.
+</li><li>Because there's conflict. Mark is trying to push the file that was updated by Jack.
+</li><li>Once the push operation fails, pull the remote repo to local.
+</li><li>Git will throw merge conflict for the file that has competing changes. The content of the file.txt becomes the below
+<pre>
+test file
+<<<<<<< HEAD
+this line is added by Mark
+=======
+this line is added by Jack
+>>>>>>> 993319df944d0ee742fsdfs74829860e16870f508</pre>
+</li><li>You see both Mark/Jack's updates are shown in the file. Git highlights the area in the file where contradiction happens. 
+</li></ul>   
+
+
+<br><h4><font color="#4682B4">How to resolve merge conflict</font></h4>
+There are different ways how we can resolve merge conflicts. Talk to Jack and agree on which update to keep (yours,Jack's). This is the best practice always.
+Never ever override someone's work until unless you have the confirmation.
+
+<br><br><b>Approach #1: Keep your update and discard other's</b>
+<br>We can do this either command line or by manually updating the file. Using command line works like a charm. If you have huge number of conflicts then
+it's a tedious affair to get into the file and remove one by one. Also there can be multiple files having conflict. So simply using the command --ours is going to remove all the extra symbols from the file and keep only your update and discard their update.
+
+<pre>
+
+git checkout --ours file.txt
+git add file.txt
+git commit -m "using mine"
+git push -u origin master
+</pre>
+
+<br><b>Approach #2: Keep other's update and discard yours</b>
+<br>We can do this either command line or by manually updating the file. Using command line works like a charm. If you have huge number of conflicts then
+it's a tedious affair to get into the file and remove one by one. Also there can be multiple files having conflict. So simply using the command --theirs is going to remove all the extra symbols from the file and keep only their update and discard your update.
+
+<pre>
+
+git checkout --theirs file.txt
+git add file.txt
+git commit -m "using theirs"
+git push -u origin master
+</pre>
+
+<br><b>Approach #3: Keep both the updates</b>
+<br>If we want to keep both the updates. Then open the file in text editor and manually remove the extra symbols/annotations added to the file highlighting the conflict.
+Then issue the commands like adding to stage, then commit and push to master.
+<pre>
+
+git pull https://github.com/biswajitsundara/githubtest.git
+git status    
+git add file.txt
+git commit -m "fs"
+git push -u origin master
+</pre>
+
+
+<br><h4><font color="#4682B4">Complete Flow</font></h4>
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; overflow: auto;'>
+C:\Users\Biswajit\Desktop\testproj><span style='font-weight:bold;color:blue;'>git init</span>
+Initialized empty Git repository in C:/Users/Biswajit/Desktop/testproj/.git/
+
+C:\Users\Biswajit\Desktop\testproj><span style='font-weight:bold;color:blue;'>git clone https://github.com/biswajitsundara/githubtest.git</span>
+Cloning into 'githubtest'...
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 21 (delta 0), reused 9 (delta 0), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+
+
+C:\Users\Biswajit\Desktop\testproj><span style='font-weight:bold;color:blue;'>cd githubtest</span>
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git pull https://github.com/biswajitsundara/githubtest.git</span>
+Username for 'https://github.com': xxxxx
+Password for 'https://biswajitsundara@github.com':
+From https://github.com/biswajitsundara/githubtest
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git status</span>
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+														
+			<span style='font-weight:bold;color:red;'>
+			------- At this time someone updated the file.txt in remote repo
+			------- At this time you updated the file.txt in your local</span>
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git add file.txt</span>
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git commit -m "a"</span>
+[master 4429a1d] a
+ 1 file changed, 1 insertion(+)
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git remote add origin https://github.com/biswajitsundara/githubtest.git</span>
+
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git push -u origin</span>
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+To https://github.com/biswajitsundara/githubtest.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/biswajitsundara/githubtest.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git pull https://github.com/biswajitsundara/githubtest.git</span>
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/biswajitsundara/githubtest
+ * branch            HEAD       -> FETCH_HEAD
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git checkout --ours file.txt</span>
+Updated 1 path from the index
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git add file.txt</span>
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git commit -m "using mine"</span>
+[master 5bc9df1] using mine
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git push -u origin master</span>
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 405 bytes | 405.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/biswajitsundara/githubtest.git
+   d5d8e54..5bc9df1  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git pull https://github.com/biswajitsundara/githubtest.git</span>
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+From https://github.com/biswajitsundara/githubtest
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+</pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'branching')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'ssh')">Next -></button>  
+
+<br><br> 
+
+
+</div>
+
+
+<div id="ssh" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">SSH Key Generation</h2>
+    SSH is a network protocol. If we open GitHub repository and click on the clone/download button we will see two tabs. One having the https url and another with ssh. We all know https is the network protocol to access web resources similarly SSH also known as Secure Shocket Shell is a network protocol that provides admins a secure way to access remote computer.
+    <ul><li>When we work with GitHub Enterprise (in company network) then using https protocol we can't work with remote repository. Either we can use GitDesktop or SSH key approach as Security is the foremost thing in all enterprise repositories.
+    </li><li>Working with GitHub repo, we often need to enter the user name & password. If we use the SSH approach then we don't have to give username/password everytime.
+    </li><li>SSH keys are generated in pairs. When we generate SSH key, it generates two files - private (which is only for your computer) and public (that we will save in GitHub settings). While working when both the keys match, access is granted to the remote repo.
+    </li><li>The public SSH key can be shared to others to work on the GitHub repo.
+    </li><li>Generally I use command prompt to execute Git commands however I noticed the key gen command didn't work with the windows command prompt. So while working with the Git SSH key generation, use GitBash instead of command prompt.       
+    </li></ul>
+
+<h4><font color="#4682B4">Without SSH token</font></h4>
+Let me tell you what's the message you would see if you don't have SSH key and try to use the SSH url from git hub. 
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222);padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<font color="blue">git init</font>
+Initialized empty Git repository in C:/Users/Biswajit/Desktop/wiki/testproj/.git
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<font color="blue">git clone git@github.com:biswajitsundara/githubtest.git</font>
+Cloning into 'githubtest'...
+git@github.com: Permission denied (publickey).
+<font color="red">fatal: Could not read from remote repository.</font>
+Please make sure you have the correct access rights
+and the repository exists.</pre>
+
+<h4><font color="#4682B4">Generate SSH Key</font></h4>
+When prompted for the file name to store the RSA id and to enter the pass phrase, just press enter to continue. Pass phrase is to add additional security.
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222); padding: 15px; font-size: 16px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='color:#2A00FF'>$ ssh-keygen -o -t rsa -C "biswajitsundara@gmail.com"</span>
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Biswajit/.ssh/id_rsa):
+Created directory '/c/Users/Biswajit/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Biswajit/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Biswajit/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:FWEUYRIWENJFSAFHAASLDAIBNMMBCJKADSJ4NBAGABDJK biswajitsundara@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+|      .o... ooo. |
+|        .= . +=. |
+|       .+.$. o++.|
+|       .oo= +* o+|
+|        0*.=o ++o|
+|       . .= . EO.|
+|         . o  =.+|
+|          $. .$ .|
+|           .o..  |
++----[SHA256]-----+
+</pre>
+
+<h4><font color="#4682B4">Add SSH Key to GitHub</font></h4>
+<ul><li>There are two SSH keys. One is private & another is public. So the public key we need to add in the GitHub. 
+</li><li>Go to the SSH directory. <font color="blue">C:\Users\Biswajit\.ssh </font>and open the file with <font color="blue">.pub </font>extension and copy the content to clipboard.
+</li><li>Then open your github account. Go to Settings -> Select SSH and GPG Keys menu item -> Under SSH keys select the <font color="blue">New SSH key </font>button then give a key name and then paste the key we have copied from .pub file.
+</li></ul>
+
+
+<h4><font color="#4682B4">Use SSH Authentication</font></h4>
+Now that we have SSH key, we can use the SSH url and work on it.
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222); padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='color:blue'>$ git clone git@github.com:biswajitsundara/githubtest.git</span>
+Cloning into 'githubtest'...
+The authenticity of host 'github.com (XX.XX.XXX.XXX)' can't be established.
+RSA key fingerprint is SHA256:nThbg4232JHewhk453BCNZCKJWQOPiKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? <font color="blue">yes</font>
+Warning: Permanently added 'github.com,XX.XX.XXX.XXX' (RSA) to the list of known hosts.
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 0), reused 6 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), done.</pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'ignore')">Next -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="ignore" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Git Ignore</h2>
+
+<p>Git Ignore is a text file in the git repository that tells the git process to exclude or ignore files/directories in the push operation</p>
+
+<h4><font color="#4682B4">Why do we need .gitignore file</font></h4>
+<p>Let's take this scenario, When we import a maven project in eclipse, it creates a folder named .settings, when we run automated tests, it generates log files, html reports.
+So over the time these files, directories become really huge and when we commit everything to github, these big file, directories are also moved to github remote
+repository which are of no use. 
+</p>
+  
+<h4><font color="#4682B4">How to use .gitignore file</font></h4>
+<ul><li>In the github root node, create a text file .gitignore
+</li><li>Add the file name/patterns to exclude. E.g .settings
+</li><li>Then execute git status -- you won't see .settings folder under untracked files that means git is ignoring that.
+</li><li>push the codes to remote repository, you will notice .settings folder is not moved.
+</li></ul>
+
+  
+<h4><font color="#4682B4">Example of .gitignore file</font></h4>
+<pre>
+.settings
+.classpath
+.project
+/target
+/test-output
+</pre>
+
+<h4><font color="#4682B4">Summary</font></h4>
+.gitignore is really simple to use and yet so useful which helps us to control which file types we would like not to commit to remote repository.
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'ssh')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'gitAction')">Next -></button>  
+<br><br>
+
+</div>
+
+
+<div id="gitAction" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">GitHub Action</h2>
+
+<p>GitHub Action is MicroSoft's answer to CI/CD. We all know how the Jenkins job triggers based on GitHub commit and runs the automated suite. Since most of the code bases are hosted in GitHub, 
+it becomes really easy to integrate with GitHub Actions for a smooth delivery pipeline.</p>
+
+<h4><font color="#4682B4">What is GitHub Action</font></h4>
+<ul><li>GitHub Action is to create CI-CD workflows.
+</li><li>If your source code is hosted in GitHub, then you can make use of it.
+</li><li>There are approx 2000 minutes free per month and then it will be chargeable.
+</li><li>The server used for GitHub Actions is GitHub's own VM/cloud server.
+</li><li>It has all the capabilities like any other CI/CD tool however it's in the early stage.
+</li></ul>
+
+
+<h4><font color="#4682B4">GitHub Action Scenarios</font></h4>
+Below are some scenarios where we can use github actions.
+<ul><li>Let's say as soon as you push the code to GitHub, it trigger's the job, validates and shows whether the build is a success or failure.
+</li><li>As soon as you create a pull request, it trigger's the job and saves the test execution status, so the reviewer can check the committed code works fine and it helps to accept the merge request.
+</li><li>Let's say the requirement is don't do anything if code is pushed/pulled to other branches and trigger the job only if the code is pushed to master branch. That's also possible.
+</li></ul>
+
+<h4><font color="#4682B4">How to configure GitHub Action?</font></h4>
+<ul><li>Open your github remote repository
+</li><li>Click on <font color="blue">Create new file</font> button
+</li><li>Create file <font color="blue">.github/workflows/&lt;filename.yml&gt;</font>
+</li><li>This will create a folder .github -> sub folder workflows -> and a file with extension .yml
+</li><li>Put the code inside this yml file and commit changes.
+</li></ul>
+  
+
+<h4><font color="#4682B4">Configuring the workflow</font></h4>
+There are several commands that we can use to customize the workflow file. Below is an example of a simple workflow file that runs the command 'maven test' on windows machine
+as soon as code is pushed to 'master' branch.
+<pre style="line-height:150%">
+
+name: Demo CI
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: windows-latest
+
+  steps:
+   - uses: actions/checkout@v2
+   - name: Test the application
+     run: |
+        mvn test
+</pre>
+
+<h4><font color="#4682B4">Test the workflow</font></h4>
+<ul><li>Now pull the repository to local, make some changes and commit the changes
+</li><li>We have configured the workflow as if we 'push' to 'master' branch then the workflow should execute
+</li><li>Now go to GitHub -> Actions tab -> You will see every step is getting executed. 
+</li><li>It will execute the command 'mvn test' and display the build status
+</li><li>The build history will be saved under this actions tab also.
+</li></ul>
+
+You can check my project here: <a href="https://github.com/biswajitsundara/GoogleSearchTest">https://github.com/biswajitsundara/GoogleSearchTest</a>
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'ignore')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+
+ 
+</div>
+
+
+
+</div>
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+
+    window.scrollTo(0, 0);
+  
+}
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('home').style.display = "block";
+}
+</script>
+
+  
+</body>
+
+</html>

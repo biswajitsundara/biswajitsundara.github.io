@@ -1,0 +1,1076 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Biswajit Sundara Blog | Git Hub</title>
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/simple-sidebar.css" rel="stylesheet">
+
+<link href="../css/comment.css" rel="stylesheet">
+
+<style>
+
+
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+
+</style>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158659468-1');
+</script>
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body onload="LoadFunc()">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><br></div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'home')">Home</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basics')">GitHub Basics</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'architecture')">Architecture</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basicoperation')">Basic Operations</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'basicCommands')">Basic Commands</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'branching')">Branching</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'conflictres')">Resolving Conflicts</a>
+         <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ssh')">SSH Key Generation</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'ignore')">Git Ignore</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light" onclick="openTopic(event, 'gitAction')">GitHub Actions</a>
+
+<br><br>      
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+       
+         <a href="bloghome.html"> Biswajit Sundara Blog</a>
+
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+              <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;</a>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        
+
+      <div id="home" class="topics">
+
+<br><br>
+        
+ 
+<div class= row>
+
+<div style="max-width: 540px; text-align: center;">
+<br>
+<img src="img\jenkins\jenkins-logo.png" style="width:80%;">  
+<p>Please comment below if you like the book</p>
+<button type="button" class="btn btn-info" onclick="window.open('../bloghome.html')">Blog Home</button>
+<button type="button" class="btn btn-success" onclick="window.open('../../../index.html')">Author Profile</button>
+<br><br>
+</div>
+
+ <div class="card mb-6" style="max-width: 540px;">  
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <img src="../img\brand\profile.png" class="card-img" alt="...">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">Author Bio</h5>
+        <p class="card-text">This book is written by Biswajit Sundara.
+	Biswajit is a software professional with 10+ years of experience. He has worked on various technologies and also an avid blogger on technology.</p>
+        <p class="card-text"><small class="text-muted">Last Edited: May 24th, 2020</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+ 
+     
+
+<br><br>
+<div class="card-deck">
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">GitHub Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'architecture')">Architecture</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicoperation')">Basic Operations</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicCommands')">Basic Commands</a></li>
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'branching')">Branching</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'conflictres')">Resolving Conflicts</a></li>
+  </ul>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'ssh')">SSH Key Generation</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'ignore')">Git Ignore</a></li>
+    <li class="list-group-item"><a href=#" onclick="openTopic(event, 'gitAction')">Git Actions</a></li>
+  </ul>
+</div>
+
+</div>
+
+<br><br>
+
+<!-- comment section -->
+
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" target="_self" method="POST">
+               <div class="form-group">
+                <input type="text" id="uname" name="entry.689225320" placeholder="Your name.." class="form-control" >
+                <br><input type="text" id="email" name="emailAddress" placeholder="Your email.." class="form-control">
+                <br><textarea id="comment" name="entry.1648468188" class="form-control" rows="3"></textarea>
+                <br><input type="hidden" name="entry.2069828936" value="selenium-grid" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        
+<!-- Comment with nested comments -->
+        <div class="media mb-4" style="visibility:hidden">
+          <img class="d-flex mr-3 rounded-circle" src="../img/comment/boy1.png" alt="" style="width:10%">
+          <div class="media-body">
+            <h5 class="mt-0">@Pravin Kumar</h5>
+            <p class="text-muted">17 May 18:04:02</p> Really helpful, thanks for sharing.
+
+            <div class="media mt-4">
+              <img class="d-flex mr-3 rounded-circle" src="../img/brand/me.png" alt="" style="width:10%">
+              <div class="media-body">
+                <h5 class="mt-0">@Biswajit Sundara</h5>
+                Thank you Pravin
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+ </div> <!-- End of first Div -->
+
+<!---------------------- End of home page Div ------------------------------>
+        
+      <div id="basics" class="topics" style="line-height: 200%;">
+      <h1 class="mt-4">Git Hub Basics</h1>
+      <p>Git is called Repository Management tool or Version Control tool or Source Code Management tool. In real time, multiple people work on the same project. So basically using Git everyone can have a local copy which they will commit frequently to GitHub (web hosting) and then from GitHub everyone will pull the latest code and use it. This way we will be able to merge the work effectively and also if there are any conflicts like two or more people updating the same file etc can be resolved.</p>
+
+      <ul><li>GitHub is the most popular version control tool. There are other tools available in the market also like SVN</li>
+      <li>GitHub was acquired by Microsoft on June 4th, 2018</li>
+      <li>It allows us to create public, private repositories</li>
+      <li>Software companies have enterprise accounts which is more secured</li>
+      <li>As a developer we can create our personal account for Free</li>
+      <li>GitHub is not only to mantain source codes, we can store word, excel files also</li>
+     </ul>
+     
+
+      <h4><font color="#4682B4">How to create GitHub Account</font></h4>
+      <ul><li>Open the URL - <a href="https://github.com/" target="_blank">https://github.com/</a>
+	</li><li>Give the User id, password of your choice
+	</li><li>Click signup.
+	</li><li>This will create a github account for you. 
+      </ul>
+
+      <h4><font color="#4682B4">How to Create Repository</font></h4>
+       <ul><li>Login to your github account
+	</li><li>At the top right corner. Click on the menu
+	</li><li>Click on <font color="blue">'Your Repositories'</font>
+	</li><li>Then click on <font color="blue">'New Repository'</font>	
+	</li><li>Enter the <font color="blue">repository name.</font> For example: githubtest
+	</li><li>You can choose the type of repository - <font color="blue">private or public</font>
+	</li><li>Private means only you can see the repository, public means anyone can see
+	</li><li>Then click <font color="blue">'Create Repository'</font>
+	</li><li>It will open a page with some commands and your repository URL. Make a note of it.
+	</li><li>So now a repository or space is created in the github server
+      </li></ul>
+
+ <h4><font color="#4682B4">Install Github management tools</font></h4>
+     
+There are two ways how we can manage our github push/pull operation. Using GUI tools or Command Line tools. Both serves the need, it depends on whichever way you like
+<ul></li><li>GUI - Download the github desktop <a href="https://desktop.github.com/" target="_blank">https://desktop.github.com/</a>
+</li><li>Command Line - Download the software from here - <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
+</li></ul>eGit is an eclipse plugin to manage Git. Download this from eclipse market place if you need. Ref the documentation here <a href="https://wiki.eclipse.org/EGit/User_Guide" target="_blank">https://wiki.eclipse.org/EGit/User_Guide</a> 
+<br>Once Git is installed. You need to append the git path in <font color="blue">environment variable Path </font> as C:\Program Files\Git\cmd;
+
+<br><br><h4><font color="#4682B4">Difference between Git & GitHub</font></h4>
+Many people get confused here. So Git is the version control tool that we use in the local machines to push the codes. GitHub is the cloud (remote/web) based platform where Git Repositories are stored.
+ 
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'architecture')">Next -></button>  
+
+<br><br> 
+</div>
+
+    
+ <div id="architecture" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">GitHub Architecture</h2>
+    Here we are going to discuss about how git works internally.
+    <ul><li>Whenever we visualize about GitFlow, there's a folder in our local system and there's a place in the web server. And all our operations are between these two entities.
+    </li><li>When we clone a remote repository, it creates a folder <font color="blue"><i>.git</i></font> in the working directory. It's a hidden folder so enable seeing hidden folders option if you don't see it. If you try to reset then just delete this folder, it will loose all tracking. This is created automatically and saves all the tracking/configuration information.  
+    </li><li>When we add files to git, then it moves all those files to staging area (It's a space inside local system only). When we fire the add command, it saves the files into <font color="blue"><i>.git/objects</i></font> folder. 
+    </li><li>After adding the files, we can either reset or commit the files to local repo. Commit means a check point. It saves the snapshot of the branch at the time of the commit. A commit is a file stored in .git/objects that specifies a snapshot. It contains one or more references to the parent commits and a reference to a tree object.
+    </li><li>Git Push means transfering the updates from the local repo to the remote repo. So what's the point of doing all these extra work when we can simply transfer from our local to remote. The answer is flexibility of managing the project folder. Using this approach we can track what are the changes, who made the changes, if anything goes wrong, we can move back to the older version etc. Also let's say we have a project of 10 GB size. Every time it will not move the whole project and waste time. It will pick only the changes and move to the remote repo.
+    </li><li>Pulling the repo updates the local repository from the remote repository. Lets say we have made some changes and pushed to the remote repo. Then all my team mates need to pull it to their system and work on it.     
+    </li><br><img src="img\github\architecture.png" style="width:60%;height: 400px;">
+    <br><br><li>HEAD is the label that indicates where we are in the commit tree. When we want to work on a particular branch then we will have to move there first. So when we fire the command git checkout &ltbranch-name&gt , the HEAD moves to the branch and whatever changes we make are tracked under that branch.
+    </li><li>Git merge is to combine two branches. let's say we have the code base in the master branch and there's a different branch created for you to work on. Once you are done with your updates and testing then you need to merge your branch with the master branch. So simply go to the master branch by using command git checkout master and then being in the master branch use the command git merge &ltbranch-name&gt to merge the branch with the master branch. This the error prone area where we got conflict errors that we will discuss in the upcoming sections.
+    </li></ul>
+
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicoperation')">Next -></button>  
+
+<br><br> 
+
+</div>
+   
+
+<div id="basicoperation" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Basic Operations</h2>
+    As we know now GitHub is a version control system. The basic operation is always to push the codes to the remote repository and then pulling the codes from the remote repository.
+<ul><li>Push: Move codes from Local to Remote
+</li><li>Pull: Move codes from Remote to Local 
+</li></ul>
+   
+<h4><font color="#4682B4">Push Projects</font></h4>
+
+	Here we will see how can we push projects to GitHub.
+	Let's create a folder <font color="rgb(240, 128, 128)">testproj</font>and have a text file named <font color="rgb(240, 128, 128)">file.txt</font>
+        Launch command prompt 
+    
+<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git init</span>
+Initialized empty Git repository in C:/Users/Biswajit/Desktop/wiki/testproj/.git
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git clone </span>https://github.com/biswajitsundara/githubtest.git
+</span>Cloning into 'githubtest'...
+Username for 'https://github.com': xxxx
+Password for 'https://biswajitsundara@github.com':xxxx
+warning: You appear to have cloned an empty repository.
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
+On branch master
+No commits yet
+Untracked files:
+  (use git add ..." to include in what will be committed)
+        file.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git add *.*</span>
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
+On branch master
+No commits yet
+Changes to be committed:
+  (use "git rm --cached ..." to unstage)
+        new file:   file.txt
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git commit -m "first commit"</span>
+[master (root-commit) a98e199] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git status</span>
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git remote add origin </span>https://github.com/biswajitsundara /githubtest.git
+</span>
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git push -u origin master</span>
+Username for 'https://github.com': xxxx
+Password for 'https://biswajitsundara@github.com': xxxx
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 222 bytes | 222.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/biswajitsundara/githubtest.git
+* [new branch]      master -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+***** Check the file should be available in the GitHub *******</pre>
+
+
+<br><h4><font color="#4682B4">Pull Operations</font></h4>
+Here we will see how can we pull projects from GitHub. Launch command prompt and execute the below commands
+<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git pull </span>https://github.com/biswajitsundara/githubtest.git
+</span>Username for 'https://github.com': biswajitsundara
+Password for 'https://biswajitsundara@github.com':
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/biswajitsundara/githubtest
+ * branch            HEAD       -&gt; FETCH_HEAD</pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+<div id="basicCommands" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Basic Commands</h2>
+    
+   <br>
+    <div class="card">
+    <div class="card-body"><h4><font color="#4682B4">1. Git initialization</font></h4>
+   This command initializes an empty repository. It creates the hidden .git folder
+   <pre>
+   git init</pre> 
+   </div>
+    </div>
+    
+
+   <br>
+    <div class="card">
+    <div class="card-body">
+    <h4><font color="#4682B4">2. Git configuration </font></h4>
+   This command saves the user name & email address so that we don't have to provide it again and again.
+   <pre>
+   git config --global user.name "biswajitsundara"
+   git config --global user.email "biswajitsundara@gmail.com"</pre> 
+   </div>
+    </div>
+
+   
+   <br>
+    <div class="card">
+    <div class="card-body">
+    <h4><font color="#4682B4">3. Git clone </font></h4>
+   This command copies the remote repository to the local drive.
+   <pre>
+   git clone &lt;remote repository url&gt;</pre> 
+   </div>
+    </div>
+
+   <br>
+    <div class="card">
+    <div class="card-body">
+    <h4><font color="#4682B4">4. Git add files/folders</font></h4>
+   This command adds files or folders to git staging.
+   <pre>
+   #To add all type of files
+   git add *.*
+
+   #To add a single file
+   git add &lt;filename with extension&gt;
+
+   #To add multiple files
+   git add &lt;filename with extension&gt &lt;filename with extension&gt 
+
+   #To add a folder (remember empty folders are not added)
+   git add &lt;folder name&gt </pre>
+   </div>
+    </div>
+
+  
+   <br>
+    <div class="card">
+    <div class="card-body">
+    <h4><font color="#4682B4">5. Git remove files</font></h4>
+   This command removes files.
+   <pre>
+  #If the file is added but not comitted yet and you want to delete it from staging.
+  git rm -f --cached &lt;filename with extension&gt;
+
+  #If the folder is added but not comitted yet and you want to delete it from staging.
+  git rm -r --cached &lt;foldername&gt;
+
+  #If the file exists in the repository and we want to delete it
+  git rm &lt;filename with extension&gt;
+
+  #If we want to remove all files
+  git rm *.*</pre>
+   </div>
+    </div>
+  
+  
+<br>
+    <div class="card">
+    <div class="card-body">
+   <h4><font color="#4682B4">6. Git commit changes</font></h4>
+ This will create a checkpoint to move the files to remote repo.
+   <pre>
+  #Commit a single file
+  git commit &lt;filename with extension&gt; -m "Message"
+
+  #Commit all the files
+  git commit -a -m "Message"</pre>
+   </div>
+    </div>
+
+
+<br>
+    <div class="card">
+    <div class="card-body">
+  <h4><font color="#4682B4">7. Git display log</font></h4>
+ This command gives us the history of git actions.
+   <pre>
+  #All git commits
+  git log
+  #All git commits with difference. Keep pressing enter to view page by page.
+  git log -p</pre>
+   </div>
+    </div>
+
+
+<br>
+    <div class="card">
+    <div class="card-body">
+ <h4><font color="#4682B4">8. Git status</font></h4>
+ This command displays files added to the staging and untracked files.
+  <pre>
+  git status</pre>
+   </div>
+    </div>
+
+
+<br>
+    <div class="card">
+    <div class="card-body">
+ <h4><font color="#4682B4">9. Git display difference</font></h4>
+ This command is used to show difference between two branches.
+  <pre>
+  #Get the difference between two branches
+  git diff branch1..branch2
+
+  #Get the difference between master and another branch
+  git diff master..branch1
+
+  #Compare commits between two branches
+  git log branch1..branch2
+
+  #Compare two branches with respect to one file
+  $ git diff branch1...branch2 -- &lt;file&gt;</pre>
+   </div>
+    </div>
+
+
+<br>
+    <div class="card">
+    <div class="card-body">
+ <h4><font color="#4682B4">10. Undo Changes</font></h4>
+ This command will revert the changes done.
+  <pre>
+  1)If we have deleted a file but haven't committed yet, we can undo this.
+  git checkout HEAD &lt;filename with extension&gt;
+
+  2)If we have deleted a file and just comitted the same to github
+  #Then first find the last commit hash and then restore the file
+  git log -n1 --format=format:"%H"
+  &lt;returns commit hash&gt;
+  git checkout &lt;commit hash&gt;~1 -- &lt;deleted file with extension&gt;
+
+  3)If we have deleted a file and comitted but don't remember when comitted. 
+  #Then first find the commit hash and then restore the file
+  git rev-list -n 1 HEAD -- &lt;file name with extension&gt;
+  &lt;returns commit hash&gt;
+  git revert --no-commit &lt;commit hash&gt;..HEAD
+  git commit
+</pre>
+   </div>
+    </div>
+
+
+
+
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basicoperation')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'branching')">Next -></button>  
+
+<br><br> 
+
+  </div>
+
+
+<div id="branching" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Branching</h2>
+    You have a team of hundreds of people and all are working on the same code repository, some are working on user stories, some on hot fixes and some on production issues etc. What if you make few changes and that breaks the whole code base. Branching allows users to create their own branches and then merge it later with the master branch. Which always helps to keep the master branch stable.
+    
+<br><br><h4><font color="#4682B4">Creating a branch</font></h4>
+   <ul><li>Go to the remote repository (GitHub). By default master branch is selected. This button is on the left side of the same row where clone/download button is available.
+    </li><li>Click on the drop down. It will show a text box with place holder text 'create or find a branch'
+    </li><li>Type the branch name that you wish to create.
+    </li><li>As soon as you type the name, on the same drop down menu, you will see the text 'create branch: branch-name'. Click on that.
+    </li><li>Congrats! you have created the branch.
+    </li><li>Lets say our repository name is githubtest and we have created a branch reg-branch.
+    </li></ul>
+<img src="img/github/branch.png">
+<br><br><h4><font color="#4682B4">Working on the branch</font></h4>
+
+Remember the <font color="blue">reg-branch</font> is created in github first.
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git init</span>
+Initialized empty Git repository in C:/Users/Biswajit/Desktop/wiki/testproj/.git
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git clone </span>https://github.com/biswajitsundara/githubtest.git
+Cloning into 'githubtest'...
+Username for 'https://github.com'</span>: biswajitsundara
+Password for 'https:// biswajitsundara@github.com':
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git checkout </span>reg-branch
+<span style='color:red'>'error: pathspec reg-branch' did not match any file(s) known to git.</span> 
+
+Enter into the folder pulled from github then checkout to the branch
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>cd </span>githubtest
+
+C:\Users\Biswajit\Desktop\wiki\testproj\githubtest&gt;<span style='font-weight:bold;color:blue;'>git checkout </span>reg-branch
+Switched to a new branch 'reg-branch'
+Branch 'reg-branch' set up to track remote branch 'reg-branch' from 'origin'.
+
+C:\Users\Biswajit\Desktop\wiki\testproj\githubtest&gt;<span style='font-weight:bold;color:blue;'>git add *.*</span>
+
+C:\Users\Biswajit\Desktop\wiki\testproj\githubtest&gt;<span style='font-weight:bold;color:blue;'>git status</span>
+On branch reg-branch
+Your branch is up to date with 'origin/reg-branch'.
+
+Changes to be committed:
+  (use "git reset HEAD ..." to unstage)
+
+        new file:   file1.txt
+
+C:\Users\Biswajit\Desktop\wiki\testproj\githubtest&gt;<span style='font-weight:bold;color:blue;'>git commit -m "second commit"</span>
+
+[reg-branch 7a373ff] second commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 file1.txt
+
+C:\Users\Biswajit\Desktop\wiki\testproj\githubtest&gt;<span style='font-weight:bold;color:blue;'>git push origin reg-branch </span>
+Username for 'https://github.com': biswajitsundara
+Password for 'https:// biswajitsundara @github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ biswajitsundara/githubtest.git
+</span>   a98e199..7a373ff  reg-branch -&gt; reg-branch</pre>
+  
+
+<br><h4><font color="#4682B4">Pull Branch</font></h4>
+By default all branches will not be cloned from the remote repo. It will copy only the master branch. Then we can pull a specific branch.
+Or If we have already synced our local repo with remote repo then just the pull command will refresh the branch repo.
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<span style='font-weight:bold;color:blue;'>git pull origin </span>reg-branch
+Username for 'https://github.com': bisxxxxx
+Password for 'https://xxxxx@github.com':
+From https://github.com/xxxxx/githubtest
+ * branch            reg-branch -> FETCH_HEAD
+Updating a98e199..ceeed19
+Fast-forward
+ file1.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 file1.txt</pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'basicCommands')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'conflictres')">Next -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="conflictres" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Conflict Resolution</h2>
+    Merge conflict is one of the most challenging and tedious task that most of the teams have to deal with. The only suggestion to avoid merge conflict is frequently moving the updates to GitHub and to work on freshly pulled github project.
+
+<br><br><h4><font color="#4682B4">When Merge Conflict Happens</font></h4>
+<ul><li>Let's say there's a file in our repository named <font color="blue"><i>file.txt</i></font>
+</li><li>The content of the file is
+</li><pre>test file</pre>
+<li>Mark cloned the project to his local and started working on it.
+</li><li>At the same time another user Jack updated the same file and committed to GitHub
+</li><li>Now the file content becomes this in GitHub
+<pre>
+test file
+this line is added by Jack</pre>
+</li><li>Mark changed the file content and added one line in his local
+<pre>
+test file
+this line is added by Mark</pre>
+</li><li>Now he added, comitted the file <font color="blue"><i>file.txt</i></font>
+</li><li>While pushing the updates to GitHub, it gets rejected.
+</li><li>Because there's conflict. Mark is trying to push the file that was updated by Jack.
+</li><li>Once the push operation fails, pull the remote repo to local.
+</li><li>Git will throw merge conflict for the file that has competing changes. The content of the file.txt becomes the below
+<pre>
+test file
+<<<<<<< HEAD
+this line is added by Mark
+=======
+this line is added by Jack
+>>>>>>> 993319df944d0ee742fsdfs74829860e16870f508</pre>
+</li><li>You see both Mark/Jack's updates are shown in the file. Git highlights the area in the file where contradiction happens. 
+</li></ul>   
+
+
+<br><h4><font color="#4682B4">How to resolve merge conflict</font></h4>
+There are different ways how we can resolve merge conflicts. Talk to Jack and agree on which update to keep (yours,Jack's). This is the best practice always.
+Never ever override someone's work until unless you have the confirmation.
+
+<br><br><b>Approach #1: Keep your update and discard other's</b>
+<br>We can do this either command line or by manually updating the file. Using command line works like a charm. If you have huge number of conflicts then
+it's a tedious affair to get into the file and remove one by one. Also there can be multiple files having conflict. So simply using the command --ours is going to remove all the extra symbols from the file and keep only your update and discard their update.
+
+<pre>
+
+git checkout --ours file.txt
+git add file.txt
+git commit -m "using mine"
+git push -u origin master
+</pre>
+
+<br><b>Approach #2: Keep other's update and discard yours</b>
+<br>We can do this either command line or by manually updating the file. Using command line works like a charm. If you have huge number of conflicts then
+it's a tedious affair to get into the file and remove one by one. Also there can be multiple files having conflict. So simply using the command --theirs is going to remove all the extra symbols from the file and keep only their update and discard your update.
+
+<pre>
+
+git checkout --theirs file.txt
+git add file.txt
+git commit -m "using theirs"
+git push -u origin master
+</pre>
+
+<br><b>Approach #3: Keep both the updates</b>
+<br>If we want to keep both the updates. Then open the file in text editor and manually remove the extra symbols/annotations added to the file highlighting the conflict.
+Then issue the commands like adding to stage, then commit and push to master.
+<pre>
+
+git pull https://github.com/biswajitsundara/githubtest.git
+git status    
+git add file.txt
+git commit -m "fs"
+git push -u origin master
+</pre>
+
+
+<br><h4><font color="#4682B4">Complete Flow</font></h4>
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222); line-height: 24px; padding: 15px; font-size: 14px; overflow: auto;'>
+C:\Users\Biswajit\Desktop\testproj><span style='font-weight:bold;color:blue;'>git init</span>
+Initialized empty Git repository in C:/Users/Biswajit/Desktop/testproj/.git/
+
+C:\Users\Biswajit\Desktop\testproj><span style='font-weight:bold;color:blue;'>git clone https://github.com/biswajitsundara/githubtest.git</span>
+Cloning into 'githubtest'...
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 21 (delta 0), reused 9 (delta 0), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+
+
+C:\Users\Biswajit\Desktop\testproj><span style='font-weight:bold;color:blue;'>cd githubtest</span>
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git pull https://github.com/biswajitsundara/githubtest.git</span>
+Username for 'https://github.com': xxxxx
+Password for 'https://biswajitsundara@github.com':
+From https://github.com/biswajitsundara/githubtest
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git status</span>
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+														
+			<span style='font-weight:bold;color:red;'>
+			------- At this time someone updated the file.txt in remote repo
+			------- At this time you updated the file.txt in your local</span>
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git add file.txt</span>
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git commit -m "a"</span>
+[master 4429a1d] a
+ 1 file changed, 1 insertion(+)
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git remote add origin https://github.com/biswajitsundara/githubtest.git</span>
+
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git push -u origin</span>
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+To https://github.com/biswajitsundara/githubtest.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/biswajitsundara/githubtest.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git pull https://github.com/biswajitsundara/githubtest.git</span>
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/biswajitsundara/githubtest
+ * branch            HEAD       -> FETCH_HEAD
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git checkout --ours file.txt</span>
+Updated 1 path from the index
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git add file.txt</span>
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git commit -m "using mine"</span>
+[master 5bc9df1] using mine
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git push -u origin master</span>
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 405 bytes | 405.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/biswajitsundara/githubtest.git
+   d5d8e54..5bc9df1  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\Biswajit\Desktop\testproj\githubtest><span style='font-weight:bold;color:blue;'>git pull https://github.com/biswajitsundara/githubtest.git</span>
+Username for 'https://github.com': xxxxxx
+Password for 'https://biswajitsundara@github.com':
+From https://github.com/biswajitsundara/githubtest
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+</pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'branching')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'ssh')">Next -></button>  
+
+<br><br> 
+
+
+</div>
+
+
+<div id="ssh" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">SSH Key Generation</h2>
+    SSH is a network protocol. If we open GitHub repository and click on the clone/download button we will see two tabs. One having the https url and another with ssh. We all know https is the network protocol to access web resources similarly SSH also known as Secure Shocket Shell is a network protocol that provides admins a secure way to access remote computer.
+    <ul><li>When we work with GitHub Enterprise (in company network) then using https protocol we can't work with remote repository. Either we can use GitDesktop or SSH key approach as Security is the foremost thing in all enterprise repositories.
+    </li><li>Working with GitHub repo, we often need to enter the user name & password. If we use the SSH approach then we don't have to give username/password everytime.
+    </li><li>SSH keys are generated in pairs. When we generate SSH key, it generates two files - private (which is only for your computer) and public (that we will save in GitHub settings). While working when both the keys match, access is granted to the remote repo.
+    </li><li>The public SSH key can be shared to others to work on the GitHub repo.
+    </li><li>Generally I use command prompt to execute Git commands however I noticed the key gen command didn't work with the windows command prompt. So while working with the Git SSH key generation, use GitBash instead of command prompt.       
+    </li></ul>
+
+<h4><font color="#4682B4">Without SSH token</font></h4>
+Let me tell you what's the message you would see if you don't have SSH key and try to use the SSH url from git hub. 
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222);padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'>C:\Users\Biswajit\Desktop\wiki\testproj&gt;<font color="blue">git init</font>
+Initialized empty Git repository in C:/Users/Biswajit/Desktop/wiki/testproj/.git
+
+C:\Users\Biswajit\Desktop\wiki\testproj&gt;<font color="blue">git clone git@github.com:biswajitsundara/githubtest.git</font>
+Cloning into 'githubtest'...
+git@github.com: Permission denied (publickey).
+<font color="red">fatal: Could not read from remote repository.</font>
+Please make sure you have the correct access rights
+and the repository exists.</pre>
+
+<h4><font color="#4682B4">Generate SSH Key</font></h4>
+When prompted for the file name to store the RSA id and to enter the pass phrase, just press enter to continue. Pass phrase is to add additional security.
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222); padding: 15px; font-size: 16px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='color:#2A00FF'>$ ssh-keygen -o -t rsa -C "biswajitsundara@gmail.com"</span>
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Biswajit/.ssh/id_rsa):
+Created directory '/c/Users/Biswajit/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Biswajit/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Biswajit/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:FWEUYRIWENJFSAFHAASLDAIBNMMBCJKADSJ4NBAGABDJK biswajitsundara@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+|      .o... ooo. |
+|        .= . +=. |
+|       .+.$. o++.|
+|       .oo= +* o+|
+|        0*.=o ++o|
+|       . .= . EO.|
+|         . o  =.+|
+|          $. .$ .|
+|           .o..  |
++----[SHA256]-----+
+</pre>
+
+<h4><font color="#4682B4">Add SSH Key to GitHub</font></h4>
+<ul><li>There are two SSH keys. One is private & another is public. So the public key we need to add in the GitHub. 
+</li><li>Go to the SSH directory. <font color="blue">C:\Users\Biswajit\.ssh </font>and open the file with <font color="blue">.pub </font>extension and copy the content to clipboard.
+</li><li>Then open your github account. Go to Settings -> Select SSH and GPG Keys menu item -> Under SSH keys select the <font color="blue">New SSH key </font>button then give a key name and then paste the key we have copied from .pub file.
+</li></ul>
+
+
+<h4><font color="#4682B4">Use SSH Authentication</font></h4>
+Now that we have SSH key, we can use the SSH url and work on it.
+
+<pre style='text-align: left; background-color: rgb(224, 236, 222); padding: 15px; font-size: 14px; font-family:'Courier New', Courier, monospace; overflow: auto;'><span style='color:blue'>$ git clone git@github.com:biswajitsundara/githubtest.git</span>
+Cloning into 'githubtest'...
+The authenticity of host 'github.com (XX.XX.XXX.XXX)' can't be established.
+RSA key fingerprint is SHA256:nThbg4232JHewhk453BCNZCKJWQOPiKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? <font color="blue">yes</font>
+Warning: Permanently added 'github.com,XX.XX.XXX.XXX' (RSA) to the list of known hosts.
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 0), reused 6 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), done.</pre>
+
+<br><br>
+
+<button  class="btn btn-primary" onclick="openTopic(event, 'conflictres')"><- Prev</button>  
+
+<button  class="btn btn-success" onclick="openTopic(event, 'ignore')">Next -></button>  
+
+<br><br> 
+</div>
+
+
+<div id="ignore" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">Git Ignore</h2>
+
+<p>Git Ignore is a text file in the git repository that tells the git process to exclude or ignore files/directories in the push operation</p>
+
+<h4><font color="#4682B4">Why do we need .gitignore file</font></h4>
+<p>Let's take this scenario, When we import a maven project in eclipse, it creates a folder named .settings, when we run automated tests, it generates log files, html reports.
+So over the time these files, directories become really huge and when we commit everything to github, these big file, directories are also moved to github remote
+repository which are of no use. 
+</p>
+  
+<h4><font color="#4682B4">How to use .gitignore file</font></h4>
+<ul><li>In the github root node, create a text file .gitignore
+</li><li>Add the file name/patterns to exclude. E.g .settings
+</li><li>Then execute git status -- you won't see .settings folder under untracked files that means git is ignoring that.
+</li><li>push the codes to remote repository, you will notice .settings folder is not moved.
+</li></ul>
+
+  
+<h4><font color="#4682B4">Example of .gitignore file</font></h4>
+<pre>
+.settings
+.classpath
+.project
+/target
+/test-output
+</pre>
+
+<h4><font color="#4682B4">Summary</font></h4>
+.gitignore is really simple to use and yet so useful which helps us to control which file types we would like not to commit to remote repository.
+
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'ssh')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'gitAction')">Next -></button>  
+<br><br>
+
+</div>
+
+
+<div id="gitAction" class="topics" style="line-height: 200%;">
+    <h1 class="mt-4">GitHub Action</h2>
+
+<p>GitHub Action is MicroSoft's answer to CI/CD. We all know how the Jenkins job triggers based on GitHub commit and runs the automated suite. Since most of the code bases are hosted in GitHub, 
+it becomes really easy to integrate with GitHub Actions for a smooth delivery pipeline.</p>
+
+<h4><font color="#4682B4">What is GitHub Action</font></h4>
+<ul><li>GitHub Action is to create CI-CD workflows.
+</li><li>If your source code is hosted in GitHub, then you can make use of it.
+</li><li>There are approx 2000 minutes free per month and then it will be chargeable.
+</li><li>The server used for GitHub Actions is GitHub's own VM/cloud server.
+</li><li>It has all the capabilities like any other CI/CD tool however it's in the early stage.
+</li></ul>
+
+
+<h4><font color="#4682B4">GitHub Action Scenarios</font></h4>
+Below are some scenarios where we can use github actions.
+<ul><li>Let's say as soon as you push the code to GitHub, it trigger's the job, validates and shows whether the build is a success or failure.
+</li><li>As soon as you create a pull request, it trigger's the job and saves the test execution status, so the reviewer can check the committed code works fine and it helps to accept the merge request.
+</li><li>Let's say the requirement is don't do anything if code is pushed/pulled to other branches and trigger the job only if the code is pushed to master branch. That's also possible.
+</li></ul>
+
+<h4><font color="#4682B4">How to configure GitHub Action?</font></h4>
+<ul><li>Open your github remote repository
+</li><li>Click on <font color="blue">Create new file</font> button
+</li><li>Create file <font color="blue">.github/workflows/&lt;filename.yml&gt;</font>
+</li><li>This will create a folder .github -> sub folder workflows -> and a file with extension .yml
+</li><li>Put the code inside this yml file and commit changes.
+</li></ul>
+  
+
+<h4><font color="#4682B4">Configuring the workflow</font></h4>
+There are several commands that we can use to customize the workflow file. Below is an example of a simple workflow file that runs the command 'maven test' on windows machine
+as soon as code is pushed to 'master' branch.
+<pre style="line-height:150%">
+
+name: Demo CI
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: windows-latest
+
+  steps:
+   - uses: actions/checkout@v2
+   - name: Test the application
+     run: |
+        mvn test
+</pre>
+
+<h4><font color="#4682B4">Test the workflow</font></h4>
+<ul><li>Now pull the repository to local, make some changes and commit the changes
+</li><li>We have configured the workflow as if we 'push' to 'master' branch then the workflow should execute
+</li><li>Now go to GitHub -> Actions tab -> You will see every step is getting executed. 
+</li><li>It will execute the command 'mvn test' and display the build status
+</li><li>The build history will be saved under this actions tab also.
+</li></ul>
+
+You can check my project here: <a href="https://github.com/biswajitsundara/GoogleSearchTest">https://github.com/biswajitsundara/GoogleSearchTest</a>
+<br><br>
+<button  class="btn btn-primary" onclick="openTopic(event, 'ignore')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
+<br><br>
+
+ 
+</div>
+
+
+
+</div>
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  
+<script>
+function openTopic(evt, topicName) {
+  var i, x;
+  x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+ 
+  document.getElementById(topicName).style.display = "block";
+
+    window.scrollTo(0, 0);
+  
+}
+
+function LoadFunc()
+{
+ x = document.getElementsByClassName("topics");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+
+document.getElementById('home').style.display = "block";
+}
+</script>
+
+  
+</body>
+
+</html>

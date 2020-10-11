@@ -1,191 +1,141 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Biswajit Sundara Blog Home</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  </head>
 
-  gtag('config', 'UA-158659468-1');
-</script>
+  <body>
 
+    <div class="container">
+      <header class="blog-header py-3">
+      
+      </header>
 
+      <div class="nav-scroller py-1 mb-2">
+         
 
-<style>
-.checked {
-  color: orange;
-}
-</style>
-</head>
-<body>
+      </div>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Biswajit Sundara Blog</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="../../index.html">About Me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Selenium</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Java</a>
-      </li>    
-	<li class="nav-item">
-        <a class="nav-link" href="#">DevOps</a>
-      </li>    
-      <li class="nav-item">
-        <a class="nav-link" href="#">Java Script</a>
-      </li>    
-    </ul>
-    
-  </div> 
+      <div class="jumbotron p-3 p-md-5 text-black rounded bg-white">
+        <div class="col-md-8 px-0">
+          <h1 class="display-4 font-italic">Biswajit Sundara's blog</h1>
+       </div>
+      
+</div>
 
-</nav>
-<br>
+    <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 font-italic">Selenium Wait</h1>
+          <p class="lead my-3">The wait mechanism in selenium is the most critical thing to consider for developping flak resistant reliable automation test scripts</p>
+          <p class="lead mb-0"><a href="selenium\selenium-wait.html" class="text-white font-weight-bold">Continue reading...</a></p>
+        </div>
+      </div>
 
-<div class="container" style="overflow-x:hidden;">
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+          <h3 class="pb-3 mb-4 font-italic border-bottom">
+            From the house..
+          </h3>
 
-   <div class="row">
-    <div class="col-sm-4" style="border: 1px solid white;padding:20px;">
-    <h4> Hello, I am Biswajit Sundara</h4>
-    <br><p>If this is your first time here, this site is little different since I write about topics that I am interested in and try to keep things straight to the point.</p>
-    <p>This is more than a blog too, I keep notes on everything I learn from books, forums etc and publish my interpretation here. The content of the blog is subjected to change. So keep visiting often to get latest updates. 
-    <p>Last but not the least, if you enjoy my content, you should definitely join the newsletter. 
+	<div class="blog-post">
+            <h2 class="blog-post-title">Selenium Grid</h2>
+            <p class="blog-post-meta">May 17th, 2020</p>
 
-    <form class="navbar-form navbar-left" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSek4yGNUVN4oqUo7lp9wubG4xlz4p7SISodAJjhS_9IQI-H6Q/formResponse" target="_self" method="POST">
+            <p>Selenium Grid is a feature provided by Selenium for parallel/distributed processing. When we have huge volume of test cases then configuring the 
+            grid server & node, we can distribute the test cases and execute them parallely.</p>
+            <a href="selenium/selenium-grid.html" target="_blank" class="card-link">Read Post</a>
+            <hr>           
+           </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">Advanced User Interactions</h2>
+            <p class="blog-post-meta">April 12th, 2020</p>
+
+            <p>Modern applications offers advanced features such as right click, double click, handling fly out menus, holding different keys etc. Selenium can automate
+             these advanced user interactions.</p>
+            <a href="selenium/advanced-user-actions.html" target="_blank" class="card-link">Read Post</a>
+            <hr>           
+           </div><!-- /.blog-post -->
+        
+          <div class="blog-post">
+            <h2 class="blog-post-title">Page Object Model</h2>
+            <p class="blog-post-meta">March 31st, 2020</p>
+            <p>Page Object Model is the most popular and widely used selenium design pattern. Here we create a class file per each web page
+           and that helps in reducing code duplication and improves test case maintenance.</p>
+             <a href="selenium/page-object-model.html" target="_blank" class="card-link">Read Post</a> 
+          <hr>         
+          </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">GitHub Basics</h2>
+            <p class="blog-post-meta">Jan 2nd, 2020</p>
+
+            <p>GitHub is the hosting platform that helps to collaborate & version control. This is also called Source Code Management tool. It offers lot of features such as pushing the code to remote repo, pulling the code,
+            creating branches, pull requests, merging the branches etc.</p>
+            <a href="devops/github.html" target="_blank" class="card-link">Read Post</a>          
+            </div><!-- /.blog-post -->
+
+          
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">About</h4>
+            <p class="mb-0">If this is your first time here, this site is little different since I write about topics that I am interested in and try to keep things straight to the point.
+
+This is more than a blog too, I keep notes on everything I learn from books, forums etc and publish my interpretation here. The content of the blog is subjected to change. So keep visiting often to get latest updates.
+
+Last but not the least, if you enjoy my content, you should definitely join the newsletter.</p>
+</div>
+
+<div class="p-3">
+    <br><form class="navbar-form navbar-right" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSek4yGNUVN4oqUo7lp9wubG4xlz4p7SISodAJjhS_9IQI-H6Q/formResponse" target="_self" method="POST">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Subscribe to newsletter" name="emailAddress">
       </div>
       <button type="submit" class="btn btn-default">Subscribe</button>
     </form>
 
-    </div>
-    <br>
 
-    <div class="col-sm-1"></div>
+          </div>
 
-    <div class="col-sm-6">
-     <div class="row">
-    <div class="card-columns">
+          <div class="p-3">
+            <h4 class="font-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="../../index.html">My Profile</a></li>
+              <li><a href="https://biswajitsundara.home.blog/" target="_blank">Wordpress</a></li>
+              <li><a href="https://www.linkedin.com/in/biswajitsundara" target="_blank">LinkedIn</a></li>
+            </ol>
+          </div>
 
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h4 class="card-title">Advanced User Interactions</h4>
-    <h6 class="card-subtitle mb-2 text-muted">April 12th, 2020</h6>
-    <p class="card-text">Selenium AUI API helps in automating advanced user actions</p>
-    <a href="selenium/advanced-user-actions.html" target="_blank" class="card-link">Read Post</a>
-  </div>
-</div>
+          <div class="p-3" style="visibility:hidden">
+            <h4 class="font-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#">March 2014</a></li>
+              <li><a href="#">February 2014</a></li>
+            </ol>
+          </div>
 
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h4 class="card-title">Page Object Model</h4>
-    <h6 class="card-subtitle mb-2 text-muted">March 31st, 2020</h6>
-    <p class="card-text">Page Object Model is the most popular and widely used selenium design pattern</p>
-    <a href="selenium/page-object-model.html" target="_blank" class="card-link">Read Post</a>
-  </div>
-</div>
+          
+        </aside><!-- /.blog-sidebar -->
 
-</div>
-</div>
- 
-<div class="row">
-    <div class="card-columns">
+      </div><!-- /.row -->
 
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h4 class="card-title">GitHub Basics</h4>
-    <h6 class="card-subtitle mb-2 text-muted">Jan 2nd, 2020</h6>
-    <p class="card-text">Git is the most popular version Control tool that helps to manage changes effectively.</p>
-    <a href="devops/github.html" target="_blank" class="card-link">Read Post</a>
-  </div>
-</div>
-  
-  <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h4 class="card-title">Selenium Grid</h4>
-    <h6 class="card-subtitle mb-2 text-muted">May 17th, 2020</h6>
-    <p class="card-text">If you are looking for basic java codes like prime number,reverse string etc then check this out</p>
-    <a href="selenium/selenium-grid.html" target="_blank" class="card-link">Read Post</a>
-  </div>
-</div>
+    </main><!-- /.container -->
 
-  </div>    
-</div>
-
-</div>
-</div>
-
+   <br><br><center>&copy;Jan 2020, Biswajit Sundara</center>
 <br><br>
-<div class="container">
-  <h2>My Blog Posts</h2>
-<br><br>
-<table class="table">
-      <tr>
-        <td><a href="https://biswajitsundara.home.blog/2019/09/15/chrome-developer-tools-tricks/" target="_blank">Chrome Developer Tools Tricks</a></td>
-        <td>
-        <span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star"></span>
-	<span class="fa fa-star"></span>
-        </td>
-        <td>October 2, 2019</td>
-      </tr>
-      <tr>
-        <td><a href="https://biswajitsundara.home.blog/2019/09/07/excel-tricks-testers-should-know/" target="_blank">Excel Tricks Testers Should Know</a></td>
-        <td>
-         <span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star"></span>
-        </td>
-        <td>September 15, 2019</td>
-      </tr>
-      <tr>
-        <td><a href="https://biswajitsundara.home.blog/2019/09/01/java-coding-best-practices/" target="_blank">Java Coding Best Practices</a></td>
-        <td><span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star"></span>
-        </td>
-        <td>September 7, 2019</td>
-      </tr>
-      <tr>
-        <td><a href="https://github.com/biswajitsundara/practice-codes-java" target="_blank">Java Practice Codes</a></td>
-        <td><span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star"></span>
-        </td>
-        <td>Feb 15th, 2020</td>
-      </tr>
-    </tbody>
-  </table>
    
-<br><br><center>&copy;Jan 2020, Biswajit Sundara</center>
-<br><br>
-</body>
+  </body>
 </html>
-
-
