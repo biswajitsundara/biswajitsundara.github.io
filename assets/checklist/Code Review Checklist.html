@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Code Review Checklist</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+body {font-family: 'Lato', sans-serif;
+line-height: 200%;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+
+
+<body>
+
+
+<ul class="nav">
+  <li class="nav"><a href="#home" class="nav">Home</a></li>
+  <li class="nav"><a href="#news" class=".nav">Best Practices</a></li>
+  <li class="nav"><a href="#contact" class="nav">Code Refactor</a></li>
+</ul>
+  
+<div class="container">
+
+
+
+  <br><br><h2>Code Review Checklist</h2>
+  <p>Biswajit Sundara | 25-Dec-2020</p>
+  
+  <br><h4>Code Formatting</h4>
+  <ol><li>Code should be easy to understand
+  </li><li>Refactor lengthy codes to few lines
+  </li><li>Check the code is properly formatted. (format in IDE)
+  </li><li>Code lines shouldn't be too big. (avoid scrolling)
+  </li><li>Ensure the alignment is correct
+  </li><li>No more white spaces, unwanted spaces
+  </li><li>Easy to figure out from where the code starts and ends 
+  </li><li>No empty lines
+  </li><li>No commented out lines 
+  </li><li>Remove warnings
+  </li><li>Remove unused imports, method arguments.
+  </li><li>Every block should have opening and closing braces even a single line if block.
+  </ol>
+
+
+  <br><br><h4>Naming Convention</h4>
+  <ol><li>Ensure naming convention is correctly followed (PascalCase, camelCase)
+  </li><li>Method & variable names should be in camelCase (e.g name, employeeName, getData)
+  </li><li>Class name should be in PascalCase (e.g Student,EmployeeDetails) 
+  </li><li>Constant names should in capital letters (e.g ORGNAME)
+  </li><li>Give meaningful names to everything in the code (avoid generic names like array, i, j etc)
+  </li><li>Avoid names like fake, dummy, random etc.
+  </li><li>Distinguishable names, location for one location but if it's an array then locations
+  </li><li>File/directory names should contain hiphen(-) instead of underscore (_) 
+  </ol>
+
+
+  
+  <br><br><h4>Comments</h4>
+  <ol><li>Follow 'no comments' rule. Develop the code that should be understandable without comments
+  </li><li>Add comments only when its absolutely necessary. (usually for library or generic methods)
+  </li><li>Do not write comments about the code but the operation you are doing
+  </li><li>Good Comment: Add two numbers
+  </li><li>Bad Comment: It takes two parameters and using the plus operator does the addition 
+  </li><li>Bad Comment:/*set the value of the age integer to 32*/int age = 32;
+  </li><li>Specify about any workaround and temporary fixes. 
+  </li><li>Highlight warnings /*Don't change the return type*/
+  </ol>
+
+ <br><br><h4>Framework Rules</h4>
+ <ol><li>Adhere to the framework rules and design
+ </li><li>If methodname() { is used in your framework/project then follow it instead of putting the { next line.
+ </li><li>Use framework reusable method, if the framework has click() method use it instead of driver.click() method.
+ </li><li>Follow the framework folder structure, don't put things here and there. put files, codes in the designated folders
+ </li><li>If you need to use custom code or enhance the framework, discuss and do it
+ </li><li>In some project folks prefix I before interface e.g IDataProvider. Follow the same approach to remain consistent. 
+ </li><li>The framework should have logging mechanism that records the flow if enabled and helps in debugging.
+ </li><li>The framework features should be changeable, we should on and off the features as per our need. 
+</ol>
+ 
+ <br><br><h4>Managing Data/Files</h4>
+ <ol><li>Never hard code data in the code
+ </li><li>Always mantian external files/separate class files
+ </li><li>For example mantain test data in excel, json files
+ </li><li>Application or framework properties in .properties files
+ </li><li>Mantain the configurable properties in XML or properties file
+ </li><li>Create class file for project constants etc.
+ </li><li>Group similar values under an enumeration (enum).
+ </li><li>Avoid opening and closing files too many times.
+ </li><li>Any file opened should be closed.
+ </li><li>Put the files in designated folder
+ </li><li>Use a data type that best suits the needs.
+ </li><li>Such as StringBuilder, generic collection classes for good performance.
+ </ol>
+
+<br><br><h4>Coding Best Practices</h4>
+ <ol><li>Methods/class files shouldn't be very huge. 
+ </li><li>Always break into logical groups that is easy to mantain/debug
+ </li><li>Codes should be generic/reusable/extendable
+ </li><li>Avoid multiple if/else blocks.
+ </li><li>Avoid multiple, nested loops
+ </li><li>Avoid recursive functions
+ </li><li>Remove variables those are declared but not used.
+ </li><li>Never do synchronization on Boolean (could lead to deadlock)
+ </li><li>Remove dead code. Code is written but never called
+ </li><li>Remove unreachable code. having code after the return statement
+ </li><li>Break the loops once operation is done.
+ </li><li>Never use Thread.sleep. Use Explicit wait.
+ </li><li>static variables shouldn't be accessed/updated through objects
+ </li><li>Handle exceptions and cleanup (dispose) resources.
+ </ol>
+
+<br><br><h4>Code Design</h4>
+<ol><li>Direct use of implementations instead of interfaces
+</li><li>Use DRY (Do not Repeat Yourself) principle
+</li><li>Refactor duplicate/repeated codes
+</li><li>Follow Single Responsibility Design
+</li><li>Means one class, method, code block should do only one thing.
+</ol>
+
+
+<br><br><h4>Web Development Coding</h4>
+<ol><li>Use em instead of px
+</li><li>Use consistent styles for all similar elements
+</li><li>Use Responsive Web Design by implementing the code for all type of screens 
+</li><li>Never hard code the height and widths, calculate it based on min, max-width
+</li><li>The application/style should work in all the browsers
+</ol>
+
+<br><br><br>
+</div>
+
+</body>
+</html>

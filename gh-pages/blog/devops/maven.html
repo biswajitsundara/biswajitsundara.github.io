@@ -87,7 +87,7 @@ table {
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
        
-         <a href="bloghome.html"> Biswajit Sundara Blog</a>
+         <a href="../bloghome.html"> Biswajit Sundara Blog</a>
 
         
 
@@ -125,8 +125,8 @@ table {
       <div class="card-body">
         <h5 class="card-title">Author Bio</h5>
         <p class="card-text">This book is written by Biswajit Sundara.
-	Biswajit is a software professional with 10+ years of experience. He has worked on various technologies and also an avid blogger on technology.</p>
-        <p class="card-text"><small class="text-muted">Last Edited: May 24th, 2020</small></p>
+	Biswajit is a software professional with 13+ years of experience. He has worked on various technologies and also an avid blogger on technology.</p>
+        <p class="card-text"><small class="text-muted">Last Edited: November 14th, 2022</small></p>
       </div>
     </div>
   </div>
@@ -143,9 +143,8 @@ table {
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">GitHub Basics</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'architecture')">Architecture</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicoperation')">Basic Operations</a></li>
+    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'basics')">Maven Basics</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'install')">Maven Installation</a></li>
   </ul>
 </div>
 
@@ -154,9 +153,8 @@ table {
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'basicCommands')">Basic Commands</a></li>
-    <li class="list-group-item"> <a href="#"  onclick="openTopic(event, 'branching')">Branching</a></li>
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'conflictres')">Resolving Conflicts</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'pom')">POM.xml</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'addCompiler')">Add Compiler</a></li>
   </ul>
 </div>
 
@@ -165,9 +163,8 @@ table {
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a href="#"  onclick="openTopic(event, 'ssh')">SSH Key Generation</a></li>
-    <li class="list-group-item"><a href="#" onclick="openTopic(event, 'ignore')">Git Ignore</a></li>
-    <li class="list-group-item"><a href=#" onclick="openTopic(event, 'gitAction')">Git Actions</a></li>
+    <li class="list-group-item"> <a href="#"  onclick="openTopic(event,'buildCycle')">Build Life Cycle</a></li>
+    <li class="list-group-item"><a href="#"  onclick="openTopic(event,'faq')">Frequently Asked Questions</a></li>
   </ul>
 </div>
 
@@ -185,7 +182,7 @@ table {
                 <input type="text" id="uname" name="entry.689225320" placeholder="Your name.." class="form-control" >
                 <br><input type="text" id="email" name="emailAddress" placeholder="Your email.." class="form-control">
                 <br><textarea id="comment" name="entry.1648468188" class="form-control" rows="3"></textarea>
-                <br><input type="hidden" name="entry.2069828936" value="selenium-grid" class="form-control">
+                <br><input type="hidden" name="entry.2069828936" value="maven" class="form-control">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -251,7 +248,7 @@ table {
 
 <br><br>
 <button  class="btn btn-primary" onclick="openTopic(event, 'home')"><- Home</button>  
-<button  class="btn btn-success" onclick="openTopic(event, 'architecture')">Next -></button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'install')">Next -></button>  
 <br><br> 
 
 </div>
@@ -296,7 +293,7 @@ mvn -B archetype:generate
 
 
 <br><button  class="btn btn-primary" onclick="openTopic(event, 'basics')"><- Prev</button>  
-<button  class="btn btn-success" onclick="openTopic(event, 'basicoperation')">Next -></button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'pom')">Next -></button>  
 <br><br> 
 
 </div>
@@ -348,9 +345,9 @@ then the group id will become com.bisApps.framework</td>
 
 <br><br>
 
-<button  class="btn btn-primary" onclick="openTopic(event, 'architecture')"><- Prev</button>  
+<button  class="btn btn-primary" onclick="openTopic(event, 'install')"><- Prev</button>  
 
-<button  class="btn btn-success" onclick="openTopic(event, 'basicCommands')">Next -></button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'addCompiler')">Next -></button>  
 
 <br><br> 
 
@@ -389,8 +386,8 @@ If we are running maven in Eclipse, then we need to add JDK to eclipse so that i
 </li><li>Finish -> Apply & Close.
 
 <br><br>
-<button  class="btn btn-primary" onclick="openTopic(event, 'basicCommands')"><- Prev</button>  
-<button  class="btn btn-success" onclick="openTopic(event, 'conflictres')">Next -></button>  
+<button  class="btn btn-primary" onclick="openTopic(event, 'pom')"><- Prev</button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'buildCycle')">Next -></button>  
 <br><br>
  
 </div>
@@ -593,9 +590,9 @@ We will have to configure in pom.xml file using fail safe plugin
 
 <br><br>
 
-<button  class="btn btn-primary" onclick="openTopic(event, 'basicoperation')"><- Prev</button>  
+<button  class="btn btn-primary" onclick="openTopic(event, 'addCompiler')"><- Prev</button>  
 
-<button  class="btn btn-success" onclick="openTopic(event, 'branching')">Next -></button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'faq')">Next -></button>  
 
 <br><br> 
 
@@ -617,11 +614,17 @@ After this execute the below command, it will copy all the jar files into a sepa
 mvn dependency:copy-dependencies -DoutputDirectory=${project.build.directory}/lib
 </pre>
 
+<br><h4><font color="#4682B4">What is the simple maven template</font></h4>
+In eclipse we can select this basic maven template by searching in the filter for this artifact
+<pre class="codeblock2">
+maven-archetype-quickstart
+</pre>
+
 <br><br>
 
-<button  class="btn btn-primary" onclick="openTopic(event, 'branching')"><- Prev</button>  
+<button  class="btn btn-primary" onclick="openTopic(event, 'buildCycle')"><- Prev</button>  
 
-<button  class="btn btn-success" onclick="openTopic(event, 'ssh')">Next -></button>  
+<button  class="btn btn-success" onclick="openTopic(event, 'home')">Home -></button>  
 
 <br><br> 
 
