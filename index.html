@@ -1,427 +1,602 @@
+<!doctype html>
 <html lang="en">
   <head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <title>Biswajit Sundara Home</title>
-
-    
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- <script type="text/javascript" src="scripts/homepagescript.js"></script>
-
-
-
-
- <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-158659468-1');
-</script>
-
-
-    <style>
-       
-        body 
-        {
-            padding-top: 100px;
-            font-family: "Roboto", sans-serif;
-        }
-
-
-       h1,h2,h3,h4,h5,h6 
-       {
-         font-family: "Roboto", sans-serif;
-       }
-
-        /* Hide for mobile, show later */
-        #profileimg {
-            display: none;
-        }
-
-        @media (min-width: 768px) 
-        {
-            #profileimg
-             {
-                display: block;
-                padding: 20px;
-                overflow-x: hidden;
-                overflow-y: hidden;
-                width:35%;
-                height:100%;
-                position:fixed;
-            }
-        }
-
-
-        .icon-profile {
-  display: none;
-}
-@media only screen and (min-width: 320px) and (max-width: 568px) and 
-   (orientation: portrait) { .icon-profile { display: inline; } }
-
-
-
-    
-  
-        .skilldiv1 { 
-            margin-top: 10px; 
-            width: 28%; 
-            display: inline-block; 
-        } 
-  
-        .skilldiv2 { 
-           margin-top: 10px; 
-            width: 28%; 
-            display: inline-block; 
-        } 
-  
-        .skilldiv3 {
-            margin-top: 10px; 
-            width: 28%; 
-            display: inline-block; 
-           
-        } 
-  
-        @media screen and (max-width: 500px) { 
-  
-            .skilldiv1, 
-            .skilldiv2, 
-            .skilldiv3 { 
-                width: 70%; 
-            } 
-        } 
-  
-
-    </style>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Biswajit Sundara — AI Engineer building production-grade AI agents, RAG systems and enterprise applications."
+    />
+    <title>Biswajit Sundara | AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-158659468-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-158659468-1");
+    </script>
   </head>
-
-  
-
- <body>
-
-    
-
-    <div class="container-fluid">
-      <div class="row">
-          
-<div class="col-sm-4">
-        
-   <img src="assets/images/me.png" id="profileimg" >
-
-</div>        
-        
-     <div class="col-sm-8" style="padding-left: 50px;">     
-              <h1 class="h1" style="font-size: 450%;"><b><center>Biswajit Sundara</b></center></h1>
-              <center>SDET &nbsp;&nbsp;|&nbsp;&nbsp;Web Automation &nbsp;&nbsp;|&nbsp;&nbsp; 11 years</center>
-              <br><br><center><button type="button" class="btn btn-primary" onclick="openBlog()">
-                 <i class="fa fa-external-link"></i>&nbsp;&nbsp;Visit Blog
-              </button></center>
-
-
-
-<br><br><br>
-<center><img class="icon-profile rounded-circle" src="assets/images/me.png" width="200" height="200" style="background-color: grey;"></center>
-<br><br><br><br>
-               <h3>About Me</h3>
-            <p class="text-muted font-weight-normal" style="line-height:200%">SDET with over a decade of experience working in companies to ensure the highest quality outcomes possible. 
-    Have hands on experience on a plethora of automation testing tools. Bringing forth a history of helping teams to achieve success and improve efficiency through attention to details,
-    bringing innovation to the current process/tools & through coaching & mentoring.</p>
-
-
-<br><h3>My Skills</h3>
-<button type="button" class="btn btn-primary" style="height:50px; margin-top: 10px; ">Selenium <span class="badge badge-light">90%</span></button>
-<button type="button" class="btn btn-success" style="height:50px; margin-top: 10px; ">Cucumber <span class="badge badge-light"> 80%</span></button>
-<button type="button" class="btn btn-warning" style="height:50px; margin-top: 10px; ">Java &nbsp;&nbsp;<span class="badge badge-light"> 80%</span></button>
-<button type="button" class="btn btn-danger" style="height:50px; margin-top: 10px; ">Cypress <span class="badge badge-light"> 60%</span></button>
-
-<button type="button" class="btn btn-primary" style="height:50px;margin-top: 10px;">Karate <span class="badge badge-light"> 60%</span></button>
-
-<button type="button" class="btn btn-success" style="height:50px;margin-top: 10px;">Angular <span class="badge badge-light"> 20%</span></button>
-
-<br><br>
-
-<div class="skilldiv1"> <p style="font-family: Consolas, monospace; font-size:13px;" class="text-muted font-weight-normal">| Java Script | Type Script
-<br>| REST API | Git | Maven  
-<br>| Jenkins | JIRA | Rally  </font></p>
-    </div> 
-    <div class="skilldiv2"> <p style="font-family: Consolas, monospace; font-size:13px;" class="text-muted font-weight-normal">| HTML | CSS | Boot Strap
-<br>| TestNG | JUnit | Apache POI
-<br>|Extent Report |Allure Report</p>
-    </div> 
-    <div class="skilldiv3"> 
-        <p style="font-family: Consolas, monospace; font-size:13px;" class="text-muted font-weight-normal">| OOPS | Singleton | Fluent
-<br>| Hybrid Framework
-<br>| Data Driven Framework</p>
-    </div> 
-
-<br>
-<br><h3>My Education</h3>
-<div class="row">
-<div class="col-sm-2">
-<br><center><i class="fa fa-graduation-cap" style="font-size:72px;color:grey"></i></center>
-</div>
-<div class="col-sm-10">
-    <br><h5 class="text-muted font-weight-normal">B.Tech in Computer Science</h5>
-    <p class="text-muted font-weight-normal">Honours with Distinction
-    <br>SRM University, 2009</p>
-</div>
-</div>
-  
-<br><br><h3>My Colleagues Say..</h3>
-<br>
-<p class="text-muted font-weight-normal">I had great opportunity to work with some wonderful people & great minds in my professional journey.</p>
-<br>
-<div class="row">
-          
-<div class="col-sm-2">
-<img src="https://www.bootdey.com/img/Content/user_2.jpg" alt="Avatar" class="rounded-circle" width="120" height="120">
-</div>
-
-<div class="col-sm-2">
-    <br><p class="text-muted font-weight-bold">Komal Sharma</b><br><font size="-2">Citibank</font></p>
-</div>
-
-<div class="col-sm-8">
-    <p class="text-muted font-weight-normal">Hi Biswajit, Wonderful work sir. Kudos to you! It's really nice working with you. An absolute professional always exploring new things, ready to help and guide always. Thanks for showing the right way always and I wish you all the best for success in your future endeavors. Regards, Komal
-    </p>
-</div>
-   
-</div>
-
-<br>
-
-<div class="row">
-          
-<div class="col-sm-2">
-<img src="https://www.bootdey.com/img/Content/user_3.jpg" alt="Avatar" class="rounded-circle" width="120" height="120">
-</div>
-
-<div class="col-sm-2">
-    <br><p class="text-muted font-weight-bold">Pravin Kumar S</b><br><font size="-2">TCS</font></p>
-</div>
-
-<div class="col-sm-8">
-    <p class="text-muted font-weight-normal">Hey Bis, We both worked together almost 7 years in same project, I am taking this opportunity to say thank you for all the help you provided to make me grow in my professional life. It was worth spending time with you and you are surely a rocking cool guy. I think I grown up in my career by seeing your hard work and dedication towards the work you shown and that's make me today where I am. One day or the other I hope our path will cross again so stay tuned....</p>
-</div>
-   
-</div>
-
-
-<div class="row">          
-<div class="col-sm-2">
-<img src="https://www.bootdey.com/img/Content/user_1.jpg" alt="Avatar" class="rounded-circle" width="120" height="120">
-</div>
-
-<div class="col-sm-2">
-    <br><p class="text-muted font-weight-bold">Sivakumar</b><br><font size="-2">Cognizant</font></p>
-</div>
-
-<div class="col-sm-8">
-    <br><p class="text-muted font-weight-normal">A cool and composed person. You are the who always striving to learn new things and following your foot prints on this character. And we are fan of your humour too:)</p>
-</div>   
-</div>
-
-<br><br>
-<div class="row">          
-<div class="col-sm-2">
-<img src="https://www.bootdey.com/img/Content/user_2.jpg" alt="Avatar" class="rounded-circle" width="120" height="120">
-</div>
-
-<div class="col-sm-2">
-    <br><p class="text-muted font-weight-bold">Komala CS</b><br><font size="-2">IBM</font></p>
-</div>
-
-<div class="col-sm-8">
-    <br><p class="text-muted font-weight-normal">I have  learned so much from you. You inspire me to do better work. Thank you so much for supporting me to learn automation effectively.</p>
-</div>   
-</div>
-   
-<br><br>
-
-<div class="row">          
-<div class="col-sm-2">
-<img src="https://www.bootdey.com/img/Content/user_3.jpg" alt="Avatar" class="rounded-circle" width="120" height="120">
-</div>
-
-<div class="col-sm-2">
-    <br><p class="text-muted font-weight-bold">Visakh JB</b><br><font size="-2">UST Global</font></p>
-</div>
-
-<div class="col-sm-8">
-    <br><p class="text-muted font-weight-normal">My experience with Biswajit was great.He was my automation lead for 6 months when I worked in cognizant.His knowledge on automation and different frameworks are great</p>
-</div>   
-
-</div>
-
-<br><br>
-<div class="row">          
-<div class="col-sm-2">
-<img src="https://www.bootdey.com/img/Content/user_1.jpg" alt="Avatar" class="rounded-circle" width="120" height="120">
-</div>
-
-<div class="col-sm-2">
-    <br><p class="text-muted font-weight-bold">Narendra Mallela</b><br><font size="-2">Publicis Sapient</font></p>
-</div>
-
-<div class="col-sm-8">
-    <br><p class="text-muted font-weight-normal">1. Positive and planned approach towards any peice of work.
-<br>2. Motivates and encourages to learn new things.
-<br>3. Helps in all the possible ways when someone approaches.</p>
-</div>   
-
-</div>
-
-
-<br><br>
-Please say <a href="https://docs.google.com/forms/d/e/1FAIpQLSegODXQn148teT5BT2pDdsTWvt4PsAZt5w4p0ko5k1eGtbsJQ/viewform" target="blank"> few words </a>about me if we have worked together.
-
-
-<br><br><br><h3>My Certifications</h3>
-<br>
-
-
-
-<div class="row">          
-    <div class="col-sm-2">
-    <img src="assets/images/udemy.png" alt="Avatar" width="80" height="80" style="margin-top: -10px;">
-    </div>
-    <div class="col-sm-10">
-        <h5 class="text-muted font-weight-normal">Cypress Automation Framework Designing</h5>
-        <font size="-1"><a href="assets/certificates/UC-07265ef4-c912-4db8-bea0-c96fb89bf658.pdf" target="_blank">UC-07265ef4-c912-4db8-bea0-c96fb89bf658</a></font> 
-    </div>
-    </div>
-
-    <br>
-    <div class="row">          
-    <div class="col-sm-2">
-    <img src="assets/images/udemy.png" alt="Avatar" width="80" height="80" style="margin-top: -10px;">
-    </div>
-    <div class="col-sm-10">
-        <h5 class="text-muted font-weight-normal">Angular & Node Js - MEAN Stack Guide</h5>
-        <font size="-1"><a href="assets/certificates/UC-6976e260-607d-47e2-8f35-b222d29d8c46.pdf" target="_blank">UC-6976e260-607d-47e2-8f35-b222d29d8c46</a></font> 
-    </div>
-    </div>
-    
-
-<br>    
-
-<div class="row">          
-<div class="col-sm-2">
-<img src="assets/images/udemy.png" alt="Avatar" width="80" height="80" style="margin-top: -10px;">
-</div>
-<div class="col-sm-10">
-    <h5 class="text-muted font-weight-normal">Spring Boot & Hibernate</h5>
-    <font size="-1"><a href="assets/certificates/UC-dc17e2c2-2711-4117-a99e-e8c4437c0257.pdf" target="_blank">UC-dc17e2c2-2711-4117-a99e-e8c4437c0257</a></font> 
-</div>
-</div>
-
-<br>
-<div class="row">          
-<div class="col-sm-2">
-<img src="assets/images/udemy.png" alt="Avatar" width="80" height="80" style="margin-top: -10px;">
-</div>
-<div class="col-sm-10">
-    <h5 class="text-muted font-weight-normal">Robotic Process Automation</h5>
-    <font size="-1"><a href="assets/certificates/UC-6223b2c3-4171-4db9-abf3-126fd1de008d.pdf" target="_blank">UC-6223b2c3-4171-4db9-abf3-126fd1de008d</a></font> 
-</div>
-</div>
-
-
-<br>
-<div class="row">          
-<div class="col-sm-2">
-<img src="assets/images/udemy.png" alt="Avatar" width="80" height="80" style="margin-top: -10px;">
-</div>
-<div class="col-sm-10">
-    <h5 class="text-muted font-weight-normal">Build Node JS application with Mango DB</h5>
-    <font size="-1"><a href="assets/certificates/UC-58fbfac6-9d53-4a9f-bb79-f6663045572a.pdf" target="_blank">UC-58fbfac6-9d53-4a9f-bb79-f6663045572a</a></font> 
-</div>
-</div>
-
-<br><br>
-<br><h3>Contact Me</h3>
-
-<div class="row">
-<div class="col-sm-2">
-<center><i class="fa fa-github" style="font-size:72px;color:grey"></i></center>
-</div>
-<div class="col-sm-10">
-    <br><a href="https://github.com/biswajitsundara" target="_blank">github.com/biswajitsundara</a>
-</div>
-</div>
-
-<br>
-<div class="row">
-<div class="col-sm-2">
-<center><i class="fa fa-linkedin" style="font-size:62px;color:grey"></i></center>
-</div>
-
-<div class="col-sm-10">
-    <br><a href="https://in.linkedin.com/in/biswajitsundara" target="_blank">https://in.linkedin.com/in/biswajitsundara</a>
-</div>
-</div>
-
-<br>
-
-<div class="row">
-<div class="col-sm-2">
-<center><i class="fa fa-envelope" style="font-size:50px;color:grey"></i></center>
-</div>
-<div class="col-sm-10">
-    <br><a href="#" target="_blank">web.biswajit.sundara@gmail.com</a>
-</div>
-</div>
-
- 
-<br><br>
-     
-
-<br><h3>Message Me</h3>
-
-<br><div id="error" style="color:red"></div>
-
-  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfVCUKnD_-vfrm9XatsW_mq3sSron9_J_Fsd0BSt-MNaWv4ww/formResponse" id="messageForm" target="_self" method="POST">
-    <div class="form-group">
-      <input class="form-control form-control-lg" type="text" id="name" name="entry.689225320" placeholder="Your Name">
-    </div>
-
-   <div class="form-group">
-      <input type="email" class="form-control form-control-lg" type="text" id="email" name="emailAddress" placeholder="Enter Email">
-    </div>
-
-    <div class="form-group">
-      <textarea class="form-control form-control-lg" rows="5" id="comment" name="entry.1648468188" placeholder="Enter Comment.."></textarea>
-    </div>
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-
-
-
-<div style="display: block;height: 100px;padding: 5px;background-color: silver; opacity: 0.2;"> <br><center><h4>Thank you & Visit Again</h4>
-
-<p>This web site is designed by me...</p></center></div>
-
-<br>
-</div> 
-
-</div>
-
-
-
-</div>
-
-</body>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#home">BS<span>.</span></a>
+        <button
+          class="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <div class="nav-links">
+          <a href="#about">About</a><a href="#skills">Skills</a
+          ><a href="#projects">Projects</a> <a href="#blog">Blog</a
+          ><a href="#testimonials">Testimonials</a
+          ><a href="resume/index.html">Resume</a
+          ><a href="#contact" class="nav-cta">Let's talk <span>↗</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span> OPEN TO INTERESTING OPPORTUNITIES
+          </div>
+          <p class="intro">Hello, I'm</p>
+          <h1>Biswajit<br /><span>Sundara.</span></h1>
+          <h2>AI Engineer <i>·</i> Software Architect</h2>
+          <p class="hero-text">
+            I build production-ready AI agents, intelligent workflows and
+            enterprise applications that turn complex problems into useful,
+            reliable products.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"
+              >Explore my work <span>↗</span></a
+            >
+            <a class="text-link" href="#contact">Get in touch <span>→</span></a>
+          </div>
+          <div class="hero-meta">
+            <span>Based in India</span><span class="meta-line"></span
+            ><span>AI · Cloud · Product Engineering</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-frame">
+            <!-- Replace assets/profile.jpg with your own portrait. -->
+            <img src="assets/profile.png" alt="Profile portrait placeholder" />
+            <div class="photo-note"><span>✳</span> Building what’s next</div>
+          </div>
+          <div class="floating-card">
+            <span class="card-icon">⌘</span>
+            <div>
+              <strong>From idea to production</strong
+              ><small>Engineering with purpose</small>
+            </div>
+          </div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+        </div>
+      </section>
+
+      <section class="strip">
+        <div class="container strip-inner">
+          <span>WHAT I DO</span><strong>Agentic AI</strong><b>✳</b
+          ><strong>RAG Systems</strong><b>✳</b
+          ><strong>Cloud Architecture</strong><b>✳</b
+          ><strong>Frontend Engineering</strong>
+        </div>
+      </section>
+
+      <section class="section container" id="about">
+        <div class="section-kicker">01 / ABOUT ME</div>
+        <div class="about-grid">
+          <div>
+            <h2 class="section-title">
+              Engineering useful<br /><span>intelligence.</span>
+            </h2>
+          </div>
+          <div class="about-copy">
+            <p class="lead">
+              I enjoy working where thoughtful engineering meets emerging
+              technology.
+            </p>
+            <p>
+              My journey began with building clean, reusable frontend components
+              and grew into delivering large-scale enterprise applications.
+              Today, I focus on production-grade AI agents, RAG pipelines and
+              MCP servers that connect language models with real business
+              systems.
+            </p>
+            <p>
+              I care about the details that make software dependable: clear
+              architecture, security, observability, performance and
+              maintainability.
+            </p>
+            <div class="about-facts">
+              <div>
+                <strong>AI + Agents</strong
+                ><span>Practical, tool-enabled workflows</span>
+              </div>
+              <div>
+                <strong>Enterprise UI</strong
+                ><span>Scalable product experiences</span>
+              </div>
+              <div>
+                <strong>Cloud</strong
+                ><span>Secure, production-minded delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="container">
+          <div class="section-kicker">02 / TOOLKIT</div>
+          <div class="section-heading">
+            <h2 class="section-title">Skills & <span>expertise.</span></h2>
+            <p>
+              A blend of AI engineering, application development and technical
+              architecture.
+            </p>
+          </div>
+          <div class="skill-grid">
+            <article class="skill-card">
+              <div class="skill-icon">✳</div>
+              <h3>Agentic AI</h3>
+              <p>
+                LLM agents, tool calling, multi-agent workflows, LangChain,
+                LangGraph, prompt engineering.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>OpenAI</span><span>Anthropic</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-icon">⌘</div>
+              <h3>RAG & MCP</h3>
+              <p>
+                Retrieval pipelines, vector search, grounding, MCP servers,
+                tool/resource contracts.
+              </p>
+              <div class="tags">
+                <span>Chroma</span><span>FastMCP</span><span>Embeddings</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-icon">◈</div>
+              <h3>Cloud & Backend</h3>
+              <p>
+                Enterprise integrations, REST APIs, AWS services, secure and
+                scalable system design.
+              </p>
+              <div class="tags">
+                <span>AWS</span><span>Node.js</span><span>API Design</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-icon">▦</div>
+              <h3>Frontend Engineering</h3>
+              <p>
+                Reusable component systems and responsive enterprise
+                applications.
+              </p>
+              <div class="tags">
+                <span>React</span><span>TypeScript</span><span>Redux</span
+                ><span>Oracle JET</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-icon">◎</div>
+              <h3>Quality & Automation</h3>
+              <p>
+                Browser automation, test strategy and reliable delivery
+                workflows.
+              </p>
+              <div class="tags">
+                <span>Playwright</span><span>Selenium</span><span>Mocha</span>
+              </div>
+            </article>
+            <article class="skill-card">
+              <div class="skill-icon">↗</div>
+              <h3>Architecture & Leadership</h3>
+              <p>
+                Technical direction, maintainability, engineering practices and
+                cross-team collaboration.
+              </p>
+              <div class="tags">
+                <span>System Design</span><span>Mentoring</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="projects">
+        <div class="section-kicker">03 / SELECTED WORK</div>
+        <div class="section-heading">
+          <h2 class="section-title">Things I've <span>built.</span></h2>
+          <p>
+            A few explorations across AI, developer experience and enterprise
+            engineering.
+          </p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-art art-ai">
+              <span class="art-label">01 / AGENTIC AI</span>
+              <div class="node node-a">Business request</div>
+              <div class="node node-b">AI agent</div>
+              <div class="node node-c">Workflow steps</div>
+              <div class="node node-d">Outcome</div>
+              <div class="connector"></div>
+            </div>
+            <div class="project-info">
+              <div class="project-type">BUSINESS AUTOMATION</div>
+              <h3>Agentic workflow automation</h3>
+              <p>
+                Agent-driven workflows that break complex business processes
+                into manageable steps, coordinate actions and keep execution
+                controlled and reliable.
+              </p>
+              <div class="project-foot">
+                <span>Python · LangGraph</span
+                ><a
+                  href="#contact"
+                  aria-label="Discuss agentic workflow project"
+                  >↗</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-mcp">
+              <span class="art-label">02 / TOOL INTEGRATION</span>
+              <div class="mcp-flow">
+                <span>AI agent</span><b>↔</b
+                ><span class="mcp-server">MCP server</span><b>↔</b
+                ><span>Business APIs</span>
+              </div>
+              <div class="mcp-caption">
+                Discover tools · Validate inputs · Execute actions
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-type">ENTERPRISE CONNECTIVITY</div>
+              <h3>MCP server integrations</h3>
+              <p>
+                Modular MCP servers that expose business capabilities as
+                structured tools, helping AI agents interact with enterprise
+                APIs through clear contracts.
+              </p>
+              <div class="project-foot">
+                <span>Python · FastMCP · APIs</span
+                ><a href="#contact" aria-label="Discuss MCP integrations">↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-rag">
+              <span class="art-label">03 / KNOWLEDGE AI</span>
+              <div class="doc-stack"><i></i><i></i><i></i></div>
+              <div class="rag-arrow">→</div>
+              <div class="rag-core">RAG</div>
+              <div class="rag-caption">Retrieve · Ground · Answer</div>
+            </div>
+            <div class="project-info">
+              <div class="project-type">LOCAL-FIRST AI</div>
+              <h3>Private document RAG</h3>
+              <p>
+                A local retrieval-augmented generation demo using document
+                chunking, embeddings and vector search to ground answers in
+                private content.
+              </p>
+              <div class="project-foot">
+                <span>Ollama · Chroma · Python</span
+                ><a href="#contact" aria-label="Discuss RAG project">↗</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art art-library">
+              <span class="art-label">04 / OPEN SOURCE</span>
+              <div class="component-window">
+                <div class="window-dots">•••</div>
+                <div class="component-row"><span></span><b></b></div>
+                <div class="component-row short"><span></span><b></b></div>
+                <div class="component-button">Reusable UI</div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-type">DEVELOPER EXPERIENCE</div>
+              <h3>Ghewar component library</h3>
+              <p>
+                An open-source React component library focused on reusable,
+                themeable components for consistent application experiences.
+              </p>
+              <div class="project-foot">
+                <span>React · TypeScript · UI</span
+                ><a
+                  href="https://bisdocs.github.io/ghewar-docs/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open Ghewar documentation"
+                  >↗</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section blog-section" id="blog">
+        <div class="container">
+          <div class="section-kicker">04 / WRITING & INSIGHTS</div>
+          <div class="section-heading">
+            <h2 class="section-title">Ideas worth <span>sharing.</span></h2>
+            <p>
+              Notes on building reliable AI systems, agentic workflows and
+              scalable engineering solutions.
+            </p>
+          </div>
+          <div class="blog-grid">
+            <article class="blog-card">
+              <div class="blog-topline">
+                <span class="blog-category">AI INFRASTRUCTURE</span
+                ><span class="blog-symbol">↗</span>
+              </div>
+              <h3>Designing an AI Gateway for Production Workloads</h3>
+              <p>
+                How virtual keys, rate limits, budgets, provider routing and
+                guardrails help teams operate LLM applications safely at scale.
+              </p>
+              <div class="blog-footer">
+                <span>Architecture · LLMOps</span
+                ><a
+                  href="https://www.linkedin.com/pulse/ai-gateway-missing-layer-between-agents-production-biswajit-sundara-pqu0f/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read article ↗</a
+                >
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-topline">
+                <span class="blog-category">AGENTIC AI</span>
+                <span class="blog-symbol">↗</span>
+              </div>
+              <h3>When an AI Agent Gets Stuck in a Loop</h3>
+              <p>
+                How to prevent runaway tool calls using failure tracking, retry
+                limits and circuit breakers—so agents recognize repeated
+                failures, stop wasting tokens and know when to escalate.
+              </p>
+              <div class="blog-footer">
+                <span>Agents · Reliability</span>
+                <a
+                  href="https://www.linkedin.com/pulse/when-ai-agent-gets-stuck-loop-biswajit-sundara-a5sgc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Read article ↗</a
+                >
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-topline">
+                <span class="blog-category">RETRIEVAL SYSTEMS</span
+                ><span class="blog-symbol">↗</span>
+              </div>
+              <h3>Hybrid Search with Reciprocal Rank Fusion</h3>
+              <p>
+                Combining keyword and semantic retrieval to improve results for
+                exact terms, acronyms, error codes and natural-language queries.
+              </p>
+              <div class="blog-footer">
+                <span>RAG · Search</span
+                ><a
+                  href="https://www.linkedin.com/pulse/reciprocal-rank-fusion-rag-biswajit-sundara-tywoc/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read article ↗</a
+                >
+              </div>
+            </article>
+            <article class="blog-card">
+              <div class="blog-topline">
+                <span class="blog-category">VECTOR SEARCH</span
+                ><span class="blog-symbol">↗</span>
+              </div>
+              <h3>Understanding HNSW for Large-Scale Vector Search</h3>
+              <p>
+                A practical look at graph-based indexing and the M,
+                efConstruction and efSearch parameters behind the recall-latency
+                trade-off.
+              </p>
+              <div class="blog-footer">
+                <span>Embeddings · Performance</span
+                ><a
+                  href="https://www.linkedin.com/pulse/hnsw-algorithm-behind-fast-vector-search-biswajit-sundara-kcphc/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Read article ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section" id="testimonials">
+        <div class="container testimonials-wrap">
+          <div class="section-kicker">05 / KIND WORDS</div>
+          <div class="section-heading">
+            <h2 class="section-title">What people <span>say.</span></h2>
+            <p>
+              A few words about collaboration, engineering depth and ownership.
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-marquee" aria-label="Testimonials">
+          <div class="testimonial-track" id="testimonial-track"></div>
+        </div>
+        <div class="testimonial-pagination" aria-label="Testimonial navigation">
+          <button
+            class="testimonial-arrow"
+            id="testimonial-prev"
+            type="button"
+            aria-label="Previous testimonial"
+          >
+            ←
+          </button>
+          <div
+            class="testimonial-dots"
+            id="testimonial-dots"
+            role="group"
+            aria-label="Choose a testimonial"
+          ></div>
+          <button
+            class="testimonial-arrow"
+            id="testimonial-next"
+            type="button"
+            aria-label="Next testimonial"
+          >
+            →
+          </button>
+        </div>
+        <dialog
+          class="testimonial-modal"
+          id="testimonial-modal"
+          aria-labelledby="testimonial-modal-name"
+        >
+          <button
+            class="testimonial-modal-close"
+            type="button"
+            aria-label="Close testimonial"
+          >
+            ×
+          </button>
+          <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+          <blockquote id="testimonial-modal-quote"></blockquote>
+          <div class="testimonial-person">
+            <div class="testimonial-avatar" id="testimonial-modal-avatar"></div>
+            <div>
+              <strong id="testimonial-modal-name"></strong
+              ><span id="testimonial-modal-role"></span>
+            </div>
+          </div>
+        </dialog>
+      </section>
+
+      <section class="section container contact-section" id="contact">
+        <div class="section-kicker">06 / CONTACT</div>
+        <div class="contact-grid">
+          <div>
+            <h2 class="section-title">
+              Have a good<br /><span>problem to solve?</span>
+            </h2>
+            <p class="contact-copy">
+              I'm always interested in thoughtful conversations about AI,
+              engineering, architecture and meaningful products.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:web.biswajitsundara@gmail.com"
+                >web.biswajitsundara@gmail.com <span>↗</span></a
+              ><a
+                href="https://www.linkedin.com/in/biswajitsundara/"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn <span>↗</span></a
+              ><a
+                href="https://github.com/biswajitsundara"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub <span>↗</span></a
+              >
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            id="message-form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeLcbyy0I5AYFQJSYXwIqLKV99b_fHHgwV2M1HAfUwuilNQaQ/formResponse"
+            method="POST"
+            target="google-form-target"
+          >
+            <h3>Message me</h3>
+            <p>Send a note and let's start a conversation.</p>
+            <label for="name">Your name</label
+            ><input
+              id="name"
+              name="entry.227811819"
+              type="text"
+              required
+              placeholder="Jane Smith"
+            />
+            <label for="email">Email address</label
+            ><input
+              id="email"
+              name="entry.883465634"
+              type="email"
+              required
+              placeholder="jane@example.com"
+            />
+            <label for="message">Your message</label
+            ><textarea
+              id="message"
+              name="entry.1741706624"
+              rows="4"
+              required
+              placeholder="Tell me a little about what you have in mind..."
+            ></textarea>
+            <button
+              class="button button-primary"
+              type="submit"
+              id="send-message-button"
+            >
+              Send Message <span>↗</span>
+            </button>
+            <small
+              id="form-status"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+              >Your message will be submitted securely through Google
+              Forms.</small
+            >
+          </form>
+          <iframe
+            name="google-form-target"
+            id="google-form-target"
+            title="Google Forms submission"
+            hidden
+          ></iframe>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#home">BS<span>.</span></a
+        ><span>Designed & built with care.</span
+        ><span>© <span id="year"></span> Biswajit Sundara</span
+        ><a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
